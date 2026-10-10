@@ -1,0 +1,1016 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="An independent concept preview for Roofing Australia — Colorbond, Monier tile and slate roofing, re-roofing, restoration and roofline work across the Sutherland Shire and Sydney.">
+<meta name="theme-color" content="#222522">
+<title>Roofing Australia — Rooflines, considered</title>
+<style>
+  :root {
+    color-scheme: light;
+    --ink: #242724;
+    --ink-deep: #1b1e1b;
+    --ink-soft: #41453f;
+    --paper: #f2efe8;
+    --paper-bright: #fbfaf7;
+    --sand: #d7ccba;
+    --sand-deep: #b5a58a;
+    --bronze: #927850;
+    --bronze-light: #c0a77d;
+    --line: rgba(36,39,36,.19);
+    --line-soft: rgba(36,39,36,.1);
+    --serif: Georgia, "Times New Roman", serif;
+    --sans: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+    --pad-x: clamp(1.5rem, 9vw, 9rem);
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; }
+  a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, summary:focus-visible { outline: 3px solid #caa66d; outline-offset: 4px; }
+  h1, h2, h3, h4, p { margin-top: 0; }
+  .skip-link { position: absolute; left: 1rem; top: -5rem; z-index: 60; padding: .8rem 1rem; background: var(--paper-bright); color: var(--ink); }
+  .skip-link:focus { top: 1rem; }
+  .preview-note { padding: .67rem 1.25rem; background: #d9cbb4; color: #302c25; text-align: center; font-size: .68rem; font-weight: 700; letter-spacing: .11em; text-transform: uppercase; }
+
+  /* ---------- header ---------- */
+  .site-header { position: sticky; top: 0; z-index: 40; color: var(--paper-bright); background: var(--ink); border-bottom: 1px solid rgba(242,239,232,.1); }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding: 1.1rem clamp(1.1rem, 5.5vw, 6.25rem); }
+  .brand { display: inline-flex; align-items: center; gap: .85rem; text-decoration: none; }
+  .brand-mark { display: grid; width: 2.55rem; height: 2.55rem; flex: 0 0 auto; place-items: center; border: 1px solid rgba(242,239,232,.48); color: var(--sand); font: 1rem var(--serif); transition: border-color .25s, color .25s; }
+  .brand:hover .brand-mark { border-color: var(--bronze-light); color: #e4cfa6; }
+  .brand-name { font-size: .78rem; font-weight: 700; letter-spacing: .16em; line-height: 1.35; text-transform: uppercase; }
+  .brand-name span { display: block; color: #c7b89f; font-size: .6rem; font-weight: 500; letter-spacing: .21em; }
+  .nav { display: flex; align-items: center; gap: clamp(.9rem, 2.2vw, 2rem); }
+  .nav > a, .nav-trigger { position: relative; padding: .55rem 0; border: 0; background: none; color: #e5e1d9; font-family: var(--sans); font-size: .72rem; letter-spacing: .09em; text-decoration: none; cursor: pointer; transition: color .2s; }
+  .nav > a:hover, .nav-trigger:hover { color: #d4b98c; }
+  .nav > a::after, .nav-trigger::after { position: absolute; left: 0; bottom: .2rem; width: 0; height: 1px; background: var(--bronze-light); content: ""; transition: width .25s ease; }
+  .nav > a:hover::after, .nav-trigger:hover::after, .nav > a.is-active::after, .nav-item.is-active .nav-trigger::after { width: 100%; }
+  .nav > a.is-active, .nav-item.is-active .nav-trigger { color: #e8d8ba; }
+  .nav-item { position: relative; }
+  .nav-trigger .caret { display: inline-block; margin-left: .35rem; font-size: .55rem; }
+  .dropdown { position: absolute; top: calc(100% + .55rem); left: -1rem; z-index: 50; min-width: 20rem; padding: .6rem; border: 1px solid rgba(242,239,232,.16); background: var(--ink-deep); box-shadow: 0 24px 50px rgba(16,18,16,.4); opacity: 0; visibility: hidden; transform: translateY(-6px); transition: opacity .2s, transform .2s, visibility .2s; }
+  .nav-item:hover .dropdown, .nav-item:focus-within .dropdown, .dropdown.is-open { opacity: 1; visibility: visible; transform: translateY(0); }
+  .dropdown a { display: block; padding: .62rem .8rem; color: #ddd8ce; font-size: .74rem; letter-spacing: .04em; text-decoration: none; transition: background .2s, color .2s; }
+  .dropdown a:hover, .dropdown a.is-active { background: rgba(215,204,186,.1); color: #e8d8ba; }
+  .dropdown a small { display: block; margin-top: .18rem; color: #8d8c83; font-size: .64rem; letter-spacing: .02em; }
+  .header-cta { display: inline-flex; min-height: 2.8rem; align-items: center; gap: .5rem; padding: .6rem 1rem; border: 1px solid var(--bronze-light); color: #e8d8ba; font-size: .69rem; font-weight: 700; letter-spacing: .11em; text-decoration: none; text-transform: uppercase; transition: background .2s, color .2s; }
+  .header-cta:hover { color: var(--ink); background: #cdb995; }
+  .burger { display: none; width: 2.9rem; height: 2.9rem; padding: 0; border: 1px solid rgba(242,239,232,.3); background: none; cursor: pointer; }
+  .burger span { display: block; width: 1.15rem; height: 1px; margin: .28rem auto; background: #e5e1d9; transition: transform .25s, opacity .25s; }
+  .burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(.29rem) rotate(45deg); }
+  .burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+  .burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-.29rem) rotate(-45deg); }
+  .drawer { display: none; padding: .5rem clamp(1.1rem, 5.5vw, 6.25rem) 1.6rem; border-top: 1px solid rgba(242,239,232,.12); background: var(--ink-deep); }
+  .drawer.is-open { display: block; }
+  .drawer a { display: block; padding: .85rem 0; border-bottom: 1px solid rgba(242,239,232,.08); color: #ddd8ce; font-size: .8rem; letter-spacing: .08em; text-decoration: none; }
+  .drawer a.is-active { color: #e8d8ba; }
+  .drawer .drawer-sub a { padding-left: 1rem; color: #a9a79e; font-size: .74rem; }
+  .drawer .drawer-label { margin: 1.1rem 0 .2rem; color: var(--bronze); font-size: .62rem; font-weight: 700; letter-spacing: .19em; text-transform: uppercase; }
+
+  /* ---------- shared blocks ---------- */
+  .page { display: none; animation: fade .45s ease both; }
+  .page.is-active { display: block; }
+  @keyframes fade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  .section { padding: clamp(4rem, 8vw, 7.5rem) var(--pad-x); }
+  .section--bright { background: var(--paper-bright); }
+  .section--sand { background: #ded5c7; }
+  .section--ink { background: var(--ink); color: var(--paper-bright); }
+  .section-kicker { margin-bottom: .9rem; color: var(--bronze); font-size: .67rem; font-weight: 700; letter-spacing: .19em; text-transform: uppercase; }
+  .section--ink .section-kicker { color: var(--sand-deep); }
+  .section-heading { display: grid; grid-template-columns: .72fr 1.28fr; gap: 3rem; align-items: start; margin-bottom: 3.2rem; }
+  h1 { font: 400 clamp(2.7rem, 5.6vw, 5.4rem)/1 var(--serif); letter-spacing: -.05em; margin-bottom: 1.4rem; }
+  h2 { margin-bottom: 0; font: 400 clamp(2.1rem, 3.8vw, 3.9rem)/1.05 var(--serif); letter-spacing: -.04em; }
+  h3 { font: 400 1.5rem/1.2 var(--serif); margin-bottom: .7rem; }
+  .intro { max-width: 41rem; margin: .95rem 0 0; color: #5c5d55; font-size: .96rem; line-height: 1.85; }
+  .section--ink .intro, .section--ink .lede { color: #c5c4bc; }
+  .lede { max-width: 38rem; color: #5c5d55; font-size: 1rem; line-height: 1.85; }
+  .eyebrow { margin: 0 0 1.3rem; color: var(--sand-deep); font-size: .68rem; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+  .button { display: inline-flex; min-height: 3.3rem; align-items: center; justify-content: center; gap: .9rem; padding: .95rem 1.4rem; border: 1px solid var(--bronze-light); color: var(--paper-bright); background: none; font-family: var(--sans); font-size: .7rem; font-weight: 700; letter-spacing: .12em; text-decoration: none; text-transform: uppercase; cursor: pointer; transition: background .2s, color .2s, border-color .2s; }
+  .button:hover { color: var(--ink); background: #cdb995; }
+  .button--dark { border-color: var(--ink); color: var(--ink); }
+  .button--dark:hover { color: var(--paper-bright); background: var(--ink); }
+  .button--solid { border-color: var(--bronze-light); color: var(--ink); background: #cdb995; }
+  .button--solid:hover { background: #e0d1b3; }
+  .button-row { display: flex; flex-wrap: wrap; gap: .85rem; margin-top: 2rem; }
+  .note { max-width: 32rem; color: #8c8b82; font-size: .72rem; line-height: 1.65; }
+  .section--ink .note { color: #a7a69e; }
+
+  /* page banner */
+  .page-hero { padding: clamp(3.2rem, 7vw, 6rem) var(--pad-x) clamp(2.8rem, 6vw, 5rem); background: var(--ink); color: var(--paper-bright); }
+  .crumbs { margin: 0 0 1.1rem; color: #8d8c83; font-size: .66rem; letter-spacing: .14em; text-transform: uppercase; }
+  .crumbs a { color: var(--sand-deep); text-decoration: none; }
+  .crumbs a:hover { color: #e8d8ba; }
+  .page-hero h1 { max-width: 16ch; margin-bottom: 1.1rem; }
+  .page-hero p { max-width: 36rem; margin: 0; color: #c5c4bc; font-size: .98rem; line-height: 1.8; }
+
+  /* home hero */
+  .hero { position: relative; display: grid; min-height: min(740px, 76vw); grid-template-columns: 1fr .92fr; background: var(--ink); color: var(--paper-bright); }
+  .hero-copy { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; padding: clamp(3rem, 7vw, 7rem) clamp(1.5rem, 7vw, 7.75rem); }
+  .hero h1 { max-width: 12ch; font-size: clamp(2.9rem, 6vw, 6rem); }
+  .hero-lede { max-width: 30rem; margin-bottom: 2rem; color: #d0cec7; font-size: clamp(.95rem, 1.3vw, 1.08rem); line-height: 1.8; }
+  .hero-image { position: relative; min-height: 28rem; overflow: hidden; background: #68685e; }
+  .hero-image img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; filter: saturate(.78) contrast(.97); }
+  .hero-image::after { position: absolute; inset: 0; content: ""; background: linear-gradient(180deg, transparent 62%, rgba(20,22,20,.55)); pointer-events: none; }
+  .photo-caption { position: absolute; z-index: 1; right: 1.5rem; bottom: 1.2rem; left: 1.5rem; margin: 0; color: #fff; font-size: .68rem; letter-spacing: .04em; text-shadow: 0 1px 8px rgba(0,0,0,.7); }
+
+  /* trust bar */
+  .trustbar { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--line); background: var(--paper-bright); }
+  .trustbar div { padding: 1.6rem clamp(1rem, 3vw, 2.2rem); border-right: 1px solid var(--line); }
+  .trustbar div:last-child { border-right: 0; }
+  .trustbar strong { display: block; margin-bottom: .35rem; font: 400 1.35rem var(--serif); }
+  .trustbar span { color: #6c6d64; font-size: .73rem; letter-spacing: .05em; line-height: 1.5; }
+
+  /* service grid */
+  .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+  .service-card { display: flex; min-height: 14.5rem; flex-direction: column; padding: 1.75rem 1.65rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); color: inherit; text-decoration: none; transition: background .25s, transform .25s; }
+  .service-card:hover { background: rgba(215,204,186,.28); }
+  .service-num { display: block; margin-bottom: 1.9rem; color: var(--bronze); font: .9rem var(--serif); }
+  .service-card h3 { margin-bottom: .7rem; }
+  .service-card p { max-width: 25rem; margin: 0 0 1.2rem; color: #66675f; font-size: .83rem; line-height: 1.7; }
+  .service-card .more { margin-top: auto; color: var(--bronze); font-size: .67rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+
+  /* generic split + cards */
+  .split { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(2.5rem, 8vw, 8rem); align-items: start; }
+  .split--even { grid-template-columns: 1fr 1fr; gap: clamp(2.5rem, 6vw, 5rem); align-items: center; }
+  .principles { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2.4rem; padding-top: 1.6rem; border-top: 1px solid rgba(36,39,36,.28); }
+  .principle { color: #4c4b43; font-size: .78rem; line-height: 1.7; }
+  .principle strong { display: block; margin-bottom: .45rem; color: var(--ink); font: 400 1.2rem var(--serif); }
+  .cardset { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 1.4rem; }
+  .card { padding: 1.7rem 1.6rem; border: 1px solid var(--line); background: var(--paper-bright); }
+  .card h3 { font-size: 1.32rem; }
+  .card p, .card li { color: #66675f; font-size: .85rem; line-height: 1.75; }
+  .card p:last-child { margin-bottom: 0; }
+  .card ul { margin: 0; padding-left: 1.05rem; }
+  .card li { margin-bottom: .4rem; }
+  .section--ink .card { border-color: rgba(215,204,186,.22); background: rgba(215,204,186,.05); }
+  .section--ink .card p, .section--ink .card li { color: #c5c4bc; }
+
+  /* steps */
+  .steps-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 0; margin: 0; padding: 0; border-top: 1px solid var(--line); border-left: 1px solid var(--line); list-style: none; }
+  .steps-list li { padding: 1.6rem 1.5rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+  .steps-list .step-n { display: block; margin-bottom: 1.3rem; color: var(--bronze); font: .9rem var(--serif); }
+  .steps-list h4 { margin-bottom: .5rem; font: 400 1.22rem var(--serif); }
+  .steps-list p { margin: 0; color: #66675f; font-size: .82rem; line-height: 1.7; }
+
+  /* list of ticks */
+  .ticks { margin: 0; padding: 0; list-style: none; }
+  .ticks li { position: relative; margin-bottom: .75rem; padding-left: 1.5rem; color: #5c5d55; font-size: .89rem; line-height: 1.7; }
+  .ticks li::before { position: absolute; left: 0; top: 0; color: var(--bronze); content: "—"; }
+  .section--ink .ticks li { color: #c5c4bc; }
+
+  /* quotes */
+  .quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1.4rem; }
+  .quote { padding: 1.9rem 1.7rem; border-left: 2px solid var(--bronze); background: var(--paper-bright); }
+  .quote blockquote { margin: 0 0 1.1rem; font: 400 1.18rem/1.6 var(--serif); }
+  .quote cite { color: #6c6d64; font-size: .74rem; font-style: normal; letter-spacing: .1em; text-transform: uppercase; }
+  .stars { margin-bottom: .9rem; color: var(--bronze); font-size: .85rem; letter-spacing: .25em; }
+
+  /* areas */
+  .suburbs { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: 0; margin: 2rem 0 0; padding: 0; border-top: 1px solid var(--line); border-left: 1px solid var(--line); list-style: none; }
+  .suburbs li { padding: 1rem 1.1rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: .85rem; letter-spacing: .03em; }
+  .area-label { display: inline-block; margin-top: 1rem; padding: .85rem 1rem; border-left: 2px solid var(--bronze); background: rgba(215,204,186,.42); color: var(--ink-soft); font-size: .78rem; letter-spacing: .05em; }
+
+  /* gallery */
+  .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); gap: 1.6rem; }
+  .shot { display: flex; flex-direction: column; border: 1px solid var(--line); background: var(--paper-bright); overflow: hidden; }
+  .shot figure { margin: 0; }
+  .shot img { width: 100%; height: 21rem; object-fit: cover; filter: saturate(.8) contrast(.97); transition: transform .6s ease; }
+  .shot:hover img { transform: scale(1.03); }
+  .shot .shot-body { padding: 1.5rem 1.5rem 1.7rem; }
+  .shot h3 { margin-bottom: .55rem; }
+  .shot p { margin: 0 0 1rem; color: #66675f; font-size: .84rem; line-height: 1.7; }
+  .shot .cap { color: #8c8b82; font-size: .68rem; line-height: 1.5; }
+  .swatchboard { height: 21rem; display: grid; grid-template-columns: 1fr 1fr; }
+  .swatch { display: flex; align-items: flex-end; padding: .9rem; color: rgba(255,255,255,.92); font-size: .64rem; letter-spacing: .12em; text-transform: uppercase; text-shadow: 0 1px 6px rgba(0,0,0,.5); }
+  .sw-charcoal { background: linear-gradient(145deg,#4a4f52,#2f3335); }
+  .sw-monument { background: linear-gradient(145deg,#4b4e4d,#35383a); }
+  .sw-terracotta { background: linear-gradient(145deg,#a9573a,#7d3f2b); }
+  .sw-copper { background: linear-gradient(145deg,#a9743f,#6f5a3a); }
+
+  /* accordion */
+  .accordion { max-width: 52rem; border-top: 1px solid var(--line); }
+  .accordion details { border-bottom: 1px solid var(--line); }
+  .accordion summary { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding: 1.25rem 0; font: 400 1.14rem/1.4 var(--serif); cursor: pointer; list-style: none; }
+  .accordion summary::-webkit-details-marker { display: none; }
+  .accordion summary::after { flex: 0 0 auto; color: var(--bronze); content: "+"; font-size: 1.1rem; transition: transform .25s; }
+  .accordion details[open] summary::after { transform: rotate(45deg); }
+  .accordion .answer { padding: 0 2.5rem 1.4rem 0; color: #5c5d55; font-size: .88rem; line-height: 1.85; }
+  .accordion .answer p { margin: 0 0 .8rem; }
+  .accordion .answer p:last-child { margin: 0; }
+
+  /* contact */
+  .contact-grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(2.5rem, 6vw, 5rem); align-items: start; }
+  .form { padding: 1.9rem 1.8rem; border: 1px solid var(--line); background: var(--paper-bright); }
+  .field { margin-bottom: 1.1rem; }
+  .field label { display: block; margin-bottom: .4rem; color: var(--ink-soft); font-size: .68rem; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+  .field input, .field select, .field textarea { width: 100%; min-height: 3rem; padding: .75rem .85rem; border: 1px solid var(--line); background: #fff; color: var(--ink); font-family: var(--sans); font-size: .9rem; }
+  .field textarea { min-height: 7rem; resize: vertical; }
+  .form-note { margin: .9rem 0 0; color: #8c8b82; font-size: .72rem; line-height: 1.6; }
+  .thanks { display: none; padding: 1.3rem 1.2rem; border-left: 2px solid var(--bronze); background: rgba(215,204,186,.35); color: var(--ink-soft); font-size: .85rem; line-height: 1.7; }
+  .thanks.is-on { display: block; }
+  .contact-card { margin-bottom: 1.1rem; padding: 1.4rem 1.5rem; border: 1px solid var(--line); background: var(--paper-bright); }
+  .contact-card h3 { margin-bottom: .45rem; font-size: 1.2rem; }
+  .contact-card p { margin: 0; color: #66675f; font-size: .87rem; line-height: 1.75; }
+  .contact-card a { color: var(--bronze); text-decoration: none; border-bottom: 1px solid rgba(146,120,80,.4); }
+  .contact-card a:hover { color: var(--ink); }
+  .map-card { display: block; padding: 1.6rem 1.5rem; border: 1px solid var(--line); background: linear-gradient(135deg, #e4ded1, #cfc5b2); color: var(--ink); text-decoration: none; transition: filter .25s; }
+  .map-card:hover { filter: brightness(1.04); }
+  .map-card strong { display: block; margin-bottom: .3rem; font: 400 1.2rem var(--serif); }
+  .map-card span { color: #5c5d55; font-size: .8rem; line-height: 1.6; }
+
+  /* CTA band */
+  .cta-band { position: relative; overflow: hidden; padding: clamp(4rem, 8vw, 7rem) var(--pad-x); background: var(--ink); color: var(--paper-bright); }
+  .cta-band::after { position: absolute; right: -4rem; bottom: -9rem; width: 27rem; height: 27rem; border: 1px solid rgba(215,204,186,.17); border-radius: 50%; content: ""; box-shadow: 0 0 0 2.5rem rgba(215,204,186,.025), 0 0 0 5rem rgba(215,204,186,.025); pointer-events: none; }
+  .cta-inner { position: relative; z-index: 1; max-width: 49rem; }
+  .cta-band h2 { max-width: 13ch; margin-bottom: 1.1rem; }
+  .cta-band p { max-width: 34rem; color: #c5c4bc; line-height: 1.8; }
+
+  /* footer */
+  .site-footer { padding: clamp(3rem, 6vw, 4.5rem) clamp(1.5rem, 5.5vw, 6.25rem) 2rem; background: var(--ink-deep); color: #adada4; font-size: .78rem; line-height: 1.8; }
+  .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 2.5rem; padding-bottom: 2.2rem; border-bottom: 1px solid rgba(242,239,232,.12); }
+  .site-footer h4 { margin-bottom: .9rem; color: #e4e0d8; font-size: .66rem; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; font-family: var(--sans); }
+  .site-footer ul { margin: 0; padding: 0; list-style: none; }
+  .site-footer li { margin-bottom: .45rem; }
+  .site-footer a { color: #adada4; text-decoration: none; transition: color .2s; }
+  .site-footer a:hover { color: #e8d8ba; }
+  .footer-blurb { max-width: 24rem; margin: 1rem 0 0; font-size: .76rem; }
+  .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1rem; padding-top: 1.4rem; font-size: .68rem; }
+  .footer-bottom p { max-width: 46rem; margin: 0; }
+
+  /* scroll reveal + to top */
+  .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+  .reveal.is-in { opacity: 1; transform: none; }
+  .to-top { position: fixed; right: 1.2rem; bottom: 1.2rem; z-index: 35; display: grid; width: 2.9rem; height: 2.9rem; place-items: center; border: 1px solid var(--bronze-light); background: var(--ink); color: #e8d8ba; cursor: pointer; opacity: 0; visibility: hidden; transition: opacity .25s, visibility .25s, background .2s; }
+  .to-top.is-on { opacity: 1; visibility: visible; }
+  .to-top:hover { background: var(--bronze); color: #fff; }
+
+  @media (max-width: 1000px) {
+    .nav { display: none; }
+    .burger { display: block; }
+    .trustbar { grid-template-columns: 1fr 1fr; }
+    .trustbar div:nth-child(2n) { border-right: 0; }
+    .trustbar div:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+    .service-grid { grid-template-columns: 1fr 1fr; }
+    .footer-grid { grid-template-columns: 1fr 1fr; }
+  }
+  @media (max-width: 860px) {
+    .section-heading, .split, .split--even, .contact-grid { grid-template-columns: 1fr; gap: 1.8rem; }
+    .hero { min-height: 0; grid-template-columns: 1fr; }
+    .hero-copy { padding: 3.4rem 1.5rem 4rem; }
+    .hero-image { min-height: 20rem; }
+    .header-cta span.cta-label { display: none; }
+  }
+  @media (max-width: 600px) {
+    .preview-note { padding: .7rem 1rem; font-size: .58rem; letter-spacing: .075em; }
+    .header-inner { padding: .9rem 1.1rem; }
+    .brand-mark { width: 2.25rem; height: 2.25rem; }
+    .brand-name { font-size: .69rem; }
+    .section { padding: 3.6rem 1.4rem; }
+    .page-hero { padding: 2.6rem 1.4rem 2.6rem; }
+    .cta-band { padding: 3.6rem 1.4rem; }
+    .service-grid, .trustbar, .footer-grid { grid-template-columns: 1fr; }
+    .trustbar div { border-right: 0; border-bottom: 1px solid var(--line); }
+    .principles { grid-template-columns: 1fr; }
+    .shot img, .swatchboard { height: 15rem; }
+    .site-footer { padding: 2.6rem 1.4rem 1.6rem; }
+  }
+  /* ---------- accessibility overrides: 12px minimum, AA contrast, 44px taps ---------- */
+  :root { --bronze: #654f30; }
+  .preview-note, .brand-name span, .eyebrow, .section-kicker, .service-card .more, .crumbs,
+  .nav > a, .nav-trigger, .header-cta, .button, .note, .photo-caption, .trustbar span,
+  .quote cite, .drawer .drawer-label, .drawer .drawer-sub a, .dropdown a small, .field label,
+  .form-note, .shot .cap, .footer-bottom, .site-footer h4, .swatch, .crumbs a { font-size: .75rem; }
+  .brand-name { font-size: .78rem; }
+  .nav-trigger .caret { font-size: .75rem; }
+  .section--ink .section-kicker, .cta-band .section-kicker, .drawer .drawer-label { color: var(--sand-deep); }
+  .note { color: #a7a69e; }
+  .section .note, .section--bright .note, .form-note, .shot .cap { color: #5c5d55; }
+  .map-card span { color: #41453f; }
+  .skip-link { min-height: 48px; display: inline-flex; align-items: center; }
+  .brand { min-height: 48px; }
+  .drawer a { display: flex; min-height: 48px; align-items: center; padding: .7rem 0; }
+  .drawer .drawer-sub a { font-size: .8rem; }
+  .site-footer li { margin-bottom: 0; }
+  .site-footer li a { display: inline-flex; min-height: 44px; min-width: 44px; align-items: center; }
+  @media (max-width: 600px) {
+    .preview-note { font-size: .75rem; letter-spacing: .06em; }
+    .brand-name { font-size: .75rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    .reveal { opacity: 1; transform: none; }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="preview-note" role="note">Independent concept preview · not an official or approved business website</div>
+
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="#/" aria-label="Roofing Australia, home">
+      <span class="brand-mark" aria-hidden="true">RA</span>
+      <span class="brand-name">Roofing Australia<span>Rooflines · Sydney</span></span>
+    </a>
+    <nav class="nav" id="desktop-nav" aria-label="Main navigation">
+      <a href="#/" data-route-link="#/">Home</a>
+      <div class="nav-item" id="services-nav-item">
+        <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="services-dropdown">Services <span class="caret" aria-hidden="true">▾</span></button>
+        <div class="dropdown" id="services-dropdown"></div>
+      </div>
+      <a href="#/projects" data-route-link="#/projects">Projects</a>
+      <a href="#/about" data-route-link="#/about">About</a>
+      <a href="#/areas" data-route-link="#/areas">Service Areas</a>
+      <a href="#/reviews" data-route-link="#/reviews">Reviews</a>
+      <a href="#/faq" data-route-link="#/faq">FAQ</a>
+      <a href="#/contact" data-route-link="#/contact">Contact</a>
+      <a class="header-cta" href="tel:+61424977583"><span class="cta-label">Call</span> 0424 977 583</a>
+    </nav>
+    <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="drawer" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="drawer" id="drawer"></div>
+</header>
+
+<main id="main">
+  <!-- HOME -->
+  <div class="page" id="page-home">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Roofing · Re-roofing · Roofline</p>
+        <h1>Re-roofed in a day. Built to last decades.</h1>
+        <p class="hero-lede">Colorbond, Monier tile and slate roofing across the Sutherland Shire and Sydney, from founder Ronny Couling's team. Residential, commercial and government work, licensed and HBCF insured.</p>
+        <div class="button-row" style="margin-top:0">
+          <a class="button" href="tel:+61424977583">Call 0424 977 583</a>
+          <a class="button" href="#/contact">Request a quote</a>
+        </div>
+        <p class="note" style="margin-top:1rem">Open 9am–5pm, 7 days · 18 University Rd, Miranda NSW 2228</p>
+      </div>
+      <div class="hero-image">
+        <img src="rau-hero.jpg" alt="A coastal Sutherland Shire home with a dark slate roof and clean roofline details">
+        <p class="photo-caption">Representative image · illustrative of the work described, not a verified company project</p>
+      </div>
+    </section>
+
+    <div class="trustbar">
+      <div><strong>4.7 ★</strong><span>49 Google reviews</span></div>
+      <div><strong>8+ years</strong><span>Re-roofing the Shire &amp; Sydney</span></div>
+      <div><strong>208+</strong><span>Project photos on Google</span></div>
+      <div><strong>Insured</strong><span>Public liability, workers comp, HBCF</span></div>
+    </div>
+
+    <section class="section section--bright reveal">
+      <div class="section-heading">
+        <p class="section-kicker">01 — Roofing services</p>
+        <div>
+          <h2>Materials and details for the whole roof.</h2>
+          <p class="intro">From the main roof surface to the flashings, gutters and vents that make it perform, Roofing Australia covers the complete roofline — in metal, tile, slate and copper.</p>
+        </div>
+      </div>
+      <div class="service-grid" id="home-services"></div>
+      <div class="button-row"><a class="button button--dark" href="#/services">All services</a></div>
+    </section>
+
+    <section class="section section--sand reveal">
+      <div class="split">
+        <div>
+          <p class="section-kicker">02 — Why Roofing Australia</p>
+          <h2>The roof is more than its surface.</h2>
+        </div>
+        <div>
+          <p class="lede" style="color:#484941">Material, pitch, drainage and the meeting of roof and wall all shape the finished roofline. Ronny Couling's team has been re-roofing homes in the Shire and Sydney for 8+ years, and works to a timetable homeowners can plan around — many homes are stripped and re-roofed in a single day.</p>
+          <div class="principles">
+            <div class="principle"><strong>One-day re-roofs</strong>Where the job allows, your home is stripped, dried in and finished in one day — no weeks under tarps.</div>
+            <div class="principle"><strong>Every material</strong>Colorbond, Monier concrete and terracotta tile, slate, copper and architectural cladding under one trade.</div>
+            <div class="principle"><strong>Properly covered</strong>Public liability, workers compensation and HBCF insurance. Licence details on request.</div>
+            <div class="principle"><strong>Shire local</strong>Based at Miranda, working across the Shire and greater Sydney for residential, commercial and government clients.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-heading">
+        <p class="section-kicker">03 — How a job runs</p>
+        <div>
+          <h2>From first call to final clean-up.</h2>
+          <p class="intro">A simple sequence, so you always know what happens next.</p>
+        </div>
+      </div>
+      <ol class="steps-list" id="home-process"></ol>
+    </section>
+
+    <section class="section section--bright reveal">
+      <div class="section-heading">
+        <p class="section-kicker">04 — What clients say</p>
+        <div>
+          <h2>4.7 stars from 49 Google reviews.</h2>
+          <p class="intro">Reviews published verbatim from the business's Google listing.</p>
+        </div>
+      </div>
+      <div class="quotes" id="home-quotes"></div>
+      <div class="button-row"><a class="button button--dark" href="#/reviews">Read all reviews</a></div>
+    </section>
+
+    <section class="section section--sand reveal">
+      <div class="split--even split">
+        <div>
+          <p class="section-kicker">05 — Service area</p>
+          <h2>The Shire and Sydney.</h2>
+        </div>
+        <div>
+          <p class="lede" style="color:#484941">From the Miranda base, the team covers the whole Sutherland Shire — Cronulla, Caringbah, Sutherland, Engadine, Menai, Woronora and beyond — plus roofing work across greater Sydney.</p>
+          <span class="area-label">Sutherland Shire · Greater Sydney, NSW</span>
+          <div class="button-row"><a class="button button--dark" href="#/areas">See all suburbs</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-band">
+      <div class="cta-inner">
+        <p class="section-kicker">Start a conversation</p>
+        <h2>Planning a roof project?</h2>
+        <p>Call Ronny directly, send a message on WhatsApp, or request a quote and we'll come and look at the roof.</p>
+        <div class="button-row">
+          <a class="button button--solid" href="tel:+61424977583">Call 0424 977 583</a>
+          <a class="button" href="https://wa.me/61424977583?text=Hi%20Roofing%20Australia%2C%20I%27d%20like%20a%20quote%20for%20a%20roofing%20job." target="_blank" rel="noopener">WhatsApp us <span aria-hidden="true">↗</span></a>
+          <a class="button" href="#/contact">Request a quote</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- SERVICES -->
+  <div class="page" id="page-services">
+    <section class="page-hero">
+      <p class="crumbs"><a href="#/">Home</a> / Services</p>
+      <h1>Seven services, one roofline.</h1>
+      <p>Colorbond, Monier tile and slate roofing, copper and architectural cladding, plus the gutters, skylights, vents, repairs and inspections around them.</p>
+    </section>
+    <section class="section section--bright reveal">
+      <div class="service-grid" id="all-services"></div>
+    </section>
+    <section class="section section--sand reveal">
+      <div class="split">
+        <div>
+          <p class="section-kicker">Who we work for</p>
+          <h2>Homes, businesses and government.</h2>
+        </div>
+        <div>
+          <p class="lede" style="color:#484941">Most of the work is residential re-roofing across the Shire, but the same team takes on commercial and government roofing projects too. Whatever the building, the brief starts with an inspection and an honest view of what the roof needs.</p>
+          <ul class="ticks">
+            <li>Residential re-roofs, restorations and repairs</li>
+            <li>Commercial roofing and cladding</li>
+            <li>Government roofing work</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="cta-band">
+      <div class="cta-inner">
+        <p class="section-kicker">Not sure what you need?</p>
+        <h2>Start with an inspection.</h2>
+        <p>Tell us what you're seeing — leaks, cracked tiles, rust, sagging gutters — and we'll arrange a look at the roof.</p>
+        <div class="button-row">
+          <a class="button button--solid" href="tel:+61424977583">Call 0424 977 583</a>
+          <a class="button" href="#/contact">Request a quote</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- SERVICE DETAIL (filled by script) -->
+  <div class="page" id="page-service"></div>
+
+  <!-- PROJECTS -->
+  <div class="page" id="page-projects">
+    <section class="page-hero">
+      <p class="crumbs"><a href="#/">Home</a> / Projects</p>
+      <h1>The kinds of roofs we build.</h1>
+      <p>A look at the project types the team takes on, from full tile re-roofs to slate and copper detailing. The Google listing holds 208+ project photos.</p>
+    </section>
+    <section class="section section--bright reveal">
+      <div class="gallery">
+        <article class="shot">
+          <figure><img src="rau-tiles.jpg" alt="A roofer laying new charcoal concrete roof tiles on battens" loading="lazy"></figure>
+          <div class="shot-body">
+            <p class="section-kicker" style="margin-bottom:.6rem">Tile re-roofing</p>
+            <h3>Monier tile re-roofs</h3>
+            <p>Old tiles stripped, battens checked, new concrete or terracotta tiles laid and pointed — often in a single day.</p>
+            <a class="button button--dark" href="#/services/monier-tile-roofing">Tile roofing</a>
+            <p class="cap" style="margin-top:1rem">Representative image</p>
+          </div>
+        </article>
+        <article class="shot">
+          <figure><img src="rau-copper.jpg" alt="Copper flashing detail where a slate roof meets a skylight" loading="lazy"></figure>
+          <div class="shot-body">
+            <p class="section-kicker" style="margin-bottom:.6rem">Slate &amp; copper</p>
+            <h3>Slate and architectural detail</h3>
+            <p>Natural slate, copper flashings and skylight surrounds — the detailed work that finishes a considered roofline.</p>
+            <a class="button button--dark" href="#/services/copper-architectural-cladding">Copper &amp; cladding</a>
+            <p class="cap" style="margin-top:1rem">Representative image</p>
+          </div>
+        </article>
+        <article class="shot">
+          <div class="swatchboard" role="img" aria-label="Material swatches: charcoal and dark grey metal, terracotta tile and copper">
+            <div class="swatch sw-charcoal">Charcoal metal</div>
+            <div class="swatch sw-monument">Dark grey metal</div>
+            <div class="swatch sw-terracotta">Terracotta tile</div>
+            <div class="swatch sw-copper">Copper</div>
+          </div>
+          <div class="shot-body">
+            <p class="section-kicker" style="margin-bottom:.6rem">Colorbond</p>
+            <h3>Colorbond metal roofs</h3>
+            <p>Tile-to-metal conversions and metal re-roofs in Colorbond steel, with matching gutters and flashings.</p>
+            <a class="button button--dark" href="#/services/colorbond-roofing">Colorbond roofing</a>
+            <p class="cap" style="margin-top:1rem">Swatches are indicative tones only — confirm colours against the manufacturer's current range.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="section reveal">
+      <div class="section-heading">
+        <p class="section-kicker">Material palette</p>
+        <div>
+          <h2>Four materials, each with its own character.</h2>
+          <p class="intro">Choosing a roof is choosing how a house will look for decades. These are the materials the team works in.</p>
+        </div>
+      </div>
+      <div class="cardset">
+        <div class="card"><h3>Colorbond steel</h3><p>Lightweight, crisp lines and a broad colour range. Suits modern homes and tile-to-metal conversions.</p></div>
+        <div class="card"><h3>Monier concrete tile</h3><p>A familiar Shire roof. Solid, quiet in rain, and available in a range of profiles and colours.</p></div>
+        <div class="card"><h3>Terracotta tile</h3><p>Fired clay with natural colour that holds its tone. Suits heritage and traditional homes.</p></div>
+        <div class="card"><h3>Slate &amp; copper</h3><p>Natural slate with copper flashings and cladding, for architectural and heritage work.</p></div>
+      </div>
+    </section>
+    <section class="cta-band">
+      <div class="cta-inner">
+        <p class="section-kicker">See more</p>
+        <h2>Hundreds more on Instagram.</h2>
+        <p>Follow along with current jobs on Instagram, where 2,931 people keep up with the team's work.</p>
+        <div class="button-row">
+          <a class="button button--solid" href="https://www.instagram.com/roofingaustralia" target="_blank" rel="noopener">Instagram <span aria-hidden="true">↗</span></a>
+          <a class="button" href="#/contact">Request a quote</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="page" id="page-about">
+    <section class="page-hero">
+      <p class="crumbs"><a href="#/">Home</a> / About</p>
+      <h1>A Shire roofer, founded by Ronny Couling.</h1>
+      <p>Roofing Australia is led by founder Ronny Lee Couling, re-roofing in the Shire and Sydney for the past 8+ years.</p>
+    </section>
+    <section class="section section--bright reveal">
+      <div class="split">
+        <div>
+          <p class="section-kicker">The story</p>
+          <h2>Slate, Colorbond, Monier.</h2>
+        </div>
+        <div>
+          <p class="lede">Ronny Couling founded Roofing Australia to do roofing properly across the Sutherland Shire. Working from Miranda, the team has spent 8+ years re-roofing homes in the Shire and across Sydney — in slate, Colorbond and Monier tile — and has grown into residential, commercial and government work.</p>
+          <p class="lede">The business is known for speed without shortcuts: where the job suits it, a home can be re-roofed in one day. Clients say the same things again and again — prompt, reliable, and kept in the loop.</p>
+        </div>
+      </div>
+    </section>
+    <section class="section section--sand reveal">
+      <div class="section-heading">
+        <p class="section-kicker">Values</p>
+        <div><h2>How the team works.</h2></div>
+      </div>
+      <div class="cardset">
+        <div class="card"><h3>Prompt</h3><p>Calls answered, inspections booked quickly, and work scheduled without long waits.</p></div>
+        <div class="card"><h3>In the loop</h3><p>You know what's happening on your roof at every stage of the job.</p></div>
+        <div class="card"><h3>Considered</h3><p>The roof is treated as a whole — material, flashings, drainage and ventilation together.</p></div>
+        <div class="card"><h3>Tidy</h3><p>Old material removed and the site left clean at the end of the day.</p></div>
+      </div>
+    </section>
+    <section class="section reveal">
+      <div class="split">
+        <div>
+          <p class="section-kicker">Credentials</p>
+          <h2>Licensed and properly insured.</h2>
+        </div>
+        <div>
+          <ul class="ticks">
+            <li>Licensed &amp; HBCF insured, licence details on request</li>
+            <li>Public liability insurance</li>
+            <li>Workers compensation insurance</li>
+            <li>Home Building Compensation Fund (HBCF) insured</li>
+            <li>4.7 ★ from 49 Google reviews · 208+ project photos</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="cta-band">
+      <div class="cta-inner">
+        <p class="section-kicker">Talk to Ronny</p>
+        <h2>Talk to the founder directly.</h2>
+        <p>The phone number goes straight to the team, 9am–5pm, 7 days.</p>
+        <div class="button-row">
+          <a class="button button--solid" href="tel:+61424977583">Call 0424 977 583</a>
+          <a class="button" href="#/contact">Request a quote</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- AREAS -->
+  <div class="page" id="page-areas">
+    <section class="page-hero">
+      <p class="crumbs"><a href="#/">Home</a> / Service areas</p>
+      <h1>The Shire and greater Sydney.</h1>
+      <p>Based at 18 University Rd, Miranda — a short drive from every suburb in the Sutherland Shire.</p>
+    </section>
+    <section class="section section--bright reveal">
+      <div class="section-heading">
+        <p class="section-kicker">Sutherland Shire</p>
+        <div>
+          <h2>Home turf.</h2>
+          <p class="intro">From the beaches to the bushland edge, these are the suburbs the team works in every week.</p>
+        </div>
+      </div>
+      <ul class="suburbs" id="suburbs"></ul>
+    </section>
+    <section class="section section--sand reveal">
+      <div class="split">
+        <div>
+          <p class="section-kicker">Greater Sydney</p>
+          <h2>Beyond the Shire.</h2>
+        </div>
+        <div>
+          <p class="lede" style="color:#484941">Re-roofing, restoration and architectural roofing across greater Sydney, for homes, commercial buildings and government projects. If you're outside the Shire, call and ask — it's often no problem.</p>
+          <span class="area-label">Sutherland Shire · Greater Sydney, NSW</span>
+        </div>
+      </div>
+    </section>
+    <section class="cta-band">
+      <div class="cta-inner">
+        <p class="section-kicker">Check your suburb</p>
+        <h2>Not on the list? Ask.</h2>
+        <p>Call or send a WhatsApp with your suburb and the job, and we'll let you know.</p>
+        <div class="button-row">
+          <a class="button button--solid" href="tel:+61424977583">Call 0424 977 583</a>
+          <a class="button" href="https://wa.me/61424977583" target="_blank" rel="noopener">WhatsApp <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- REVIEWS -->
+  <div class="page" id="page-reviews">
+    <section class="page-hero">
+      <p class="crumbs"><a href="#/">Home</a> / Reviews</p>
+      <h1>4.7 stars from 49 Google reviews.</h1>
+      <p>What clients have written on Roofing Australia's Google listing, published word for word.</p>
+    </section>
+    <section class="section section--bright reveal">
+      <div class="quotes" id="all-quotes"></div>
+      <div class="button-row">
+        <a class="button button--dark" href="https://www.google.com/maps/place/Roofing+Australia/data=!4m7!3m6!1s0x6b12c756f964294b:0x59fe03b13d3f4018!8m2!3d-34.0351257!4d151.096125!16s%2Fg%2F11h6fg5fy_" target="_blank" rel="noopener">Read all reviews on Google <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+    <section class="cta-band">
+      <div class="cta-inner">
+        <p class="section-kicker">Your roof next</p>
+        <h2>Ready when you are.</h2>
+        <p>Book an inspection and see why clients call the service prompt and reliable.</p>
+        <div class="button-row">
+          <a class="button button--solid" href="tel:+61424977583">Call 0424 977 583</a>
+          <a class="button" href="#/contact">Request a quote</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- FAQ -->
+  <div class="page" id="page-faq">
+    <section class="page-hero">
+      <p class="crumbs"><a href="#/">Home</a> / FAQ</p>
+      <h1>Roofing questions, answered.</h1>
+      <p>General guidance for Shire and Sydney homeowners. Every roof is different, so we'll confirm the details after an inspection.</p>
+    </section>
+    <section class="section section--bright reveal">
+      <div class="accordion" id="faq-list"></div>
+    </section>
+    <section class="cta-band">
+      <div class="cta-inner">
+        <p class="section-kicker">Still wondering?</p>
+        <h2>Ask us directly.</h2>
+        <p>Call or message 9am–5pm, 7 days.</p>
+        <div class="button-row">
+          <a class="button button--solid" href="tel:+61424977583">Call 0424 977 583</a>
+          <a class="button" href="#/contact">Send a message</a>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- CONTACT -->
+  <div class="page" id="page-contact">
+    <section class="page-hero">
+      <p class="crumbs"><a href="#/">Home</a> / Contact</p>
+      <h1>Request a roofing quote.</h1>
+      <p>Fill in the form and it opens a ready-to-send WhatsApp message to 0424 977 583. Or just call.</p>
+    </section>
+    <section class="section section--bright">
+      <div class="contact-grid">
+        <div>
+          <form class="form" id="quote-form" novalidate>
+            <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+            <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div>
+            <div class="field"><label for="f-email">Email (optional)</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+            <div class="field"><label for="f-suburb">Suburb</label><input id="f-suburb" name="suburb" autocomplete="address-level2"></div>
+            <div class="field"><label for="f-service">Service</label><select id="f-service" name="service"></select></div>
+            <div class="field"><label for="f-msg">About the job</label><textarea id="f-msg" name="message" placeholder="Roof type, what you're noticing, timing…"></textarea></div>
+            <button class="button button--solid" type="submit">Send via WhatsApp <span aria-hidden="true">↗</span></button>
+            <p class="form-note" id="form-error" role="alert"></p>
+            <p class="form-note">No email address is listed for the business, so the form opens WhatsApp with your details filled in. Nothing is sent until you press send.</p>
+          </form>
+          <div class="thanks" id="thanks" role="status" tabindex="-1"><strong>Thanks — your message is ready in WhatsApp.</strong><br>Press send there and the team will be in touch. If WhatsApp didn't open, call <a href="tel:+61424977583">0424 977 583</a>.</div>
+        </div>
+        <div>
+          <div class="contact-card"><h3>Phone &amp; WhatsApp</h3><p><a href="tel:+61424977583">0424 977 583</a><br>+61 424 977 583 · <a href="https://wa.me/61424977583" target="_blank" rel="noopener">WhatsApp ↗</a></p></div>
+          <div class="contact-card"><h3>Hours</h3><p>9am–5pm, 7 days</p></div>
+          <div class="contact-card"><h3>Address</h3><p>18 University Rd<br>Miranda NSW 2228</p></div>
+          <div class="contact-card"><h3>Instagram</h3><p><a href="https://www.instagram.com/roofingaustralia" target="_blank" rel="noopener">@roofingaustralia ↗</a> · 2,931 followers</p></div>
+          <a class="map-card" href="https://www.google.com/maps/place/Roofing+Australia/data=!4m7!3m6!1s0x6b12c756f964294b:0x59fe03b13d3f4018!8m2!3d-34.0351257!4d151.096125!16s%2Fg%2F11h6fg5fy_" target="_blank" rel="noopener">
+            <strong>Find us on Google Maps ↗</strong>
+            <span>Miranda, Sutherland Shire · 4.7 ★ from 49 reviews</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <a class="brand" href="#/" aria-label="Roofing Australia, home">
+        <span class="brand-mark" aria-hidden="true">RA</span>
+        <span class="brand-name">Roofing Australia<span>Rooflines · Sydney</span></span>
+      </a>
+      <p class="footer-blurb">Colorbond, Monier tile, slate and copper roofing across the Sutherland Shire and Sydney. Founded by Ronny Lee Couling. Licensed &amp; HBCF insured, licence details on request.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <ul>
+        <li><a href="#/">Home</a></li>
+        <li><a href="#/services">Services</a></li>
+        <li><a href="#/projects">Projects</a></li>
+        <li><a href="#/about">About</a></li>
+        <li><a href="#/areas">Service areas</a></li>
+        <li><a href="#/reviews">Reviews</a></li>
+        <li><a href="#/faq">FAQ</a></li>
+        <li><a href="#/contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Services</h4>
+      <ul id="footer-services"></ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+61424977583">0424 977 583</a></li>
+        <li><a href="https://wa.me/61424977583" target="_blank" rel="noopener">WhatsApp ↗</a></li>
+        <li>18 University Rd,<br>Miranda NSW 2228</li>
+        <li>Open 9am–5pm, 7 days</li>
+        <li><a href="https://www.instagram.com/roofingaustralia" target="_blank" rel="noopener">Instagram ↗</a></li>
+        <li>4.7 ★ from 49 Google reviews</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Independent concept preview; not an official or approved business website. Details and imagery require owner confirmation before production. Photographs are representative and are not presented as verified company work.</p>
+    <p>© Roofing Australia · Concept</p>
+  </div>
+<div style="text-align:center;padding:12px 16px;font-size:12.5px;opacity:.7">Developed by <a href="https://teta.dpdns.org" target="_blank" rel="noopener" style="color:inherit">Teta Digitals</a></div></footer>
+
+<button class="to-top" id="to-top" type="button" aria-label="Back to top">↑</button>
+<script>
+(function () {
+  var PHONE_TEL = "tel:+61424977583";
+  var WA = "https://wa.me/61424977583";
+
+  var SERVICES = [
+    { slug: "colorbond-roofing", name: "Colorbond roofing", short: "Metal re-roofs and tile-to-metal conversions in Colorbond steel.",
+      what: "Colorbond steel roofing gives a home clean lines, a light roof load and a wide choice of colours. We re-roof existing metal roofs and convert tired tile roofs to Colorbond, with matching gutters, flashings and capping so the whole roofline reads as one.",
+      signs: ["Rust spots, corrosion or flaking on existing sheets", "Loose or popped screws and lifting sheets in wind", "Leaks around flashings, valleys or penetrations", "A tile roof you'd like to replace with something lighter and more modern"],
+      steps: [["Inspect & measure", "We look at the roof structure, pitch and drainage and talk through colours and profiles."], ["Strip", "Old sheets or tiles come off and are removed from site."], ["Prepare", "Battens, sarking and insulation are checked and set up for the new sheets."], ["Install", "New Colorbond sheets, flashings, ridge capping and gutters go on and are fixed off."], ["Clean up", "The site is cleared and the finished roof is checked with you."]],
+      related: ["guttering-skylights-ventilation", "roof-inspections", "copper-architectural-cladding"] },
+    { slug: "monier-tile-roofing", name: "Monier tile roofing", short: "Concrete and terracotta re-roofing with Monier tiles.",
+      what: "Monier concrete and terracotta tiles are a Shire classic: solid, quiet in the rain and long-lived. We strip and re-roof tired tile roofs with new Monier tiles, re-bed and point ridges, and renew the valleys and flashings at the same time — and where the job allows, the whole home is re-roofed in one day.",
+      signs: ["Cracked, broken or slipped tiles", "Crumbling ridge bedding or pointing", "Porous, faded tiles growing moss or lichen", "Water stains on ceilings after heavy rain"],
+      steps: [["Inspect & quote", "We check tiles, battens, valleys and ridges and recommend re-roof or restoration."], ["Strip", "Old tiles are removed and taken away."], ["Battens & sarking", "Battens are checked or replaced and sarking laid to keep the roof dry."], ["Lay new tiles", "New Monier concrete or terracotta tiles are laid, with ridges bedded and pointed."], ["Final check", "Flashings and valleys are checked and the site is cleaned."]],
+      related: ["roof-restoration-repairs", "roof-inspections", "guttering-skylights-ventilation"] },
+    { slug: "slate-roofing", name: "Slate roofing", short: "Natural slate roofs for heritage and architectural homes.",
+      what: "Natural slate is the most enduring roof material there is, and the most demanding to lay well. We install new slate roofs, replace damaged slates and repair slate roofs on heritage and architectural homes — often detailed with copper flashings.",
+      signs: ["Cracked, slipped or missing slates", "Corroded nails or fixings letting slates loose", "Leaks at valleys, hips or chimneys", "A new build or renovation that calls for a premium natural roof"],
+      steps: [["Assess", "We inspect the slate, fixings and flashings and talk through repair or replacement."], ["Source", "Matching slate is sourced for repairs, or chosen for a new roof."], ["Prepare", "Battens, sarking and the substrate are readied."], ["Lay & fix", "Slates are laid and fixed to suit the roof, with valleys and hips detailed."], ["Flash & finish", "Flashings — often copper — are installed and the roof is checked."]],
+      related: ["copper-architectural-cladding", "roof-inspections", "roof-restoration-repairs"] },
+    { slug: "copper-architectural-cladding", name: "Copper & architectural cladding", short: "Copper flashings, cladding and architectural roof detail.",
+      what: "Copper and architectural cladding turn a roof into a feature. We supply and install copper flashings, gutters and cladding, and architectural metal details for homes and commercial buildings — the finishing work that makes a roofline considered.",
+      signs: ["Worn or failing flashings around chimneys, skylights and walls", "A renovation or new build with architectural roof details", "Heritage homes needing traditional copper work", "Cladding on walls, dormers or feature roofs"],
+      steps: [["Brief", "We review the drawings or the existing roof and agree the details."], ["Plan", "Materials, junctions and fixings are planned for weather-tightness."], ["Fabricate", "Flashings and cladding are formed to suit the building."], ["Install", "Copper and cladding are fitted and sealed at every junction."], ["Handover", "Details are checked and the site is cleaned."]],
+      related: ["slate-roofing", "colorbond-roofing", "guttering-skylights-ventilation"] },
+    { slug: "guttering-skylights-ventilation", name: "Guttering, skylights & ventilation", short: "Gutters, downpipes, skylights and roof ventilation.",
+      what: "A roof only works if water gets off it and air moves through it. We replace gutters and downpipes, install skylights for natural light, and add roof ventilation to reduce heat and condensation in the roof space — on their own or as part of a re-roof.",
+      signs: ["Overflowing, sagging or rusted gutters", "Water running down walls or pooling near foundations", "Dark rooms that would benefit from natural light", "A hot, stuffy roof space or condensation"],
+      steps: [["Inspect", "We check drainage, the roof space and where light or ventilation would help."], ["Recommend", "We suggest gutter profiles, skylight positions or vent options."], ["Install", "Gutters, downpipes, skylights or vents are fitted and flashed."], ["Test", "Drainage and seals are checked."], ["Clean up", "Old material is removed and the site is tidied."]],
+      related: ["colorbond-roofing", "monier-tile-roofing", "roof-restoration-repairs"] },
+    { slug: "roof-restoration-repairs", name: "Roof restoration & repairs", short: "Repairs, re-bedding, re-pointing and full restorations.",
+      what: "Not every roof needs replacing. Where the roof is sound, we repair leaks, replace broken tiles, re-bed and re-point ridges and restore the roof to extend its life. One client called on a Monday, had the roof inspected within the hour, and had the team on the roof doing a repair and restoration by Friday.",
+      signs: ["A leak after rain, or a water stain on the ceiling", "Broken or slipped tiles after a storm", "Cracked ridge pointing", "A roof that looks tired but is structurally sound"],
+      steps: [["Inspect", "We find the cause of the problem, not just the symptom."], ["Advise", "We tell you whether repair, restoration or re-roof makes sense."], ["Repair", "Broken tiles, flashings and fixings are replaced or secured."], ["Restore", "Ridges are re-bedded and pointed and the roof is brought back to condition."], ["Check", "The work is checked with you and the site is cleaned."]],
+      related: ["roof-inspections", "monier-tile-roofing", "guttering-skylights-ventilation"] },
+    { slug: "roof-inspections", name: "Roof inspections", short: "An honest look at the roof's condition before you decide.",
+      what: "A roof inspection tells you where you stand. We get up on the roof, check tiles or sheets, flashings, valleys, gutters and the roof space, and explain what we find — so you can decide between a repair, a restoration or a re-roof.",
+      signs: ["You're buying or selling a home", "You've noticed a leak or storm damage", "The roof hasn't been looked at in years", "You're weighing up restoration against a re-roof"],
+      steps: [["Book", "Call or message with your address and what you've noticed."], ["Inspect", "We check the roof surface, flashings, gutters and roof space."], ["Explain", "We walk you through what we found."], ["Recommend", "We suggest the right next step, with a quote if you need work."]],
+      related: ["roof-restoration-repairs", "monier-tile-roofing", "colorbond-roofing"] }
+  ];
+  var BY_SLUG = {};
+  SERVICES.forEach(function (s) { BY_SLUG[s.slug] = s; });
+
+  var PROCESS = [["Call or message", "Ring 0424 977 583 or send a WhatsApp, 9am–5pm, 7 days."], ["Inspection", "We come out, get on the roof and look at what it really needs."], ["Quote & plan", "You get a clear scope, and a date that suits."], ["The roof", "The team strips and re-roofs — often in one day — or carries out the repair."], ["Clean up", "Old material goes, the site is tidied and the roof is checked with you."]];
+
+  var QUOTES = [
+    ["Professional and prompt service. Called Ronny on the Monday within the hour he inspected the roof, and by Friday his team was on the roof doing a repair and restoration.", "Snez G."],
+    ["Great service! Very reliable. Kept us in the loop through the whole process of our roof repair.", "Erin W."],
+    ["It is easy to understand why Roofing Australia receives such good reviews.", "Barry Y."]
+  ];
+
+  var SUBURBS = ["Cronulla", "Miranda", "Caringbah", "Sutherland", "Engadine", "Menai", "Woronora", "Gymea", "Kirrawee", "Jannali", "Sylvania", "Bundeena"];
+
+  var FAQS = [
+    ["Can you really re-roof a home in one day?", "Many homes can be stripped and re-roofed in a single day, depending on the roof's size, pitch, access, material and the weather. We'll tell you after the inspection whether your job suits a one-day re-roof."],
+    ["Should I restore my roof or replace it?", "If the tiles and structure are sound, a restoration — replacing broken tiles and re-bedding and re-pointing ridges — can extend the roof's life. If tiles are porous and cracking widely, sheets are rusted through, or leaks keep returning, a re-roof is usually better value. An inspection is the way to find out."],
+    ["Colorbond or tile — which is better?", "Neither is better for every home. Colorbond is lighter, has crisp lines and suits modern homes and tile-to-metal conversions. Monier concrete and terracotta tiles suit traditional homes and are quiet in the rain. We'll talk through looks, budget and the house itself."],
+    ["Do you work on slate and heritage roofs?", "Yes. Slate roofing, copper flashings and architectural cladding are part of the service range, including repairs to existing slate roofs."],
+    ["Are you licensed and insured?", "Yes. Roofing Australia carries public liability, workers compensation and HBCF (Home Building Compensation Fund) insurance. Licence details are available on request — please ask when you call."],
+    ["What are the signs my roof needs attention?", "Water stains on ceilings, cracked or slipped tiles, crumbling ridge pointing, rust on metal sheets, overflowing gutters and moss on tiles are the common ones. After a big storm it's also worth a check."],
+    ["Which areas do you cover?", "The whole Sutherland Shire — including Cronulla, Miranda, Caringbah, Sutherland, Engadine, Menai, Woronora, Gymea, Kirrawee, Jannali, Sylvania and Bundeena — and greater Sydney."],
+    ["Do you do commercial and government work?", "Yes. As well as homes, the team takes on commercial and government roofing projects."],
+    ["What happens to my old roof?", "Old tiles, sheets and debris are removed as part of the job, and the site is cleaned up when the work is done."],
+    ["How do I get a quote?", "Call 0424 977 583, send a WhatsApp, or use the quote form on the Contact page. We're available 9am–5pm, 7 days, and usually start with an inspection."]
+  ];
+
+  function esc(s) { return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
+  function pad(n) { return (n < 10 ? "0" : "") + n; }
+  function $(id) { return document.getElementById(id); }
+
+  function serviceCards(list) {
+    return list.map(function (s, i) {
+      return '<a class="service-card" href="#/services/' + s.slug + '"><span class="service-num">' + pad(i + 1) + '</span><h3>' + esc(s.name) + '</h3><p>' + esc(s.short) + '</p><span class="more">View service →</span></a>';
+    }).join("");
+  }
+  function quoteCards(list) {
+    return list.map(function (q) {
+      return '<figure class="quote" style="margin:0"><div class="stars" aria-hidden="true">★★★★★</div><blockquote>“' + esc(q[0]) + '”</blockquote><figcaption><cite>' + esc(q[1]) + ' · Google review</cite></figcaption></figure>';
+    }).join("");
+  }
+  function stepItems(list) {
+    return list.map(function (s, i) { return '<li><span class="step-n">' + pad(i + 1) + '</span><h4>' + esc(s[0]) + '</h4><p>' + esc(s[1]) + '</p></li>'; }).join("");
+  }
+
+  // static fills
+  $("home-services").innerHTML = serviceCards(SERVICES.slice(0, 6));
+  $("all-services").innerHTML = serviceCards(SERVICES);
+  $("home-process").innerHTML = stepItems(PROCESS);
+  $("home-quotes").innerHTML = quoteCards(QUOTES);
+  $("all-quotes").innerHTML = quoteCards(QUOTES);
+  $("suburbs").innerHTML = SUBURBS.map(function (s) { return "<li>" + s + "</li>"; }).join("") + "<li>Greater Sydney</li>";
+  $("faq-list").innerHTML = FAQS.map(function (f, i) { return '<details' + (i === 0 ? " open" : "") + '><summary>' + esc(f[0]) + '</summary><div class="answer"><p>' + esc(f[1]) + '</p></div></details>'; }).join("");
+  $("footer-services").innerHTML = SERVICES.map(function (s) { return '<li><a href="#/services/' + s.slug + '">' + esc(s.name) + "</a></li>"; }).join("");
+  $("services-dropdown").innerHTML = '<a href="#/services" data-route-link="#/services">All services<small>Overview of everything we do</small></a>' + SERVICES.map(function (s) { return '<a href="#/services/' + s.slug + '" data-route-link="#/services/' + s.slug + '">' + esc(s.name) + '<small>' + esc(s.short) + '</small></a>'; }).join("");
+  $("f-service").innerHTML = '<option value="">Choose a service…</option>' + SERVICES.map(function (s) { return '<option>' + esc(s.name) + '</option>'; }).join("") + '<option>Not sure / other</option>';
+
+  $("drawer").innerHTML =
+    '<a href="#/" data-route-link="#/">Home</a><a href="#/services" data-route-link="#/services">Services</a><div class="drawer-sub">' +
+    SERVICES.map(function (s) { return '<a href="#/services/' + s.slug + '" data-route-link="#/services/' + s.slug + '">' + esc(s.name) + "</a>"; }).join("") +
+    '</div>' + [["#/projects", "Projects"], ["#/about", "About"], ["#/areas", "Service Areas"], ["#/reviews", "Reviews"], ["#/faq", "FAQ"], ["#/contact", "Contact"]].map(function (l) { return '<a href="' + l[0] + '" data-route-link="' + l[0] + '">' + l[1] + "</a>"; }).join("") +
+    '<p class="drawer-label">Call or WhatsApp</p><a href="' + PHONE_TEL + '">0424 977 583</a><a href="' + WA + '" target="_blank" rel="noopener">WhatsApp ↗</a>';
+
+  function renderService(s) {
+    var idx = SERVICES.indexOf(s);
+    var rel = s.related.map(function (r) { return BY_SLUG[r]; });
+    $("page-service").innerHTML =
+      '<section class="page-hero"><p class="crumbs"><a href="#/">Home</a> / <a href="#/services">Services</a> / ' + esc(s.name) + '</p>' +
+      '<p class="eyebrow">Service ' + pad(idx + 1) + ' of ' + pad(SERVICES.length) + '</p><h1>' + esc(s.name) + '</h1><p>' + esc(s.short) + ' Across the Sutherland Shire and Sydney.</p>' +
+      '<div class="button-row"><a class="button button--solid" href="' + PHONE_TEL + '">Call 0424 977 583</a><a class="button" href="#/contact?service=' + s.slug + '">Request a quote</a></div></section>' +
+      '<section class="section section--bright reveal"><div class="split"><div><p class="section-kicker">What it is</p><h2>' + esc(s.name) + ', done properly.</h2></div><div><p class="lede">' + esc(s.what) + '</p></div></div></section>' +
+      '<section class="section section--sand reveal"><div class="split"><div><p class="section-kicker">Signs you need it</p><h2>What to look for.</h2></div><div><ul class="ticks">' + s.signs.map(function (x) { return "<li>" + esc(x) + "</li>"; }).join("") + '</ul></div></div></section>' +
+      '<section class="section reveal"><div class="section-heading"><p class="section-kicker">How the job is done</p><div><h2>Step by step.</h2><p class="intro">Every roof is different; this is the usual sequence, confirmed after the inspection.</p></div></div><ol class="steps-list">' + stepItems(s.steps) + '</ol></section>' +
+      '<section class="section section--bright reveal"><div class="section-heading"><p class="section-kicker">Related services</p><div><h2>Often done together.</h2></div></div><div class="service-grid">' + serviceCards(rel).replace(/<span class="service-num">\d+<\/span>/g, function () { return '<span class="service-num">→</span>'; }) + '</div></section>' +
+      '<section class="cta-band"><div class="cta-inner"><p class="section-kicker">Book an inspection</p><h2>Talk to us about your roof.</h2><p>Licensed &amp; HBCF insured, licence details on request. Open 9am–5pm, 7 days.</p><div class="button-row"><a class="button button--solid" href="' + PHONE_TEL + '">Call 0424 977 583</a><a class="button" href="' + WA + '?text=' + encodeURIComponent("Hi Roofing Australia, I'd like to ask about " + s.name.toLowerCase() + ".") + '" target="_blank" rel="noopener">WhatsApp <span aria-hidden="true">↗</span></a></div></div></section>';
+  }
+
+  // router
+  var TITLES = { home: "Roofing Australia — Rooflines, considered", services: "Services — Roofing Australia", projects: "Projects — Roofing Australia", about: "About Ronny Couling — Roofing Australia", areas: "Service Areas: Sutherland Shire & Sydney — Roofing Australia", reviews: "Reviews — Roofing Australia", faq: "Roofing FAQ — Roofing Australia", contact: "Contact & Quotes — Roofing Australia" };
+  var observer = "IntersectionObserver" in window ? new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("is-in"); observer.unobserve(e.target); } });
+  }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }) : null;
+
+  function route() {
+    var raw = location.hash || "#/";
+    if (raw.indexOf("#/") !== 0) { return; } // plain anchors such as #main
+    var parts = raw.slice(2).split("?");
+    var path = parts[0].replace(/\/$/, "");
+    var query = parts[1] || "";
+    var seg = path.split("/");
+    var key = seg[0] || "home", pageId, title, linkKey;
+
+    if (key === "services" && seg[1]) {
+      var s = BY_SLUG[seg[1]];
+      if (s) { renderService(s); pageId = "page-service"; title = s.name + " — Roofing Australia"; linkKey = "#/services/" + s.slug; }
+      else { key = "home"; }
+    }
+    if (!pageId) {
+      if (!TITLES[key]) key = "home";
+      pageId = "page-" + key; title = TITLES[key]; linkKey = key === "home" ? "#/" : "#/" + key;
+    }
+
+    document.querySelectorAll(".page").forEach(function (p) { p.classList.remove("is-active"); });
+    var page = $(pageId);
+    page.classList.add("is-active");
+    document.title = title;
+
+    document.querySelectorAll("[data-route-link]").forEach(function (a) {
+      var on = a.getAttribute("data-route-link") === linkKey;
+      a.classList.toggle("is-active", on);
+      if (on) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
+    });
+    $("services-nav-item").classList.toggle("is-active", linkKey.indexOf("#/services") === 0);
+
+    if (key === "contact" && query) {
+      var m = /service=([^&]+)/.exec(query);
+      if (m && BY_SLUG[m[1]]) $("f-service").value = BY_SLUG[m[1]].name;
+    }
+
+    closeMenus();
+    window.scrollTo({ top: 0, behavior: "auto" });
+    page.querySelectorAll(".reveal:not(.is-in)").forEach(function (el) {
+      if (observer) observer.observe(el); else el.classList.add("is-in");
+    });
+  }
+
+  // menus
+  var burger = $("burger"), drawer = $("drawer"), trig = document.querySelector(".nav-trigger"), dd = $("services-dropdown");
+  function closeMenus() {
+    drawer.classList.remove("is-open"); burger.setAttribute("aria-expanded", "false"); burger.setAttribute("aria-label", "Open menu");
+    dd.classList.remove("is-open"); trig.setAttribute("aria-expanded", "false");
+    if (document.activeElement && dd.contains(document.activeElement)) document.activeElement.blur();
+  }
+  burger.addEventListener("click", function () {
+    var open = !drawer.classList.contains("is-open");
+    drawer.classList.toggle("is-open", open);
+    burger.setAttribute("aria-expanded", String(open));
+    burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  });
+  trig.addEventListener("click", function () {
+    var open = !dd.classList.contains("is-open");
+    dd.classList.toggle("is-open", open); trig.setAttribute("aria-expanded", String(open));
+  });
+  document.addEventListener("click", function (e) { if (!$("services-nav-item").contains(e.target)) { dd.classList.remove("is-open"); trig.setAttribute("aria-expanded", "false"); } });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") { closeMenus(); } });
+  window.addEventListener("resize", function () { if (window.innerWidth > 1000) { drawer.classList.remove("is-open"); burger.setAttribute("aria-expanded", "false"); } });
+
+  // to top
+  var toTop = $("to-top");
+  window.addEventListener("scroll", function () { toTop.classList.toggle("is-on", window.scrollY > 600); }, { passive: true });
+  toTop.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: "smooth" }); });
+
+  // form → WhatsApp
+  $("quote-form").addEventListener("submit", function (e) {
+    e.preventDefault();
+    var f = e.target.elements, err = $("form-error");
+    var name = f.name.value.trim(), phone = f.phone.value.trim();
+    if (!name || !phone) { err.textContent = "Please add your name and phone number so the team can reply."; (name ? f.phone : f.name).focus(); return; }
+    err.textContent = "";
+    var lines = ["Hi Roofing Australia, I'd like a quote.", "", "Name: " + name, "Phone: " + phone];
+    if (f.email.value.trim()) lines.push("Email: " + f.email.value.trim());
+    if (f.suburb.value.trim()) lines.push("Suburb: " + f.suburb.value.trim());
+    if (f.service.value) lines.push("Service: " + f.service.value);
+    if (f.message.value.trim()) lines.push("", f.message.value.trim());
+    window.open(WA + "?text=" + encodeURIComponent(lines.join("\n")), "_blank", "noopener");
+    e.target.style.display = "none";
+    var t = $("thanks"); t.classList.add("is-on"); t.focus();
+  });
+
+  window.addEventListener("hashchange", route);
+  route();
+})();
+</script>
+</body>
+</html>

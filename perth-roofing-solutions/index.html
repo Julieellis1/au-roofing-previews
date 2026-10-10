@@ -1,0 +1,1093 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="An independent concept preview for Perth Roofing Solutions: tile roofing, ridge capping, roof renovation and restoration across Perth's northern suburbs."
+    />
+    <meta name="theme-color" content="#f2eee4" />
+    <title>Perth Roofing Solutions | Roofing for Perth's North</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --limestone: #f2eee4;
+        --paper: #fbf9f3;
+        --sand: #e8e0d2;
+        --ink: #202e28;
+        --muted: #59645d;
+        --green: #29483d;
+        --green-deep: #1d382f;
+        --eucalyptus: #dce5dc;
+        --clay: #a94f36;
+        --clay-deep: #8f4129;
+        --clay-soft: #e4b09a;
+        --line: #d7d6c9;
+        --serif: Georgia, "Times New Roman", serif;
+        --sans: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        overflow-x: hidden;
+        background: var(--limestone);
+        color: var(--ink);
+        font-family: var(--sans);
+        font-size: 16px;
+        line-height: 1.6;
+        -webkit-font-smoothing: antialiased;
+      }
+      a { color: inherit; }
+      a:focus-visible,
+      button:focus-visible,
+      summary:focus-visible,
+      input:focus-visible,
+      select:focus-visible,
+      textarea:focus-visible {
+        outline: 3px solid var(--clay);
+        outline-offset: 3px;
+        border-radius: 2px;
+      }
+      img { max-width: 100%; }
+      h1, h2, h3, h4, p { margin-top: 0; }
+      h1, h2, h3, h4 { font-family: var(--serif); font-weight: 500; letter-spacing: -.035em; }
+      h1 em, h2 em { color: var(--green); font-weight: 400; }
+
+      /* banner */
+      .preview-notice {
+        margin: 0;
+        padding: .65rem 1rem;
+        background: var(--green-deep);
+        color: #fffdf7;
+        text-align: center;
+        font-size: .76rem;
+        font-weight: 650;
+        letter-spacing: .055em;
+      }
+      .shell { width: min(1160px, calc(100% - 56px)); margin-inline: auto; }
+      .eyebrow {
+        display: flex; align-items: center; gap: 11px; margin: 0 0 21px;
+        color: var(--clay-deep); font-size: .78rem; font-weight: 750;
+        letter-spacing: .16em; text-transform: uppercase;
+      }
+      .eyebrow::before { content: ""; width: 26px; height: 1px; background: currentColor; flex: none; }
+
+      /* header */
+      .site-header {
+        position: sticky; top: 0; z-index: 60;
+        background: rgba(251, 249, 243, .94);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(32, 46, 40, .14);
+      }
+      .nav { min-height: 82px; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+      .brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
+      .brand-mark {
+        width: 39px; height: 39px; flex: none; display: grid; place-items: center;
+        color: var(--paper); background: var(--green); border-radius: 50%;
+        font-family: var(--serif); font-size: 1.1rem; letter-spacing: -.07em;
+      }
+      .brand-copy { display: flex; flex-direction: column; line-height: 1.12; }
+      .brand-copy strong { font-family: var(--serif); font-weight: 600; font-size: 1.03rem; letter-spacing: -.02em; }
+      .brand { min-width: 0; }
+      .brand-copy span { margin-top: 5px; color: var(--muted); font-size: .75rem; letter-spacing: .12em; text-transform: uppercase; }
+      .nav-links { display: flex; align-items: center; gap: 24px; }
+      .nav-links > a, .drop-toggle {
+        text-decoration: none; font-family: var(--sans); font-size: .84rem; font-weight: 600;
+        color: var(--ink); background: none; border: 0; padding: 0; cursor: pointer;
+      }
+      .nav-links > a { position: relative; padding: 6px 0; }
+      .nav-links > a:hover, .drop-toggle:hover { color: var(--clay-deep); }
+      .nav-links a[aria-current="page"], .has-drop.is-active .drop-toggle { color: var(--clay-deep); }
+      .nav-links a[aria-current="page"]::after {
+        content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 2px; background: var(--clay);
+      }
+      .has-drop { position: relative; }
+      .drop-toggle { display: inline-flex; align-items: center; gap: 6px; min-height: 44px; }
+      .drop-toggle .caret { font-size: .75rem; transition: transform .18s ease; }
+      .dropdown::before { content: ""; position: absolute; left: 0; right: 0; top: -16px; height: 16px; }
+      .drop-toggle[aria-expanded="true"] .caret { transform: rotate(180deg); }
+      .dropdown {
+        position: absolute; top: calc(100% + 14px); left: -18px; z-index: 70;
+        min-width: 252px; padding: 8px; background: var(--paper);
+        border: 1px solid var(--line); box-shadow: 0 18px 40px rgba(32, 46, 40, .16);
+      }
+      .dropdown[hidden] { display: none; }
+      .dropdown a {
+        display: block; padding: 11px 14px; text-decoration: none;
+        font-size: .84rem; font-weight: 600; border-radius: 2px;
+      }
+      .dropdown a small { display: block; margin-top: 2px; color: var(--muted); font-size: .76rem; font-weight: 500; }
+      .dropdown a:hover { background: var(--eucalyptus); color: var(--green-deep); }
+      .dropdown .dropdown-all { border-bottom: 1px solid var(--line); border-radius: 0; }
+      .nav-right { display: flex; align-items: center; gap: 10px; }
+      .nav-cta, .button {
+        display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+        min-height: 48px; padding: 0 21px; border: 1px solid var(--green);
+        border-radius: 2px; background: var(--green); color: #fff;
+        text-decoration: none; font-family: var(--sans); font-size: .85rem; font-weight: 700;
+        cursor: pointer; transition: background .18s ease, color .18s ease, transform .18s ease;
+      }
+      .nav-cta { min-height: 44px; padding-inline: 17px; }
+      .nav-cta:hover, .button:hover { background: var(--green-deep); transform: translateY(-1px); }
+      .button.secondary { background: transparent; color: var(--green); }
+      .button.secondary:hover { background: var(--eucalyptus); }
+      .button.light { background: var(--paper); border-color: var(--paper); color: var(--green-deep); }
+      .button.light:hover { background: #fff; border-color: #fff; }
+      .button.ghost-light { background: transparent; border-color: rgba(255, 255, 255, .55); color: #f8f6ec; }
+      .button.ghost-light:hover { background: rgba(255, 255, 255, .12); }
+      .hamburger {
+        display: none; width: 44px; height: 44px; flex-direction: column;
+        align-items: center; justify-content: center; gap: 5px;
+        background: transparent; border: 1px solid var(--line); border-radius: 2px; cursor: pointer;
+      }
+      .hamburger span { display: block; width: 20px; height: 2px; background: var(--ink); transition: transform .2s ease, opacity .2s ease; }
+      .hamburger[aria-expanded="true"] span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+      .hamburger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+      .hamburger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+      .mobile-menu { display: none; border-top: 1px solid var(--line); background: var(--paper); }
+      .mobile-menu[hidden] { display: none; }
+      .mobile-menu ul { margin: 0; padding: 10px 0 18px; list-style: none; }
+      .mobile-menu li + li { border-top: 1px solid rgba(32, 46, 40, .1); }
+      .mobile-menu a {
+        display: flex; align-items: center; min-height: 52px; padding: 8px 2px;
+        text-decoration: none; font-size: .95rem; font-weight: 600;
+      }
+      .mobile-menu a[aria-current="page"] { color: var(--clay-deep); }
+      .mobile-menu .sub a { padding-left: 18px; font-size: .88rem; font-weight: 500; color: var(--muted); }
+      .mobile-menu .menu-label {
+        padding: 16px 2px 6px; color: var(--clay-deep); font-size: .78rem;
+        font-weight: 750; letter-spacing: .16em; text-transform: uppercase;
+      }
+      .mobile-menu .menu-actions { display: grid; gap: 10px; padding: 4px 0 24px; }
+
+      /* routing + reveal */
+      .view { display: block; }
+      .page { animation: fade .4s ease both; }
+      @keyframes fade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+      .reveal { opacity: 0; transform: translateY(18px); transition: opacity .65s ease, transform .65s ease; }
+      .reveal.is-in { opacity: 1; transform: none; }
+
+      /* page banner */
+      .page-hero { padding: 68px 0 60px; background: var(--green); color: #f8f6ec; }
+      .page-hero .eyebrow { color: var(--clay-soft); }
+      .page-hero h1 { max-width: 760px; margin: 0; font-size: clamp(2.5rem, 5.4vw, 4.2rem); line-height: 1.01; }
+      .page-hero h1 em { color: var(--clay-soft); }
+      .page-hero p { max-width: 540px; margin: 20px 0 0; color: #dce5dc; font-size: 1rem; }
+      .crumbs { margin: 24px 0 0; color: #b9c9bf; font-size: .74rem; letter-spacing: .04em; }
+      .crumbs a { display: inline-flex; align-items: center; min-height: 28px; text-decoration: underline; }
+
+      /* back to top */
+      .to-top {
+        position: fixed; right: 20px; bottom: 20px; z-index: 80;
+        width: 46px; height: 46px; display: grid; place-items: center;
+        background: var(--green); color: #fff; border: 0; border-radius: 50%;
+        font-size: 1.05rem; cursor: pointer; box-shadow: 0 10px 24px rgba(32, 46, 40, .26);
+        opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .25s ease, transform .25s ease;
+      }
+      .to-top.is-visible { opacity: 1; visibility: visible; pointer-events: auto; }
+      .to-top:hover { transform: translateY(-2px); }
+      @supports (overflow: clip) { body { overflow-x: clip; } }
+
+      /* utilities */
+      .skip {
+        position: absolute; left: 12px; top: -80px; z-index: 100; padding: 12px 18px;
+        background: var(--paper); border: 1px solid var(--green); color: var(--green-deep);
+        font-weight: 700; text-decoration: none;
+      }
+      .skip:focus { top: 12px; }
+      .view:focus { outline: none; }
+      .muted { color: var(--muted); }
+      .stars { color: var(--clay-deep); letter-spacing: .12em; }
+      .text-link { color: var(--green); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+      .text-link:hover { color: var(--clay-deep); }
+      .section { padding: 96px 0; }
+      .section.paper { background: var(--paper); }
+      .section.eucalyptus { background: var(--eucalyptus); }
+      .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 32px; margin-bottom: 42px; }
+      .section-heading h2 { max-width: 600px; margin: 0; font-size: clamp(2.2rem, 4.2vw, 3.45rem); line-height: 1.05; }
+      .section-heading p { max-width: 360px; margin: 0; color: var(--muted); font-size: .95rem; }
+      .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+      /* home hero */
+      .home-hero { padding: 56px 0 92px; }
+      .hero-grid { display: grid; grid-template-columns: .92fr 1.08fr; align-items: center; gap: clamp(36px, 7vw, 88px); }
+      .home-hero h1 { max-width: 600px; margin-bottom: 22px; font-size: clamp(2.7rem, 5.6vw, 5rem); line-height: 1; }
+      .hero-intro { max-width: 480px; margin: 0 0 30px; color: var(--muted); font-size: 1.06rem; line-height: 1.75; }
+      .hero-note { margin: 18px 0 0; color: var(--muted); font-size: .8rem; }
+      .hero-visual { position: relative; min-width: 0; }
+      .hero-photo {
+        display: block; width: 100%; aspect-ratio: 1.16 / 1; object-fit: cover;
+        background: #aeb8ad; border-radius: 2px 74px 2px 2px;
+      }
+      .photo-caption {
+        max-width: 280px; position: absolute; right: -18px; bottom: 24px;
+        padding: 14px 17px; border-left: 2px solid var(--clay);
+        background: var(--paper); box-shadow: 0 9px 28px rgba(32, 46, 40, .11);
+        color: var(--muted); font-size: .78rem; line-height: 1.45;
+      }
+      .photo-caption strong { display: block; margin-bottom: 3px; color: var(--ink); }
+
+      /* trust bar */
+      .trust { background: var(--green-deep); color: #f8f6ec; }
+      .trust ul { display: grid; grid-template-columns: repeat(4, 1fr); margin: 0; padding: 0; list-style: none; }
+      .trust li { padding: 26px 24px; border-left: 1px solid rgba(255, 255, 255, .18); color: #dce5dc; font-size: .86rem; }
+      .trust li:first-child { border-left: 0; padding-left: 0; }
+      .trust strong { display: block; margin-bottom: 2px; color: #fff; font-family: var(--serif); font-size: 1.4rem; font-weight: 500; letter-spacing: -.02em; }
+      .trust .stars, .site-footer .stars, .rating-card .stars { color: var(--clay-soft); }
+
+      /* service cards */
+      .service-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+      .service-grid.three { grid-template-columns: repeat(3, 1fr); }
+      .service-card {
+        display: flex; flex-direction: column; min-height: 290px; padding: 30px 26px;
+        background: var(--paper); text-decoration: none; transition: background .2s ease;
+      }
+      .service-card:hover { background: #fff; }
+      .service-card:hover .more { color: var(--clay-deep); }
+      .service-card:hover .more span { transform: translateX(4px); }
+      .service-number { display: block; margin-bottom: 30px; color: var(--clay-deep); font-family: var(--serif); font-size: .95rem; }
+      .service-card h3 { margin-bottom: 10px; font-size: 1.55rem; line-height: 1.15; }
+      .service-card p { margin-bottom: 24px; color: var(--muted); font-size: .9rem; }
+      .more { margin-top: auto; color: var(--green); font-size: .84rem; font-weight: 700; }
+      .more span { display: inline-block; transition: transform .2s ease; }
+
+      /* split + features */
+      .split { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(40px, 8vw, 110px); align-items: start; }
+      .split h2 { margin: 0 0 18px; font-size: clamp(2.2rem, 4vw, 3.5rem); line-height: 1.05; }
+      .split .lead { max-width: 420px; color: var(--muted); }
+      .feature-list { display: grid; grid-template-columns: 1fr 1fr; gap: 34px 36px; margin: 0; padding: 0; list-style: none; }
+      .feature-list li { padding-top: 18px; border-top: 2px solid var(--clay); }
+      .feature-list h3 { margin: 0 0 6px; font-size: 1.3rem; }
+      .feature-list p { margin: 0; color: var(--muted); font-size: .92rem; }
+
+      /* steps */
+      .steps { margin: 0; padding: 0; list-style: none; border-top: 1px solid rgba(32, 46, 40, .23); }
+      .steps li { display: grid; grid-template-columns: 48px 1fr; gap: 15px; padding: 20px 0; border-bottom: 1px solid rgba(32, 46, 40, .23); }
+      .step-num { color: var(--clay-deep); font-family: var(--serif); font-size: 1rem; }
+      .steps h3 { margin: 0 0 4px; font-size: 1.22rem; }
+      .steps p { margin: 0; color: #48564f; font-size: .9rem; }
+
+      /* testimonials */
+      .quotes { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+      .quote-card { display: flex; flex-direction: column; margin: 0; padding: clamp(26px, 4vw, 40px); background: var(--paper); border: 1px solid var(--line); }
+      .quote-card blockquote { margin: 16px 0 26px; font-family: var(--serif); font-size: 1.25rem; line-height: 1.5; letter-spacing: -.015em; }
+      .quote-card figcaption { margin-top: auto; padding-top: 18px; border-top: 1px solid var(--line); font-size: .9rem; font-weight: 700; }
+      .quote-card figcaption small { display: block; color: var(--muted); font-weight: 500; font-size: .8rem; }
+
+      /* area panel */
+      .area { padding: 76px 0; }
+      .area-panel { display: grid; grid-template-columns: 1fr auto; gap: 34px; align-items: center; padding: 40px 44px; background: var(--green); color: #f8f6ec; }
+      .area-panel .eyebrow { margin-bottom: 12px; color: var(--clay-soft); }
+      .area-panel h2 { margin: 0; font-size: clamp(1.9rem, 3.4vw, 2.9rem); line-height: 1.1; }
+      .area-panel p { max-width: 580px; margin: 12px 0 22px; color: #dce5dc; font-size: .94rem; }
+      .area-label { align-self: stretch; display: flex; align-items: center; padding-left: 30px; border-left: 1px solid rgba(255, 255, 255, .27); color: #f1d6c8; font-family: var(--serif); font-size: 1.06rem; }
+
+      /* closing cta */
+      .cta-band { padding: 96px 0; background: var(--sand); }
+      .cta-inner { display: grid; grid-template-columns: 1fr auto; gap: 36px; align-items: center; }
+      .cta-inner h2 { max-width: 640px; margin-bottom: 14px; font-size: clamp(2.4rem, 5vw, 4.2rem); line-height: 1; }
+      .cta-inner p { max-width: 520px; margin: 0; color: var(--muted); }
+      .cta-actions { display: flex; flex-direction: column; gap: 12px; min-width: 210px; }
+
+      /* service detail */
+      .detail-grid { display: grid; grid-template-columns: 1.25fr .75fr; gap: clamp(36px, 7vw, 90px); align-items: start; }
+      .detail-photo { display: block; width: 100%; aspect-ratio: 16 / 10; object-fit: cover; margin: 0 0 12px; border-radius: 2px 60px 2px 2px; background: #aeb8ad; }
+      .photo-note { margin: 0 0 44px; color: var(--muted); font-size: .78rem; }
+      .prose p { max-width: 660px; color: var(--muted); font-size: 1.02rem; line-height: 1.8; }
+      .prose h2 { margin: 54px 0 20px; font-size: clamp(1.8rem, 3vw, 2.4rem); line-height: 1.1; }
+      .prose h2:first-child { margin-top: 0; }
+      .signs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 0; padding: 0; list-style: none; }
+      .signs li { position: relative; padding: 16px 18px 16px 44px; background: var(--paper); border: 1px solid var(--line); font-size: .92rem; line-height: 1.5; }
+      .signs li::before { content: ""; position: absolute; left: 18px; top: 21px; width: 10px; height: 10px; border: 2px solid var(--clay); border-radius: 50%; }
+      .detail-aside { position: sticky; top: 112px; padding: 32px; background: var(--paper); border: 1px solid var(--line); }
+      .detail-aside h3 { margin-bottom: 10px; font-size: 1.5rem; line-height: 1.15; }
+      .detail-aside p { color: var(--muted); font-size: .92rem; }
+      .detail-aside .button { width: 100%; }
+      .detail-aside .actions { flex-direction: column; margin-top: 20px; }
+      .aside-facts { margin: 22px 0 0; padding: 18px 0 0; border-top: 1px solid var(--line); list-style: none; font-size: .86rem; color: var(--muted); }
+      .aside-facts li { padding: 4px 0; }
+
+      /* about */
+      .about-photo { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: 2px 60px 2px 2px; background: #aeb8ad; }
+      .facts { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin: 0; background: var(--line); border: 1px solid var(--line); }
+      .facts div { padding: 26px 24px; background: var(--paper); }
+      .facts dt { margin-bottom: 8px; color: var(--clay-deep); font-size: .78rem; font-weight: 750; letter-spacing: .14em; text-transform: uppercase; }
+      .facts dd { margin: 0; font-family: var(--serif); font-size: 1.3rem; line-height: 1.25; letter-spacing: -.02em; }
+      .facts dd small { display: block; margin-top: 6px; color: var(--muted); font-family: var(--sans); font-size: .8rem; letter-spacing: 0; }
+      .fineprint { margin: 18px 0 0; color: var(--muted); font-size: .8rem; }
+
+      /* areas */
+      .area-groups { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+      .area-group { padding: 30px; background: var(--paper); border: 1px solid var(--line); }
+      .area-group h3 { margin-bottom: 4px; font-size: 1.4rem; }
+      .area-group > p { margin-bottom: 16px; color: var(--muted); font-size: .86rem; }
+      .area-group ul { margin: 0; padding: 0; list-style: none; columns: 2; column-gap: 20px; }
+      .area-group li { break-inside: avoid; padding: 8px 0; border-bottom: 1px solid rgba(32, 46, 40, .1); font-size: .92rem; }
+      .area-group li.home-base { color: var(--clay-deep); font-weight: 700; }
+
+      /* reviews */
+      .rating-card { display: flex; flex-wrap: wrap; align-items: center; gap: 22px 34px; margin-bottom: 40px; padding: 36px 40px; background: var(--green); color: #f8f6ec; }
+      .rating-big { font-family: var(--serif); font-size: clamp(3.4rem, 7vw, 4.6rem); line-height: 1; letter-spacing: -.04em; }
+      .rating-card p { margin: 0; color: #dce5dc; }
+      .rating-card .stars { display: block; font-size: 1.3rem; }
+      .rating-card .button { margin-left: auto; }
+
+      /* faq */
+      .faq-layout { display: grid; grid-template-columns: .7fr 1.3fr; gap: clamp(36px, 7vw, 90px); align-items: start; }
+      .faq { border-top: 1px solid var(--line); }
+      .faq details { border-bottom: 1px solid var(--line); }
+      .faq summary {
+        display: flex; justify-content: space-between; align-items: center; gap: 20px;
+        min-height: 64px; padding: 18px 0; cursor: pointer; list-style: none;
+        font-family: var(--serif); font-size: 1.2rem; line-height: 1.3; letter-spacing: -.015em;
+      }
+      .faq summary::-webkit-details-marker { display: none; }
+      .faq summary::after { content: "+"; flex: none; color: var(--clay-deep); font-family: var(--sans); font-size: 1.5rem; line-height: 1; transition: transform .2s ease; }
+      .faq details[open] summary::after { transform: rotate(45deg); }
+      .faq summary:hover { color: var(--green); }
+      .faq .answer { max-width: 680px; padding: 0 0 24px; color: var(--muted); }
+      .faq .answer p { margin: 0; }
+      .side-card { padding: 30px; background: var(--paper); border: 1px solid var(--line); }
+      .side-card h3 { font-size: 1.45rem; margin-bottom: 8px; }
+      .side-card p { color: var(--muted); font-size: .92rem; }
+
+      /* contact */
+      .contact-grid { display: grid; grid-template-columns: 1.3fr .7fr; gap: 36px; align-items: start; }
+      .form-card { padding: clamp(24px, 4vw, 44px); background: var(--paper); border: 1px solid var(--line); }
+      .form-card h2 { margin-bottom: 8px; font-size: clamp(1.8rem, 3vw, 2.4rem); line-height: 1.1; }
+      .form-card > p { color: var(--muted); }
+      .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-top: 26px; }
+      .field { display: flex; flex-direction: column; gap: 7px; min-width: 0; }
+      .field.full { grid-column: 1 / -1; }
+      .field label { font-size: .84rem; font-weight: 700; }
+      .field label span { color: var(--muted); font-weight: 500; }
+      .field input, .field select, .field textarea {
+        width: 100%; min-height: 48px; padding: 12px 14px; border: 1px solid #8d978f; border-radius: 2px;
+        background: #fff; color: var(--ink); font: inherit; font-size: 1rem;
+      }
+      .field textarea { min-height: 140px; resize: vertical; }
+      .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--green); }
+      .form-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; margin-top: 24px; }
+      .form-foot p { flex: 1 1 220px; margin: 0; color: var(--muted); font-size: .8rem; }
+      .thanks { text-align: left; }
+      .thanks .tick { display: grid; place-items: center; width: 54px; height: 54px; margin-bottom: 20px; border-radius: 50%; background: var(--eucalyptus); color: var(--green-deep); font-size: 1.4rem; }
+      .contact-cards { display: grid; gap: 14px; }
+      .contact-card { padding: 24px 26px; background: var(--paper); border: 1px solid var(--line); }
+      .contact-card h3 { margin-bottom: 6px; font-size: 1.15rem; }
+      .contact-card p { margin: 0; color: var(--muted); font-size: .9rem; }
+      .contact-card a { display: inline-flex; align-items: center; min-height: 44px; color: var(--green); font-weight: 700; overflow-wrap: anywhere; }
+      .map-card {
+        position: relative; display: flex; flex-direction: column; justify-content: flex-end; min-height: 230px; padding: 24px 26px;
+        border: 1px solid var(--line); text-decoration: none; overflow: hidden;
+        background:
+          radial-gradient(circle at 62% 38%, rgba(169, 79, 54, .18) 0 34px, transparent 35px),
+          repeating-linear-gradient(0deg, transparent 0 38px, rgba(41, 72, 61, .1) 38px 39px),
+          repeating-linear-gradient(90deg, transparent 0 38px, rgba(41, 72, 61, .1) 38px 39px),
+          linear-gradient(160deg, transparent 0 55%, rgba(41, 72, 61, .12) 55% 58%, transparent 58%),
+          var(--eucalyptus);
+      }
+      .map-pin { position: absolute; left: 62%; top: 38%; width: 22px; height: 22px; margin: -22px 0 0 -11px; background: var(--clay); border-radius: 50% 50% 50% 0; transform: rotate(-45deg); box-shadow: 0 6px 14px rgba(32, 46, 40, .25); }
+      .map-label { position: relative; padding: 14px 16px; background: var(--paper); border-left: 2px solid var(--clay); }
+      .map-label strong { display: block; font-family: var(--serif); font-weight: 500; font-size: 1.1rem; }
+      .map-label span { color: var(--green); font-size: .86rem; font-weight: 700; }
+      .map-card:hover .map-label span { color: var(--clay-deep); }
+
+      /* footer */
+      .site-footer { padding: 72px 0 34px; background: var(--green-deep); color: #f8f6ec; }
+      .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.25fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255, 255, 255, .2); }
+      .site-footer .brand { min-height: 48px; }
+      .site-footer .brand-mark { background: #f5eee1; color: var(--green-deep); }
+      .site-footer .brand-copy span { color: #cfdbd2; }
+      .footer-about p { max-width: 340px; margin: 20px 0 0; color: #d3ddd6; font-size: .9rem; }
+      .footer-col h4 { margin: 0 0 10px; color: var(--clay-soft); font-family: var(--sans); font-size: .75rem; font-weight: 750; letter-spacing: .16em; text-transform: uppercase; }
+      .footer-col ul { margin: 0; padding: 0; list-style: none; }
+      .footer-col li > a, .footer-col li > span { display: flex; align-items: center; min-height: 44px; color: #e6ece7; font-size: .9rem; text-decoration: none; overflow-wrap: anywhere; }
+      .footer-col li > a:hover { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+      .footer-col li > a[aria-current="page"] { color: var(--clay-soft); }
+      .footer-note { max-width: 720px; margin: 22px 0 0; color: #d3ddd6; font-size: .78rem; line-height: 1.6; }
+      .copyright { margin: 14px 0 0; color: #c3d1c8; font-size: .75rem; }
+
+      /* responsive */
+      @media (max-width: 1100px) {
+        .nav-links { display: none; }
+        .hamburger { display: inline-flex; }
+        .mobile-menu:not([hidden]) { display: block; max-height: calc(100vh - 82px); overflow-y: auto; }
+        .service-grid { grid-template-columns: repeat(2, 1fr); }
+        .facts { grid-template-columns: repeat(2, 1fr); }
+        .footer-grid { grid-template-columns: 1fr 1fr; }
+        .area-groups { grid-template-columns: 1fr 1fr; }
+      }
+      @media (max-width: 860px) {
+        .hero-grid, .split, .detail-grid, .contact-grid, .faq-layout, .quotes, .cta-inner { grid-template-columns: 1fr; }
+        .detail-aside { position: static; }
+        .trust ul { grid-template-columns: 1fr 1fr; }
+        .trust li:nth-child(3) { border-left: 0; padding-left: 0; }
+        .trust li { border-top: 1px solid rgba(255, 255, 255, .12); }
+        .trust li:nth-child(-n+2) { border-top: 0; }
+        .cta-actions { flex-direction: row; flex-wrap: wrap; }
+        .service-grid.three { grid-template-columns: 1fr; }
+        .rating-card .button { margin-left: 0; }
+      }
+      @media (max-width: 760px) {
+        .shell { width: calc(100% - 40px); }
+        .nav { min-height: 72px; gap: 12px; }
+        .mobile-menu:not([hidden]) { max-height: calc(100vh - 72px); }
+        .section { padding: 68px 0; }
+        .section-heading { display: block; margin-bottom: 30px; }
+        .section-heading p { margin-top: 14px; }
+        .home-hero { padding: 40px 0 68px; }
+        .page-hero { padding: 52px 0 46px; }
+        .crumbs a { min-height: 44px; }
+        .feature-list, .signs, .form-grid, .area-groups { grid-template-columns: 1fr; }
+        .area { padding: 54px 0; }
+        .area-panel { grid-template-columns: 1fr; gap: 22px; padding: 30px 24px; }
+        .area-label { padding: 14px 0 0; border-left: 0; border-top: 1px solid rgba(255, 255, 255, .27); }
+        .cta-band { padding: 70px 0; }
+        .rating-card { padding: 28px 24px; }
+        .text-link { display: inline-block; padding: 11px 0; margin: -11px 0; }
+      }
+      @media (max-width: 560px) {
+        .shell { width: calc(100% - 32px); }
+        .cta-long { display: none; }
+        .nav-cta { padding-inline: 14px; }
+        .nav-right { gap: 8px; }
+        .brand { gap: 10px; }
+        .brand-copy strong { font-size: .92rem; }
+        .photo-caption { position: static; max-width: none; margin-top: 12px; box-shadow: none; }
+        .service-grid, .facts, .footer-grid, .trust ul { grid-template-columns: 1fr; }
+        .trust li, .trust li:nth-child(3) { padding: 16px 0; border-left: 0; }
+        .trust li:nth-child(2) { border-top: 1px solid rgba(255, 255, 255, .12); }
+        .service-card { min-height: 0; }
+        .actions .button, .cta-actions .button { width: 100%; }
+        .area-group ul { columns: 1; }
+        .to-top { right: 14px; bottom: 14px; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; }
+        .reveal { opacity: 1; transform: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <p class="preview-notice">Independent concept preview · not an official or approved business website</p>
+    <a class="skip" href="#view">Skip to content</a>
+    <header class="site-header" id="top">
+      <div class="shell nav">
+        <a class="brand" href="#/" aria-label="Perth Roofing Solutions, home">
+          <span class="brand-mark" aria-hidden="true">PR</span>
+          <span class="brand-copy"><strong>Perth Roofing Solutions</strong><span>Roofing · Perth North</span></span>
+        </a>
+        <nav class="nav-links" id="deskNav" aria-label="Main navigation">
+          <a href="#/">Home</a>
+          <div class="has-drop" id="drop">
+            <button class="drop-toggle" id="dropToggle" aria-expanded="false" aria-controls="servicesMenu">
+              Services <span class="caret" aria-hidden="true">▾</span>
+            </button>
+            <div class="dropdown" id="servicesMenu" hidden>
+              <a class="dropdown-all" href="#/services">All services</a>
+              <a href="#/services/tile-roofing">Tile roofing<small>Repairs, re-lays and replacements</small></a>
+              <a href="#/services/ridge-capping">Ridge capping<small>Re-bedding and re-pointing</small></a>
+              <a href="#/services/roof-renovation">Roof renovation<small>Bringing a tired roof back</small></a>
+              <a href="#/services/roof-restoration">Roof restoration<small>Clean, repair, re-coat</small></a>
+            </div>
+          </div>
+          <a href="#/about">About</a>
+          <a href="#/areas">Service areas</a>
+          <a href="#/reviews">Reviews</a>
+          <a href="#/faq">FAQ</a>
+          <a href="#/contact">Contact</a>
+        </nav>
+        <div class="nav-right">
+          <a class="nav-cta" href="tel:+61433864872" aria-label="Call 0433 864 872"><span aria-hidden="true">Call</span><span class="cta-long" aria-hidden="true">&nbsp;0433 864 872</span></a>
+          <button class="hamburger" id="burger" aria-expanded="false" aria-controls="mobileMenu" aria-label="Open menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <div class="mobile-menu" id="mobileMenu" hidden>
+        <div class="shell">
+          <ul>
+            <li><a href="#/">Home</a></li>
+            <li><a href="#/services">Services</a></li>
+            <li class="sub"><a href="#/services/tile-roofing">Tile roofing</a></li>
+            <li class="sub"><a href="#/services/ridge-capping">Ridge capping</a></li>
+            <li class="sub"><a href="#/services/roof-renovation">Roof renovation</a></li>
+            <li class="sub"><a href="#/services/roof-restoration">Roof restoration</a></li>
+            <li><a href="#/about">About</a></li>
+            <li><a href="#/areas">Service areas</a></li>
+            <li><a href="#/reviews">Reviews</a></li>
+            <li><a href="#/faq">FAQ</a></li>
+            <li><a href="#/contact">Contact</a></li>
+          </ul>
+          <div class="menu-actions">
+            <a class="button" href="tel:+61433864872">Call 0433 864 872</a>
+            <a class="button secondary" href="https://wa.me/61433864872" target="_blank" rel="noopener">WhatsApp Dylan</a>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="view" id="view" tabindex="-1"></main>
+    <div id="media" hidden>
+      <img data-key="hero" class="hero-photo" src="prs-hero.jpg" alt="Single-storey brick home in Perth's northern suburbs with a charcoal tiled roof, native garden and curved driveway under a clear blue sky" />
+      <img data-key="ridge" class="detail-photo" src="prs-ridge.jpg" alt="Two roofers in hi-vis and wide-brimmed hats bedding a ridge cap in fresh mortar on a grey tiled roof, with Perth's city skyline in the distance" />
+      <img data-key="clean" class="about-photo" src="prs-clean.jpg" alt="Brick-and-render home with a freshly re-roofed charcoal tile roof and a skip bin of old tiles on the driveway, the site left clear" />
+    </div>
+    <footer class="site-footer">
+      <div class="shell">
+        <div class="footer-grid">
+          <div class="footer-col footer-about">
+            <a class="brand" href="#/" aria-label="Perth Roofing Solutions, home">
+              <span class="brand-mark" aria-hidden="true">PR</span>
+              <span class="brand-copy"><strong>Perth Roofing Solutions</strong><span>Roofing · Perth North</span></span>
+            </a>
+            <p>
+              Tile roofing, ridge capping, renovation and restoration by Dylan Jackson's crew. Based in
+              Heathridge and working across Perth's northern suburbs since 2017.
+            </p>
+            <p class="footer-rating"><span class="stars" aria-hidden="true">★★★★★</span> 5.0 from 46 Google reviews</p>
+          </div>
+          <div class="footer-col">
+            <h4>Pages</h4>
+            <ul>
+              <li><a href="#/">Home</a></li>
+              <li><a href="#/about">About</a></li>
+              <li><a href="#/areas">Service areas</a></li>
+              <li><a href="#/reviews">Reviews</a></li>
+              <li><a href="#/faq">FAQ</a></li>
+              <li><a href="#/contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#/services/tile-roofing">Tile roofing</a></li>
+              <li><a href="#/services/ridge-capping">Ridge capping</a></li>
+              <li><a href="#/services/roof-renovation">Roof renovation</a></li>
+              <li><a href="#/services/roof-restoration">Roof restoration</a></li>
+              <li><a href="#/services">All services</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Get in touch</h4>
+            <ul>
+              <li><a href="tel:+61433864872">0433 864 872</a></li>
+              <li><a href="https://wa.me/61433864872" target="_blank" rel="noopener">WhatsApp</a></li>
+              <li><a href="mailto:Dylanjroofing@gmail.com?subject=Roofing%20enquiry">Dylanjroofing@gmail.com</a></li>
+              <li><span>Heathridge WA 6027</span></li>
+              <li><span>Mon–Sat, 7am–7pm</span></li>
+            </ul>
+          </div>
+        </div>
+        <p class="footer-note">
+          Independent concept preview — not an official or approved business website. Photography is
+          representative, not confirmed company work. Details and imagery require owner confirmation
+          before production.
+        </p>
+        <p class="copyright">
+          © Perth Roofing Solutions · Dylan Jackson, sole trader · ABN 63 919 825 233 · Heathridge, Western Australia
+        </p>
+      </div>
+    <div style="text-align:center;padding:12px 16px;font-size:12.5px;opacity:.7">Developed by <a href="https://teta.dpdns.org" target="_blank" rel="noopener" style="color:inherit">Teta Digitals</a></div></footer>
+    <button class="to-top" id="toTop" aria-label="Back to top"><span aria-hidden="true">↑</span></button>
+    <script>
+      (function () {
+        "use strict";
+        var PHONE = "0433 864 872", TEL = "tel:+61433864872", WA = "https://wa.me/61433864872";
+        var EMAIL = "Dylanjroofing@gmail.com";
+        var MAPS = "https://www.google.com/maps/place/Perth+Roofing+Solutions/data=!4m7!3m6!1s0x2bcd53a866e6d82f:0x1e5fbf6290834616!8m2!3d-31.7553114!4d115.7555013!16s%2Fg%2F11t352dblq";
+        var SITE = "Perth Roofing Solutions";
+        var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        var SERVICES = [
+          {
+            slug: "tile-roofing", name: "Tile roofing", num: "01", label: "Tile roofs",
+            card: "Cracked, slipped or broken tiles replaced and re-laid, with the valleys and flashings around them checked too.",
+            title: "Tile roofing,<br><em>done properly.</em>",
+            sub: "Repairs, re-lays and replacements for the concrete and terracotta tile roofs found across Perth's north.",
+            what: [
+              "Tiled roofs are the norm across Perth's northern suburbs. Tile roofing work covers replacing cracked or broken tiles, re-laying sections that have slipped, and sorting out the details around valleys, flashings and vents so water runs off the way it should.",
+              "Dylan's crew looks at the roof as a whole rather than just the tile you can see from the driveway, then talks you through what they found and what they'd recommend before any work starts."
+            ],
+            signs: ["Cracked, chipped or slipped tiles", "Water stains on ceilings or cornices after rain", "Daylight showing in the roof space", "Tiles moved after a storm or other trades on the roof", "Leaves and debris sitting in the valleys", "Gaps where the roof meets walls, vents or chimneys"],
+            steps: [
+              ["Look over the roof", "Tiles, valleys, flashings and ridges are checked so the quote covers the real problem, not just the obvious one."],
+              ["A clear quote", "You get a plain explanation of what needs doing and what it costs, so there are no surprises."],
+              ["Protect the site", "Paths, gardens and driveways are kept clear and safe while the crew works overhead."],
+              ["Replace and re-lay", "Broken tiles are swapped out, matched as closely as possible, and slipped sections are re-laid and secured."],
+              ["Clean up and walk through", "Rubbish is removed, the site is left tidy and you're shown what was done."]
+            ],
+            related: ["ridge-capping", "roof-restoration", "roof-renovation"]
+          },
+          {
+            slug: "ridge-capping", name: "Ridge capping", num: "02", label: "Ridge detail",
+            card: "Re-bedding and re-pointing the caps along your ridges and hips, one of the most common sources of roof leaks.",
+            title: "Ridge capping that<br><em>stays put.</em>",
+            sub: "Re-bedding and re-pointing the caps along your ridges and hips so the top of the roof is sealed again.",
+            img: "ridge",
+            what: [
+              "Ridge caps are the curved tiles that run along the peaks and hips of a tiled roof. They sit on a bed of mortar and are sealed with pointing. Over years of Perth sun and winter storms the bedding cracks, the pointing breaks down and the caps can work loose.",
+              "Once that happens, water and wind find a way in along the very top of the roof. Re-bedding and re-pointing sets the caps firmly on fresh mortar and seals them again, and it's often the job that stops a leak that's been hard to trace."
+            ],
+            signs: ["Cracked or crumbling pointing along the ridges", "Loose, rocking or missing ridge caps", "Bits of mortar in the gutters or on the ground", "Leaks near the top of walls or along the hips", "Visible gaps under the caps", "A ridgeline that looks wavy or uneven"],
+            steps: [
+              ["Check every ridge and hip", "The caps, bedding and pointing are inspected along the full length of the roof."],
+              ["Lift the caps", "Loose caps are carefully removed and the old, failed bedding is cleared away."],
+              ["Re-bed on fresh mortar", "Each cap goes back down on a new mortar bed, lined up straight along the ridge."],
+              ["Re-point", "A pointing compound seals the caps, keeping water and wind out."],
+              ["Clean up", "Mortar and old material are removed and the gutters are left clear."]
+            ],
+            related: ["tile-roofing", "roof-restoration", "roof-renovation"]
+          },
+          {
+            slug: "roof-renovation", name: "Roof renovation", num: "03", label: "Renew",
+            card: "For a roof that's seen better days: the problems that have built up are fixed together, so the whole roof is back up to scratch.",
+            title: "Bring a tired roof<br><em>back to life.</em>",
+            sub: "When a roof needs more than one fix, a renovation deals with everything that has built up, in one planned job.",
+            what: [
+              "Renovation is for a roof where the structure is still sound but the wear has added up: broken tiles in a few places, tired ridges, worn valleys and the odd leak. Instead of chasing one problem at a time, the work is planned and done together.",
+              "It's a common choice when you've bought an older home, are getting ready to sell, or simply want the roof sorted for the years ahead. Dylan will tell you plainly what the roof needs and what can wait."
+            ],
+            signs: ["Several repairs needed at the same time", "Leaks that keep coming back", "Broken tiles and failing ridges in different spots", "Rusting or worn valley irons", "You've bought an older home and want it checked", "You're preparing the house for sale"],
+            steps: [
+              ["Full roof inspection", "The whole roof is looked over, from tiles and ridges to valleys and flashings."],
+              ["A prioritised plan", "You get a clear quote that separates what needs doing now from what can wait."],
+              ["Tile and valley repairs", "Broken tiles are replaced, slipped sections re-laid and worn valleys addressed."],
+              ["Ridge capping", "Ridges and hips are re-bedded and re-pointed where needed."],
+              ["Final check and clean up", "The roof is checked over once more and the site is left clean."]
+            ],
+            related: ["roof-restoration", "tile-roofing", "ridge-capping"]
+          },
+          {
+            slug: "roof-restoration", name: "Roof restoration", num: "04", label: "Restore",
+            card: "Clean, repair and re-coat: a sound tiled roof refreshed and protected, with a finish that lifts the whole house.",
+            title: "Clean, repair,<br><em>re-coat.</em>",
+            sub: "A full restoration takes a sound tiled roof through cleaning, repairs and a fresh protective coating.",
+            what: [
+              "Restoration is a start-to-finish refresh for a tiled roof that is structurally sound but looking worn. The roof is cleaned to remove dirt, moss and lichen, repairs are made to tiles and ridge capping, and a protective coating is applied.",
+              "The result is a roof that looks renewed and is better protected against the weather. Whether coating suits your roof depends on the tile type and its condition, and you'll get a straight answer on that before anything is quoted."
+            ],
+            signs: ["Faded, patchy or discoloured tiles", "Moss or lichen building up on the roof", "A roof that makes the house look dated", "Ridge pointing starting to crack", "Tiles that are sound but have a worn surface", "You'd like to refresh the roof colour"],
+            steps: [
+              ["Inspect", "The roof is checked to make sure it's a good candidate for restoration."],
+              ["Clean", "The tiles are cleaned to strip away dirt, moss and lichen."],
+              ["Repair", "Broken tiles are replaced and ridge capping is re-bedded and re-pointed."],
+              ["Coat", "A protective coating system is applied to the clean, repaired roof."],
+              ["Final check and clean up", "A last look over the finished roof, and the site is left clean and tidy."]
+            ],
+            related: ["roof-renovation", "ridge-capping", "tile-roofing"]
+          }
+        ];
+        var bySlug = {};
+        SERVICES.forEach(function (s) { bySlug[s.slug] = s; });
+
+        var REVIEWS = [
+          { name: "Nema N.", text: "Highly recommend this roofing company. The team was professional, reliable, and completed the job to a very high standard. Communication was excellent from start to finish… the site was left clean and tidy, and the project was completed on time." },
+          { name: "Wendy T.", text: "Dylan and Peter did a great job. No fuss just got on with it. Removed all rubbish and maintained a clean site… I look forward to a top notch tile roof and ridge capping to carry us through for the foreseeable future." }
+        ];
+
+        var AREAS = [
+          { name: "Joondalup coast", note: "Close to home base", list: ["Heathridge", "Ocean Reef", "Mullaloo", "Kallaroo", "Iluka", "Burns Beach", "Hillarys", "Sorrento", "Marmion"] },
+          { name: "Joondalup central", note: "A short drive away", list: ["Joondalup", "Edgewater", "Beldon", "Craigie", "Padbury", "Connolly", "Currambine", "Kinross", "Woodvale"] },
+          { name: "Wanneroo &amp; further south", note: "Across the northern suburbs", list: ["Wanneroo", "Kingsley", "Greenwood", "Duncraig", "Warwick", "Carine", "Hamersley", "Wangara", "Madeley"] }
+        ];
+
+        var FAQS = [
+          ["Which suburbs do you cover?", "Perth Roofing Solutions is based in Heathridge and works across Perth's northern suburbs. If you're not sure whether your suburb is covered, just call or send a message with your address and Dylan will let you know."],
+          ["How do I get a quote?", "Call or WhatsApp " + PHONE + ", email " + EMAIL + ", or use the quote form on the contact page. Tell us your suburb, the type of roof and what you've noticed. Photos taken safely from the ground help a lot."],
+          ["What's the difference between roof renovation and roof restoration?", "Restoration is a set process for a sound tiled roof: clean, repair and re-coat. Renovation is broader repair work for a roof where problems have built up, such as broken tiles, tired ridges and worn valleys, fixed together in one planned job. Dylan will recommend whichever actually suits your roof."],
+          ["How do I know if my ridge capping needs work?", "Look for cracked or crumbling pointing along the ridges, caps that look loose or uneven, bits of mortar in the gutters, or leaks near the top of walls. Ridge capping is one of the most common sources of roof leaks, so it's worth having checked if you see any of these."],
+          ["Can you just replace a few broken tiles?", "Often, yes. Plenty of roofs only need individual tiles replaced or a section re-laid. If there's a bigger issue, such as failing ridges or worn valleys, you'll be told about it so you can decide what to do."],
+          ["Is my roof suitable for a restoration and coating?", "It depends on the tile type and the condition of the roof. Coating is meant for a roof that is structurally sound. After looking at your roof, Dylan will tell you whether restoration makes sense or whether repairs or renovation are the better option."],
+          ["Should I get my roof checked after a storm?", "If you notice moved or broken tiles, debris on the roof, or new water stains inside after a storm, it's worth getting it looked at before the next rain. Small problems are usually easier to fix when they're caught early."],
+          ["Is it safe to get up on the roof and check it myself?", "We don't recommend it. Tiles can crack underfoot and roofs are easy to slip on. Check from the ground, look at your ceilings for water stains, and if you can do it safely, look in the roof space for daylight or damp patches. Leave the climbing to the crew."],
+          ["What happens to the rubbish from the job?", "Old tiles, mortar and other rubbish are removed and the site is cleaned up when the work is done. Customers regularly mention the clean, tidy site in their reviews."],
+          ["When can I reach you?", "Monday to Saturday, 7am to 7pm. You can also send a WhatsApp message or email at any time and Dylan will get back to you."]
+        ];
+
+        /* ---------- helpers ---------- */
+        function hero(eyebrow, title, sub, crumbs) {
+          var c = '<p class="crumbs"><a href="#/">Home</a>';
+          (crumbs || []).forEach(function (p) {
+            c += " / " + (p[1] ? '<a href="' + p[1] + '">' + p[0] + "</a>" : '<span aria-current="page">' + p[0] + "</span>");
+          });
+          c += "</p>";
+          return '<section class="page-hero"><div class="shell"><p class="eyebrow">' + eyebrow + "</p><h1>" + title + "</h1>" + (sub ? "<p>" + sub + "</p>" : "") + c + "</div></section>";
+        }
+        function cta(title, text) {
+          return '<section class="cta-band"><div class="shell cta-inner reveal"><div><p class="eyebrow">Your roofing enquiry</p><h2>' +
+            (title || "Let's talk about <em>your roof.</em>") + "</h2><p>" +
+            (text || "Tell Dylan what you're seeing and where you are. You'll get a clear quote and a straight answer about what your roof needs.") +
+            '</p></div><div class="cta-actions"><a class="button" href="#/contact">Request a quote <span aria-hidden="true">→</span></a><a class="button secondary" href="' + TEL + '">Call ' + PHONE + "</a></div></div></section>";
+        }
+        function serviceCard(s) {
+          return '<a class="service-card" href="#/services/' + s.slug + '"><span class="service-number">' + s.num + " / " + s.label + "</span><h3>" + s.name + "</h3><p>" + s.card + '</p><span class="more">Learn more <span aria-hidden="true">→</span></span></a>';
+        }
+        function steps(list) {
+          return '<ol class="steps">' + list.map(function (st, i) {
+            return '<li><span class="step-num">0' + (i + 1) + "</span><div><h3>" + st[0] + "</h3><p>" + st[1] + "</p></div></li>";
+          }).join("") + "</ol>";
+        }
+        function quotes() {
+          return '<div class="quotes">' + REVIEWS.map(function (r) {
+            return '<figure class="quote-card reveal"><span class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</span><blockquote>“' + r.text + '”</blockquote><figcaption>' + r.name + "<small>Google review</small></figcaption></figure>";
+          }).join("") + "</div>";
+        }
+        function areaTeaser() {
+          return '<section class="area"><div class="shell area-panel reveal"><div><p class="eyebrow">Close to home</p><h2>Rooted in Heathridge.<br>Focused on Perth\'s north.</h2><p>Based in Heathridge, WA 6027, and working on homes right across Perth\'s northern suburbs.</p><a class="button ghost-light" href="#/areas">See service areas</a></div><div class="area-label">Heathridge<br>Western Australia</div></div></section>';
+        }
+
+        /* ---------- pages ---------- */
+        var pages = {
+          home: function () {
+            return {
+              title: SITE + " | Tile roofing & restoration, Perth North",
+              html:
+                '<section class="home-hero"><div class="shell hero-grid"><div class="hero-copy"><p class="eyebrow">Heathridge · Perth\'s northern suburbs</p>' +
+                "<h1>Perth's northern suburbs roofer with a <em>perfect 5-star record.</em></h1>" +
+                '<p class="hero-intro">Tile roofs, ridge capping and full restorations by Dylan Jackson\'s crew. Clear quotes, clean sites, and jobs finished on time.</p>' +
+                '<div class="actions"><a class="button" href="#/contact">Request a quote <span aria-hidden="true">→</span></a><a class="button secondary" href="' + TEL + '">Call ' + PHONE + "</a></div>" +
+                '<p class="hero-note">Mon–Sat, 7am–7pm · Based in Heathridge, WA 6027</p></div>' +
+                '<div class="hero-visual"><span data-img="hero"></span>' +
+                '<div class="photo-caption"><strong>Image note</strong>Representative roofing photography for this concept, not a confirmed company project.</div></div></div></section>' +
+                '<section class="trust" aria-label="At a glance"><div class="shell"><ul>' +
+                '<li><strong><span class="stars" aria-hidden="true">★</span> 5.0</strong>From 46 Google reviews</li>' +
+                "<li><strong>Since 2017</strong>Trading in Perth's north</li>" +
+                "<li><strong>Mon–Sat</strong>7am–7pm</li>" +
+                "<li><strong>Heathridge</strong>Locally based, WA 6027</li></ul></div></section>" +
+                '<section class="section paper"><div class="shell"><div class="section-heading reveal"><div><p class="eyebrow">What we do</p><h2>Four services, one focus: <em>tiled roofs.</em></h2></div><p>From a few broken tiles to a full clean, repair and re-coat. Pick a service to see what\'s involved.</p></div>' +
+                '<div class="service-grid reveal">' + SERVICES.map(serviceCard).join("") + "</div></div></section>" +
+                '<section class="section"><div class="shell split"><div class="reveal"><p class="eyebrow">Why homeowners choose us</p><h2>What 46 five-star reviews <em>keep mentioning.</em></h2><p class="lead">The roof is the job. How it\'s done is why people recommend Dylan to their neighbours.</p></div>' +
+                '<ul class="feature-list reveal">' +
+                "<li><h3>Communication</h3><p>You know what's happening from the first call to the final clean-up.</p></li>" +
+                "<li><h3>Clean, tidy sites</h3><p>Rubbish removed and the site left clean, as reviewers point out again and again.</p></li>" +
+                "<li><h3>Finished on time</h3><p>No fuss. The crew turns up and gets on with it.</p></li>" +
+                "<li><h3>Fair, clear quotes</h3><p>Customers regularly praise the price, and you'll know what you're paying for.</p></li></ul></div></section>" +
+                '<section class="section eucalyptus"><div class="shell split"><div class="reveal"><p class="eyebrow">How it works</p><h2>Start with the roof <em>you have.</em></h2><p class="lead">A simple process, from first call to clean site.</p></div><div class="reveal">' +
+                steps([
+                  ["Tell us what you're seeing", "Call, WhatsApp or send the quote form with your suburb, roof type and the problem."],
+                  ["Roof check and clear quote", "Dylan looks at the roof and explains what it needs, and what it doesn't."],
+                  ["The work, done properly", "The crew gets on with the job and keeps you informed along the way."],
+                  ["Clean site, job done", "Rubbish removed and the site left tidy, on time."]
+                ]) + "</div></div></section>" +
+                '<section class="section"><div class="shell"><div class="section-heading reveal"><div><p class="eyebrow">In their words</p><h2>5.0 stars from <em>46 Google reviews.</em></h2></div><p><a class="text-link" href="#/reviews">Read more reviews</a></p></div>' + quotes() + "</div></section>" +
+                areaTeaser() + cta()
+            };
+          },
+
+          services: function () {
+            return {
+              title: "Roofing services | " + SITE,
+              html:
+                hero("Our services", "Roofing services for <em>Perth's north.</em>", "Tile roofing, ridge capping, renovation and restoration, all handled by Dylan Jackson's crew.", [["Services"]]) +
+                '<section class="section paper"><div class="shell"><div class="section-heading reveal"><div><p class="eyebrow">Choose a service</p><h2>The right work for <em>the roof overhead.</em></h2></div><p>Not sure which one you need? Describe the problem and Dylan will tell you what the roof actually needs.</p></div>' +
+                '<div class="service-grid reveal">' + SERVICES.map(serviceCard).join("") + "</div></div></section>" +
+                '<section class="section eucalyptus"><div class="shell split"><div class="reveal"><p class="eyebrow">Every job</p><h2>The same standard, <em>whatever the size.</em></h2></div><ul class="feature-list reveal">' +
+                "<li><h3>A proper look first</h3><p>The quote is based on the roof as a whole, not a guess from the street.</p></li>" +
+                "<li><h3>Plain-English quotes</h3><p>What needs doing, what can wait, and what it costs.</p></li>" +
+                "<li><h3>Kept informed</h3><p>You'll know when the crew is coming and how the job is going.</p></li>" +
+                "<li><h3>Left clean</h3><p>Old tiles, mortar and rubbish removed when the job's done.</p></li></ul></div></section>" +
+                cta()
+            };
+          },
+
+          service: function (s) {
+            var rel = s.related.map(function (r) { return serviceCard(bySlug[r]); }).join("");
+            return {
+              title: s.name + " in Perth's northern suburbs | " + SITE,
+              html:
+                hero(s.num + " / " + s.label, s.title, s.sub, [["Services", "#/services"], [s.name]]) +
+                '<section class="section"><div class="shell detail-grid"><div class="prose">' +
+                (s.img ? '<span data-img="' + s.img + '"></span><p class="photo-note">Representative photography, not a confirmed company project.</p>' : "") +
+                '<div class="reveal"><h2>What it is</h2>' + s.what.map(function (p) { return "<p>" + p + "</p>"; }).join("") + "</div>" +
+                '<div class="reveal"><h2>Signs you need it</h2><ul class="signs">' + s.signs.map(function (x) { return "<li>" + x + "</li>"; }).join("") + "</ul></div>" +
+                '<div class="reveal"><h2>How the job is done</h2>' + steps(s.steps) + "</div></div>" +
+                '<aside class="detail-aside" aria-label="Get a quote"><p class="eyebrow">Get a quote</p><h3>Need ' + s.name.toLowerCase() + "?</h3><p>Tell Dylan your suburb and what you've noticed. Photos taken from the ground help.</p>" +
+                '<div class="actions"><a class="button" href="#/contact?service=' + s.slug + '">Request a quote</a><a class="button secondary" href="' + TEL + '">Call ' + PHONE + '</a><a class="button secondary" href="' + WA + '" target="_blank" rel="noopener">WhatsApp</a></div>' +
+                '<ul class="aside-facts"><li><span class="stars" aria-hidden="true">★★★★★</span> 5.0 from 46 Google reviews</li><li>Mon–Sat, 7am–7pm</li><li>Based in Heathridge, WA 6027</li></ul></aside></div></section>' +
+                '<section class="section paper"><div class="shell"><div class="section-heading reveal"><div><p class="eyebrow">Related services</p><h2>Often done <em>alongside it.</em></h2></div><p><a class="text-link" href="#/services">All services</a></p></div><div class="service-grid three reveal">' + rel + "</div></div></section>" +
+                cta("Ready to sort out <em>your roof?</em>")
+            };
+          },
+
+          about: function () {
+            return {
+              title: "About Dylan Jackson | " + SITE,
+              html:
+                hero("About us", "A local roofer, <em>on the roof himself.</em>", "Perth Roofing Solutions is Dylan Jackson's business, based in Heathridge and trading since 2017.", [["About"]]) +
+                '<section class="section"><div class="shell split"><div class="prose reveal"><h2>Dylan\'s story</h2>' +
+                "<p>Dylan Jackson started Perth Roofing Solutions as a sole trader in May 2017. Since then he has built the business around tiled roofs in Perth's northern suburbs: tile roofing, ridge capping, renovation and restoration.</p>" +
+                "<p>It's a hands-on business. Reviews name Dylan himself on the job, alongside Peter on the crew. When you call, you're talking to the person who'll look at your roof and stand behind the quote.</p>" +
+                "<p>The result is a 5.0-star rating from 46 Google reviews, with customers coming back to the same few things: good communication, fair prices, clean sites and jobs finished on time.</p></div>" +
+                '<div class="reveal"><span data-img="clean"></span><p class="fineprint">Representative photography, not a confirmed company project.</p></div></div></section>' +
+                '<section class="section eucalyptus"><div class="shell split"><div class="reveal"><p class="eyebrow">How we work</p><h2>Values you can <em>hold us to.</em></h2></div><ul class="feature-list reveal">' +
+                "<li><h3>Say what's happening</h3><p>Clear communication from the first call to the final clean-up.</p></li>" +
+                "<li><h3>Quote it straight</h3><p>A clear, reasonable quote that explains what your roof needs.</p></li>" +
+                "<li><h3>Leave it clean</h3><p>Rubbish removed and the site left tidy, every time.</p></li>" +
+                "<li><h3>Finish on time</h3><p>No fuss. Turn up, get on with it, get it done.</p></li></ul></div></section>" +
+                '<section class="section paper"><div class="shell"><div class="section-heading reveal"><div><p class="eyebrow">The verified facts</p><h2>A registered local <em>business.</em></h2></div><p>Public details you can check for yourself.</p></div>' +
+                '<dl class="facts reveal"><div><dt>Owner</dt><dd>Dylan Jackson<small>Sole trader</small></dd></div>' +
+                "<div><dt>ABN</dt><dd>63 919 825 233<small>Active from 8 May 2017</small></dd></div>" +
+                "<div><dt>Google rating</dt><dd>5.0 stars<small>From 46 reviews</small></dd></div>" +
+                "<div><dt>Based in</dt><dd>Heathridge<small>WA 6027</small></dd></div></dl></div></section>" +
+                cta()
+            };
+          },
+
+          areas: function () {
+            return {
+              title: "Service areas, Perth northern suburbs | " + SITE,
+              html:
+                hero("Service areas", "Roofing across <em>Perth's north.</em>", "Based in Heathridge, WA 6027, and working on homes throughout the northern suburbs.", [["Service areas"]]) +
+                '<section class="section"><div class="shell"><div class="section-heading reveal"><div><p class="eyebrow">Where we work</p><h2>Suburbs we <em>regularly cover.</em></h2></div><p>A guide, not a complete list. If your suburb isn\'t here, ask. If it\'s in Perth\'s north, the answer is probably yes.</p></div>' +
+                '<div class="area-groups">' + AREAS.map(function (g) {
+                  return '<div class="area-group reveal"><h3>' + g.name + "</h3><p>" + g.note + "</p><ul>" + g.list.map(function (x) {
+                    return x === "Heathridge" ? '<li class="home-base">Heathridge (home base)</li>' : "<li>" + x + "</li>";
+                  }).join("") + "</ul></div>";
+                }).join("") + "</div></div></section>" +
+                '<section class="section paper"><div class="shell split"><div class="reveal"><p class="eyebrow">Find us</p><h2>Close by for quotes <em>and follow-ups.</em></h2><p class="lead">Being local means getting to your roof is easy, from the first look to the finished job.</p></div>' +
+                '<a class="map-card reveal" href="' + MAPS + '" target="_blank" rel="noopener"><span class="map-pin" aria-hidden="true"></span><span class="map-label"><strong>Perth Roofing Solutions</strong><span>Heathridge WA 6027 · Open in Google Maps ↗</span></span></a></div></section>' +
+                cta("Is your suburb <em>on the list?</em>", "Send your address with your enquiry and Dylan will confirm, along with a clear quote.")
+            };
+          },
+
+          reviews: function () {
+            return {
+              title: "Reviews | " + SITE,
+              html:
+                hero("Reviews", "Five stars, <em>46 times over.</em>", "What Perth homeowners say about Dylan and the crew, word for word from Google.", [["Reviews"]]) +
+                '<section class="section"><div class="shell">' +
+                '<div class="rating-card reveal"><span class="rating-big">5.0</span><div><span class="stars" role="img" aria-label="5 out of 5 stars">★★★★★</span><p>From 46 Google reviews</p></div><a class="button light" href="' + MAPS + '" target="_blank" rel="noopener">See all on Google ↗</a></div>' +
+                quotes() + '<p class="fineprint">Excerpts quoted as published on Google; “…” marks where text has been shortened.</p></div></section>' +
+                cta("Join the <em>five-star list.</em>")
+            };
+          },
+
+          faq: function () {
+            return {
+              title: "Roofing FAQ | " + SITE,
+              html:
+                hero("FAQ", "Roofing questions, <em>answered.</em>", "General guidance on tiled roofs in Perth's north. For your roof specifically, just ask Dylan.", [["FAQ"]]) +
+                '<section class="section"><div class="shell faq-layout"><aside class="side-card reveal"><h3>Still have a question?</h3><p>Call or message Dylan, Monday to Saturday, 7am to 7pm.</p><div class="actions"><a class="button" href="' + TEL + '">Call ' + PHONE + '</a><a class="button secondary" href="' + WA + '" target="_blank" rel="noopener">WhatsApp</a></div></aside>' +
+                '<div class="faq reveal">' + FAQS.map(function (f) {
+                  return "<details><summary>" + f[0] + '</summary><div class="answer"><p>' + f[1] + "</p></div></details>";
+                }).join("") + "</div></div></section>" +
+                cta()
+            };
+          },
+
+          contact: function (q) {
+            var pre = q && bySlug[q] ? bySlug[q].name : "";
+            var opts = ["Not sure yet"].concat(SERVICES.map(function (s) { return s.name; })).map(function (o) {
+              return '<option value="' + o + '"' + (o === pre ? " selected" : "") + ">" + o + "</option>";
+            }).join("");
+            return {
+              title: "Contact & quotes | " + SITE,
+              html:
+                hero("Contact", "Request a <em>roofing quote.</em>", "Tell us about your roof and Dylan will be in touch. Prefer to talk? Call or WhatsApp " + PHONE + ".", [["Contact"]]) +
+                '<section class="section"><div class="shell contact-grid"><div class="form-card" id="formCard">' +
+                '<form id="quoteForm" novalidate><h2>Your details</h2><p>Fields marked optional can be left blank. Sending opens your email app with everything filled in.</p><div class="form-grid">' +
+                '<div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required /></div>' +
+                '<div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required /></div>' +
+                '<div class="field"><label for="f-email">Email <span>(optional)</span></label><input id="f-email" name="email" type="email" autocomplete="email" /></div>' +
+                '<div class="field"><label for="f-suburb">Suburb</label><input id="f-suburb" name="suburb" autocomplete="address-level2" required /></div>' +
+                '<div class="field full"><label for="f-service">Service</label><select id="f-service" name="service">' + opts + "</select></div>" +
+                '<div class="field full"><label for="f-msg">What are you seeing? <span>(optional)</span></label><textarea id="f-msg" name="message" placeholder="Roof type, the problem, anything we should know"></textarea></div>' +
+                '</div><div class="form-foot"><button class="button" type="submit">Send enquiry <span aria-hidden="true">→</span></button><p>Goes to ' + EMAIL + ". Photos can be attached in your email app.</p></div></form>" +
+                '<div class="thanks" id="thanks" hidden tabindex="-1"><span class="tick" aria-hidden="true">✓</span><h2>Thanks, your enquiry is ready.</h2><p class="muted">Your email app should have opened with your details filled in. Press send there and Dylan will get back to you.</p><p class="muted">Email app didn\'t open? Send it by WhatsApp instead, or call ' + PHONE + '.</p><div class="actions"><a class="button" id="waSend" href="' + WA + '" target="_blank" rel="noopener">Send by WhatsApp</a><button class="button secondary" type="button" id="again">Edit enquiry</button></div></div>' +
+                "</div>" +
+                '<div class="contact-cards">' +
+                '<div class="contact-card"><h3>Call</h3><p><a href="' + TEL + '">' + PHONE + "</a></p></div>" +
+                '<div class="contact-card"><h3>WhatsApp</h3><p><a href="' + WA + '" target="_blank" rel="noopener">Message Dylan</a></p></div>' +
+                '<div class="contact-card"><h3>Email</h3><p><a href="mailto:' + EMAIL + '?subject=Roofing%20enquiry">' + EMAIL + "</a></p></div>" +
+                '<div class="contact-card"><h3>Hours</h3><p>Monday to Saturday<br>7am – 7pm</p></div>' +
+                '<a class="map-card" href="' + MAPS + '" target="_blank" rel="noopener"><span class="map-pin" aria-hidden="true"></span><span class="map-label"><strong>Heathridge WA 6027</strong><span>Open in Google Maps ↗</span></span></a>' +
+                "</div></div></section>"
+            };
+          }
+        };
+
+        /* ---------- router ---------- */
+        var view = document.getElementById("view");
+        var firstRender = true;
+
+        function parse() {
+          var h = location.hash.replace(/^#/, "");
+          var query = "";
+          var qi = h.indexOf("?");
+          if (qi > -1) { query = h.slice(qi + 1); h = h.slice(0, qi); }
+          h = h.replace(/\/+$/, "") || "/";
+          var parts = h.split("/").filter(Boolean);
+          if (h === "/") return { key: "home", path: "#/" };
+          if (parts[0] === "services" && parts.length === 1) return { key: "services", path: "#/services" };
+          if (parts[0] === "services" && parts.length === 2 && bySlug[parts[1]]) return { key: "service", slug: parts[1], path: "#/services/" + parts[1] };
+          if (parts.length === 1 && ["about", "areas", "reviews", "faq", "contact"].indexOf(parts[0]) > -1) {
+            var m = /service=([\w-]+)/.exec(query);
+            return { key: parts[0], path: "#/" + parts[0], q: m ? m[1] : "" };
+          }
+          return { key: "home", path: "#/" };
+        }
+
+        function setActive(r) {
+          document.querySelectorAll(".site-header a[href^='#/'], .site-footer a[href^='#/']").forEach(function (a) {
+            if (a.classList.contains("brand")) return;
+            if (a.getAttribute("href") === r.path) a.setAttribute("aria-current", "page");
+            else a.removeAttribute("aria-current");
+          });
+          document.getElementById("drop").classList.toggle("is-active", r.key === "services" || r.key === "service");
+        }
+
+        function render() {
+          var r = parse();
+          var p = r.key === "service" ? pages.service(bySlug[r.slug]) : pages[r.key](r.q);
+          view.innerHTML = '<div class="page">' + p.html + "</div>";
+          view.querySelectorAll("[data-img]").forEach(function (slot) {
+            var src = document.querySelector('#media img[data-key="' + slot.getAttribute("data-img") + '"]');
+            if (src) slot.replaceWith(src.cloneNode(true));
+          });
+          document.title = p.title;
+          setActive(r);
+          setDrop(false);
+          setMenu(false);
+          var root = document.documentElement, prev = root.style.scrollBehavior;
+          root.style.scrollBehavior = "auto";
+          window.scrollTo(0, 0);
+          root.style.scrollBehavior = prev;
+          if (!firstRender) view.focus({ preventScroll: true });
+          firstRender = false;
+          reveal();
+          if (r.key === "contact") bindForm();
+          updateTop();
+        }
+
+        function reveal() {
+          var els = view.querySelectorAll(".reveal");
+          if (reduced || !("IntersectionObserver" in window)) {
+            els.forEach(function (e) { e.classList.add("is-in"); });
+            return;
+          }
+          var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (en) {
+              if (en.isIntersecting) { en.target.classList.add("is-in"); io.unobserve(en.target); }
+            });
+          }, { rootMargin: "0px 0px -8% 0px", threshold: 0.05 });
+          els.forEach(function (e) { io.observe(e); });
+        }
+
+        /* ---------- quote form ---------- */
+        function bindForm() {
+          var form = document.getElementById("quoteForm");
+          var thanks = document.getElementById("thanks");
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            if (!form.checkValidity()) {
+              form.reportValidity();
+              var bad = form.querySelector(":invalid");
+              if (bad) bad.focus();
+              return;
+            }
+            var d = new FormData(form);
+            var v = function (k) { return (d.get(k) || "").toString().trim(); };
+            var lines = [
+              "Name: " + v("name"),
+              "Phone: " + v("phone"),
+              "Email: " + (v("email") || "-"),
+              "Suburb: " + v("suburb"),
+              "Service: " + v("service"),
+              "",
+              v("message") || "(No message added)"
+            ];
+            var subject = "Quote request: " + v("service") + " in " + v("suburb");
+            var body = "Hi Dylan,\n\nI'd like a roofing quote.\n\n" + lines.join("\n");
+            document.getElementById("waSend").href = WA + "?text=" + encodeURIComponent(subject + "\n\n" + lines.join("\n"));
+            window.location.href = "mailto:" + EMAIL + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+            form.hidden = true;
+            thanks.hidden = false;
+            thanks.focus();
+          });
+          document.getElementById("again").addEventListener("click", function () {
+            thanks.hidden = true;
+            form.hidden = false;
+            document.getElementById("f-name").focus();
+          });
+        }
+
+        /* ---------- services dropdown ---------- */
+        var drop = document.getElementById("drop");
+        var dropToggle = document.getElementById("dropToggle");
+        var dropMenu = document.getElementById("servicesMenu");
+        var openedAt = 0, closeTimer = null;
+        function setDrop(open) {
+          clearTimeout(closeTimer);
+          if (open && dropMenu.hidden) openedAt = Date.now();
+          dropMenu.hidden = !open;
+          dropToggle.setAttribute("aria-expanded", open ? "true" : "false");
+        }
+        dropToggle.addEventListener("click", function (e) {
+          e.stopPropagation();
+          if (!dropMenu.hidden && Date.now() - openedAt < 400) return;
+          setDrop(dropMenu.hidden);
+        });
+        drop.addEventListener("mouseenter", function () { if (window.matchMedia("(hover: hover)").matches) setDrop(true); });
+        drop.addEventListener("mouseleave", function () {
+          if (!window.matchMedia("(hover: hover)").matches) return;
+          closeTimer = setTimeout(function () { if (!drop.contains(document.activeElement)) setDrop(false); }, 200);
+        });
+        var suppressFocus = false;
+        drop.addEventListener("focusin", function () { if (!suppressFocus) setDrop(true); });
+        drop.addEventListener("focusout", function (e) { if (!drop.contains(e.relatedTarget)) setDrop(false); });
+        document.addEventListener("click", function (e) { if (!drop.contains(e.target)) setDrop(false); });
+        drop.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && !dropMenu.hidden) {
+            suppressFocus = true;
+            dropToggle.focus();
+            suppressFocus = false;
+            setDrop(false);
+          }
+        });
+
+        /* ---------- mobile menu ---------- */
+        var burger = document.getElementById("burger");
+        var menu = document.getElementById("mobileMenu");
+        function setMenu(open) {
+          menu.hidden = !open;
+          burger.setAttribute("aria-expanded", open ? "true" : "false");
+          burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+        }
+        burger.addEventListener("click", function () { setMenu(menu.hidden); });
+        menu.addEventListener("click", function (e) { if (e.target.closest("a")) setMenu(false); });
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && !menu.hidden) { setMenu(false); burger.focus(); }
+        });
+        window.matchMedia("(min-width: 1101px)").addEventListener("change", function (m) { if (m.matches) setMenu(false); });
+
+        /* ---------- back to top ---------- */
+        var toTop = document.getElementById("toTop");
+        function updateTop() {
+          var show = window.scrollY > 480;
+          toTop.classList.toggle("is-visible", show);
+          toTop.tabIndex = show ? 0 : -1;
+          toTop.setAttribute("aria-hidden", show ? "false" : "true");
+        }
+        window.addEventListener("scroll", updateTop, { passive: true });
+        toTop.addEventListener("click", function () {
+          window.scrollTo({ top: 0, behavior: reduced ? "auto" : "smooth" });
+          var brand = document.querySelector(".site-header .brand");
+          if (brand) brand.focus({ preventScroll: true });
+        });
+
+        /* skip link without breaking the router */
+        document.querySelector(".skip").addEventListener("click", function (e) {
+          e.preventDefault();
+          view.focus();
+        });
+
+        window.addEventListener("hashchange", render);
+        render();
+      })();
+    </script>
+  </body>
+</html>

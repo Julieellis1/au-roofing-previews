@@ -1,0 +1,974 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="description" content="An independent concept preview for The Sydney Roof Doctor: roof repairs, leak detection, gutter cleaning, tile work, bedding and pointing across Sydney.">
+  <meta name="theme-color" content="#17252e">
+  <title>The Sydney Roof Doctor — Find the source. Plan the repair.</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17252e;
+      --ink-deep: #101c23;
+      --ink-soft: #31414a;
+      --ivory: #f5f1e8;
+      --paper: #fffdf8;
+      --sand: #e8e2d7;
+      --terracotta: #b65e46;
+      --terracotta-deep: #8f422f;
+      --terracotta-light: #e2ad96;
+      --line: #d9d3c7;
+      --muted: #626d70;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+      --wrap: min(1240px, 90%);
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--ivory); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, summary:focus-visible { outline: 3px solid var(--terracotta); outline-offset: 3px; border-radius: 2px; }
+    img { max-width: 100%; }
+    h1, h2, h3, h4, p, ul, ol { margin-top: 0; }
+    .preview-note { padding: 10px 5vw; background: var(--terracotta); color: #fffaf4; text-align: center; font-size: .76rem; font-weight: 700; letter-spacing: .075em; }
+    .eyebrow { margin: 0 0 19px; color: var(--terracotta-light); font-size: .72rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+    .section-heading .eyebrow, .on-light .eyebrow { color: var(--terracotta-deep); }
+    h1 { margin-bottom: 23px; font-family: var(--serif); font-size: clamp(3rem, 6.4vw, 6rem); font-weight: 400; letter-spacing: -.055em; line-height: 1; }
+    h1 em, h2 em { color: var(--terracotta-light); font-weight: 400; }
+    .on-light h2 em, .section h2 em { color: var(--terracotta-deep); }
+    h2 { margin-bottom: 14px; font-family: var(--serif); font-size: clamp(2.3rem, 4.4vw, 3.8rem); font-weight: 400; letter-spacing: -.045em; line-height: 1.08; }
+    h3 { font-family: var(--serif); font-weight: 400; }
+    .button { min-height: 52px; padding: 14px 22px; display: inline-flex; align-items: center; justify-content: center; gap: 16px; background: var(--terracotta); color: #fffaf4; font-size: .8rem; font-weight: 750; letter-spacing: .075em; text-decoration: none; text-transform: uppercase; border: 1px solid var(--terracotta); cursor: pointer; font-family: inherit; transition: background .2s ease, transform .2s ease; }
+    .button:hover { background: var(--terracotta-deep); border-color: var(--terracotta-deep); transform: translateY(-2px); }
+    .button--ghost { background: transparent; color: inherit; border: 1px solid currentColor; }
+    .button--ghost:hover { background: rgba(182,94,70,.12); border-color: var(--terracotta); color: inherit; transform: translateY(-2px); }
+    .arrow { font-size: 1.2rem; line-height: 1; }
+    .btn-row { display: flex; flex-wrap: wrap; gap: 14px; }
+
+    /* @header */
+    .site-header { position: sticky; top: 0; z-index: 60; background: var(--ink); color: var(--paper); border-bottom: 1px solid rgba(226,173,150,.22); }
+    .header-inner { width: var(--wrap); min-height: 86px; margin: auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 13px; text-decoration: none; }
+    .brand-mark { width: 39px; height: 39px; flex: none; border: 1px solid #d29a83; transform: rotate(45deg); display: grid; place-items: center; }
+    .brand-mark::before { content: ""; width: 15px; height: 15px; border-top: 2px solid #d29a83; border-left: 2px solid #d29a83; transform: translate(2px, 2px); }
+    .brand-name { font-size: .9rem; font-weight: 700; letter-spacing: .075em; line-height: 1.25; text-transform: uppercase; }
+    .brand-name span { display: block; color: #d5b5a3; font-family: var(--serif); font-weight: 400; font-size: .83rem; letter-spacing: .015em; text-transform: none; }
+    .nav { display: flex; align-items: center; gap: 4px; }
+    .nav a, .nav button.navtrigger { padding: 10px 11px; color: #e7e2d8; font-size: .76rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; background: none; border: 0; font-family: inherit; cursor: pointer; display: inline-flex; align-items: center; gap: 7px; border-bottom: 1px solid transparent; transition: color .2s ease, border-color .2s ease; }
+    .nav a:hover, .nav button.navtrigger:hover { color: #f1c2ad; }
+    .nav a.is-active, .nav .has-menu.is-active > button { color: #f1c2ad; border-bottom-color: #a77361; }
+    .has-menu { position: relative; }
+    .menu { position: absolute; top: calc(100% + 10px); left: -8px; min-width: 268px; padding: 8px; background: var(--paper); border: 1px solid var(--line); box-shadow: 0 22px 44px rgba(16,28,35,.22); display: none; }
+    .menu::before { content: ""; position: absolute; left: 0; right: 0; top: -12px; height: 12px; }
+    .has-menu:hover .menu, .menu.is-open { display: block; }
+    .menu a { display: block; padding: 10px 12px; color: var(--ink); font-size: .74rem; letter-spacing: .05em; border-bottom: 0; }
+    .menu a:hover { background: var(--ivory); color: var(--terracotta-deep); }
+    .menu a.is-active { color: var(--terracotta-deep); }
+    .menu-top { font-family: var(--serif); font-style: italic; text-transform: none; letter-spacing: 0; font-size: .85rem !important; color: var(--muted) !important; border-bottom: 1px solid var(--line) !important; }
+    .header-cta { display: inline-flex; align-items: center; gap: 10px; min-height: 46px; padding: 9px 18px; background: var(--terracotta); color: #fffaf4; font-size: .78rem; font-weight: 750; letter-spacing: .06em; text-decoration: none; transition: background .2s ease; }
+    .header-cta:hover { background: var(--terracotta-deep); }
+    .burger { display: none; width: 46px; height: 46px; background: none; border: 1px solid #52616a; color: var(--paper); cursor: pointer; }
+    .burger span { display: block; width: 20px; height: 1.5px; margin: 4px auto; background: currentColor; transition: transform .2s ease, opacity .2s ease; }
+    .burger[aria-expanded="true"] span:nth-child(1) { transform: translateY(5.5px) rotate(45deg); }
+    .burger[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
+    .burger[aria-expanded="true"] span:nth-child(3) { transform: translateY(-5.5px) rotate(-45deg); }
+    .mobile-nav { display: none; padding: 10px 5vw 26px; background: var(--ink); border-top: 1px solid rgba(226,173,150,.2); }
+    .mobile-nav.is-open { display: block; }
+    .mobile-nav a { display: block; padding: 13px 0; color: #e7e2d8; font-size: .82rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; text-decoration: none; border-bottom: 1px solid rgba(226,173,150,.16); }
+    .mobile-nav a.sub { padding-left: 16px; font-weight: 400; font-size: .78rem; letter-spacing: .04em; text-transform: none; font-family: var(--serif); color: #cbd0ce; }
+    .mobile-nav a.is-active { color: #f1c2ad; }
+
+    /* @page transitions */
+    .page { display: none; }
+    .page.is-current { display: block; animation: fade .45s ease both; }
+    @keyframes fade { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+    .reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.is-in { opacity: 1; transform: none; }
+
+    /* @hero */
+    .hero { background: var(--ink); color: var(--paper); padding: 54px 5vw 86px; overflow: hidden; }
+    .hero-grid { width: min(1240px, 100%); margin: 0 auto; display: grid; grid-template-columns: 1.02fr .98fr; align-items: center; gap: clamp(32px, 6vw, 86px); }
+    .hero-copy { position: relative; z-index: 1; padding: 18px 0 20px; }
+    .hero-intro { max-width: 520px; margin-bottom: 30px; color: #d4d8d7; font-size: 1.08rem; line-height: 1.8; }
+    .hero-figure { margin: 0; position: relative; padding: 0 0 27px 27px; }
+    .hero-figure::before { content: ""; position: absolute; inset: 27px 0 0 0; border: 1px solid rgba(226,173,150,.55); }
+    .hero-image { width: 100%; height: clamp(340px, 39vw, 520px); display: block; position: relative; z-index: 1; object-fit: cover; background: #50606a; }
+    .photo-caption { position: relative; z-index: 1; margin: 10px 0 0; color: #b9c0c0; font-size: .72rem; letter-spacing: .025em; }
+    .hero-index { position: absolute; z-index: 2; left: -16px; top: 52px; writing-mode: vertical-rl; transform: rotate(180deg); color: #e5b29c; font-size: .68rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+    .hero-meta { display: flex; flex-wrap: wrap; gap: 8px 22px; margin: 26px 0 0; padding: 0; list-style: none; color: #cbd0ce; font-size: .78rem; letter-spacing: .04em; }
+    .hero-meta li::before { content: "◆"; margin-right: 8px; color: var(--terracotta-light); font-size: .6rem; }
+
+    /* @page banner */
+    .page-hero { background: var(--ink); color: var(--paper); padding: 72px 5vw 76px; }
+    .page-hero .inner { width: min(1160px, 100%); margin: auto; }
+    .page-hero h1 { max-width: 15ch; font-size: clamp(2.6rem, 5.4vw, 4.6rem); }
+    .page-hero p { max-width: 560px; margin: 0; color: #cbd0ce; font-size: 1.02rem; }
+    .crumb { margin: 0 0 18px; color: #9fb0b3; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; }
+    .crumb a { text-decoration: none; }
+    .crumb a:hover { color: #f1c2ad; }
+
+    /* @strip */
+    .signal-strip { background: var(--paper); border-bottom: 1px solid var(--line); }
+    .signal-inner { width: var(--wrap); min-height: 94px; margin: auto; display: grid; grid-template-columns: repeat(4, 1fr); align-items: center; }
+    .signal { min-height: 43px; padding: 4px 26px; border-left: 1px solid var(--line); }
+    .signal:first-child { padding-left: 0; border-left: 0; }
+    .signal b { display: block; font-family: var(--serif); font-size: 1.04rem; font-weight: 400; }
+    .signal span { display: block; color: var(--muted); font-size: .71rem; letter-spacing: .08em; text-transform: uppercase; }
+
+    /* @sections */
+    .section { padding: 100px 5vw; }
+    .section--tight { padding: 72px 5vw; }
+    .section-inner { width: min(1160px, 100%); margin: 0 auto; }
+    .section-heading { max-width: 720px; margin-bottom: 48px; }
+    .section-heading p { max-width: 600px; margin-bottom: 0; color: var(--muted); font-size: 1rem; }
+    .paper { background: var(--paper); }
+    .sand { background: var(--sand); }
+    .dark { background: var(--ink); color: var(--paper); }
+    .dark p { color: #cbd0ce; }
+    .prose p { max-width: 62ch; color: var(--ink-soft); }
+    .lede { font-size: 1.1rem; line-height: 1.8; }
+
+    /* @service grid */
+    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+    .service-card { min-height: 190px; padding: 26px 27px 24px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); text-decoration: none; display: flex; flex-direction: column; transition: background .25s ease, transform .25s ease; }
+    .service-card:hover { background: var(--ivory); transform: translateY(-3px); }
+    .service-no { display: block; margin-bottom: 22px; color: var(--terracotta-deep); font-family: var(--serif); font-size: .9rem; font-style: italic; }
+    .service-card h3 { margin-bottom: 8px; font-size: 1.42rem; line-height: 1.2; }
+    .service-card p { margin: 0 0 16px; color: var(--muted); font-size: .87rem; }
+    .service-card .more { margin-top: auto; color: var(--terracotta-deep); font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+
+    /* @cards */
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+    .cards > * { padding: 28px 26px; background: var(--paper); }
+    .cards h3 { margin-bottom: 8px; font-size: 1.3rem; }
+    .cards p { margin: 0; color: var(--muted); font-size: .9rem; }
+    .sand .cards > * { background: #efeae0; }
+
+    /* @steps */
+    .split { display: grid; grid-template-columns: .85fr 1.15fr; gap: clamp(40px, 9vw, 120px); align-items: start; }
+    .split--form { grid-template-columns: 1.2fr .8fr; gap: clamp(32px, 5vw, 64px); }
+    .sticky-title { position: sticky; top: 110px; }
+    .sticky-title p { max-width: 380px; color: #515e61; }
+    .steps { border-top: 1px solid #bcb7ac; }
+    .step { display: grid; grid-template-columns: 58px 1fr; gap: 20px; padding: 25px 0; border-bottom: 1px solid #bcb7ac; }
+    .step-num { color: var(--terracotta-deep); font-family: var(--serif); font-size: 1.2rem; font-style: italic; }
+    .step h3 { margin-bottom: 5px; font-size: 1.4rem; }
+    .step p { max-width: 540px; margin: 0; color: #515e61; font-size: .92rem; }
+
+    /* @ticklist */
+    .ticks { margin: 0; padding: 0; list-style: none; display: grid; gap: 12px; }
+    .ticks li { padding-left: 28px; position: relative; color: var(--ink-soft); font-size: .95rem; }
+    .ticks li::before { content: "◆"; position: absolute; left: 0; top: .18em; color: var(--terracotta); font-size: .7rem; }
+    .dark .ticks li { color: #d4d8d7; }
+
+    /* @feature with photo */
+    .feature { display: grid; grid-template-columns: 1.05fr .95fr; gap: clamp(32px, 6vw, 80px); align-items: center; }
+    .feature figure { margin: 0; position: relative; padding: 0 27px 27px 0; }
+    .feature figure::before { content: ""; position: absolute; inset: 0 0 27px 27px; border: 1px solid var(--line); }
+    .feature img { position: relative; z-index: 1; width: 100%; height: clamp(320px, 36vw, 480px); object-fit: cover; display: block; background: #50606a; }
+    .feature figcaption { position: relative; z-index: 1; margin-top: 10px; color: var(--muted); font-size: .72rem; }
+    .feature--flip figure { padding: 0 0 27px 27px; }
+    .feature--flip figure::before { inset: 27px 27px 0 0; }
+
+    /* @quotes */
+    .quotes { display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 24px; }
+    .quote { padding: 34px 32px; background: var(--paper); border: 1px solid var(--line); position: relative; }
+    .dark .quote { background: rgba(255,253,248,.05); border-color: #42525a; }
+    .quote blockquote { margin: 0 0 18px; font-family: var(--serif); font-size: 1.12rem; line-height: 1.6; }
+    .quote cite { font-style: normal; font-size: .74rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--terracotta-deep); }
+    .dark .quote cite { color: var(--terracotta-light); }
+    .stars { margin: 0 0 14px; color: var(--terracotta); letter-spacing: .2em; font-size: .9rem; }
+    .dark .stars { color: var(--terracotta-light); }
+
+    /* @areas */
+    .area-list { display: flex; flex-wrap: wrap; gap: 10px; }
+    .area-list span { padding: 10px 15px; border: 1px solid #52616a; color: #e5e5df; font-size: .82rem; }
+    .area-block { padding: 30px 28px; background: var(--paper); border: 1px solid var(--line); }
+    .area-block h3 { margin-bottom: 6px; font-size: 1.5rem; }
+    .area-block p { color: var(--muted); font-size: .86rem; }
+    .suburbs { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 6px 8px; }
+    .suburbs li { padding: 5px 10px; background: var(--ivory); border: 1px solid var(--line); font-size: .76rem; color: var(--ink-soft); }
+
+    /* @faq */
+    .faq { border-top: 1px solid var(--line); }
+    .faq details { border-bottom: 1px solid var(--line); }
+    .faq summary { list-style: none; cursor: pointer; padding: 22px 48px 22px 0; position: relative; font-family: var(--serif); font-size: 1.25rem; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "+"; position: absolute; right: 8px; top: 18px; color: var(--terracotta-deep); font-size: 1.5rem; transition: transform .2s ease; }
+    .faq details[open] summary::after { content: "–"; }
+    .faq .answer { padding: 0 60px 24px 0; margin: 0; color: var(--ink-soft); font-size: .96rem; max-width: 72ch; }
+
+    /* @contact */
+    .contact-panel { position: relative; padding: clamp(32px, 6vw, 70px); background: var(--paper); border: 1px solid var(--line); display: grid; grid-template-columns: 1fr auto; gap: 38px; align-items: center; }
+    .contact-panel::before { content: ""; position: absolute; inset: 9px; border: 1px solid #e8e0d5; pointer-events: none; }
+    .contact-panel > * { position: relative; z-index: 1; }
+    .contact-action { text-align: right; }
+    .contact-email { display: block; margin-top: 13px; color: var(--ink-soft); font-size: .82rem; text-underline-offset: 3px; }
+    .form { display: grid; gap: 18px; padding: clamp(28px, 4vw, 44px); background: var(--paper); border: 1px solid var(--line); }
+    .field { display: grid; gap: 7px; }
+    .field label { font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
+    .field input, .field select, .field textarea { min-height: 48px; padding: 12px 14px; background: var(--ivory); border: 1px solid var(--line); font-family: inherit; font-size: .95rem; color: var(--ink); }
+    .field textarea { min-height: 130px; resize: vertical; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .form-note { margin: 0; color: var(--muted); font-size: .76rem; }
+    .thanks { padding: 22px 24px; background: var(--sand); border: 1px solid var(--line); font-size: .92rem; }
+    .map-card { display: block; padding: 30px 28px; background: linear-gradient(135deg, #1d2f3a, #17252e); color: var(--paper); text-decoration: none; border: 1px solid #42525a; transition: transform .2s ease; }
+    .map-card:hover { transform: translateY(-3px); }
+    .map-card h3 { margin-bottom: 6px; font-size: 1.4rem; }
+    .map-card p { margin: 0; color: #cbd0ce; font-size: .86rem; }
+    .cta-band { padding: 86px 5vw; background: var(--ink); color: var(--paper); text-align: center; }
+    .cta-band .section-inner { max-width: 760px; }
+    .cta-band h2 { margin-bottom: 14px; }
+    .cta-band p { margin: 0 auto 28px; max-width: 540px; color: #cbd0ce; }
+    .cta-band .btn-row { justify-content: center; }
+
+    /* @footer */
+    footer { background: var(--ink-deep); color: #d3d8d5; padding: 68px 5vw 30px; }
+    .footer-inner { width: min(1240px, 100%); margin: auto; display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 42px; }
+    .footer-inner h4 { margin: 0 0 16px; color: var(--paper); font-size: .72rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    .footer-inner ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 9px; }
+    .footer-inner a { color: #c3cbca; font-size: .85rem; text-decoration: none; }
+    .footer-inner a:hover { color: #f1c2ad; }
+    .footer-blurb { max-width: 36ch; color: #aeb8b8; font-size: .85rem; }
+    .footer-brand { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 16px; text-decoration: none; color: var(--paper); font-family: var(--serif); font-size: 1.1rem; }
+    .footer-ids { margin: 10px 0 0; color: #8e9a9a; font-size: .76rem; }
+    .footer-bottom { width: min(1240px, 100%); margin: 44px auto 0; padding-top: 20px; border-top: 1px solid #27353c; display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+    .footer-bottom p { margin: 0; color: #8e9a9a; font-size: .74rem; max-width: 70ch; }
+    .to-top { position: fixed; right: 20px; bottom: 20px; z-index: 70; width: 48px; height: 48px; display: none; place-items: center; background: var(--ink); color: var(--paper); border: 1px solid #52616a; cursor: pointer; font-size: 1rem; }
+    .to-top.is-vis { display: grid; }
+    .to-top:hover { background: var(--terracotta); border-color: var(--terracotta); }
+
+    @media (max-width: 1040px) {
+      .nav { display: none; }
+      .burger { display: block; }
+      .footer-inner { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 860px) {
+      .hero-grid, .split, .feature { grid-template-columns: 1fr; gap: 34px; }
+      .sticky-title { position: static; }
+      .feature figure, .feature--flip figure { padding: 0 0 22px 22px; }
+      .feature figure::before, .feature--flip figure::before { inset: 22px 0 0 0; }
+      .signal-inner { grid-template-columns: 1fr 1fr; gap: 18px 0; padding: 20px 0; }
+      .service-grid { grid-template-columns: 1fr 1fr; }
+      .contact-panel { grid-template-columns: 1fr; gap: 24px; }
+      .contact-action { text-align: left; }
+    }
+    @media (max-width: 560px) {
+      body { font-size: 15px; }
+      .preview-note { padding: 9px 16px; font-size: .66rem; letter-spacing: .04em; }
+      .header-inner { min-height: 72px; width: 88%; }
+      .brand-mark { width: 32px; height: 32px; }
+      .brand-name { font-size: .72rem; }
+      .brand-name span { font-size: .74rem; }
+      .header-cta { padding: 9px 12px; font-size: .68rem; letter-spacing: .04em; }
+      .hero { padding: 26px 6vw 52px; }
+      .hero-image { height: 72vw; min-height: 250px; }
+      .section, .section--tight { padding: 62px 6vw; }
+      .page-hero { padding: 48px 6vw 54px; }
+      .signal-inner { grid-template-columns: 1fr; width: 88%; }
+      .signal, .signal:first-child { padding: 0 0 0 13px; border-left: 2px solid #d6a28a; }
+      .service-grid { grid-template-columns: 1fr; }
+      .two-col { grid-template-columns: 1fr; }
+      .footer-inner { grid-template-columns: 1fr; gap: 30px; }
+      .step { grid-template-columns: 34px 1fr; gap: 11px; }
+      .faq .answer { padding-right: 10px; }
+      .cta-band { padding: 62px 6vw; }
+    }
+    /* @accessibility floor: 12px text, 4.5:1 fills, 44px taps */
+    .preview-note, .button, .header-cta { background-color: #ad5841; border-color: #ad5841; }
+    .button--ghost { background-color: transparent; border-color: currentColor; }
+    .button:hover, .header-cta:hover { background-color: var(--terracotta-deep); border-color: var(--terracotta-deep); }
+    .button--ghost:hover { background-color: rgba(182,94,70,.12); border-color: var(--terracotta); }
+    .stars { color: var(--terracotta-deep); }
+    .preview-note, .eyebrow, .hero-index, .photo-caption, .signal span, .service-card .more, .feature figcaption,
+    .quote cite, .footer-inner h4, .footer-bottom p, .menu a, .brand-name, .brand-name span, .header-cta,
+    .crumb, .field label, .form-note, .footer-ids, .hero-meta, .nav a, .nav button.navtrigger, .suburbs li { font-size: max(.75rem, 12px); }
+    .brand { min-height: 48px; }
+    .burger { flex: none; width: 46px; }
+    .footer-brand { min-height: 44px; }
+    .footer-inner ul { gap: 0; }
+    .footer-inner ul a { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; }
+    .cta-short { display: none; }
+    @media (max-width: 560px) {
+      .cta-long { display: none; }
+      .cta-short { display: inline; }
+      .header-inner { gap: 10px; }
+      .brand { gap: 10px; min-width: 0; }
+      .brand-name { letter-spacing: .04em; }
+      .preview-note { letter-spacing: .02em; }
+    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } .reveal { opacity: 1; transform: none; } }
+  </style>
+</head>
+<body>
+  <div class="preview-note" role="note">Independent concept preview · not an official or approved business website</div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#/" aria-label="The Sydney Roof Doctor, home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">The Sydney Roof Doctor<span>Roof care, considered.</span></span>
+      </a>
+      <nav class="nav" id="desktop-nav" aria-label="Primary"></nav>
+      <div style="display:flex;align-items:center;gap:12px">
+        <a class="header-cta" href="tel:+61419162112" aria-label="Call 0419 162 112"><span class="cta-long">Call 0419 162 112</span><span class="cta-short">Call</span></a>
+        <button class="burger" id="burger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile"></nav>
+  </header>
+
+  <main id="view">
+
+    <!-- @home -->
+    <div class="page" id="page-home">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">Roof repairs &amp; maintenance · Sydney</p>
+            <h1 id="hero-title">Find the source.<br><em>Plan the repair.</em></h1>
+            <p class="hero-intro">Over two decades of roof repairs, gutter cleaning and tile work across Sydney. Free quotes, a photo report on every job, and a 100% Service Guarantee.</p>
+            <div class="btn-row">
+              <a class="button" href="tel:+61419162112">Call Steve now <span class="arrow" aria-hidden="true">→</span></a>
+              <a class="button button--ghost" href="#/contact">Request a free quote</a>
+            </div>
+            <ul class="hero-meta">
+              <li>Open 24 hours, 7 days</li>
+              <li>Licence 275484C</li>
+              <li>4.1★ from 173 Google reviews</li>
+            </ul>
+          </div>
+          <figure class="hero-figure">
+            <span class="hero-index" aria-hidden="true">Roof care / Sydney</span>
+            <img class="hero-image" src="srd-hero.jpg" alt="A roofer working on the terracotta tiled roof of a Sydney federation home.">
+            <figcaption class="photo-caption">Representative photography; not a verified client project.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <div class="signal-strip" aria-label="Trust signals">
+        <div class="signal-inner">
+          <div class="signal"><b>Licence 275484C</b><span>NSW trade licence</span></div>
+          <div class="signal"><b>Fully insured</b><span>OH&amp;S certified, harnessed</span></div>
+          <div class="signal"><b>173 Google reviews</b><span>Rated 4.1 out of 5</span></div>
+          <div class="signal"><b>Open 24/7</b><span>Free quotes, Sydney-wide</span></div>
+        </div>
+      </div>
+
+      <section class="section paper" aria-labelledby="home-services">
+        <div class="section-inner">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Roof work, clearly scoped</p>
+            <h2 id="home-services">A roof is a system.<br><em>Care for the details.</em></h2>
+            <p>Seven services covering the whole water path: where it lands, where it runs, and where it gets in. Every job is photographed from start to finish.</p>
+          </div>
+          <div class="service-grid reveal" id="home-service-grid"></div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="home-report">
+        <div class="section-inner feature reveal">
+          <div class="on-light">
+            <p class="eyebrow">The signature of the service</p>
+            <h2 id="home-report">A detailed photo report, every inspection.</h2>
+            <p class="prose lede">You rarely get to stand on your own roof. So Steve brings it down to you: photographs of every problem area, an explanation of what caused it, and a clear plan for the repair before a single tile is lifted.</p>
+            <ul class="ticks">
+              <li>Photos of the fault, the cause and the finished repair</li>
+              <li>Talked through in plain language, on the spot</li>
+              <li>Free quotes with the scope written out</li>
+              <li>Free 6- or 12-month reminder programme so maintenance never lapses</li>
+            </ul>
+            <p style="margin-top:26px"><a class="button" href="#/contact">Book a free inspection <span class="arrow" aria-hidden="true">→</span></a></p>
+          </div>
+          <figure>
+            <img src="srd-gutter.jpg" loading="lazy" alt="A gloved hand clearing leaves from a gutter beside a tablet showing photographs of the roof." >
+            <figcaption>Gutter clearing recorded as part of the job's photo record.</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="section sand" aria-labelledby="home-why">
+        <div class="section-inner">
+          <div class="split">
+            <div class="sticky-title on-light reveal">
+              <p class="eyebrow">Why homeowners call Steve</p>
+              <h2 id="home-why">Understand the roof before choosing the fix.</h2>
+              <p>Good roof care starts with the specific problem, not a one-size-fits-all answer. Steve Vella has spent more than twenty years keeping Sydney roofs dry.</p>
+            </div>
+            <div class="steps reveal" aria-label="How a job runs">
+              <article class="step"><span class="step-num">01</span><div><h3>Call or send the details</h3><p>Describe what you have noticed: a stain on the ceiling, overflowing gutters, cracked pointing, slipped tiles. Phones are answered 24 hours, 7 days.</p></div></article>
+              <article class="step"><span class="step-num">02</span><div><h3>Inspection and photo report</h3><p>Steve gets on the roof safely — harnessed, insured and OH&amp;S certified — and photographs what he finds, including the parts you cannot see from the ground.</p></div></article>
+              <article class="step"><span class="step-num">03</span><div><h3>Free quote, clear scope</h3><p>You see the photos, hear what caused the problem and get a free quote for the work that actually fixes it.</p></div></article>
+              <article class="step"><span class="step-num">04</span><div><h3>The repair, backed and recorded</h3><p>The work is completed and photographed again, covered by a 100% Service Guarantee.</p></div></article>
+              <article class="step"><span class="step-num">05</span><div><h3>A reminder, so it does not lapse</h3><p>Join the free 6- or 12-month reminder programme and the next clean or check comes to you.</p></div></article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section paper" aria-labelledby="home-reviews">
+        <div class="section-inner">
+          <div class="section-heading reveal">
+            <p class="eyebrow">4.1 ★ from 173 Google reviews</p>
+            <h2 id="home-reviews">What Sydney says.</h2>
+          </div>
+          <div class="quotes reveal">
+            <figure class="quote"><p class="stars" aria-hidden="true">★★★★★</p><blockquote>"Steve profession, prompt and reliable. Extremely thorough and efficient in all aspects of work and quoting. Communicates very well and does an amazing job."</blockquote><cite>Catherine F. · Google</cite></figure>
+            <figure class="quote"><p class="stars" aria-hidden="true">★★★★★</p><blockquote>"Steve Vella is a great guy and a pleasure to deal with. Highly recommended if you want your roof looked after."</blockquote><cite>Stewart B. · Google</cite></figure>
+          </div>
+          <p style="margin-top:28px"><a class="button button--ghost" href="#/reviews">Read all reviews <span class="arrow" aria-hidden="true">→</span></a></p>
+        </div>
+      </section>
+
+      <section class="section dark" aria-labelledby="home-areas">
+        <div class="section-inner split">
+          <div class="reveal">
+            <p class="eyebrow">Service area</p>
+            <h2 id="home-areas">Roof care across Sydney.</h2>
+            <p>Servicing all of Sydney, from the Eastern Suburbs to the Hills District. No street address needed — Steve comes to the roof.</p>
+            <p style="margin-top:24px"><a class="button" href="#/areas">See service areas <span class="arrow" aria-hidden="true">→</span></a></p>
+          </div>
+          <div class="area-list reveal" aria-label="Sydney service areas">
+            <span>Eastern Suburbs</span><span>North Shore</span><span>Inner West</span><span>Hills District</span><span>Inner City</span><span>Sydney City</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-band">
+        <div class="section-inner">
+          <p class="eyebrow">Free quotes · Open 24/7</p>
+          <h2>Something wrong up there?</h2>
+          <p>Call Steve directly, message on WhatsApp, or send the details and get a free quote with photos.</p>
+          <div class="btn-row">
+            <a class="button" href="tel:+61419162112">Call 0419 162 112</a>
+            <a class="button button--ghost" href="https://wa.me/61419162112" target="_blank" rel="noopener">WhatsApp Steve</a>
+            <a class="button button--ghost" href="#/contact">Request a quote</a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- @services -->
+    <div class="page" id="page-services">
+      <section class="page-hero">
+        <div class="inner">
+          <p class="crumb"><a href="#/">Home</a> / Services</p>
+          <p class="eyebrow">Seven services, one standard</p>
+          <h1>Every part of the roof, <em>properly looked after.</em></h1>
+          <p>From routine gutter cleaning to rebuilding a valley, each job starts with an inspection and ends with photos of the finished work.</p>
+        </div>
+      </section>
+      <section class="section paper">
+        <div class="section-inner">
+          <div class="service-grid reveal" id="services-grid"></div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-inner">
+          <div class="section-heading on-light reveal">
+            <p class="eyebrow">Included on every job</p>
+            <h2>The standard, <em>whatever the job.</em></h2>
+          </div>
+          <div class="cards reveal">
+            <div><h3>Photo record</h3><p>Every job is photographed, so you see the problem and the finished repair.</p></div>
+            <div><h3>Free quotes</h3><p>No charge to look, explain and price the work.</p></div>
+            <div><h3>Safe on the roof</h3><p>Fully insured, OH&amp;S certified and working in roof harnesses.</p></div>
+            <div><h3>100% Service Guarantee</h3><p>The work is backed by Steve's 100% Service Guarantee.</p></div>
+          </div>
+        </div>
+      </section>
+      <section class="cta-band">
+        <div class="section-inner">
+          <h2>Not sure which service you need?</h2>
+          <p>Describe what you are seeing. Steve will work out the cause and tell you what it needs.</p>
+          <div class="btn-row"><a class="button" href="tel:+61419162112">Call 0419 162 112</a><a class="button button--ghost" href="#/contact">Request a quote</a></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- @service detail (filled from data) -->
+    <div class="page" id="page-service">
+      <section class="page-hero">
+        <div class="inner">
+          <p class="crumb"><a href="#/">Home</a> / <a href="#/services">Services</a> / <span data-s="name"></span></p>
+          <p class="eyebrow" data-s="tag"></p>
+          <h1 data-s="title"></h1>
+          <p data-s="intro"></p>
+          <div class="btn-row" style="margin-top:28px"><a class="button" href="tel:+61419162112">Call 0419 162 112</a><a class="button button--ghost" id="svc-quote" href="#/contact">Get a free quote</a></div>
+        </div>
+      </section>
+      <section class="section paper">
+        <div class="section-inner split">
+          <div class="on-light reveal">
+            <p class="eyebrow">What it is</p>
+            <h2 data-s="whatTitle"></h2>
+            <div class="prose" data-s="what"></div>
+          </div>
+          <div class="reveal">
+            <div class="area-block" style="background:var(--ivory)">
+              <h3>Signs you need it</h3>
+              <p>If you notice any of these, it is worth a call.</p>
+              <ul class="ticks" data-s="signs"></ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section sand">
+        <div class="section-inner split">
+          <div class="sticky-title on-light reveal">
+            <p class="eyebrow">How the job is done</p>
+            <h2>Step by step, <em>photographed throughout.</em></h2>
+            <p>Every stage is recorded, so you can see exactly what was found and what was fixed.</p>
+          </div>
+          <div class="steps reveal" data-s="steps"></div>
+        </div>
+      </section>
+      <section class="section paper">
+        <div class="section-inner">
+          <div class="section-heading on-light reveal">
+            <p class="eyebrow">Related services</p>
+            <h2>Often done together.</h2>
+          </div>
+          <div class="service-grid reveal" data-s="related"></div>
+        </div>
+      </section>
+      <section class="cta-band">
+        <div class="section-inner">
+          <p class="eyebrow">Free quote · Photo report</p>
+          <h2 data-s="cta"></h2>
+          <p>Call or message Steve, any day, any hour. The quote is free and comes with photos.</p>
+          <div class="btn-row"><a class="button" href="tel:+61419162112">Call 0419 162 112</a><a class="button button--ghost" href="https://wa.me/61419162112" target="_blank" rel="noopener">WhatsApp</a><a class="button button--ghost" href="#/contact">Request a quote</a></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- @about -->
+    <div class="page" id="page-about">
+      <section class="page-hero">
+        <div class="inner">
+          <p class="crumb"><a href="#/">Home</a> / About</p>
+          <p class="eyebrow">Steve Vella · The Sydney Roof Doctor</p>
+          <h1>Twenty years of <em>keeping Sydney dry.</em></h1>
+          <p>One roofer, a camera and a careful way of working.</p>
+        </div>
+      </section>
+      <section class="section paper">
+        <div class="section-inner feature feature--flip reveal">
+          <figure>
+            <img src="srd-pointing.jpg" loading="lazy" alt="A roofer pointing ridge caps on a tiled roof with Sydney Harbour in the background.">
+            <figcaption>Representative photography; not a verified client project.</figcaption>
+          </figure>
+          <div class="on-light">
+            <p class="eyebrow">The story</p>
+            <h2>The roof doctor <em>shows his working.</em></h2>
+            <div class="prose">
+              <p class="lede">Steve Vella has spent more than twenty years keeping Sydney roofs dry. Every inspection comes with a detailed photo report, so you can see the problem and know exactly how it'll be fixed.</p>
+              <p>That habit is what customers mention most. Reviews describe Steve as thorough, prompt and a clear communicator who talks you through what the problem is and how he will fix it, every step of the way.</p>
+              <p>The business trades through Vella Investments Aust Pty Ltd and holds NSW trade licence 275484C.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-inner">
+          <div class="section-heading on-light reveal">
+            <p class="eyebrow">How Steve works</p>
+            <h2>Four things <em>that do not change.</em></h2>
+          </div>
+          <div class="cards reveal">
+            <div><h3>Show, then fix</h3><p>A photo record on every job. You see the fault before you approve the repair.</p></div>
+            <div><h3>Explain it plainly</h3><p>What failed, why, and what the repair involves, without jargon.</p></div>
+            <div><h3>Work safely</h3><p>Fully insured, OH&amp;S certified, and always harnessed on the roof.</p></div>
+            <div><h3>Stand behind it</h3><p>A 100% Service Guarantee, and a free reminder programme to keep the roof on schedule.</p></div>
+          </div>
+        </div>
+      </section>
+      <section class="section dark">
+        <div class="section-inner split">
+          <div class="reveal">
+            <p class="eyebrow">Credentials</p>
+            <h2>Verified, <em>on the record.</em></h2>
+            <p>The details below are the business's own registered identifiers.</p>
+          </div>
+          <ul class="ticks reveal">
+            <li>NSW trade licence 275484C</li>
+            <li>ABN 19 612 973 485 · Vella Investments Aust Pty Ltd</li>
+            <li>Over two decades of roofing experience</li>
+            <li>Fully insured and OH&amp;S certified</li>
+            <li>Roof harnesses on every job</li>
+            <li>4.1★ from 173 Google reviews</li>
+            <li>Open 24 hours, 7 days</li>
+          </ul>
+        </div>
+      </section>
+      <section class="cta-band">
+        <div class="section-inner">
+          <h2>Talk to Steve directly.</h2>
+          <p>No call centre. Ring, message or email and Steve will come back to you.</p>
+          <div class="btn-row"><a class="button" href="tel:+61419162112">Call 0419 162 112</a><a class="button button--ghost" href="mailto:steve@tsrd.com.au">Email Steve</a></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- @areas -->
+    <div class="page" id="page-areas">
+      <section class="page-hero">
+        <div class="inner">
+          <p class="crumb"><a href="#/">Home</a> / Service areas</p>
+          <p class="eyebrow">Servicing all of Sydney</p>
+          <h1>From the harbour <em>to the Hills.</em></h1>
+          <p>Steve works across six regions of Sydney. If your suburb is not listed, call — chances are it is covered.</p>
+        </div>
+      </section>
+      <section class="section paper">
+        <div class="section-inner">
+          <div class="cards reveal" style="background:transparent;border:0;gap:22px">
+            <div class="area-block"><h3>Eastern Suburbs</h3><p>Coastal exposure, salt air and older terraces.</p><ul class="suburbs"><li>Bondi</li><li>Coogee</li><li>Randwick</li><li>Paddington</li><li>Double Bay</li><li>Rose Bay</li><li>Vaucluse</li><li>Maroubra</li><li>Bronte</li></ul></div>
+            <div class="area-block"><h3>North Shore</h3><p>Leafy streets and gutters that fill fast.</p><ul class="suburbs"><li>Chatswood</li><li>Mosman</li><li>Neutral Bay</li><li>Lane Cove</li><li>Willoughby</li><li>Gordon</li><li>Pymble</li><li>Wahroonga</li><li>Hornsby</li></ul></div>
+            <div class="area-block"><h3>Inner West</h3><p>Federation homes and terracotta tiles.</p><ul class="suburbs"><li>Newtown</li><li>Marrickville</li><li>Leichhardt</li><li>Balmain</li><li>Annandale</li><li>Ashfield</li><li>Summer Hill</li><li>Dulwich Hill</li><li>Strathfield</li></ul></div>
+            <div class="area-block"><h3>Hills District</h3><p>Larger roofs, valleys and whirlybirds.</p><ul class="suburbs"><li>Castle Hill</li><li>Baulkham Hills</li><li>Kellyville</li><li>Bella Vista</li><li>Cherrybrook</li><li>Dural</li><li>Glenhaven</li><li>West Pennant Hills</li></ul></div>
+            <div class="area-block"><h3>Inner City</h3><p>Terraces, tight access and shared walls.</p><ul class="suburbs"><li>Surry Hills</li><li>Redfern</li><li>Darlinghurst</li><li>Glebe</li><li>Pyrmont</li><li>Erskineville</li><li>Alexandria</li><li>Waterloo</li></ul></div>
+            <div class="area-block"><h3>Sydney City</h3><p>Residential and commercial roofs in the CBD fringe.</p><ul class="suburbs"><li>Sydney CBD</li><li>The Rocks</li><li>Millers Point</li><li>Haymarket</li><li>Ultimo</li><li>Woolloomooloo</li><li>Potts Point</li></ul></div>
+          </div>
+          <p class="form-note" style="margin-top:22px">Suburbs listed are examples within each region.</p>
+        </div>
+      </section>
+      <section class="cta-band">
+        <div class="section-inner">
+          <h2>Is your suburb covered?</h2>
+          <p>Almost certainly. Call or message and Steve will confirm.</p>
+          <div class="btn-row"><a class="button" href="tel:+61419162112">Call 0419 162 112</a><a class="button button--ghost" href="#/contact">Request a quote</a></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- @reviews -->
+    <div class="page" id="page-reviews">
+      <section class="page-hero">
+        <div class="inner">
+          <p class="crumb"><a href="#/">Home</a> / Reviews</p>
+          <p class="eyebrow">Google reviews</p>
+          <h1>4.1 ★ <em>from 173 reviews.</em></h1>
+          <p>In their own words, unedited, from the business's Google listing.</p>
+          <div class="btn-row" style="margin-top:28px"><a class="button" href="https://www.google.com/maps/place/The+Sydney+Roof+Doctor/data=!4m7!3m6!1s0x6b12979376b17ec1:0x7eb546f17364f77b!8m2!3d-33.4042388!4d151.2882767!16s%2Fg%2F1tkl3ghk" target="_blank" rel="noopener">See all 173 on Google ↗</a></div>
+        </div>
+      </section>
+      <section class="section paper">
+        <div class="section-inner">
+          <div class="quotes reveal">
+            <figure class="quote"><p class="stars" aria-hidden="true">★★★★★</p><blockquote>"Steve profession, prompt and reliable. Extremely thorough and efficient in all aspects of work and quoting. Communicates very well and does an amazing job."</blockquote><cite>Catherine F. · Google</cite></figure>
+            <figure class="quote"><p class="stars" aria-hidden="true">★★★★★</p><blockquote>"Steve Vella is efficient, detailed in his work and communicates with you every step of the way. He comes in and does a very detailed report and provides photos. He talks you through what the problem is and how he will fix it."</blockquote><cite>Carolyn B. · Google</cite></figure>
+            <figure class="quote"><p class="stars" aria-hidden="true">★★★★★</p><blockquote>"Steve Vella is a great guy and a pleasure to deal with. Highly recommended if you want your roof looked after."</blockquote><cite>Stewart B. · Google</cite></figure>
+          </div>
+        </div>
+      </section>
+      <section class="section dark">
+        <div class="section-inner split">
+          <div class="reveal">
+            <p class="eyebrow">The common thread</p>
+            <h2>Thorough. Prompt. <em>Explains everything.</em></h2>
+          </div>
+          <div class="reveal">
+            <p>Across the reviews, the same things come up: the detail of the report, the photos, and being told what the problem is and how it will be fixed. That is the service, by design.</p>
+            <p style="margin-top:22px"><a class="button" href="https://www.google.com/maps/place/The+Sydney+Roof+Doctor/data=!4m7!3m6!1s0x6b12979376b17ec1:0x7eb546f17364f77b!8m2!3d-33.4042388!4d151.2882767!16s%2Fg%2F1tkl3ghk" target="_blank" rel="noopener">Leave a review ↗</a></p>
+          </div>
+        </div>
+      </section>
+      <section class="cta-band">
+        <div class="section-inner">
+          <h2>See what the fuss is about.</h2>
+          <p>Free quote, photo report, 100% Service Guarantee.</p>
+          <div class="btn-row"><a class="button" href="tel:+61419162112">Call 0419 162 112</a><a class="button button--ghost" href="#/contact">Request a quote</a></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- @faq -->
+    <div class="page" id="page-faq">
+      <section class="page-hero">
+        <div class="inner">
+          <p class="crumb"><a href="#/">Home</a> / FAQ</p>
+          <p class="eyebrow">Questions, answered</p>
+          <h1>Good questions <em>about roofs.</em></h1>
+          <p>General guidance for Sydney homeowners. For your roof specifically, a free inspection is the honest answer.</p>
+        </div>
+      </section>
+      <section class="section paper">
+        <div class="section-inner" style="max-width:880px">
+          <div class="faq reveal">
+            <details><summary>How do I know where my roof is leaking from?</summary><p class="answer">Often you can't from inside. Water can travel along battens and rafters before it drips, so the stain on your ceiling may be metres from the entry point. Common culprits are cracked or slipped tiles, failed pointing on ridge caps, rusted or blocked valleys and overflowing gutters. An inspection traces the path, and the photo report shows you where it starts.</p></details>
+            <details><summary>How often should gutters be cleaned in Sydney?</summary><p class="answer">It depends on the trees around you. Many homes manage with a clean every 6 to 12 months; leafy North Shore and Hills District properties often need it more often, especially before storm season. Steve's free 6- or 12-month reminder programme is designed for exactly this.</p></details>
+            <details><summary>What is bedding and pointing, and why does it fail?</summary><p class="answer">The ridge caps along the top of a tiled roof sit on a bed of mortar (bedding) and are sealed with a flexible or cement compound (pointing). Over years of sun, heat and movement, it cracks and comes away, letting water in and loosening caps. Re-bedding and re-pointing restores the seal.</p></details>
+            <details><summary>Should I repair or replace damaged roof tiles?</summary><p class="answer">Most of the time, individual cracked or broken tiles can be replaced on their own. Where tiles are porous or weathered across the roof, sealing may be an option. The photo report lets you see the condition and weigh the choice with Steve.</p></details>
+            <details><summary>What does a roof valley do, and when does it need replacing?</summary><p class="answer">A valley is the channel where two roof slopes meet; it carries a lot of water. Rust, holes, debris build-up or poorly bedded tiles along its edge can all cause leaks. A rusted-through valley is usually replaced rather than patched.</p></details>
+            <details><summary>Do whirlybirds actually help?</summary><p class="answer">Whirlybirds are wind-driven roof vents that let hot, moist air escape the roof space. They can help reduce heat build-up and condensation in the ceiling cavity. Steve can advise on whether your roof suits one and where it should go.</p></details>
+            <details><summary>Can you come out after hours or on weekends?</summary><p class="answer">The business is open 24 hours, 7 days. Call +61 419 162 112 and talk to Steve about how soon he can attend.</p></details>
+            <details><summary>Is the quote really free?</summary><p class="answer">Yes. Quotes are free, and the inspection comes with photos so you understand what you're being quoted for.</p></details>
+            <details><summary>Are you licensed and insured?</summary><p class="answer">Yes. The Sydney Roof Doctor holds NSW trade licence 275484C, is fully insured and OH&amp;S certified, and uses roof harnesses on the job.</p></details>
+            <details><summary>What should I do while waiting for a leak repair?</summary><p class="answer">Put a bucket under the drip, move valuables and electronics away, and if the ceiling is bulging with water, keep clear of it. Don't climb onto a wet roof yourself. Then call and describe what you're seeing.</p></details>
+          </div>
+        </div>
+      </section>
+      <section class="cta-band">
+        <div class="section-inner">
+          <h2>Still have a question?</h2>
+          <p>Ask Steve directly. Phone, WhatsApp or email.</p>
+          <div class="btn-row"><a class="button" href="tel:+61419162112">Call 0419 162 112</a><a class="button button--ghost" href="https://wa.me/61419162112" target="_blank" rel="noopener">WhatsApp</a><a class="button button--ghost" href="mailto:steve@tsrd.com.au">Email</a></div>
+        </div>
+      </section>
+    </div>
+
+    <!-- @contact -->
+    <div class="page" id="page-contact">
+      <section class="page-hero">
+        <div class="inner">
+          <p class="crumb"><a href="#/">Home</a> / Contact</p>
+          <p class="eyebrow">Free quotes · Open 24/7</p>
+          <h1>What is happening <em>on your roof?</em></h1>
+          <p>Send the details below and your email app will open with the enquiry ready to go. Or call Steve directly, any hour.</p>
+        </div>
+      </section>
+      <section class="section paper">
+        <div class="section-inner split split--form">
+          <div class="reveal">
+            <form class="form" id="quote-form" novalidate>
+              <div class="two-col">
+                <div class="field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required></div>
+                <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div>
+              </div>
+              <div class="two-col">
+                <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+                <div class="field"><label for="f-suburb">Suburb</label><input id="f-suburb" name="suburb" required></div>
+              </div>
+              <div class="field"><label for="f-service">Service</label><select id="f-service" name="service"></select></div>
+              <div class="field"><label for="f-msg">What have you noticed?</label><textarea id="f-msg" name="message" placeholder="e.g. water stain on the bedroom ceiling after heavy rain"></textarea></div>
+              <p class="form-note" id="form-error" role="alert" hidden>Please add your name, phone and suburb.</p>
+              <div><button class="button" type="submit">Send enquiry <span class="arrow" aria-hidden="true">→</span></button></div>
+              <p class="form-note">This opens a pre-filled email to steve@tsrd.com.au. Nothing is stored on this site.</p>
+            </form>
+            <div class="thanks" id="thanks" hidden tabindex="-1">
+              <h3 style="margin:0 0 6px;font-size:1.4rem">Thank you.</h3>
+              <p style="margin:0">Your email app should have opened with your enquiry. Press send and Steve will be in touch. If nothing opened, email <a href="mailto:steve@tsrd.com.au">steve@tsrd.com.au</a> or call <a href="tel:+61419162112">0419 162 112</a>.</p>
+            </div>
+          </div>
+          <div class="reveal" style="display:grid;gap:18px">
+            <div class="area-block"><p class="eyebrow" style="color:var(--terracotta-deep);margin-bottom:8px">Phone</p><h3><a href="tel:+61419162112" style="text-decoration:none">+61 419 162 112</a></h3><p style="margin:0"><a href="https://wa.me/61419162112" target="_blank" rel="noopener">Message on WhatsApp ↗</a></p></div>
+            <div class="area-block"><p class="eyebrow" style="color:var(--terracotta-deep);margin-bottom:8px">Email</p><h3 style="font-size:1.2rem"><a href="mailto:steve@tsrd.com.au">steve@tsrd.com.au</a></h3></div>
+            <div class="area-block"><p class="eyebrow" style="color:var(--terracotta-deep);margin-bottom:8px">Hours</p><h3>Open 24 hours, 7 days</h3><p style="margin:0">Servicing all of Sydney</p></div>
+            <a class="map-card" href="https://www.google.com/maps/place/The+Sydney+Roof+Doctor/data=!4m7!3m6!1s0x6b12979376b17ec1:0x7eb546f17364f77b!8m2!3d-33.4042388!4d151.2882767!16s%2Fg%2F1tkl3ghk" target="_blank" rel="noopener">
+              <p class="eyebrow" style="margin-bottom:8px">Google Maps</p>
+              <h3>The Sydney Roof Doctor</h3>
+              <p>4.1★ · 173 reviews · View the listing ↗</p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>
+        <a class="footer-brand" href="#/"><span class="brand-mark" aria-hidden="true" style="width:30px;height:30px"></span> The Sydney Roof Doctor</a>
+        <p class="footer-blurb">Roof care, considered. Repairs, gutter cleaning, tile work and leak detection across Sydney, with a photo report on every job.</p>
+        <p class="footer-ids">NSW licence 275484C · ABN 19 612 973 485<br>Vella Investments Aust Pty Ltd</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="#/">Home</a></li>
+          <li><a href="#/services">Services</a></li>
+          <li><a href="#/about">About Steve</a></li>
+          <li><a href="#/areas">Service areas</a></li>
+          <li><a href="#/reviews">Reviews</a></li>
+          <li><a href="#/faq">FAQ</a></li>
+          <li><a href="#/contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul id="footer-services"></ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="tel:+61419162112">+61 419 162 112</a></li>
+          <li><a href="https://wa.me/61419162112" target="_blank" rel="noopener">WhatsApp</a></li>
+          <li><a href="mailto:steve@tsrd.com.au">steve@tsrd.com.au</a></li>
+          <li><a href="https://www.google.com/maps/place/The+Sydney+Roof+Doctor/data=!4m7!3m6!1s0x6b12979376b17ec1:0x7eb546f17364f77b!8m2!3d-33.4042388!4d151.2882767!16s%2Fg%2F1tkl3ghk" target="_blank" rel="noopener">Google listing · 4.1★ (173)</a></li>
+        </ul>
+        <p class="footer-ids">Open 24 hours, 7 days<br>Servicing all of Sydney</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Independent concept preview — not an official or approved business website. All details and imagery require owner confirmation before production.</p>
+      <p>© <span id="year"></span> The Sydney Roof Doctor concept</p>
+    </div>
+  <div style="text-align:center;padding:12px 16px;font-size:12.5px;opacity:.7">Developed by <a href="https://teta.dpdns.org" target="_blank" rel="noopener" style="color:inherit">Teta Digitals</a></div></footer>
+  <button class="to-top" id="to-top" aria-label="Back to top">↑</button>
+
+  <script>
+  (function () {
+    var SERVICES = [
+      { slug: "gutter-cleaning", name: "Gutter cleaning & maintenance", short: "Gutter cleaning", tag: "Rainwater", blurb: "Clearing and maintaining the channels that carry rainwater away.",
+        title: "Gutters that <em>carry water away.</em>", intro: "Blocked gutters overflow into eaves, walls and ceilings. Regular cleaning, with photos of before and after, keeps the water going where it should.",
+        whatTitle: "Clear channels, dry walls.", what: ["Gutters and downpipes collect leaves, twigs, silt and nests. Once they block, rain spills over the edge or backs up under the roof line, where it can rot fascias and find its way inside.", "A gutter clean removes the debris by hand, flushes the downpipes and checks the gutters for rust, sagging and leaking joints. Every clean is photographed, and the free 6- or 12-month reminder programme means the next one is never forgotten."],
+        signs: ["Water spilling over the gutter edge in rain", "Plants or grass growing in the gutters", "Stains or peeling paint on fascias and eaves", "Downpipes that gurgle or barely flow", "Sagging or rusting gutter sections"],
+        steps: [["Inspect and photograph", "Gutters, downpipes and the roof edge are checked and photographed before work begins."], ["Clear by hand", "Leaves, silt and debris are removed and bagged, not blown into your garden."], ["Flush the downpipes", "Downpipes are tested and cleared so water drains freely."], ["Report and remind", "You get after photos, notes on anything that needs attention, and the option of a 6- or 12-month reminder."]],
+        related: ["leaking-roofs", "roof-valley-replacement", "roof-repairs"], cta: "Book your gutter clean." },
+      { slug: "roof-repairs", name: "Roof repairs & maintenance", short: "Roof repairs", tag: "Roof surface", blurb: "Care for roof condition, upkeep and repair needs.",
+        title: "Small repairs, <em>before they get big.</em>", intro: "Broken tiles, loose flashings and tired seals are cheap to fix early. Left alone, they become leaks. Steve finds them and fixes them, with photos.",
+        whatTitle: "Maintenance that pays for itself.", what: ["A roof works as a system of tiles or sheets, flashings, ridges, valleys and gutters. When one part fails, water finds the gap.", "Roof repairs and maintenance cover the general upkeep of that system: replacing broken tiles, resealing flashings, fixing loose capping and clearing debris. Each problem is photographed so you can see it for yourself before deciding."],
+        signs: ["Cracked, slipped or missing tiles", "Lifting or rusted flashings", "Debris build-up on the roof", "Recent storm or hail", "No one has looked at the roof in years"],
+        steps: [["Full roof inspection", "Steve goes up harnessed and checks every part of the roof, photographing what he finds."], ["Walk you through it", "You see the photos and hear which items matter now and which can wait."], ["Free quote", "A clear, free quote for the work you choose."], ["Repair and record", "The work is done and photographed, backed by the 100% Service Guarantee."]],
+        related: ["tile-sealing-replacement", "bedding-pointing", "leaking-roofs"], cta: "Get your roof checked." },
+      { slug: "tile-sealing-replacement", name: "Tile sealing & replacement", short: "Tile sealing", tag: "Tile work", blurb: "Options for worn, damaged or weather-exposed roof tiles.",
+        title: "Tiles that <em>shed water again.</em>", intro: "Cracked tiles let water straight in; weathered, porous tiles let it seep. Replace the broken ones, seal where it makes sense.",
+        whatTitle: "Replace the broken, protect the rest.", what: ["Tiles crack from foot traffic, falling branches, hail and age. Terracotta and concrete tiles also weather over decades, becoming more porous.", "Tile replacement swaps out cracked or broken tiles with matching ones where available. Tile sealing applies a protective coating to weathered tiles. Steve photographs the tiles so you can see which approach your roof needs."],
+        signs: ["Visible cracks or broken corners", "Tiles that have slipped out of line", "Moss, lichen or heavy weathering", "Leaks after heavy rain", "Damage after a storm or hail"],
+        steps: [["Assess every tile face", "The roof is walked and photographed, tile by tile where needed."], ["Agree the approach", "Replacement, sealing, or both, explained with the photos in front of you."], ["Replace and seal", "Broken tiles are swapped and secured; sealing is applied where agreed."], ["After photos", "You see the finished roof in the photo record."]],
+        related: ["roof-repairs", "bedding-pointing", "leaking-roofs"], cta: "Have your tiles assessed." },
+      { slug: "leaking-roofs", name: "Leaking roofs", short: "Leaking roofs", tag: "Water ingress", blurb: "Investigating and tracing roof leaks to the source.",
+        title: "Find the source. <em>Fix the leak.</em>", intro: "The stain is rarely under the hole. Steve traces the water back to where it gets in, shows you photos, and fixes that, not just the symptom.",
+        whatTitle: "A leak is a question. The photos answer it.", what: ["Water travels. It can enter at a cracked tile or a rusted valley and run along timber before it drips onto your ceiling, so patching above the stain often does nothing.", "Leak repairs start with finding the true entry point: checking tiles, ridge pointing, valleys, flashings and gutters. The cause is photographed and explained, then repaired properly."],
+        signs: ["Water stains or bubbling paint on the ceiling", "Drips during or after rain", "Damp or musty smell in the roof space", "Mould spots on the ceiling", "Stains around skylights or chimneys"],
+        steps: [["Talk it through", "Tell Steve where and when it leaks. Available 24 hours, 7 days."], ["Trace the water", "Roof and roof space are checked to find the true entry point, photographed as it is found."], ["Show and quote", "You see the cause in the photo report and get a free quote."], ["Repair and confirm", "The fault is fixed and photographed, backed by the 100% Service Guarantee."]],
+        related: ["roof-valley-replacement", "bedding-pointing", "gutter-cleaning"], cta: "Stop the leak at the source." },
+      { slug: "bedding-pointing", name: "Bedding & pointing", short: "Bedding & pointing", tag: "Roof junction", blurb: "Re-bedding and re-pointing ridge and hip caps.",
+        title: "Ridge caps, <em>bedded and sealed.</em>", intro: "Cracked pointing on ridge caps is one of the most common causes of leaks on tiled roofs. Re-bedding and re-pointing seals the top of the roof again.",
+        whatTitle: "The seal along the top of the roof.", what: ["Ridge and hip caps sit on a mortar bed and are finished with pointing. Over years of heat, cold and movement, the pointing cracks and the bedding crumbles, so caps loosen and water gets underneath.", "Bedding and pointing removes the failed material, re-beds loose caps and applies fresh pointing along the ridges and hips. The before and after are photographed."],
+        signs: ["Cracked or flaking pointing on ridge lines", "Loose or moving ridge caps", "Mortar pieces in the gutters", "Leaks near the top of the roof", "Gaps visible under the caps"],
+        steps: [["Inspect the ridges and hips", "Every run of capping is checked and photographed."], ["Remove failed material", "Cracked pointing and loose bedding are taken back to sound material."], ["Re-bed and re-point", "Caps are re-set and fresh pointing applied for a weathertight finish."], ["Photograph the finish", "The completed ridges go into your photo report."]],
+        related: ["tile-sealing-replacement", "leaking-roofs", "roof-repairs"], cta: "Get your ridges checked." },
+      { slug: "roof-valley-replacement", name: "Roof valley replacement", short: "Roof valleys", tag: "Water channel", blurb: "Replacing rusted or failing valley irons.",
+        title: "Valleys that <em>carry the load.</em>", intro: "A valley carries water from two roof slopes at once. When it rusts through or blocks, the leak is usually serious. Replacing it fixes the problem for good.",
+        whatTitle: "Where two slopes meet.", what: ["Roof valleys are the metal channels where two roof planes join. They carry a large share of the roof's water and catch leaves and debris.", "Over time valleys rust, hole or sit too low under the tiles. Valley replacement lifts the tiles along the valley, removes the old iron, fits a new valley and re-sets the tiles, with photos at each stage."],
+        signs: ["Rust or holes visible in the valley", "Leaks along an internal corner of the ceiling", "Debris constantly building up in the valley", "Water overflowing the valley in heavy rain", "Tiles along the valley cracked or out of line"],
+        steps: [["Inspect and photograph", "The valley and surrounding tiles are checked and recorded."], ["Lift and remove", "Tiles along the valley are lifted and the old iron removed."], ["Fit the new valley", "A new valley is installed and the tiles re-set and secured."], ["Check and record", "The finished valley is photographed for your report."]],
+        related: ["leaking-roofs", "gutter-cleaning", "roof-repairs"], cta: "Have your valleys inspected." },
+      { slug: "whirlybird-installation", name: "Whirlybird installation", short: "Whirlybirds", tag: "Ventilation", blurb: "Roof-mounted ventilation installation.",
+        title: "Let the roof <em>breathe.</em>", intro: "A whirlybird uses the wind to draw hot, moist air out of the roof space. Installed in the right spot, it helps keep the ceiling cavity cooler and drier.",
+        whatTitle: "Simple, wind-driven ventilation.", what: ["Sydney summers heat roof spaces well above the outside temperature, and trapped moisture can lead to condensation and mould.", "Whirlybirds are roof vents that spin in the breeze, pulling warm, damp air out. Installation means choosing the right position, cutting in the vent and flashing it so it stays watertight."],
+        signs: ["A roof space that feels like an oven", "Condensation or mould in the ceiling", "Musty smells from the roof", "Upstairs rooms that stay hot at night", "An old whirlybird that is noisy or seized"],
+        steps: [["Look in the roof space", "Steve checks the roof and ceiling cavity to recommend position and number."], ["Free quote", "You get a free quote and an explanation of where the vents will go."], ["Install and flash", "The whirlybird is fitted and flashed to keep it watertight."], ["Photograph the job", "The installation is recorded in your photo report."]],
+        related: ["roof-repairs", "tile-sealing-replacement", "leaking-roofs"], cta: "Get a whirlybird quote." }
+    ];
+    var BY = {}; SERVICES.forEach(function (s, i) { s.no = String(i + 1).padStart(2, "0"); BY[s.slug] = s; });
+
+    function esc(t) { return t.replace(/&/g, "&amp;").replace(/</g, "&lt;"); }
+    function card(s) { return '<a class="service-card" href="#/services/' + s.slug + '"><span class="service-no">' + s.no + ' / ' + s.tag + '</span><h3>' + esc(s.name) + '</h3><p>' + s.blurb + '</p><span class="more">View service →</span></a>'; }
+
+    // Fill grids, menus, footer, form select
+    var allCards = SERVICES.map(card).join("");
+    document.getElementById("home-service-grid").innerHTML = allCards;
+    document.getElementById("services-grid").innerHTML = allCards;
+    document.getElementById("footer-services").innerHTML = SERVICES.map(function (s) { return '<li><a href="#/services/' + s.slug + '">' + esc(s.name) + '</a></li>'; }).join("");
+    document.getElementById("f-service").innerHTML = '<option value="">Not sure / general inspection</option>' + SERVICES.map(function (s) { return '<option>' + esc(s.name) + '</option>'; }).join("");
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    var NAV = [["/", "Home"], ["/services", "Services"], ["/about", "About"], ["/areas", "Service Areas"], ["/reviews", "Reviews"], ["/faq", "FAQ"], ["/contact", "Contact"]];
+    var dn = "", mn = "";
+    NAV.forEach(function (n) {
+      if (n[0] === "/services") {
+        dn += '<div class="has-menu" data-route="/services"><button class="navtrigger" aria-expanded="false" aria-haspopup="true">Services <span aria-hidden="true">▾</span></button><div class="menu" role="menu"><a class="menu-top" href="#/services" data-route="/services" role="menuitem">All services</a>' +
+          SERVICES.map(function (s) { return '<a href="#/services/' + s.slug + '" data-route="/services/' + s.slug + '" role="menuitem">' + esc(s.name) + '</a>'; }).join("") + '</div></div>';
+        mn += '<a href="#/services" data-route="/services">Services</a>' + SERVICES.map(function (s) { return '<a class="sub" href="#/services/' + s.slug + '" data-route="/services/' + s.slug + '">' + esc(s.name) + '</a>'; }).join("");
+      } else {
+        dn += '<a href="#' + n[0] + '" data-route="' + n[0] + '">' + n[1] + '</a>';
+        mn += '<a href="#' + n[0] + '" data-route="' + n[0] + '">' + n[1] + '</a>';
+      }
+    });
+    mn += '<a href="https://wa.me/61419162112" target="_blank" rel="noopener">WhatsApp Steve ↗</a>';
+    document.getElementById("desktop-nav").innerHTML = dn;
+    var mobile = document.getElementById("mobile-nav"); mobile.innerHTML = mn;
+
+    // Dropdown and burger
+    var trig = document.querySelector(".navtrigger"), menu = document.querySelector(".menu");
+    trig.addEventListener("click", function (e) { e.stopPropagation(); var o = menu.classList.toggle("is-open"); trig.setAttribute("aria-expanded", o); });
+    document.addEventListener("click", function () { menu.classList.remove("is-open"); trig.setAttribute("aria-expanded", "false"); });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") { menu.classList.remove("is-open"); trig.setAttribute("aria-expanded", "false"); closeMobile(); } });
+    var burger = document.getElementById("burger");
+    function closeMobile() { mobile.classList.remove("is-open"); burger.setAttribute("aria-expanded", "false"); }
+    burger.addEventListener("click", function () { var o = mobile.classList.toggle("is-open"); burger.setAttribute("aria-expanded", o); });
+
+    // Service detail renderer
+    function renderService(s) {
+      var p = document.getElementById("page-service");
+      var q = function (k) { return p.querySelector('[data-s="' + k + '"]'); };
+      q("name").textContent = s.name; q("tag").textContent = s.no + " / " + s.tag;
+      q("title").innerHTML = s.title; q("intro").textContent = s.intro;
+      q("whatTitle").textContent = s.whatTitle;
+      q("what").innerHTML = s.what.map(function (t, i) { return '<p' + (i === 0 ? ' class="lede"' : '') + '>' + t + '</p>'; }).join("");
+      q("signs").innerHTML = s.signs.map(function (t) { return "<li>" + t + "</li>"; }).join("");
+      q("steps").innerHTML = s.steps.map(function (st, i) { return '<article class="step"><span class="step-num">0' + (i + 1) + '</span><div><h3>' + st[0] + '</h3><p>' + st[1] + '</p></div></article>'; }).join("");
+      q("related").innerHTML = s.related.map(function (r) { return card(BY[r]); }).join("");
+      q("cta").textContent = s.cta;
+      document.getElementById("svc-quote").setAttribute("href", "#/contact?service=" + s.slug);
+    }
+
+    // Router
+    var TITLES = { "/": "The Sydney Roof Doctor — Find the source. Plan the repair.", "/services": "Roofing services", "/about": "About Steve Vella", "/areas": "Service areas across Sydney", "/reviews": "Google reviews", "/faq": "Roofing FAQ", "/contact": "Contact & free quote" };
+    var PAGES = { "/": "home", "/services": "services", "/about": "about", "/areas": "areas", "/reviews": "reviews", "/faq": "faq", "/contact": "contact" };
+    var first = true;
+    function route() {
+      var raw = (location.hash || "#/").slice(1) || "/";
+      var parts = raw.split("?"), path = parts[0].replace(/\/+$/, "") || "/", query = parts[1] || "";
+      var pageId, title, svc = null;
+      var m = path.match(/^\/services\/([\w-]+)$/);
+      if (m && BY[m[1]]) { svc = BY[m[1]]; pageId = "service"; title = svc.name + " · The Sydney Roof Doctor"; renderService(svc); }
+      else if (PAGES[path]) { pageId = PAGES[path]; title = path === "/" ? TITLES["/"] : TITLES[path] + " · The Sydney Roof Doctor"; }
+      else { path = "/"; pageId = "home"; title = TITLES["/"]; }
+      document.querySelectorAll(".page").forEach(function (pg) { pg.classList.toggle("is-current", pg.id === "page-" + pageId); });
+      document.title = title;
+      document.querySelectorAll("[data-route]").forEach(function (a) {
+        var r = a.getAttribute("data-route");
+        var on = r === path || (r === "/services" && path.indexOf("/services") === 0 && a.classList.contains("has-menu"));
+        a.classList.toggle("is-active", on);
+        if (a.tagName === "A") { if (r === path) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); }
+      });
+      if (pageId === "contact") {
+        var sm = query.match(/service=([\w-]+)/);
+        if (sm && BY[sm[1]]) document.getElementById("f-service").value = BY[sm[1]].name;
+      }
+      closeMobile(); menu.classList.remove("is-open");
+      if (!first) window.scrollTo({ top: 0, behavior: "instant" });
+      first = false;
+      observeReveals();
+    }
+
+    // Scroll reveal
+    var io = "IntersectionObserver" in window ? new IntersectionObserver(function (es) {
+      es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); } });
+    }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }) : null;
+    function observeReveals() {
+      document.querySelectorAll(".page.is-current .reveal:not(.is-in)").forEach(function (el) { if (io) io.observe(el); else el.classList.add("is-in"); });
+    }
+
+    // Scroll to top button
+    var tt = document.getElementById("to-top");
+    window.addEventListener("scroll", function () { tt.classList.toggle("is-vis", window.scrollY > 600); }, { passive: true });
+    tt.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: "smooth" }); });
+
+    // Quote form → mailto
+    var form = document.getElementById("quote-form");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var f = form.elements, err = document.getElementById("form-error");
+      if (!f.name.value.trim() || !f.phone.value.trim() || !f.suburb.value.trim()) { err.hidden = false; return; }
+      err.hidden = true;
+      var svcName = f.service.value || "General inspection";
+      var body = "Hi Steve,\n\nI'd like a free quote.\n\nName: " + f.name.value + "\nPhone: " + f.phone.value + "\nEmail: " + (f.email.value || "-") + "\nSuburb: " + f.suburb.value + "\nService: " + svcName + "\n\nWhat I've noticed:\n" + (f.message.value || "-") + "\n";
+      var subject = "Quote request: " + svcName + " (" + f.suburb.value + ")";
+      window.location.href = "mailto:steve@tsrd.com.au?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+      form.hidden = true;
+      var th = document.getElementById("thanks"); th.hidden = false; th.focus();
+    });
+
+    window.addEventListener("hashchange", route);
+    route();
+  })();
+  </script>
+</body>
+</html>

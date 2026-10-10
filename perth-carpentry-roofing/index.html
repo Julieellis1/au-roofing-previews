@@ -1,0 +1,1467 @@
+<!doctype html>
+<html lang="en-AU" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="description" content="Concept website for Perth Carpentry and Roofing: roof framing, roof repairs, cladding and custom timber decks, pergolas, alfresco areas and carports across Perth." />
+    <meta name="theme-color" content="#173b2c" />
+    <title>Perth Carpentry and Roofing | Roof framing, roofing and timber outdoor builds</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400&display=swap"
+    />
+    <link rel="stylesheet" href="hark.css" />
+    <link rel="stylesheet" href="hark-hero.css" />
+    <style>
+      /* ===== Design system carried over from the original concept ===== */
+      :root {
+        --forest: #173b2c; --forest-deep: #10291f; --moss: #45644e;
+        --honey: #d5a45b; --honey-lt: #e2b76e; --bronze: #8d6534;
+        --sand: #f3eee4; --sand-2: #ece5d6; --paper: #fbfaf7; --ink: #1c2821;
+        --muted: #5f6c63; --line: #d9d8cc;
+        --serif: Georgia, "Times New Roman", serif;
+        --grotesk: "Avenir Next", Avenir, "Segoe UI", system-ui, sans-serif;
+        --wrap: 1180px; --hdr: 84px;
+        --ease: cubic-bezier(.2, .7, .2, 1);
+      }
+      html { color-scheme: light; scroll-padding-top: 100px; }
+      body { margin: 0; background: var(--paper); color: var(--ink); font: 400 16px/1.6 var(--grotesk); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+      .page.x-site { max-width: none; margin: 0; padding: 0; display: block; }
+      :focus-visible { outline: 3px solid var(--honey); outline-offset: 3px; border-radius: 2px; }
+      img { max-width: 100%; display: block; }
+      .x-wrap { width: min(var(--wrap), calc(100% - 64px)); margin: 0 auto; }
+      .x-skip { position: absolute; left: 12px; top: -60px; z-index: 100; padding: 12px 16px; background: var(--honey); color: var(--ink); font-weight: 700; text-decoration: none; }
+      .x-skip:focus { top: 12px; }
+
+      /* preview banner */
+      .x-preview { display: flex; justify-content: center; align-items: center; gap: .6rem; min-height: 38px; padding: 8px 18px; background: #e8e2d3; color: #283d30; text-align: center; font-size: 12px; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
+      .x-preview::before { content: ""; width: 6px; height: 6px; flex: 0 0 6px; border-radius: 50%; background: #9c6d2f; }
+
+      /* brand */
+      .x-brand { display: inline-flex; align-items: center; gap: 13px; color: #fff; text-decoration: none; }
+      .x-brand__mark { display: grid; place-items: center; width: 41px; height: 41px; border: 1px solid rgb(255 255 255 / .6); color: var(--honey); font: 21px var(--serif); transition: border-color .3s; }
+      .x-brand__mark i { color: #fff; font-style: normal; }
+      .x-brand:hover .x-brand__mark { border-color: var(--honey); }
+      .x-brand__name { max-width: 185px; font-size: 12px; line-height: 1.25; font-weight: 750; letter-spacing: .085em; text-transform: uppercase; }
+
+      /* header */
+      .x-header { position: sticky; top: 0; z-index: 50; background: rgb(16 41 31 / .97); color: #fff; border-bottom: 1px solid rgb(255 255 255 / .12); transition: box-shadow .3s; }
+      @supports (backdrop-filter: blur(8px)) { .x-header { background: rgb(16 41 31 / .9); backdrop-filter: blur(12px); } }
+      .x-header.is-scrolled { box-shadow: 0 10px 30px rgb(9 24 18 / .22); }
+      .x-nav { height: var(--hdr); display: flex; align-items: center; justify-content: space-between; gap: 24px; transition: height .3s var(--ease); }
+      .x-header.is-scrolled .x-nav { height: 70px; }
+      .x-menu { display: flex; align-items: center; gap: 30px; margin: 0; padding: 0; list-style: none; }
+      .x-menu > li { position: relative; }
+      .x-menu a, .x-dd__btn { position: relative; display: inline-flex; align-items: center; gap: 6px; min-height: 44px; padding: 0; background: none; border: 0; color: rgb(255 255 255 / .82); font: 650 13px/1 var(--grotesk); letter-spacing: .035em; text-decoration: none; cursor: pointer; transition: color .2s; }
+      .x-menu a::after, .x-dd__btn::after { content: ""; position: absolute; left: 0; right: 0; bottom: 8px; height: 1px; background: var(--honey); transform: scaleX(0); transform-origin: left; transition: transform .3s var(--ease); }
+      .x-dd__btn::after { right: 14px; }
+      .x-menu a:hover, .x-dd__btn:hover, .x-menu a.is-active, .x-dd__btn.is-active { color: #fff; }
+      .x-menu a:hover::after, .x-menu a.is-active::after, .x-dd__btn.is-active::after { transform: scaleX(1); }
+      .x-dd__btn svg { transition: transform .25s; }
+      .x-dd.is-open .x-dd__btn svg { transform: rotate(180deg); }
+      .x-dd__panel { position: absolute; top: calc(100% + 14px); left: 50%; width: 560px; display: grid; grid-template-columns: 1fr 1fr; gap: 28px; padding: 28px 30px 26px; background: var(--paper); color: var(--ink); border-top: 2px solid var(--honey); box-shadow: 0 24px 60px rgb(9 24 18 / .28); opacity: 0; visibility: hidden; transform: translate(-50%, 8px); transition: opacity .25s, transform .25s var(--ease), visibility .25s; }
+      .x-dd__panel::before { content: ""; position: absolute; left: 0; right: 0; top: -18px; height: 18px; }
+      .x-dd.is-open .x-dd__panel { opacity: 1; visibility: visible; transform: translate(-50%, 0); }
+      .x-dd__group p { margin: 0 0 10px; color: var(--bronze); font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+      .x-dd__group ul { margin: 0; padding: 0; list-style: none; }
+      .x-dd__panel a { display: flex; min-height: 40px; align-items: center; color: var(--forest); font: 400 17px/1.25 var(--serif); letter-spacing: 0; border-bottom: 1px solid var(--line); }
+      .x-dd__panel a::after { display: none; }
+      .x-dd__panel a:hover, .x-dd__panel a.is-active { color: var(--bronze); }
+      .x-dd__all { grid-column: 1 / -1; }
+      .x-dd__panel .x-dd__all a { border: 0; font: 700 13px/1 var(--grotesk); letter-spacing: .04em; }
+      .x-hdr-cta { display: flex; align-items: center; gap: 12px; }
+      .x-burger { display: none; width: 46px; height: 46px; place-items: center; background: none; border: 1px solid rgb(255 255 255 / .45); color: #fff; cursor: pointer; }
+      .x-burger span, .x-burger span::before, .x-burger span::after { display: block; width: 20px; height: 1.5px; background: currentColor; position: relative; transition: transform .3s var(--ease), background .2s; }
+      .x-burger span::before, .x-burger span::after { content: ""; position: absolute; left: 0; }
+      .x-burger span::before { top: -6px; } .x-burger span::after { top: 6px; }
+      .x-burger[aria-expanded="true"] span { background: transparent; }
+      .x-burger[aria-expanded="true"] span::before { transform: translateY(6px) rotate(45deg); }
+      .x-burger[aria-expanded="true"] span::after { transform: translateY(-6px) rotate(-45deg); }
+
+      /* mobile drawer */
+      .x-drawer { position: fixed; inset: var(--hdr) 0 0; z-index: 49; overflow-y: auto; padding: 18px 21px 40px; background: var(--forest-deep); color: #fff; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: opacity .3s, transform .3s var(--ease), visibility .3s; }
+      .x-drawer.is-open { opacity: 1; visibility: visible; transform: none; }
+      .x-drawer ul { margin: 0; padding: 0; list-style: none; }
+      .x-drawer > ul > li { border-bottom: 1px solid rgb(255 255 255 / .14); }
+      .x-drawer a, .x-drawer summary { display: flex; align-items: center; justify-content: space-between; min-height: 58px; color: #fff; font: 400 26px/1.1 var(--serif); text-decoration: none; cursor: pointer; list-style: none; }
+      .x-drawer summary::-webkit-details-marker { display: none; }
+      .x-drawer summary::after { content: "+"; color: var(--honey); font: 300 28px var(--grotesk); }
+      .x-drawer details[open] summary::after { content: "–"; }
+      .x-drawer a.is-active { color: var(--honey-lt); }
+      .x-drawer details ul { padding: 0 0 14px 14px; border-left: 1px solid rgb(213 164 91 / .5); margin-bottom: 16px; }
+      .x-drawer details a { min-height: 44px; font: 500 15px/1.3 var(--grotesk); color: rgb(255 255 255 / .82); }
+      .x-drawer details .x-drawer__cap { margin: 10px 0 2px; color: var(--honey); font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
+      .x-drawer__actions { display: grid; gap: 12px; margin-top: 28px; }
+      .x-drawer .x-drawer__actions .x-btn { justify-content: center; min-height: 51px; color: #17251c; font: 800 13px/1 var(--grotesk); letter-spacing: .055em; }
+      .x-drawer .x-drawer__actions .x-btn--ghost { color: #fff; }
+      .x-drawer .x-drawer__actions .x-btn--ghost:hover { color: var(--forest); }
+      .x-burger { flex: 0 0 46px; min-width: 46px; }
+      .x-top[hidden] { display: none; }
+
+      /* buttons & links */
+      .x-btn { display: inline-flex; align-items: center; justify-content: center; gap: 12px; min-height: 51px; padding: 0 22px; background: var(--honey); color: #17251c; border: 0; font: 800 13px/1 var(--grotesk); letter-spacing: .055em; text-decoration: none; cursor: pointer; transition: background .2s, transform .2s var(--ease), color .2s, border-color .2s; }
+      .x-btn:hover { background: #e5bc79; transform: translateY(-2px); }
+      .x-btn .x-arr { transition: transform .25s var(--ease); }
+      .x-btn:hover .x-arr { transform: translate(2px, -2px); }
+      .x-btn--sm { min-height: 44px; padding: 0 16px; font-size: 12px; }
+      .x-btn--forest { background: var(--forest); color: #fff; }
+      .x-btn--forest:hover { background: #28543d; }
+      .x-btn--ghost { background: transparent; color: #fff; border: 1px solid rgb(255 255 255 / .6); }
+      .x-btn--ghost:hover { background: #fff; color: var(--forest); }
+      .x-btn--line { background: transparent; color: var(--forest); border: 1px solid var(--forest); }
+      .x-btn--line:hover { background: var(--forest); color: #fff; }
+      .x-tlink { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; color: inherit; font-size: 13px; font-weight: 700; letter-spacing: .03em; text-decoration: none; }
+      .x-tlink span { border-bottom: 1px solid currentColor; padding: 4px 0; }
+      .x-tlink:hover span { border-color: var(--honey); }
+      .x-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px 24px; margin-top: 34px; }
+      /* type */
+      .x-eyebrow { display: flex; align-items: center; gap: 12px; margin: 0; color: var(--honey); font-size: 12px; font-weight: 750; letter-spacing: .19em; text-transform: uppercase; }
+      .x-eyebrow::before { content: ""; width: 30px; height: 1px; background: currentColor; }
+      .x-kicker { margin: 0 0 14px; color: var(--bronze); font-size: 12px; font-weight: 800; letter-spacing: .18em; text-transform: uppercase; }
+      .x-display { max-width: 720px; margin: 25px 0 22px; font: 400 clamp(3rem, 6.6vw, 6.2rem)/.99 var(--serif); letter-spacing: -.052em; }
+      .x-display em, .x-h1 em, .x-h2 em { color: var(--honey-lt); font-style: italic; font-weight: 400; }
+      .x-h1 { max-width: 820px; margin: 22px 0 18px; font: 400 clamp(2.7rem, 5.4vw, 4.8rem)/1.02 var(--serif); letter-spacing: -.045em; }
+      .x-h2 { margin: 0; color: var(--forest); font: 400 clamp(2.2rem, 4vw, 3.5rem)/1.06 var(--serif); letter-spacing: -.035em; }
+      .x-h2 em { color: var(--bronze); }
+      .x-dark .x-h2 { color: #fff; } .x-dark .x-h2 em { color: var(--honey-lt); } .x-dark .x-kicker { color: var(--honey); }
+      .x-h3 { margin: 0 0 10px; color: var(--forest); font: 400 25px/1.15 var(--serif); letter-spacing: -.01em; }
+      .x-lead { max-width: 520px; margin: 0; color: rgb(255 255 255 / .83); font-size: 17px; line-height: 1.75; }
+      .x-body { color: var(--muted); font-size: 16px; line-height: 1.8; }
+      .x-body p + p { margin-top: 1em; }
+      .x-body strong { color: var(--ink); }
+
+      /* home hero */
+      .x-hero { position: relative; min-height: min(760px, calc(100vh - 120px)); display: grid; align-items: center; overflow: hidden; isolation: isolate; background: var(--forest-deep); color: #fff; }
+      .x-hero__img { position: absolute; z-index: -2; top: 0; bottom: 0; left: 39%; right: 0; width: 61%; height: 100%; object-fit: cover; object-position: center 48%; animation: xZoom 14s var(--ease) both; }
+      .x-hero::before { content: ""; position: absolute; z-index: -1; inset: 0; background: linear-gradient(90deg, #10291f 0%, #10291f 32%, rgb(16 41 31 / .94) 43%, rgb(16 41 31 / .55) 65%, rgb(16 41 31 / .1) 100%), linear-gradient(0deg, rgb(16 41 31 / .45), transparent 40%); }
+      .x-hero::after, .x-ring::after { content: ""; position: absolute; z-index: -1; width: 45vw; height: 45vw; max-width: 580px; max-height: 580px; border: 1px solid rgb(213 164 91 / .33); border-radius: 50%; right: -6%; top: 11%; box-shadow: 0 0 0 28px rgb(213 164 91 / .055), 0 0 0 58px rgb(213 164 91 / .04); pointer-events: none; }
+      .x-hero__inner { padding: 110px 0 120px; }
+      .x-hero__note { position: absolute; right: max(32px, calc((100% - var(--wrap)) / 2)); bottom: 24px; max-width: 260px; margin: 0; padding: 9px 12px; background: rgb(16 41 31 / .78); color: #f4f0e6; font-size: 12px; line-height: 1.45; }
+      .x-hero__note strong { color: #e6ba71; }
+      @keyframes xZoom { from { transform: scale(1.08); } to { transform: scale(1); } }
+
+      /* trust bar */
+      .x-trust { background: var(--paper); border-bottom: 1px solid var(--line); }
+      .x-trust ul { display: grid; grid-template-columns: repeat(4, 1fr); margin: 0 auto; padding: 0; list-style: none; }
+      .x-trust li { display: flex; align-items: center; gap: 16px; padding: 30px 26px; border-left: 1px solid var(--line); }
+      .x-trust li:first-child { border-left: 0; padding-left: 0; }
+      .x-trust b { color: var(--forest); font: 400 34px/1 var(--serif); letter-spacing: -.03em; white-space: nowrap; }
+      .x-trust b small { color: var(--bronze); font-size: 22px; }
+      .x-trust span { color: var(--muted); font-size: 13px; line-height: 1.45; }
+      .x-trust a { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; color: inherit; text-decoration: none; }
+      .x-trust a:hover b { color: var(--bronze); }
+      .x-trust a:hover span { color: var(--forest); }
+
+      /* inner page hero */
+      .x-phero { position: relative; overflow: hidden; isolation: isolate; padding: 92px 0 96px; background: var(--forest-deep); color: #fff; }
+      .x-phero::after { top: -40%; right: -10%; }
+      .x-phero::before { content: ""; position: absolute; z-index: -1; inset: 0; background: radial-gradient(circle at 85% 20%, rgb(213 164 91 / .14), transparent 45%), linear-gradient(180deg, var(--forest-deep), var(--forest)); }
+      .x-crumbs { display: flex; flex-wrap: wrap; gap: 4px 10px; margin: 0 0 30px; padding: 0; list-style: none; font-size: 12px; font-weight: 650; letter-spacing: .06em; color: rgb(255 255 255 / .65); }
+      .x-crumbs li + li::before { content: "/"; margin-right: 10px; color: var(--honey); }
+      .x-crumbs a { color: rgb(255 255 255 / .82); text-decoration: none; }
+      .x-crumbs a:hover { color: #fff; text-decoration: underline; }
+
+      /* sections */
+      .x-sec { padding: 108px 0; }
+      .x-sec--sand { background: var(--sand); }
+      .x-sec--tight { padding: 80px 0; }
+      .x-dark { position: relative; overflow: hidden; isolation: isolate; background: var(--forest); color: #fff; }
+      .x-dark::after { content: ""; position: absolute; z-index: -1; right: -160px; bottom: -275px; width: 600px; height: 600px; border: 1px solid rgb(213 164 91 / .26); border-radius: 50%; box-shadow: 0 0 0 36px rgb(213 164 91 / .05), 0 0 0 72px rgb(213 164 91 / .04); }
+      .x-intro { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; margin-bottom: 52px; }
+      .x-intro__text { max-width: 450px; justify-self: end; margin: 0 0 4px; color: var(--muted); font-size: 16px; line-height: 1.8; }
+      .x-dark .x-intro__text { color: rgb(255 255 255 / .78); }
+      .x-split { display: grid; grid-template-columns: .9fr 1.1fr; gap: 90px; align-items: start; }
+      .x-split--center { align-items: center; grid-template-columns: 1fr 1fr; }
+
+      /* service cards */
+      .x-sgrid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-left: 1px solid var(--line); }
+      .x-sgrid--5 { grid-template-columns: repeat(5, 1fr); }
+      .x-scard { position: relative; display: flex; flex-direction: column; min-height: 240px; padding: 28px 28px 30px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); color: inherit; text-decoration: none; transition: background .3s; }
+      .x-scard::before { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: var(--honey); transform: scaleX(0); transform-origin: left; transition: transform .4s var(--ease); }
+      .x-scard:hover { background: #f4f0e7; }
+      .x-scard:hover::before { transform: scaleX(1); }
+      .x-scard__no { color: #8a6c43; font: 15px var(--serif); }
+      .x-scard h3 { margin: 30px 0 10px; color: var(--forest); font: 400 25px/1.15 var(--serif); }
+      .x-scard p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
+      .x-scard__arr { position: absolute; top: 24px; right: 26px; color: #8a6c43; font-size: 17px; transition: transform .3s var(--ease); }
+      .x-scard:hover .x-scard__arr { transform: translate(3px, -3px); color: var(--forest); }
+      .x-sgrid--5 .x-scard { min-height: 220px; padding: 24px 22px; }
+      .x-sgrid--5 .x-scard h3 { font-size: 21px; margin-top: 26px; }
+      .x-sgroup + .x-sgroup { margin-top: 70px; }
+      .x-sgroup__head { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; margin-bottom: 22px; }
+      .x-sgroup__head h3 { margin: 0; color: var(--forest); font: 400 30px/1.1 var(--serif); }
+      .x-sgroup__head p { margin: 0; color: var(--muted); font-size: 14px; max-width: 460px; }
+
+      /* reasons & steps (dark) */
+      .x-reasons { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid rgb(255 255 255 / .22); }
+      .x-reasons > div { padding: 28px 30px 30px 0; border-bottom: 1px solid rgb(255 255 255 / .22); }
+      .x-reasons > div:nth-child(even) { padding-left: 30px; padding-right: 0; border-left: 1px solid rgb(255 255 255 / .22); }
+      .x-reasons b { display: block; margin: 14px 0 8px; color: #fff; font: 400 22px/1.2 var(--serif); }
+      .x-reasons span:first-child { color: var(--honey); font: 16px var(--serif); }
+      .x-reasons p { margin: 0; color: rgb(255 255 255 / .74); font-size: 14px; line-height: 1.7; }
+      .x-steps { margin: 0; padding: 0; list-style: none; border-top: 1px solid rgb(255 255 255 / .25); }
+      .x-steps li { display: grid; grid-template-columns: 56px 1fr; gap: 14px; padding: 22px 0; border-bottom: 1px solid rgb(255 255 255 / .25); }
+      .x-steps__no { color: var(--honey); font: 20px var(--serif); }
+      .x-steps strong { display: block; margin-bottom: 5px; color: #fff; font-size: 16px; font-weight: 700; }
+      .x-steps p { margin: 0; color: rgb(255 255 255 / .74); font-size: 14px; line-height: 1.65; }
+
+      /* process (light) */
+      .x-process { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; margin: 0; padding: 0; list-style: none; counter-reset: s; }
+      .x-process li { position: relative; padding: 34px 28px 0 0; border-top: 1px solid var(--forest); }
+      .x-process li::before { counter-increment: s; content: "0" counter(s); position: absolute; top: -13px; left: 0; padding-right: 12px; background: var(--paper); color: var(--bronze); font: 18px var(--serif); }
+      .x-sec--sand .x-process li::before { background: var(--sand); }
+      .x-process strong { display: block; margin-bottom: 8px; color: var(--forest); font: 400 22px/1.2 var(--serif); }
+      .x-process p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
+
+      /* quotes */
+      .x-feature { display: grid; grid-template-columns: 1.25fr .75fr; gap: 70px; align-items: start; }
+      .x-bigquote { margin: 0; }
+      .x-bigquote p { margin: 0; color: var(--forest); font: 400 clamp(1.7rem, 3vw, 2.5rem)/1.28 var(--serif); letter-spacing: -.02em; }
+      .x-bigquote p::before { content: "“"; display: block; height: .55em; color: var(--honey); font-size: 2.6em; line-height: 1; }
+      .x-quote { position: relative; display: flex; flex-direction: column; margin: 0; padding: 32px 30px 28px; background: var(--paper); border: 1px solid var(--line); transition: transform .3s var(--ease), box-shadow .3s; }
+      .x-quote:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgb(23 59 44 / .1); }
+      .x-quote p { flex: 1; margin: 0 0 22px; color: var(--ink); font: 400 19px/1.55 var(--serif); }
+      .x-stars { color: var(--bronze); letter-spacing: .18em; font-size: 15px; margin-bottom: 14px; display: block; }
+      .x-cite { display: flex; align-items: center; gap: 12px; color: var(--forest); font-size: 13px; font-weight: 750; letter-spacing: .06em; font-style: normal; text-transform: uppercase; }
+      .x-cite::before { content: ""; width: 24px; height: 1px; background: var(--honey); }
+      .x-cite small { color: var(--muted); font-weight: 600; letter-spacing: .04em; text-transform: none; }
+      .x-quotes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+      .x-rating { display: grid; grid-template-columns: auto 1fr auto; gap: 34px; align-items: center; margin-bottom: 48px; padding: 34px 38px; background: var(--forest); color: #fff; }
+      .x-rating__fig { font: 400 76px/1 var(--serif); letter-spacing: -.04em; }
+      .x-rating__fig small { color: var(--honey); font-size: 34px; }
+      .x-rating p { margin: 0; color: rgb(255 255 255 / .8); font-size: 15px; line-height: 1.6; }
+      .x-rating strong { color: #fff; display: block; font: 400 24px/1.2 var(--serif); margin-bottom: 4px; }
+      /* area art, tags, regions */
+      .x-art { position: relative; min-height: 380px; overflow: hidden; display: grid; place-items: center; background: #e8e2d4; }
+      .x-art::before, .x-art::after { content: ""; position: absolute; inset: 38px; border: 1px solid rgb(23 59 44 / .24); }
+      .x-art::after { inset: 53px; border-color: rgb(23 59 44 / .13); }
+      .x-art__sun { position: absolute; width: 195px; height: 195px; border-radius: 50%; background: #d8b678; opacity: .5; right: 8%; top: 3%; }
+      .x-art svg { position: relative; z-index: 1; width: 88%; height: 70%; }
+      .x-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 0; padding: 0; list-style: none; }
+      .x-tag { display: inline-flex; align-items: center; gap: 10px; min-height: 40px; padding: 8px 14px; border: 1px solid #c9c9bb; color: var(--forest); font-size: 13px; font-weight: 700; letter-spacing: .03em; background: transparent; transition: background .2s, border-color .2s; }
+      .x-tag--dot::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--honey); }
+      .x-tag:hover { border-color: var(--forest); }
+      .x-regions { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; }
+      .x-region { padding: 34px 34px 32px; background: var(--paper); border: 1px solid var(--line); }
+      .x-region h3 { display: flex; justify-content: space-between; align-items: baseline; margin: 0 0 6px; color: var(--forest); font: 400 28px/1.15 var(--serif); }
+      .x-region h3 span { color: var(--bronze); font-size: 15px; }
+      .x-region > p { margin: 0; color: var(--muted); font-size: 14px; }
+      .x-region .x-tags { margin-top: 18px; }
+      .x-region .x-tag { min-height: 36px; padding: 6px 12px; font-weight: 600; }
+      .x-region .x-tag.is-home { background: var(--forest); color: #fff; border-color: var(--forest); }
+
+      /* projects gallery */
+      .x-filter { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 36px; }
+      .x-filter button { min-height: 46px; padding: 0 20px; background: transparent; border: 1px solid #c9c9bb; color: var(--forest); font: 700 13px/1 var(--grotesk); letter-spacing: .05em; cursor: pointer; transition: all .2s; }
+      .x-filter button:hover { border-color: var(--forest); }
+      .x-filter button[aria-pressed="true"] { background: var(--forest); border-color: var(--forest); color: #fff; }
+      .x-filter button span { margin-left: 6px; color: var(--honey); }
+      .x-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+      .x-gitem { transition: opacity .35s, transform .35s var(--ease); }
+      .x-gitem.is-hidden { display: none; }
+      .x-gitem.is-fading { opacity: 0; transform: scale(.97); }
+      .x-gitem--wide { grid-column: span 2; }
+      .x-photo { position: relative; height: 100%; min-height: 380px; margin: 0; overflow: hidden; background: var(--forest-deep); }
+      .x-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--ease); }
+      .x-photo:hover img { transform: scale(1.05); }
+      .x-photo figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 70px 26px 24px; background: linear-gradient(0deg, rgb(16 41 31 / .94), transparent); color: #fff; }
+      .x-photo figcaption b { display: block; font: 400 24px/1.2 var(--serif); margin: 8px 0 4px; }
+      .x-photo figcaption span { color: rgb(255 255 255 / .8); font-size: 13px; }
+      .x-cat { display: inline-block; padding: 5px 9px; background: var(--honey); color: #17251c; font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+      .x-case { display: flex; flex-direction: column; height: 100%; min-height: 380px; padding: 32px 30px; background: var(--sand); border: 1px solid var(--line); }
+      .x-case svg { width: 100%; max-width: 220px; height: 90px; margin: 22px 0 18px; }
+      .x-case h3 { margin: 0 0 10px; color: var(--forest); font: 400 26px/1.15 var(--serif); }
+      .x-case p { margin: 0 0 18px; color: var(--muted); font-size: 14px; line-height: 1.7; }
+      .x-case .x-tlink { margin-top: auto; color: var(--forest); }
+      .x-figure { position: relative; margin: 0; }
+      .x-figure img { width: 100%; height: 560px; object-fit: cover; }
+      .x-figure figcaption { margin-top: 12px; color: var(--muted); font-size: 12px; letter-spacing: .03em; }
+      .x-figure::before { content: ""; position: absolute; z-index: -1; inset: 28px -28px -28px 28px; border: 1px solid var(--honey); }
+
+      /* signs grid */
+      .x-signs { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin: 0; padding: 0; list-style: none; }
+      .x-signs li { padding: 28px 24px; background: var(--paper); border: 1px solid var(--line); color: var(--ink); font-size: 15px; line-height: 1.6; }
+      .x-signs li::before { content: ""; display: block; width: 28px; height: 28px; margin-bottom: 20px; border: 1px solid var(--honey); border-radius: 50%; background: radial-gradient(circle, var(--honey) 3px, transparent 4px); }
+      .x-glance { padding: 30px 30px 26px; background: var(--sand); border-top: 2px solid var(--honey); }
+      .x-glance h3 { margin: 0 0 14px; color: var(--forest); font: 400 22px/1.2 var(--serif); }
+      .x-glance dl { margin: 0; }
+      .x-glance dt { color: var(--bronze); font-size: 12px; font-weight: 800; letter-spacing: .14em; text-transform: uppercase; margin-top: 14px; }
+      .x-glance dd { margin: 4px 0 0; color: var(--ink); font-size: 15px; }
+      .x-glance a { color: var(--forest); }
+      .x-glance .x-btn { margin-top: 22px; width: 100%; }
+
+      /* faq */
+      .x-faq { border-top: 1px solid var(--line); }
+      .x-faq__item { border-bottom: 1px solid var(--line); }
+      .x-faq__q { display: flex; align-items: center; justify-content: space-between; gap: 24px; width: 100%; min-height: 76px; padding: 20px 0; background: none; border: 0; color: var(--forest); font: 400 22px/1.3 var(--serif); text-align: left; cursor: pointer; }
+      .x-faq__q:hover { color: var(--bronze); }
+      .x-faq__icon { position: relative; flex: 0 0 38px; height: 38px; border: 1px solid var(--line); border-radius: 50%; transition: background .3s, border-color .3s; }
+      .x-faq__icon::before, .x-faq__icon::after { content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 1.5px; background: var(--forest); transform: translate(-50%, -50%); transition: transform .3s var(--ease); }
+      .x-faq__icon::after { transform: translate(-50%, -50%) rotate(90deg); }
+      .x-faq__q[aria-expanded="true"] .x-faq__icon { background: var(--honey); border-color: var(--honey); }
+      .x-faq__q[aria-expanded="true"] .x-faq__icon::after { transform: translate(-50%, -50%) rotate(0); }
+      .x-faq__a { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .4s var(--ease); }
+      .x-faq__a > div { overflow: hidden; }
+      .x-faq__a p { max-width: 760px; margin: 0; padding: 0 60px 26px 0; color: var(--muted); font-size: 16px; line-height: 1.8; }
+      .x-faq__item.is-open .x-faq__a { grid-template-rows: 1fr; }
+
+      /* contact */
+      .x-contact { display: grid; grid-template-columns: 1.15fr .85fr; gap: 60px; align-items: start; }
+      .x-form { padding: 44px 44px 40px; background: var(--paper); border: 1px solid var(--line); box-shadow: 0 30px 60px rgb(23 59 44 / .07); }
+      .x-form__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px 22px; margin-top: 28px; }
+      .x-field { display: grid; gap: 8px; }
+      .x-field--full { grid-column: 1 / -1; }
+      .x-field label { color: var(--forest); font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+      .x-field label small { color: var(--muted); font-weight: 600; letter-spacing: .04em; text-transform: none; font-size: 12px; }
+      .x-field input, .x-field select, .x-field textarea { width: 100%; min-height: 52px; padding: 13px 15px; background: #fff; border: 1px solid #cfcdbf; border-radius: 0; color: var(--ink); font: 400 16px/1.4 var(--grotesk); transition: border-color .2s, box-shadow .2s; }
+      .x-field select { appearance: none; background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23173b2c' stroke-width='1.5'/%3E%3C/svg%3E") no-repeat right 16px center; padding-right: 40px; }
+      .x-field textarea { min-height: 140px; resize: vertical; }
+      .x-field input:focus, .x-field select:focus, .x-field textarea:focus { outline: none; border-color: var(--forest); box-shadow: 0 0 0 3px rgb(213 164 91 / .45); }
+      .x-field.is-invalid input, .x-field.is-invalid select, .x-field.is-invalid textarea { border-color: #a5432f; }
+      .x-field__err { display: none; color: #a5432f; font-size: 13px; }
+      .x-field.is-invalid .x-field__err { display: block; }
+      .x-form__foot { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 22px; margin-top: 28px; }
+      .x-form__foot p { margin: 0; color: var(--muted); font-size: 13px; max-width: 300px; }
+      .x-thanks { padding: 50px 44px; background: var(--forest); color: #fff; text-align: left; }
+      .x-thanks .x-h2 { color: #fff; margin: 16px 0 14px; }
+      .x-thanks p { color: rgb(255 255 255 / .8); margin: 0 0 8px; max-width: 460px; }
+      .x-ccards { display: grid; gap: 14px; }
+      .x-ccard { display: grid; grid-template-columns: 46px 1fr auto; gap: 16px; align-items: center; padding: 20px 22px; background: var(--paper); border: 1px solid var(--line); color: inherit; text-decoration: none; transition: border-color .2s, transform .3s var(--ease); }
+      a.x-ccard:hover { border-color: var(--forest); transform: translateX(4px); }
+      .x-ccard__ic { display: grid; place-items: center; width: 46px; height: 46px; background: var(--forest); color: var(--honey); }
+      .x-ccard small { display: block; color: var(--bronze); font-size: 12px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+      .x-ccard b { display: block; color: var(--forest); font: 400 20px/1.3 var(--serif); }
+      .x-ccard > span:last-child { color: #8a6c43; }
+      .x-map { position: relative; display: block; min-height: 250px; overflow: hidden; background: #e8e2d4; color: var(--forest); text-decoration: none; }
+      .x-map svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+      .x-map__label { position: absolute; left: 20px; bottom: 20px; right: 20px; display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 14px 16px; background: var(--paper); font-size: 14px; font-weight: 700; box-shadow: 0 10px 30px rgb(23 59 44 / .15); }
+      .x-map:hover .x-map__label { background: var(--forest); color: #fff; }
+      .x-pin { transform-origin: center bottom; animation: xPin 2.4s ease-in-out infinite; }
+      @keyframes xPin { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+
+      /* closing CTA */
+      .x-cta { position: relative; overflow: hidden; isolation: isolate; padding: 96px 0; background: var(--sand); }
+      .x-cta::after { content: ""; position: absolute; z-index: -1; left: -140px; top: -260px; width: 520px; height: 520px; border: 1px solid rgb(141 101 52 / .28); border-radius: 50%; box-shadow: 0 0 0 34px rgb(213 164 91 / .07); }
+      .x-cta__inner { display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+      .x-cta .x-h2 { max-width: 680px; }
+      .x-cta p { max-width: 500px; margin: 16px 0 0; color: var(--muted); font-size: 16px; line-height: 1.75; }
+      .x-cta__btns { display: grid; gap: 12px; flex: 0 0 auto; }
+
+      /* footer */
+      .x-foot { background: var(--forest-deep); color: rgb(255 255 255 / .78); }
+      .x-foot__main { display: grid; grid-template-columns: 1.4fr 1fr 1.2fr 1.3fr; gap: 48px; padding: 72px 0 56px; }
+      .x-foot__blurb { margin: 22px 0 18px; max-width: 320px; font-size: 14px; line-height: 1.75; }
+      .x-foot h2 { margin: 6px 0 18px; color: var(--honey); font: 800 12px/1 var(--grotesk); letter-spacing: .18em; text-transform: uppercase; }
+      .x-foot ul { margin: 0; padding: 0; list-style: none; }
+      .x-foot li a { display: inline-flex; align-items: center; min-height: 44px; min-width: 44px; color: rgb(255 255 255 / .8); font-size: 14px; text-decoration: none; }
+      .x-foot li a:hover { color: #fff; text-decoration: underline; text-underline-offset: 4px; }
+      .x-foot address { font-style: normal; font-size: 14px; line-height: 1.8; }
+      .x-foot address a { color: #fff; text-decoration: none; }
+      .x-foot address a:hover { text-decoration: underline; }
+      .x-foot__badge { display: inline-flex; align-items: center; gap: 10px; padding: 9px 13px; border: 1px solid rgb(255 255 255 / .22); color: #fff; font-size: 13px; text-decoration: none; }
+      .x-foot__badge b { color: var(--honey); }
+      .x-foot__hours { margin-top: 18px; font-size: 13px; color: rgb(255 255 255 / .68); }
+      .x-foot__note { padding: 22px 0; border-top: 1px solid rgb(255 255 255 / .16); color: rgb(255 255 255 / .62); font-size: 12px; line-height: 1.7; }
+      .x-foot__bottom { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px 20px; padding: 16px 0 22px; border-top: 1px solid rgb(255 255 255 / .16); color: rgb(255 255 255 / .6); font-size: 12px; letter-spacing: .045em; }
+      .x-foot .x-brand__mark { border-color: rgb(255 255 255 / .38); }
+
+      /* scroll to top */
+      .x-top { position: fixed; right: 22px; bottom: 22px; z-index: 40; display: grid; place-items: center; width: 50px; height: 50px; background: var(--honey); color: var(--ink); border: 0; cursor: pointer; box-shadow: 0 12px 30px rgb(16 41 31 / .25); opacity: 0; visibility: hidden; transform: translateY(12px); transition: opacity .3s, transform .3s var(--ease), visibility .3s; }
+      .x-top.is-shown { opacity: 1; visibility: visible; transform: none; }
+      .x-top:hover { background: #e5bc79; }
+
+      /* routing, transitions, reveal */
+      .x-page[hidden] { display: none; }
+      .x-main { outline: none; transition: opacity .28s ease, transform .28s var(--ease); }
+      .x-main.is-leaving { opacity: 0; transform: translateY(8px); }
+      .js [data-reveal] { opacity: 0; transform: translateY(26px); transition: opacity .8s var(--ease), transform .8s var(--ease); transition-delay: var(--d, 0s); }
+      .js [data-reveal].is-in { opacity: 1; transform: none; }
+
+      /* extras: case links, contact notes, hours */
+      .x-case__meta { margin: 0 0 6px !important; color: var(--bronze) !important; font-size: 12px !important; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; }
+      .x-photo__note { display: block; margin-top: 6px; color: rgb(255 255 255 / .7); font-size: 12px; }
+      .x-hours { margin: 0; padding: 26px 26px 22px; background: var(--sand); border-top: 2px solid var(--honey); }
+      .x-hours h3 { margin: 0 0 8px; color: var(--forest); font: 400 22px/1.2 var(--serif); }
+      .x-hours p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.7; }
+      .x-checks { margin: 22px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--line); }
+      .x-checks li { display: grid; grid-template-columns: 26px 1fr; gap: 12px; padding: 16px 0; border-bottom: 1px solid var(--line); color: var(--ink); font-size: 15px; line-height: 1.6; }
+      .x-checks li::before { content: "✓"; color: var(--bronze); font-weight: 800; }
+      .x-checks small { display: block; color: var(--muted); font-size: 13px; }
+      .x-themes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; border-top: 1px solid rgb(255 255 255 / .22); }
+      .x-themes > div { padding: 28px 28px 30px 0; }
+      .x-themes > div + div { padding-left: 28px; border-left: 1px solid rgb(255 255 255 / .22); }
+      .x-themes b { display: block; margin: 12px 0 8px; color: #fff; font: 400 22px/1.2 var(--serif); }
+      .x-themes span { color: var(--honey); font: 16px var(--serif); }
+      .x-themes p { margin: 0; color: rgb(255 255 255 / .74); font-size: 14px; line-height: 1.7; }
+      .x-faqside { position: sticky; top: 120px; }
+      .x-faqside .x-body { margin: 18px 0 0; }
+      @media (min-width: 1101px) { .x-drawer { display: none; } }
+      @media (max-width: 1240px) { .x-menu { gap: 20px; } }
+
+      /* responsive */
+      @media (max-width: 1100px) {
+        .x-menu { display: none; }
+        .x-burger { display: grid; }
+      }
+      @media (max-width: 1080px) {
+        .x-menu { gap: 22px; }
+        .x-sgrid--5 { grid-template-columns: repeat(3, 1fr); }
+        .x-foot__main { grid-template-columns: 1fr 1fr; }
+      }
+      @media (max-width: 980px) {
+        :root { --hdr: 74px; }
+        .x-menu, .x-hdr-cta .x-btn--full { display: none; }
+        .x-burger { display: grid; }
+        .x-header.is-scrolled .x-nav { height: var(--hdr); }
+        .x-intro, .x-split, .x-split--center, .x-feature, .x-contact { grid-template-columns: 1fr; gap: 28px; }
+        .x-intro__text { justify-self: start; }
+        .x-trust ul { grid-template-columns: 1fr 1fr; }
+        .x-trust li:nth-child(3) { border-left: 0; padding-left: 0; }
+        .x-trust li:nth-child(n+3) { border-top: 1px solid var(--line); }
+        .x-process { grid-template-columns: 1fr 1fr; gap: 40px 24px; }
+        .x-signs { grid-template-columns: 1fr 1fr; }
+        .x-quotes, .x-gallery { grid-template-columns: 1fr 1fr; }
+        .x-rating { grid-template-columns: auto 1fr; }
+        .x-rating .x-btn { grid-column: 1 / -1; justify-self: start; }
+        .x-cta__inner { flex-direction: column; align-items: flex-start; }
+        .x-figure img { height: 440px; }
+      }
+      @media (max-width: 760px) {
+        .x-preview { font-size: 12px; letter-spacing: .05em; }
+        .x-wrap { width: calc(100% - 42px); }
+        .x-brand__mark { width: 36px; height: 36px; font-size: 19px; }
+        .x-brand__name { max-width: 150px; font-size: 12px; }
+        .x-hero { min-height: 740px; align-items: end; }
+        .x-hero__img { left: 0; width: 100%; object-position: 58% center; }
+        .x-hero::before { background: linear-gradient(0deg, #10291f 0%, rgb(16 41 31 / .98) 22%, rgb(16 41 31 / .8) 50%, rgb(16 41 31 / .15) 100%); }
+        .x-hero::after { width: 70vw; height: 70vw; right: -18%; top: 12%; }
+        .x-hero__inner { padding: 260px 0 110px; }
+        .x-display { font-size: clamp(2.8rem, 12vw, 4.4rem); }
+        .x-lead { font-size: 16px; }
+        .x-hero__note { right: 21px; left: 21px; bottom: 16px; max-width: none; }
+        .x-sec { padding: 76px 0; }
+        .x-phero { padding: 64px 0 70px; }
+        .x-trust li { padding: 22px 14px; flex-direction: column; align-items: flex-start; gap: 6px; }
+        .x-trust li:nth-child(even) { padding-right: 0; }
+        .x-trust b { font-size: 28px; }
+        .x-sgrid, .x-sgrid--5 { grid-template-columns: 1fr 1fr; }
+        .x-scard, .x-sgrid--5 .x-scard { min-height: 200px; padding: 22px 18px; }
+        .x-scard h3, .x-sgrid--5 .x-scard h3 { font-size: 21px; margin-top: 22px; }
+        .x-scard__arr { top: 18px; right: 16px; }
+        .x-sgroup__head { flex-direction: column; gap: 8px; }
+        .x-reasons { grid-template-columns: 1fr; }
+        .x-reasons > div, .x-reasons > div:nth-child(even) { padding: 24px 0; border-left: 0; }
+        .x-process, .x-signs, .x-quotes, .x-gallery, .x-regions { grid-template-columns: 1fr; }
+        .x-gitem--wide { grid-column: auto; }
+        .x-photo, .x-case { min-height: 320px; }
+        .x-rating { grid-template-columns: 1fr; gap: 16px; padding: 28px 24px; }
+        .x-form { padding: 28px 22px; }
+        .x-form__grid { grid-template-columns: 1fr; }
+        .x-faq__q { font-size: 19px; }
+        .x-faq__a p { padding-right: 0; }
+        .x-figure img { height: 360px; }
+        .x-figure::before { inset: 16px -10px -16px 16px; }
+        .x-foot__main { grid-template-columns: 1fr; gap: 34px; padding: 56px 0 40px; }
+        .x-region { padding: 26px 22px; }
+        .x-cta { padding: 72px 0; }
+        .x-top { right: 16px; bottom: 16px; }
+        .x-foot li a, .x-foot address a, .x-foot__note a { display: inline-flex; align-items: center; min-height: 44px; }
+        .x-foot__badge { min-height: 44px; }
+        .x-themes { grid-template-columns: 1fr; }
+        .x-themes > div, .x-themes > div + div { padding: 24px 0; border-left: 0; border-bottom: 1px solid rgb(255 255 255 / .22); }
+        .x-faqside { position: static; }
+      }
+      @media (max-width: 400px) {
+        .x-sgrid, .x-sgrid--5 { grid-template-columns: 1fr; }
+        .x-scard { min-height: 170px; }
+        .x-brand__name { max-width: 120px; }
+        .x-hdr-cta .x-btn { padding: 0 12px; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        *, *::before, *::after { animation: none !important; transition-duration: .01ms !important; }
+        .js [data-reveal] { opacity: 1; transform: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="x-skip" href="#/" data-skip>Skip to content</a>
+    <div class="page x-site" id="top">
+      <div class="x-preview" role="note">Independent concept preview · not an official or approved business website</div>
+      <header class="x-header" id="x-header">
+        <nav class="x-wrap x-nav" aria-label="Main navigation">
+          <a class="x-brand" href="#/" aria-label="Perth Carpentry and Roofing, home">
+            <span class="x-brand__mark" aria-hidden="true">P<i>/</i>R</span>
+            <span class="x-brand__name">Perth Carpentry<br />and Roofing</span>
+          </a>
+          <ul class="x-menu">
+            <li><a href="#/" data-route-link="/">Home</a></li>
+            <li class="x-dd" id="x-dd">
+              <button class="x-dd__btn" type="button" aria-expanded="false" aria-controls="x-dd-panel" data-route-link="/services">
+                Services
+                <svg width="10" height="7" viewBox="0 0 10 7" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" /></svg>
+              </button>
+              <div class="x-dd__panel" id="x-dd-panel">
+                <div class="x-dd__group">
+                  <p>Roofing</p>
+                  <ul>
+                    <li><a href="#/services/roof-framing">Roof framing &amp; trusses</a></li>
+                    <li><a href="#/services/roof-repairs">Roof repairs</a></li>
+                    <li><a href="#/services/barge-board-restoration">Gable &amp; barge boards</a></li>
+                    <li><a href="#/services/tile-scribe-replacement">Tile scribe replacement</a></li>
+                    <li><a href="#/services/wall-cladding">External wall cladding</a></li>
+                  </ul>
+                </div>
+                <div class="x-dd__group">
+                  <p>Outdoor living</p>
+                  <ul>
+                    <li><a href="#/services/timber-decks">Custom timber decks</a></li>
+                    <li><a href="#/services/pergolas-gazebos">Pergolas &amp; gazebos</a></li>
+                    <li><a href="#/services/alfresco-areas">Alfresco areas</a></li>
+                    <li><a href="#/services/carports">Carports</a></li>
+                    <li><a href="#/services/small-additions">Small additions</a></li>
+                  </ul>
+                </div>
+                <div class="x-dd__group x-dd__all"><a href="#/services">View all services ↗</a></div>
+              </div>
+            </li>
+            <li><a href="#/projects" data-route-link="/projects">Projects</a></li>
+            <li><a href="#/about" data-route-link="/about">About</a></li>
+            <li><a href="#/areas" data-route-link="/areas">Service Areas</a></li>
+            <li><a href="#/reviews" data-route-link="/reviews">Reviews</a></li>
+            <li><a href="#/faq" data-route-link="/faq">FAQ</a></li>
+            <li><a href="#/contact" data-route-link="/contact">Contact</a></li>
+          </ul>
+          <div class="x-hdr-cta">
+            <a class="x-btn x-btn--sm" href="tel:+61427945345" aria-label="Call Mat on 0427 945 345">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" /></svg>
+              <span>0427 945 345</span>
+            </a>
+            <button class="x-burger" type="button" aria-expanded="false" aria-controls="x-drawer" aria-label="Open menu"><span></span></button>
+          </div>
+        </nav>
+      </header>
+      <div class="x-drawer" id="x-drawer" aria-label="Mobile menu">
+        <ul>
+          <li><a href="#/" data-route-link="/">Home</a></li>
+          <li>
+            <details>
+              <summary>Services</summary>
+              <ul>
+                <li><a href="#/services">All services</a></li>
+                <li class="x-drawer__cap">Roofing</li>
+                <li><a href="#/services/roof-framing">Roof framing &amp; trusses</a></li>
+                <li><a href="#/services/roof-repairs">Roof repairs</a></li>
+                <li><a href="#/services/barge-board-restoration">Gable &amp; barge boards</a></li>
+                <li><a href="#/services/tile-scribe-replacement">Tile scribe replacement</a></li>
+                <li><a href="#/services/wall-cladding">External wall cladding</a></li>
+                <li class="x-drawer__cap">Outdoor living</li>
+                <li><a href="#/services/timber-decks">Custom timber decks</a></li>
+                <li><a href="#/services/pergolas-gazebos">Pergolas &amp; gazebos</a></li>
+                <li><a href="#/services/alfresco-areas">Alfresco areas</a></li>
+                <li><a href="#/services/carports">Carports</a></li>
+                <li><a href="#/services/small-additions">Small additions</a></li>
+              </ul>
+            </details>
+          </li>
+          <li><a href="#/projects" data-route-link="/projects">Projects</a></li>
+          <li><a href="#/about" data-route-link="/about">About</a></li>
+          <li><a href="#/areas" data-route-link="/areas">Service Areas</a></li>
+          <li><a href="#/reviews" data-route-link="/reviews">Reviews</a></li>
+          <li><a href="#/faq" data-route-link="/faq">FAQ</a></li>
+          <li><a href="#/contact" data-route-link="/contact">Contact</a></li>
+        </ul>
+        <div class="x-drawer__actions">
+          <a class="x-btn" href="tel:+61427945345">Call Mat · 0427 945 345</a>
+          <a class="x-btn x-btn--ghost" href="https://wa.me/61427945345" target="_blank" rel="noopener">Message on WhatsApp</a>
+        </div>
+      </div>
+      <main class="x-main" id="main" tabindex="-1">
+        <!-- ================= HOME ================= -->
+        <div class="x-page" data-page="/">
+          <section class="x-hero" aria-labelledby="home-title">
+            <img class="x-hero__img" src="pcr-hero.jpg" alt="Timber pergola and alfresco area under a Colorbond roof" />
+            <div class="x-wrap x-hero__inner">
+              <p class="x-eyebrow">Roofing · Carpentry · Perth</p>
+              <h1 class="x-display" id="home-title">Roofs, decks and carports, <em>framed right.</em></h1>
+              <p class="x-lead">Over 15 years of roof framing, repairs, cladding and custom timber outdoor builds across Perth, from Perth's carpenter-roofer, Mat.</p>
+              <div class="x-actions">
+                <a class="x-btn" href="#/contact">Request a quote <span class="x-arr" aria-hidden="true">↗</span></a>
+                <a class="x-tlink" href="tel:+61427945345"><span>Or call 0427 945 345</span></a>
+              </div>
+            </div>
+            <p class="x-hero__note"><strong>Representative image.</strong> Shown for this concept; not presented as a project by this business.</p>
+          </section>
+
+          <section class="x-trust" aria-label="At a glance">
+            <ul class="x-wrap">
+              <li data-reveal><a href="#/reviews" aria-label="4.9 stars from 40 Google reviews: read reviews"><b>4.9<small>★</small></b></a><span>Google rating from 40 reviews</span></li>
+              <li data-reveal style="--d:.08s"><b>15+</b><span>Years in the roof business</span></li>
+              <li data-reveal style="--d:.16s"><b>Como</b><span>Based locally, working across Perth</span></li>
+              <li data-reveal style="--d:.24s"><b>10</b><span>Roofing and carpentry services under one name</span></li>
+            </ul>
+          </section>
+
+          <section class="x-sec" aria-labelledby="home-services">
+            <div class="x-wrap">
+              <div class="x-intro" data-reveal>
+                <div>
+                  <p class="x-kicker">The work, in its elements</p>
+                  <h2 class="x-h2" id="home-services">From roof structure<br />to outdoor room.</h2>
+                </div>
+                <p class="x-intro__text">A specialist roof framing and roofing company that also builds the timber spaces Perth lives in outdoors. Pick a service to see how the job is done.</p>
+              </div>
+              <div class="x-sgrid" data-reveal>
+                <a class="x-scard" href="#/services/roof-framing"><span class="x-scard__no">01</span><span class="x-scard__arr" aria-hidden="true">↗</span><h3>Roof framing</h3><p>Pitched roof frames and truss installation for new builds, extensions and re-roofs.</p></a>
+                <a class="x-scard" href="#/services/roof-repairs"><span class="x-scard__no">02</span><span class="x-scard__arr" aria-hidden="true">↗</span><h3>Roof repairs</h3><p>Leaks, defects and damaged sheets or tiles, traced to the cause and fixed.</p></a>
+                <a class="x-scard" href="#/services/barge-board-restoration"><span class="x-scard__no">03</span><span class="x-scard__arr" aria-hidden="true">↗</span><h3>Gables &amp; barge boards</h3><p>Weathered gable ends and barge boards restored, plus tile scribe replacement.</p></a>
+                <a class="x-scard" href="#/services/wall-cladding"><span class="x-scard__no">04</span><span class="x-scard__arr" aria-hidden="true">↗</span><h3>Wall cladding</h3><p>External wall cladding and metal flashings for a sound, fresh exterior.</p></a>
+                <a class="x-scard" href="#/services/timber-decks"><span class="x-scard__no">05</span><span class="x-scard__arr" aria-hidden="true">↗</span><h3>Decks &amp; pergolas</h3><p>Custom timber decks, pergolas and gazebos made for life outdoors.</p></a>
+                <a class="x-scard" href="#/services/carports"><span class="x-scard__no">06</span><span class="x-scard__arr" aria-hidden="true">↗</span><h3>Alfresco &amp; carports</h3><p>Alfresco areas, carports and small additions, framed and roofed in one job.</p></a>
+              </div>
+              <div class="x-actions" data-reveal><a class="x-btn x-btn--line" href="#/services">See all 10 services <span class="x-arr" aria-hidden="true">↗</span></a></div>
+            </div>
+          </section>
+
+          <section class="x-sec x-dark" aria-labelledby="home-why">
+            <div class="x-wrap x-split">
+              <div data-reveal>
+                <p class="x-kicker">Why homeowners call Mat</p>
+                <h2 class="x-h2" id="home-why">A roofer who thinks like a <em>carpenter.</em></h2>
+                <p class="x-intro__text" style="justify-self:start;margin-top:22px">The roof frame and the roof cover are done by the same business, so what sits underneath is built for what goes on top.</p>
+              </div>
+              <div class="x-reasons" data-reveal style="--d:.1s">
+                <div><span>01</span><b>Framing is the specialty</b><p>Roof framing and truss work is the core of the business, built on more than 15 years in the trade.</p></div>
+                <div><span>02</span><b>Quick, clear quotes</b><p>Reviewers mention prompt responses and very competitive, reasonable pricing.</p></div>
+                <div><span>03</span><b>Deadlines respected</b><p>Time-critical jobs are scheduled quickly and finished within the agreed time frame.</p></div>
+                <div><span>04</span><b>Local to Como</b><p>Based south of the river and working across Perth and the surrounding areas.</p></div>
+              </div>
+            </div>
+          </section>
+
+          <section class="x-sec" aria-labelledby="home-process">
+            <div class="x-wrap">
+              <div class="x-intro" data-reveal>
+                <div>
+                  <p class="x-kicker">How a job runs</p>
+                  <h2 class="x-h2" id="home-process">Good building starts with a good conversation.</h2>
+                </div>
+                <p class="x-intro__text">Whether the job is up on the roof or out in the garden, it begins with the work you have in mind and the details that matter to your home.</p>
+              </div>
+              <ol class="x-process">
+                <li data-reveal><strong>Talk it through</strong><p>Call or WhatsApp Mat with what needs repairing, replacing or building. Photos help.</p></li>
+                <li data-reveal style="--d:.1s"><strong>Look and quote</strong><p>The job is checked properly so the quote covers the real scope, not a guess.</p></li>
+                <li data-reveal style="--d:.2s"><strong>Book it in</strong><p>Once you're happy, the work is scheduled around your timing and any deadline.</p></li>
+                <li data-reveal style="--d:.3s"><strong>Build and finish</strong><p>Framed, fixed and finished, with the site left tidy when the job is done.</p></li>
+              </ol>
+            </div>
+          </section>
+
+          <section class="x-sec x-sec--sand" aria-labelledby="home-reviews">
+            <div class="x-wrap">
+              <p class="x-kicker" data-reveal>From Google reviews · 4.9 ★ from 40</p>
+              <h2 class="x-h2" id="home-reviews" style="margin-bottom:44px" data-reveal>What clients say about Mat.</h2>
+              <div class="x-feature">
+                <blockquote class="x-bigquote" data-reveal>
+                  <p>Mat was first class from start to finish… Our job was time critical and Mat went above and beyond to meet our deadline. The work was first class and the price extremely competitive.</p>
+                  <footer class="x-cite" style="margin-top:26px">Kym B. <small>Google review</small></footer>
+                </blockquote>
+                <blockquote class="x-quote" data-reveal style="--d:.12s">
+                  <span class="x-stars" aria-hidden="true">★★★★★</span>
+                  <p>Had Mat remove an exterior balcony wall and replace with cladding and metal flashing. He also fitted some metal sheeting on a leaking flat roof. Mat was very responsive and quick to provide a very competitive quote.</p>
+                  <footer class="x-cite">Tegan D. <small>Google review</small></footer>
+                </blockquote>
+              </div>
+              <div class="x-actions" data-reveal><a class="x-tlink" href="#/reviews" style="color:var(--forest)"><span>Read all reviews</span> ↗</a></div>
+            </div>
+          </section>
+
+          <section class="x-sec" aria-labelledby="home-area">
+            <div class="x-wrap x-split x-split--center">
+              <div class="x-art" aria-hidden="true" data-reveal>
+                <span class="x-art__sun"></span>
+                <svg viewBox="0 0 520 300" fill="none"><path d="M55 220L260 68L465 220" stroke="#234B37" stroke-width="2" /><path d="M85 220V250H435V220" stroke="#234B37" stroke-width="2" /><path d="M130 220V250M195 170V250M260 130V250M325 170V250M390 220V250" stroke="#6F795F" stroke-width="1.5" /><path d="M35 265H485M70 280H450" stroke="#9D895F" stroke-width="1" /></svg>
+              </div>
+              <div data-reveal style="--d:.1s">
+                <p class="x-kicker">Rooted in the Perth area</p>
+                <h2 class="x-h2" id="home-area">Local to Como.<br />Working across Perth.</h2>
+                <p class="x-body" style="max-width:460px;margin-top:20px">Based in Como, WA, Perth Carpentry and Roofing serves Perth metro and the surrounding areas.</p>
+                <ul class="x-tags">
+                  <li class="x-tag x-tag--dot">Como</li><li class="x-tag">South Perth</li><li class="x-tag">Victoria Park</li><li class="x-tag">East Victoria Park</li><li class="x-tag">Applecross</li><li class="x-tag">Canning Vale</li><li class="x-tag">Fremantle</li><li class="x-tag">Subiaco</li>
+                </ul>
+                <div class="x-actions"><a class="x-btn x-btn--line" href="#/areas">All service areas <span class="x-arr" aria-hidden="true">↗</span></a></div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- ================= SERVICES ================= -->
+        <div class="x-page" data-page="/services" hidden>
+          <section class="x-phero x-ring" aria-labelledby="svc-title">
+            <div class="x-wrap">
+              <ol class="x-crumbs"><li><a href="#/">Home</a></li><li aria-current="page">Services</li></ol>
+              <p class="x-eyebrow">Ten services · One carpenter-roofer</p>
+              <h1 class="x-h1" id="svc-title">Everything from the <em>roof frame</em> to the back deck.</h1>
+              <p class="x-lead">Roof framing and roofing is the specialty. Timber outdoor builds come from the same carpentry skills, so one business can frame it, roof it and finish it.</p>
+            </div>
+          </section>
+          <section class="x-sec" aria-label="All services">
+            <div class="x-wrap">
+              <div class="x-sgroup" data-reveal>
+                <div class="x-sgroup__head">
+                  <h3>Roofing</h3>
+                  <p>Structure, repairs and the weather-facing edges of your home.</p>
+                </div>
+                <div class="x-sgrid x-sgrid--5">
+                  <a class="x-scard" href="#/services/roof-framing"><span class="x-scard__no">01</span><span class="x-scard__arr" aria-hidden="true">↗</span><h3>Roof framing &amp; trusses</h3><p>New roof frames and truss installation.</p></a>
+                  <a class="x-scard" href="#/services/roof-repairs"><span class="x-scard__no">02</span><span class="x-scard__arr" aria-hidden="true">↗</span><h3>Roof repairs</h3><p>Leaks, defects and damaged roofing fixed.</p></a>
+                  <a class="x-scard" href="#/services/barge-board-restoration"><span class="x-scard__no">03</span><span class="x-scard__arr" aria-hidden="true">↗</span><h3>Gable &amp; barge boards</h3><p>Weathered timber edges restored.</p></a>
+                  <a class="x-scard" href="#/services/tile-scribe-replacement"><span class="x-scard__no">04</span><span class="x-scard__arr" aria-hidden="true">↗</span><h3>Tile scribe replacement</h3><p>The tiled roof edge, made good again.</p></a>
+                  <a class="x-scard" href="#/services/wall-cladding"><span class="x-scard__no">05</span><span class="x-scard__arr" aria-hidden="true">↗</span><h3>External wall cladding</h3><p>Cladding and metal flashings.</p></a>
+                </div>
+              </div>
+              <div class="x-sgroup" data-reveal>
+                <div class="x-sgroup__head">
+                  <h3>Outdoor living</h3>
+                  <p>Custom timber builds for shade, cars and long Perth evenings.</p>
+                </div>
+                <div class="x-sgrid x-sgrid--5">
+                  <a class="x-scard" href="#/services/timber-decks"><span class="x-scard__no">06</span><span class="x-scard__arr" aria-hidden="true">↗</span><h3>Custom timber decks</h3><p>Decks built to suit the block.</p></a>
+                  <a class="x-scard" href="#/services/pergolas-gazebos"><span class="x-scard__no">07</span><span class="x-scard__arr" aria-hidden="true">↗</span><h3>Pergolas &amp; gazebos</h3><p>Shade structures in timber.</p></a>
+                  <a class="x-scard" href="#/services/alfresco-areas"><span class="x-scard__no">08</span><span class="x-scard__arr" aria-hidden="true">↗</span><h3>Alfresco areas</h3><p>Roofed outdoor rooms off the house.</p></a>
+                  <a class="x-scard" href="#/services/carports"><span class="x-scard__no">09</span><span class="x-scard__arr" aria-hidden="true">↗</span><h3>Carports</h3><p>Framed and roofed cover for the car.</p></a>
+                  <a class="x-scard" href="#/services/small-additions"><span class="x-scard__no">10</span><span class="x-scard__arr" aria-hidden="true">↗</span><h3>Small additions</h3><p>Modest extensions, framed properly.</p></a>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="x-sec x-sec--sand" aria-labelledby="svc-unsure">
+            <div class="x-wrap x-split x-split--center">
+              <div data-reveal>
+                <p class="x-kicker">Not sure what you need?</p>
+                <h2 class="x-h2" id="svc-unsure">Send a photo. <em>Start there.</em></h2>
+              </div>
+              <div class="x-body" data-reveal style="--d:.1s">
+                <p>A leak, a tired barge board or a bare corner of the yard doesn't always fit neatly into one service. Message Mat on WhatsApp with a few photos and a short description, and he can tell you what the job involves.</p>
+                <div class="x-actions"><a class="x-btn x-btn--forest" href="https://wa.me/61427945345" target="_blank" rel="noopener">Message on WhatsApp <span class="x-arr" aria-hidden="true">↗</span></a><a class="x-tlink" href="#/contact" style="color:var(--forest)"><span>Or use the quote form</span></a></div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- ================= SERVICE DETAIL (rendered from data) ================= -->
+        <div class="x-page" data-page="/service" hidden></div>
+
+        <!-- ================= ABOUT ================= -->
+        <div class="x-page" data-page="/about" hidden>
+          <section class="x-phero x-ring" aria-labelledby="about-title">
+            <div class="x-wrap">
+              <ol class="x-crumbs"><li><a href="#/">Home</a></li><li aria-current="page">About</li></ol>
+              <p class="x-eyebrow">About · Como, WA</p>
+              <h1 class="x-h1" id="about-title">Meet Mat, Perth's <em>carpenter-roofer.</em></h1>
+              <p class="x-lead">Over 15 years in the roof business, and the name that comes up in nearly every review.</p>
+            </div>
+          </section>
+          <section class="x-sec" aria-labelledby="about-story">
+            <div class="x-wrap x-split x-split--center">
+              <div class="x-art" aria-hidden="true" data-reveal>
+                <span class="x-art__sun"></span>
+                <svg viewBox="0 0 520 300" fill="none"><path d="M70 230L260 80L450 230" stroke="#234B37" stroke-width="2" /><path d="M110 198L260 80L410 198H110Z" stroke="#6F795F" stroke-width="1.2" /><path d="M150 198L260 112M370 198L260 112M260 80V198M205 198L260 140M315 198L260 140" stroke="#6F795F" stroke-width="1.2" /><path d="M95 230H425M40 262H480" stroke="#9D895F" stroke-width="1" /></svg>
+              </div>
+              <div data-reveal style="--d:.1s">
+                <p class="x-kicker">The story</p>
+                <h2 class="x-h2" id="about-story">A roof framing specialist who also builds outdoors.</h2>
+                <div class="x-body" style="margin-top:22px">
+                  <p>Perth Carpentry and Roofing (also known on Facebook as All Perth Carpentry and Roofing) is run by <strong>Mathew, known to his clients as Mat</strong>. In the business's own words, it is "a specialist Roof framing and roofing company in Perth", with <strong>over 15 years of experience in the roof business</strong>.</p>
+                  <p>That framing background carries into everything else: custom timber decks, pergolas, gazebos, alfresco areas, carports, cladding and small additions. Mat is based in Como and works across Perth and the surrounding areas.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="x-sec x-dark" aria-labelledby="about-values">
+            <div class="x-wrap x-split">
+              <div data-reveal>
+                <p class="x-kicker">How Mat works</p>
+                <h2 class="x-h2" id="about-values">Values you can read in the <em>reviews.</em></h2>
+                <p class="x-intro__text" style="justify-self:start;margin-top:22px">Not slogans: these are the things clients wrote about after the job was done.</p>
+              </div>
+              <div class="x-reasons" data-reveal style="--d:.1s">
+                <div><span>01</span><b>Respond promptly</b><p>Quote requests answered quickly, as Tegan and Jieke both noted.</p></div>
+                <div><span>02</span><b>Price it fairly</b><p>"Very competitive" and "reasonable" are the words clients used.</p></div>
+                <div><span>03</span><b>Keep to the timeline</b><p>Work scheduled quickly and finished within the agreed time frame.</p></div>
+                <div><span>04</span><b>Go the extra step</b><p>When a job was time critical, Mat "went above and beyond" to meet it.</p></div>
+              </div>
+            </div>
+          </section>
+          <section class="x-sec" aria-labelledby="about-facts">
+            <div class="x-wrap x-split">
+              <div data-reveal>
+                <p class="x-kicker">The verified facts</p>
+                <h2 class="x-h2" id="about-facts">What you can check for yourself.</h2>
+                <p class="x-body" style="margin-top:20px;max-width:420px">Licence and registration details should always be confirmed directly. Ask Mat for his current details when you request a quote.</p>
+              </div>
+              <ul class="x-checks" data-reveal style="--d:.1s">
+                <li><span>4.9 stars from 40 Google reviews <small>Listed on Google as a carpenter</small></span></li>
+                <li><span>Over 15 years in the roof business <small>From the business's own Google description</small></span></li>
+                <li><span>Based in Como, WA 6152 <small>Serving Perth and the surrounding areas</small></span></li>
+                <li><span>All Perth Carpentry and Roofing on Facebook <small>543 followers</small></span></li>
+              </ul>
+            </div>
+          </section>
+        </div>
+
+        <!-- ================= PROJECTS ================= -->
+        <div class="x-page" data-page="/projects" hidden>
+          <section class="x-phero x-ring" aria-labelledby="proj-title">
+            <div class="x-wrap">
+              <ol class="x-crumbs"><li><a href="#/">Home</a></li><li aria-current="page">Projects</li></ol>
+              <p class="x-eyebrow">Projects · Gallery</p>
+              <h1 class="x-h1" id="proj-title">Roofs, outdoor rooms and <em>carports.</em></h1>
+              <p class="x-lead">A gallery of the kind of work Mat does, with two jobs clients wrote about. Photos marked representative are shown for this concept only.</p>
+            </div>
+          </section>
+          <section class="x-sec" aria-label="Project gallery">
+            <div class="x-wrap">
+              <div class="x-filter" role="group" aria-label="Filter projects">
+                <button type="button" aria-pressed="true" data-filter="all">All <span>7</span></button>
+                <button type="button" aria-pressed="false" data-filter="roofing">Roofing <span>3</span></button>
+                <button type="button" aria-pressed="false" data-filter="outdoor">Outdoor living <span>2</span></button>
+                <button type="button" aria-pressed="false" data-filter="carports">Carports <span>2</span></button>
+              </div>
+              <p class="x-body" id="x-filter-status" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)"></p>
+              <div class="x-gallery">
+                <div class="x-gitem x-gitem--wide" data-cat="roofing">
+                  <figure class="x-photo">
+                    <img src="pcr-framing.jpg" alt="Timber roof trusses and framing standing over a new building" loading="lazy" />
+                    <figcaption><span class="x-cat">Roofing</span><b>Roof framing &amp; trusses</b><span>The core of the business: frames built for what goes on top.</span><span class="x-photo__note">Representative image</span></figcaption>
+                  </figure>
+                </div>
+                <div class="x-gitem" data-cat="roofing">
+                  <article class="x-case">
+                    <span class="x-cat" style="align-self:flex-start">Case study · Roofing</span>
+                    <svg viewBox="0 0 220 90" fill="none" aria-hidden="true"><path d="M10 80L110 12L210 80" stroke="#173b2c" stroke-width="2" /><path d="M24 80L110 22L196 80" stroke="#d5a45b" stroke-width="4" /><path d="M60 80V60H160V80" stroke="#8d6534" stroke-width="1.2" /></svg>
+                    <p class="x-case__meta">1960s home · From a Google review</p>
+                    <h3>Barge boards on a 1960s home</h3>
+                    <p>A client with a 1960s home had their barge boards attended to. Older timber edges like these take care to restore without disturbing the roof around them.</p>
+                    <a class="x-tlink" href="#/services/barge-board-restoration"><span>Gable &amp; barge board restoration</span> ↗</a>
+                  </article>
+                </div>
+                <div class="x-gitem" data-cat="carports">
+                  <article class="x-case">
+                    <span class="x-cat" style="align-self:flex-start">Case study · Carport</span>
+                    <svg viewBox="0 0 220 90" fill="none" aria-hidden="true"><path d="M14 30H206" stroke="#d5a45b" stroke-width="4" /><path d="M30 30V82M190 30V82M110 30V82" stroke="#173b2c" stroke-width="2" /><path d="M6 84H214" stroke="#8d6534" stroke-width="1.2" /></svg>
+                    <p class="x-case__meta">East Victoria Park · From a Google review</p>
+                    <h3>A carport in East Victoria Park</h3>
+                    <p>One of the jobs clients mention by name: a carport built for a home in East Victoria Park, a short drive from Mat's base in Como.</p>
+                    <a class="x-tlink" href="#/services/carports"><span>About carports</span> ↗</a>
+                  </article>
+                </div>
+                <div class="x-gitem x-gitem--wide" data-cat="carports">
+                  <figure class="x-photo">
+                    <img src="pcr-carport.jpg" alt="Timber-framed carport with a metal roof beside a house" loading="lazy" />
+                    <figcaption><span class="x-cat">Carports</span><b>Framed and roofed in one job</b><span>Timber posts and beams under a sheet metal roof.</span><span class="x-photo__note">Representative image</span></figcaption>
+                  </figure>
+                </div>
+                <div class="x-gitem" data-cat="roofing">
+                  <article class="x-case">
+                    <span class="x-cat" style="align-self:flex-start">Roofing · Cladding</span>
+                    <svg viewBox="0 0 220 90" fill="none" aria-hidden="true"><path d="M10 30H210" stroke="#173b2c" stroke-width="2" /><path d="M20 30V82M40 30V82M60 30V82M80 30V82M100 30V82" stroke="#8d6534" stroke-width="1.2" /><path d="M120 22H210" stroke="#d5a45b" stroke-width="4" /></svg>
+                    <p class="x-case__meta">From Tegan D.'s review</p>
+                    <h3>Balcony wall clad, flat roof sheeted</h3>
+                    <p>An exterior balcony wall removed and replaced with cladding and metal flashing, plus metal sheeting fitted to a leaking flat roof.</p>
+                    <a class="x-tlink" href="#/services/wall-cladding"><span>External wall cladding</span> ↗</a>
+                  </article>
+                </div>
+                <div class="x-gitem" data-cat="outdoor">
+                  <article class="x-case">
+                    <span class="x-cat" style="align-self:flex-start">Outdoor living</span>
+                    <svg viewBox="0 0 220 90" fill="none" aria-hidden="true"><path d="M10 56H210" stroke="#d5a45b" stroke-width="4" /><path d="M10 64H210M10 72H210" stroke="#8d6534" stroke-width="1.2" /><path d="M30 60V86M190 60V86" stroke="#173b2c" stroke-width="2" /></svg>
+                    <p class="x-case__meta">Space for Mat's own photos</p>
+                    <h3>Custom timber decks</h3>
+                    <p>Decks built to suit the block, the house and how you use the yard.</p>
+                    <a class="x-tlink" href="#/services/timber-decks"><span>About timber decks</span> ↗</a>
+                  </article>
+                </div>
+                <div class="x-gitem" data-cat="outdoor">
+                  <article class="x-case">
+                    <span class="x-cat" style="align-self:flex-start">Outdoor living</span>
+                    <svg viewBox="0 0 220 90" fill="none" aria-hidden="true"><path d="M14 20H206" stroke="#d5a45b" stroke-width="4" /><path d="M30 14H190M50 26V30M90 26V30M130 26V30M170 26V30" stroke="#8d6534" stroke-width="1.2" /><path d="M36 22V84M184 22V84" stroke="#173b2c" stroke-width="2" /></svg>
+                    <p class="x-case__meta">Space for Mat's own photos</p>
+                    <h3>Pergolas, gazebos &amp; alfresco</h3>
+                    <p>Shade and shelter in timber, from a freestanding gazebo to a roofed alfresco off the house.</p>
+                    <a class="x-tlink" href="#/services/pergolas-gazebos"><span>About pergolas &amp; gazebos</span> ↗</a>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <!-- ================= AREAS ================= -->
+        <div class="x-page" data-page="/areas" hidden>
+          <section class="x-phero x-ring" aria-labelledby="areas-title">
+            <div class="x-wrap">
+              <ol class="x-crumbs"><li><a href="#/">Home</a></li><li aria-current="page">Service Areas</li></ol>
+              <p class="x-eyebrow">Service areas · Perth, WA</p>
+              <h1 class="x-h1" id="areas-title">Based in Como. <em>Working across Perth.</em></h1>
+              <p class="x-lead">Perth Carpentry and Roofing serves Perth and the surrounding areas. These are some of the suburbs in each region.</p>
+            </div>
+          </section>
+          <section class="x-sec x-sec--sand" aria-label="Regions served">
+            <div class="x-wrap">
+              <div class="x-regions">
+                <div class="x-region" data-reveal>
+                  <h3>South of the river <span>Home base</span></h3>
+                  <p>Close to the Como workshop.</p>
+                  <ul class="x-tags"><li class="x-tag is-home">Como</li><li class="x-tag">South Perth</li><li class="x-tag">Kensington</li><li class="x-tag">Manning</li><li class="x-tag">Salter Point</li><li class="x-tag">Karawara</li><li class="x-tag">Waterford</li><li class="x-tag">Applecross</li><li class="x-tag">Mount Pleasant</li><li class="x-tag">Bull Creek</li></ul>
+                </div>
+                <div class="x-region" data-reveal style="--d:.08s">
+                  <h3>Victoria Park &amp; inner east</h3>
+                  <p>Older homes, carports and roof edges.</p>
+                  <ul class="x-tags"><li class="x-tag">Victoria Park</li><li class="x-tag">East Victoria Park</li><li class="x-tag">Lathlain</li><li class="x-tag">Carlisle</li><li class="x-tag">Bentley</li><li class="x-tag">St James</li><li class="x-tag">Rivervale</li><li class="x-tag">Belmont</li></ul>
+                </div>
+                <div class="x-region" data-reveal>
+                  <h3>Central &amp; western suburbs</h3>
+                  <p>Inner-city and riverside homes.</p>
+                  <ul class="x-tags"><li class="x-tag">Perth</li><li class="x-tag">Subiaco</li><li class="x-tag">Leederville</li><li class="x-tag">Mount Lawley</li><li class="x-tag">Nedlands</li><li class="x-tag">Claremont</li><li class="x-tag">Cottesloe</li><li class="x-tag">Mosman Park</li></ul>
+                </div>
+                <div class="x-region" data-reveal style="--d:.08s">
+                  <h3>South-east corridor</h3>
+                  <p>Established and growing family suburbs.</p>
+                  <ul class="x-tags"><li class="x-tag">Cannington</li><li class="x-tag">Riverton</li><li class="x-tag">Willetton</li><li class="x-tag">Canning Vale</li><li class="x-tag">Thornlie</li><li class="x-tag">Gosnells</li><li class="x-tag">Kelmscott</li><li class="x-tag">Armadale</li></ul>
+                </div>
+                <div class="x-region" data-reveal>
+                  <h3>Fremantle &amp; south-west</h3>
+                  <p>Port city character homes and coastal suburbs.</p>
+                  <ul class="x-tags"><li class="x-tag">Fremantle</li><li class="x-tag">East Fremantle</li><li class="x-tag">Bicton</li><li class="x-tag">Melville</li><li class="x-tag">Leeming</li><li class="x-tag">Murdoch</li><li class="x-tag">Spearwood</li><li class="x-tag">Cockburn Central</li></ul>
+                </div>
+                <div class="x-region" data-reveal style="--d:.08s">
+                  <h3>North &amp; the hills</h3>
+                  <p>Perth's northern suburbs and the hills to the east.</p>
+                  <ul class="x-tags"><li class="x-tag">Osborne Park</li><li class="x-tag">Scarborough</li><li class="x-tag">Morley</li><li class="x-tag">Bayswater</li><li class="x-tag">Midland</li><li class="x-tag">Kalamunda</li><li class="x-tag">Forrestfield</li><li class="x-tag">Mundaring</li></ul>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="x-sec x-sec--tight" aria-labelledby="areas-missing">
+            <div class="x-wrap x-split x-split--center">
+              <div data-reveal>
+                <p class="x-kicker">Suburb not listed?</p>
+                <h2 class="x-h2" id="areas-missing">Just ask.</h2>
+              </div>
+              <p class="x-body" data-reveal style="--d:.1s">These lists are a guide, not a boundary. If you're in Perth or the surrounding areas, call or message Mat with your suburb and the job, and he'll let you know.</p>
+            </div>
+          </section>
+        </div>
+
+        <!-- ================= REVIEWS ================= -->
+        <div class="x-page" data-page="/reviews" hidden>
+          <section class="x-phero x-ring" aria-labelledby="rev-title">
+            <div class="x-wrap">
+              <ol class="x-crumbs"><li><a href="#/">Home</a></li><li aria-current="page">Reviews</li></ol>
+              <p class="x-eyebrow">Reviews · Google</p>
+              <h1 class="x-h1" id="rev-title">In their words: <em>first class.</em></h1>
+              <p class="x-lead">Mat is named in nearly every review. Here are three, quoted exactly as written on Google.</p>
+            </div>
+          </section>
+          <section class="x-sec x-sec--sand" aria-label="Google reviews">
+            <div class="x-wrap">
+              <div class="x-rating" data-reveal>
+                <div class="x-rating__fig">4.9<small>★</small></div>
+                <p><strong>40 Google reviews</strong>Average rating on the Perth Carpentry and Roofing Google listing.</p>
+                <a class="x-btn" href="https://www.google.com/maps/place/Perth+Carpentry+and+Roofing/@-32.0167339,116.1397877,9z/data=!3m1!4b1!4m6!3m5!1s0x2a32ba9affffffff:0xcf95e060d869cdb4!8m2!3d-32.0167339!4d116.1397877!16s%2Fg%2F11b7kl4ync" target="_blank" rel="noopener">Read them on Google <span class="x-arr" aria-hidden="true">↗</span></a>
+              </div>
+              <div class="x-quotes">
+                <blockquote class="x-quote" data-reveal>
+                  <span class="x-stars" aria-hidden="true">★★★★★</span>
+                  <p>“Mat was first class from start to finish… Our job was time critical and Mat went above and beyond to meet our deadline. The work was first class and the price extremely competitive.”</p>
+                  <footer class="x-cite">Kym B. <small>Google review</small></footer>
+                </blockquote>
+                <blockquote class="x-quote" data-reveal style="--d:.08s">
+                  <span class="x-stars" aria-hidden="true">★★★★★</span>
+                  <p>“Had Mat remove an exterior balcony wall and replace with cladding and metal flashing. He also fitted some metal sheeting on a leaking flat roof. Mat was very responsive and quick to provide a very competitive quote.”</p>
+                  <footer class="x-cite">Tegan D. <small>Google review</small></footer>
+                </blockquote>
+                <blockquote class="x-quote" data-reveal style="--d:.16s">
+                  <span class="x-stars" aria-hidden="true">★★★★★</span>
+                  <p>“Mat has prompt response with the quote request and offer a reasonable price for some roof defect fix work. Schedule the work quickly and get it done within the time frame.”</p>
+                  <footer class="x-cite">Jieke Z. <small>Google review</small></footer>
+                </blockquote>
+              </div>
+            </div>
+          </section>
+          <section class="x-sec x-dark" aria-labelledby="rev-themes">
+            <div class="x-wrap">
+              <div class="x-intro" data-reveal>
+                <div>
+                  <p class="x-kicker">What keeps coming up</p>
+                  <h2 class="x-h2" id="rev-themes">Three themes across the <em>reviews.</em></h2>
+                </div>
+              </div>
+              <div class="x-themes" data-reveal>
+                <div><span>01</span><b>Quick to quote</b><p>"Very responsive and quick to provide a very competitive quote."</p></div>
+                <div><span>02</span><b>Fair on price</b><p>"The price extremely competitive." "A reasonable price."</p></div>
+                <div><span>03</span><b>On time</b><p>"Went above and beyond to meet our deadline."</p></div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- ================= FAQ ================= -->
+        <div class="x-page" data-page="/faq" hidden>
+          <section class="x-phero x-ring" aria-labelledby="faq-title">
+            <div class="x-wrap">
+              <ol class="x-crumbs"><li><a href="#/">Home</a></li><li aria-current="page">FAQ</li></ol>
+              <p class="x-eyebrow">FAQ · Roofing &amp; carpentry</p>
+              <h1 class="x-h1" id="faq-title">Good questions, <em>straight answers.</em></h1>
+              <p class="x-lead">General guidance on roofing and outdoor builds in Perth. Every home is different, so ask Mat about yours.</p>
+            </div>
+          </section>
+          <section class="x-sec" aria-label="Frequently asked questions">
+            <div class="x-wrap x-split">
+              <div class="x-faqside" data-reveal>
+                <p class="x-kicker">Still wondering?</p>
+                <h2 class="x-h2">Ask Mat directly.</h2>
+                <p class="x-body">Send a message with a photo of the job and your suburb.</p>
+                <div class="x-actions"><a class="x-btn x-btn--forest" href="https://wa.me/61427945345" target="_blank" rel="noopener">WhatsApp Mat <span class="x-arr" aria-hidden="true">↗</span></a><a class="x-tlink" href="tel:+61427945345" style="color:var(--forest)"><span>0427 945 345</span></a></div>
+              </div>
+              <div class="x-faq" data-reveal style="--d:.1s">
+                <div class="x-faq__item"><button class="x-faq__q" type="button" aria-expanded="false" aria-controls="fa1" id="fq1">What's the difference between roof framing and roofing?<span class="x-faq__icon" aria-hidden="true"></span></button><div class="x-faq__a" id="fa1" role="region" aria-labelledby="fq1"><div><p>Roof framing is the timber structure: the rafters, trusses and battens that set the roof's shape and carry its weight. Roofing is the cover that goes on top, such as tiles or metal sheeting. Perth Carpentry and Roofing specialises in the framing and handles roofing work too, so the structure is built with the finished roof in mind.</p></div></div></div>
+                <div class="x-faq__item"><button class="x-faq__q" type="button" aria-expanded="false" aria-controls="fa2" id="fq2">How do I know my roof needs repairs?<span class="x-faq__icon" aria-hidden="true"></span></button><div class="x-faq__a" id="fa2" role="region" aria-labelledby="fq2"><div><p>Common signs are water stains on ceilings, drips after rain, cracked or slipped tiles, rusted or lifting sheets, sagging lines along the ridge, and flaking or rotting timber at the gable ends. If you notice any of these, it's worth getting the roof looked at before the next run of winter rain.</p></div></div></div>
+                <div class="x-faq__item"><button class="x-faq__q" type="button" aria-expanded="false" aria-controls="fa3" id="fq3">When is the best time to fix a leaking roof in Perth?<span class="x-faq__icon" aria-hidden="true"></span></button><div class="x-faq__a" id="fa3" role="region" aria-labelledby="fq3"><div><p>As soon as you find it. Most of Perth's rain falls between May and September, so small leaks that go unnoticed over summer tend to show up, and get worse, once winter arrives. Booking repairs in the drier months also makes the work easier to schedule.</p></div></div></div>
+                <div class="x-faq__item"><button class="x-faq__q" type="button" aria-expanded="false" aria-controls="fa4" id="fq4">What are barge boards, and can old ones be restored?<span class="x-faq__icon" aria-hidden="true"></span></button><div class="x-faq__a" id="fa4" role="region" aria-labelledby="fq4"><div><p>Barge boards are the timber boards running along the sloping edges of a gable roof. They protect the roof edge from weather and are often the first timber to suffer on older homes. Depending on their condition, they can be repaired, partly replaced or fully replaced, and Mat can advise which suits your home after seeing them.</p></div></div></div>
+                <div class="x-faq__item"><button class="x-faq__q" type="button" aria-expanded="false" aria-controls="fa5" id="fq5">What is a tile scribe, and why does it need replacing?<span class="x-faq__icon" aria-hidden="true"></span></button><div class="x-faq__a" id="fa5" role="region" aria-labelledby="fq5"><div><p>A scribe is the timber board along the edge of a tiled roof at the gable, where the tiles finish. Over time it can weather, split or rot, leaving the edge tiles poorly supported and the roof edge open to the weather. Replacing it restores a solid, neat edge.</p></div></div></div>
+                <div class="x-faq__item"><button class="x-faq__q" type="button" aria-expanded="false" aria-controls="fa6" id="fq6">Do I need council approval for a pergola, carport or deck?<span class="x-faq__icon" aria-hidden="true"></span></button><div class="x-faq__a" id="fa6" role="region" aria-labelledby="fq6"><div><p>Often, yes. In Western Australia many patios, pergolas, carports and decks need a building permit, and the rules vary by local council and by the size and position of the structure. Check with your council early; Mat can talk through the design so you know what to ask.</p></div></div></div>
+                <div class="x-faq__item"><button class="x-faq__q" type="button" aria-expanded="false" aria-controls="fa7" id="fq7">How do I get a quote?<span class="x-faq__icon" aria-hidden="true"></span></button><div class="x-faq__a" id="fa7" role="region" aria-labelledby="fq7"><div><p>Call or WhatsApp Mat on 0427 945 345, or use the quote form on the contact page, which opens a pre-filled WhatsApp message. Include your suburb, the service and a few photos if you can. Reviewers mention quick responses to quote requests.</p></div></div></div>
+                <div class="x-faq__item"><button class="x-faq__q" type="button" aria-expanded="false" aria-controls="fa8" id="fq8">Can you work to a deadline?<span class="x-faq__icon" aria-hidden="true"></span></button><div class="x-faq__a" id="fa8" role="region" aria-labelledby="fq8"><div><p>Mention any deadline when you ask for a quote, so it can be planned for from the start. Clients have written about time-critical jobs being met and work being finished within the agreed time frame, but availability always depends on the job and the time of year.</p></div></div></div>
+                <div class="x-faq__item"><button class="x-faq__q" type="button" aria-expanded="false" aria-controls="fa9" id="fq9">Which areas do you cover?<span class="x-faq__icon" aria-hidden="true"></span></button><div class="x-faq__a" id="fa9" role="region" aria-labelledby="fq9"><div><p>The business is based in Como and works across Perth and the surrounding areas. See the <a class="x-tlink" href="#/areas" style="color:var(--forest);min-height:0;display:inline"><span>service areas page</span></a> for suburbs in each region, or just ask about yours.</p></div></div></div>
+                <div class="x-faq__item"><button class="x-faq__q" type="button" aria-expanded="false" aria-controls="fa10" id="fq10">Can one business do both the roof and the carpentry?<span class="x-faq__icon" aria-hidden="true"></span></button><div class="x-faq__a" id="fa10" role="region" aria-labelledby="fq10"><div><p>Yes. Roof framing, repairs, cladding and timber outdoor builds such as decks, pergolas, alfresco areas and carports all sit within the one business, which keeps a job like a roofed alfresco or carport with one point of contact.</p></div></div></div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- ================= CONTACT ================= -->
+        <div class="x-page" data-page="/contact" hidden>
+          <section class="x-phero x-ring" aria-labelledby="ct-title">
+            <div class="x-wrap">
+              <ol class="x-crumbs"><li><a href="#/">Home</a></li><li aria-current="page">Contact</li></ol>
+              <p class="x-eyebrow">Contact · Quotes</p>
+              <h1 class="x-h1" id="ct-title">Tell Mat about <em>the job.</em></h1>
+              <p class="x-lead">Fill in the form and it opens WhatsApp with your details ready to send. Prefer to talk? Call 0427 945 345.</p>
+            </div>
+          </section>
+          <section class="x-sec x-sec--sand" aria-label="Request a quote">
+            <div class="x-wrap x-contact">
+              <div>
+                <form class="x-form" id="x-form" novalidate data-reveal>
+                  <p class="x-kicker">Quote request</p>
+                  <h2 class="x-h3" style="font-size:32px">Request a quote</h2>
+                  <div class="x-form__grid">
+                    <div class="x-field"><label for="f-name">Name</label><input id="f-name" name="name" autocomplete="name" required /><span class="x-field__err">Please add your name.</span></div>
+                    <div class="x-field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required /><span class="x-field__err">Please add a phone number.</span></div>
+                    <div class="x-field"><label for="f-email">Email <small>(optional)</small></label><input id="f-email" name="email" type="email" autocomplete="email" /><span class="x-field__err">Please check the email address.</span></div>
+                    <div class="x-field"><label for="f-suburb">Suburb</label><input id="f-suburb" name="suburb" autocomplete="address-level2" required /><span class="x-field__err">Please add your suburb.</span></div>
+                    <div class="x-field x-field--full"><label for="f-service">Service</label>
+                      <select id="f-service" name="service" required>
+                        <option value="">Choose a service</option>
+                        <optgroup label="Roofing"><option>Roof framing &amp; trusses</option><option>Roof repairs</option><option>Gable &amp; barge board restoration</option><option>Tile scribe replacement</option><option>External wall cladding</option></optgroup>
+                        <optgroup label="Outdoor living"><option>Custom timber deck</option><option>Pergola or gazebo</option><option>Alfresco area</option><option>Carport</option><option>Small addition</option></optgroup>
+                        <option>Something else</option>
+                      </select><span class="x-field__err">Please choose a service.</span></div>
+                    <div class="x-field x-field--full"><label for="f-msg">About the job</label><textarea id="f-msg" name="message" placeholder="What needs doing, rough size, any deadline…"></textarea></div>
+                  </div>
+                  <div class="x-form__foot">
+                    <button class="x-btn x-btn--forest" type="submit">Send via WhatsApp <span class="x-arr" aria-hidden="true">↗</span></button>
+                    <p>Opens WhatsApp with your message to 0427 945 345. Nothing is sent until you press send there.</p>
+                  </div>
+                </form>
+                <div class="x-thanks" id="x-thanks" hidden tabindex="-1">
+                  <p class="x-eyebrow">Thank you</p>
+                  <h2 class="x-h2">Your message is ready in WhatsApp.</h2>
+                  <p>Press send in WhatsApp to get it to Mat. If WhatsApp didn't open, <a id="x-wa-retry" href="https://wa.me/61427945345" target="_blank" rel="noopener" style="color:#fff">open it here</a> or call 0427 945 345.</p>
+                  <div class="x-actions"><button class="x-btn x-btn--ghost" type="button" id="x-reset">Start a new request</button></div>
+                </div>
+              </div>
+              <aside class="x-ccards" aria-label="Contact details" data-reveal style="--d:.1s">
+                <a class="x-ccard" href="tel:+61427945345"><span class="x-ccard__ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" /></svg></span><span><small>Call Mat</small><b>0427 945 345</b></span><span aria-hidden="true">↗</span></a>
+                <a class="x-ccard" href="https://wa.me/61427945345" target="_blank" rel="noopener"><span class="x-ccard__ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7L4 20z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" /></svg></span><span><small>WhatsApp</small><b>Message Mat</b></span><span aria-hidden="true">↗</span></a>
+                <div class="x-ccard"><span class="x-ccard__ic" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v7h4v-7h3l1-4h-4V8z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /></svg></span><span><small>Facebook</small><b>All Perth Carpentry and Roofing, Como WA</b></span><span></span></div>
+                <div class="x-hours"><h3>Hours</h3><p>Hours aren't published yet. Call or WhatsApp any time and Mat will get back to you to arrange a time.</p></div>
+                <a class="x-map" href="https://www.google.com/maps/place/Perth+Carpentry+and+Roofing/@-32.0167339,116.1397877,9z/data=!3m1!4b1!4m6!3m5!1s0x2a32ba9affffffff:0xcf95e060d869cdb4!8m2!3d-32.0167339!4d116.1397877!16s%2Fg%2F11b7kl4ync" target="_blank" rel="noopener" aria-label="Open Perth Carpentry and Roofing in Google Maps">
+                  <svg viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" fill="none" aria-hidden="true"><rect width="400" height="250" fill="#e8e2d4" /><path d="M-10 150C60 120 110 170 170 140S280 80 410 110" stroke="#b9cbbf" stroke-width="22" /><path d="M0 60L400 200M120 0L180 250M300 0L260 250M0 210L400 40" stroke="#fbfaf7" stroke-width="6" /><g class="x-pin"><path d="M200 70c-15 0-26 11-26 26 0 20 26 46 26 46s26-26 26-46c0-15-11-26-26-26z" fill="#173b2c" /><circle cx="200" cy="96" r="9" fill="#d5a45b" /></g></svg>
+                  <span class="x-map__label"><span>Como, WA 6152 · Google Maps</span><span aria-hidden="true">↗</span></span>
+                </a>
+              </aside>
+            </div>
+          </section>
+        </div>
+
+        <!-- ================= SHARED CLOSING CTA ================= -->
+        <section class="x-cta" id="x-cta" aria-labelledby="cta-title">
+          <div class="x-wrap x-cta__inner">
+            <div data-reveal>
+              <p class="x-kicker">Ready when you are</p>
+              <h2 class="x-h2" id="cta-title">Have a roof, deck or carport in mind?</h2>
+              <p>Call or message Mat with the job and your suburb. A photo or two helps him quote it properly.</p>
+            </div>
+            <div class="x-cta__btns" data-reveal style="--d:.1s">
+              <a class="x-btn x-btn--forest" href="#/contact">Request a quote <span class="x-arr" aria-hidden="true">↗</span></a>
+              <a class="x-btn x-btn--line" href="tel:+61427945345">Call 0427 945 345</a>
+              <a class="x-btn x-btn--line" href="https://wa.me/61427945345" target="_blank" rel="noopener">WhatsApp Mat</a>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="x-foot">
+        <div class="x-wrap x-foot__main">
+          <div>
+            <a class="x-brand" href="#/" aria-label="Perth Carpentry and Roofing, home">
+              <span class="x-brand__mark" aria-hidden="true">P<i>/</i>R</span>
+              <span class="x-brand__name">Perth Carpentry<br />and Roofing</span>
+            </a>
+            <p class="x-foot__blurb">A specialist roof framing and roofing company in Perth, with over 15 years in the roof business, plus custom timber decks, pergolas, alfresco areas and carports.</p>
+            <a class="x-foot__badge" href="https://www.google.com/maps/place/Perth+Carpentry+and+Roofing/@-32.0167339,116.1397877,9z/data=!3m1!4b1!4m6!3m5!1s0x2a32ba9affffffff:0xcf95e060d869cdb4!8m2!3d-32.0167339!4d116.1397877!16s%2Fg%2F11b7kl4ync" target="_blank" rel="noopener"><b>4.9 ★</b> 40 Google reviews</a>
+          </div>
+          <nav aria-label="Quick links">
+            <h2>Quick links</h2>
+            <ul>
+              <li><a href="#/">Home</a></li>
+              <li><a href="#/services">Services</a></li>
+              <li><a href="#/projects">Projects</a></li>
+              <li><a href="#/about">About</a></li>
+              <li><a href="#/areas">Service Areas</a></li>
+              <li><a href="#/reviews">Reviews</a></li>
+              <li><a href="#/faq">FAQ</a></li>
+              <li><a href="#/contact">Contact</a></li>
+            </ul>
+          </nav>
+          <nav aria-label="Services">
+            <h2>Services</h2>
+            <ul>
+              <li><a href="#/services/roof-framing">Roof framing &amp; trusses</a></li>
+              <li><a href="#/services/roof-repairs">Roof repairs</a></li>
+              <li><a href="#/services/barge-board-restoration">Gable &amp; barge boards</a></li>
+              <li><a href="#/services/tile-scribe-replacement">Tile scribe replacement</a></li>
+              <li><a href="#/services/wall-cladding">External wall cladding</a></li>
+              <li><a href="#/services/timber-decks">Custom timber decks</a></li>
+              <li><a href="#/services/pergolas-gazebos">Pergolas &amp; gazebos</a></li>
+              <li><a href="#/services/alfresco-areas">Alfresco areas</a></li>
+              <li><a href="#/services/carports">Carports</a></li>
+              <li><a href="#/services/small-additions">Small additions</a></li>
+            </ul>
+          </nav>
+          <div>
+            <h2>Contact</h2>
+            <address>
+              Mat (Mathew)<br />
+              <a href="tel:+61427945345">0427 945 345</a><br />
+              <a href="https://wa.me/61427945345" target="_blank" rel="noopener">WhatsApp</a><br />
+              Como, WA 6152<br />
+              Facebook: All Perth Carpentry and Roofing
+            </address>
+            <p class="x-foot__hours">Hours: call or message to arrange a time.</p>
+          </div>
+        </div>
+        <div class="x-wrap x-foot__note">
+          Independent concept preview, not an official or approved business website. Business details are drawn from public listings and should be confirmed by the owner before launch; registration and business numbers are not shown until verified. Images marked representative are not presented as this business's projects.
+        </div>
+        <div class="x-wrap x-foot__bottom">
+          <span>© Perth Carpentry and Roofing · Concept preview</span>
+          <span>Perth, Western Australia</span>
+        </div>
+      <div style="text-align:center;padding:12px 16px;font-size:12.5px;opacity:.7">Developed by <a href="https://teta.dpdns.org" target="_blank" rel="noopener" style="color:inherit">Teta Digitals</a></div></footer>
+      <button class="x-top" id="x-top" type="button" hidden aria-label="Back to top"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 13V3M3 8l5-5 5 5" stroke="currentColor" stroke-width="1.8" /></svg></button>
+    </div>
+    <script src="hark.js"></script>
+    <script>
+      (function () {
+        "use strict";
+        var doc = document, root = doc.documentElement;
+        root.classList.add("js");
+        var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        var SITE = "Perth Carpentry and Roofing";
+
+        /* ---------- service data ---------- */
+        var SERVICES = [
+          { slug: "roof-framing", group: "Roofing", name: "Roof framing & trusses", h1: "Roof framing and <em>truss installation.</em>",
+            lead: "The specialty of the business: pitched roof frames and trusses for new builds, extensions and re-roofs.",
+            what: ["Roof framing is the timber structure that gives a roof its shape and carries its weight: rafters, trusses, ridges and battens. Get it right and everything above it sits true; get it wrong and no roof cover will fix it.", "Perth Carpentry and Roofing describes itself as \"a specialist Roof framing and roofing company in Perth\". Mat frames and stands roofs and installs trusses, with the roof cover in mind from the start."],
+            signs: ["You're building new, or adding an extension that needs a roof", "An old frame is sagging, cracked or showing rot", "You're re-roofing and the battens or rafters need attention", "A carport, alfresco or addition needs a properly framed roof"],
+            steps: [["Look at the plans or the site", "Mat checks the drawings or the existing structure to understand what the roof needs to carry."], ["Quote the real scope", "The quote covers the framing work as it is, so there are no surprises once the job starts."], ["Frame or install trusses", "Rafters or trusses are set out, stood and fixed, ready for the roof cover."], ["Ready for roofing", "The frame is left true and square for the roof to go on."]],
+            pair: "Roof repairs, small additions", related: ["roof-repairs", "small-additions", "alfresco-areas"] },
+          { slug: "roof-repairs", group: "Roofing", name: "Roof repairs", h1: "Roof repairs, traced to <em>the cause.</em>",
+            lead: "Leaks, roof defects and damaged sheets or tiles, found and fixed rather than patched over.",
+            what: ["A roof leak rarely starts where the water shows up. Good repair work means finding where the water gets in, whether that's a cracked tile, a lifted sheet, a failed flashing or a weathered roof edge, and fixing it properly.", "Clients have written about roof defect fixes scheduled quickly and finished within the time frame, and about metal sheeting fitted to a leaking flat roof."],
+            signs: ["Water stains or drips on the ceiling after rain", "Cracked, slipped or missing tiles", "Rusted, lifting or loose metal sheets", "A flat roof that pools water or leaks"],
+            steps: [["Describe the problem", "Tell Mat where the leak or damage shows, and send photos if you can."], ["Inspect and quote", "The roof is checked to find the cause, then quoted at a fair price."], ["Schedule quickly", "Repairs are booked in promptly, especially ahead of wet weather."], ["Fix and check", "Damaged sections are repaired or replaced and the area checked."]],
+            pair: "Tile scribe replacement, barge boards", related: ["tile-scribe-replacement", "barge-board-restoration", "wall-cladding"] },
+          { slug: "barge-board-restoration", group: "Roofing", name: "Gable & barge board restoration", h1: "Gable and barge board <em>restoration.</em>",
+            lead: "Weathered timber at the roof's edges brought back, from 1960s homes to newer builds.",
+            what: ["Barge boards run along the sloping edges of a gable roof, protecting the roof edge and finishing the look of the house. Gable ends take the weather side-on, and on older homes they are often the first timber to show its age.", "One Google reviewer had the barge boards on their 1960s home attended to. Depending on condition, boards can be repaired, partly replaced or fully renewed."],
+            signs: ["Flaking paint and grey, cracked timber", "Soft or rotten sections at the ends of boards", "Gaps where the boards meet the roof edge", "Boards pulling away or sagging along the gable"],
+            steps: [["Look closely", "Boards and gable ends are checked for rot, splits and loose fixings."], ["Repair or replace", "Mat recommends what to keep and what to renew, and quotes it."], ["Restore the edge", "Damaged timber is cut out and replaced, and the boards refixed."], ["Ready to finish", "The gable is left sound and ready for paint."]],
+            pair: "Tile scribe replacement, roof repairs", related: ["tile-scribe-replacement", "roof-repairs", "wall-cladding"] },
+          { slug: "tile-scribe-replacement", group: "Roofing", name: "Tile scribe replacement", h1: "Tile scribe <em>replacement.</em>",
+            lead: "The timber edge where a tiled roof finishes at the gable, renewed so the edge tiles sit firm and dry.",
+            what: ["On a tiled roof, the scribe is the timber board at the gable edge that the outer tiles finish against. Exposed to sun and rain, it can weather, split or rot over time.", "When it fails, the edge tiles lose support and the roof edge is open to the weather. Replacing it is a precise carpentry job that sits naturally alongside barge board work."],
+            signs: ["Edge tiles that rock, slip or have dropped", "Split or rotting timber at the tiled gable edge", "Daylight or gaps visible along the roof edge", "Barge boards nearby that also need attention"],
+            steps: [["Check the edge", "The scribe, edge tiles and barge boards are looked at together."], ["Quote the work", "A clear quote for the scribe and any related timber."], ["Replace the scribe", "Edge tiles are lifted, the old scribe removed and new timber fitted."], ["Re-seat the tiles", "Tiles go back on a solid edge, leaving the roof line neat."]],
+            pair: "Barge board restoration", related: ["barge-board-restoration", "roof-repairs", "roof-framing"] },
+          { slug: "wall-cladding", group: "Roofing", name: "External wall cladding", h1: "External wall <em>cladding.</em>",
+            lead: "Cladding and metal flashings that renew an exterior and keep the weather out.",
+            what: ["External cladding covers a wall with a weather-resistant skin, whether it's replacing a tired wall, closing in a balcony or finishing an addition. Metal flashings at the joins and edges are what keep it watertight.", "One reviewer had Mat remove an exterior balcony wall and replace it with cladding and metal flashing, alongside metal sheeting on a leaking flat roof."],
+            signs: ["An exterior or balcony wall that's damaged or leaking", "An addition or enclosure that needs finishing", "Old cladding that's cracked, warped or loose", "Water getting in at wall and roof junctions"],
+            steps: [["Talk through the wall", "What's there now, what you'd like and any leaks to solve."], ["Quote it", "A clear quote covering removal, framing and cladding."], ["Strip and frame", "Old material comes off and the framing is made good."], ["Clad and flash", "New cladding goes on with metal flashings to keep it weathertight."]],
+            pair: "Roof repairs, small additions", related: ["roof-repairs", "small-additions", "barge-board-restoration"] },
+          { slug: "timber-decks", group: "Outdoor living", name: "Custom timber decks", h1: "Custom timber <em>decks.</em>",
+            lead: "Decks built to fit your block, your house and how you actually use the yard.",
+            what: ["A good deck starts underneath: footings, bearers and joists set out level and strong, so the boards on top stay flat for years. That's carpentry Mat knows from framing roofs.", "Each deck is made for its site, whether it's a step-down off the back door, a raised deck on a slope or a platform to go under a pergola."],
+            signs: ["A sloping or uneven yard you can't use", "An old deck that's soft, bouncy or splintering", "You want level outdoor space off the living area", "You're planning a pergola or alfresco and need a floor"],
+            steps: [["Share the idea", "Size, height, where it goes and how you'll use it."], ["Measure and quote", "The site is checked and the deck quoted to suit."], ["Build the frame", "Footings, bearers and joists set out level and fixed."], ["Lay and finish", "Boards are laid and the edges finished neatly."]],
+            pair: "Pergolas, alfresco areas", related: ["pergolas-gazebos", "alfresco-areas", "carports"] },
+          { slug: "pergolas-gazebos", group: "Outdoor living", name: "Pergolas & gazebos", h1: "Pergolas and <em>gazebos.</em>",
+            lead: "Timber shade structures, attached to the house or standing on their own in the garden.",
+            what: ["A pergola frames an outdoor space with posts and beams, open or roofed. A gazebo is a freestanding roofed structure, often a garden centrepiece. Both are, at heart, small roof frames.", "That's where a roof framing specialist makes a difference: posts, beams and rafters sized and fixed properly, with any roof cover detailed to shed water."],
+            signs: ["A patio that's too hot to use in summer", "A garden that needs a sheltered place to sit", "You want to define an outdoor space off the house", "An old pergola that's sagging or rotting"],
+            steps: [["Talk through the space", "Attached or freestanding, open or roofed, and the size you need."], ["Quote", "A quote for the structure, its fixings and any roofing."], ["Frame it", "Posts, beams and rafters set out and fixed."], ["Roof and finish", "Roof sheets or battens added, and the structure finished."]],
+            pair: "Timber decks, alfresco areas", related: ["alfresco-areas", "timber-decks", "carports"] },
+          { slug: "alfresco-areas", group: "Outdoor living", name: "Alfresco areas", h1: "Alfresco areas, <em>roofed right.</em>",
+            lead: "Outdoor rooms off the house, framed and roofed so they work in Perth's summer sun and winter rain.",
+            what: ["An alfresco is a roofed outdoor living area that connects to the house. Getting it right means tying a new roof into the existing home cleanly, with the right falls and flashings so water goes where it should.", "Because Mat frames and roofs, the alfresco's structure and its roof are handled by one business."],
+            signs: ["You want to use the backyard year-round", "Your outdoor area has no shelter from sun or rain", "An existing patio roof leaks or looks tired", "You're adding a deck and want it covered"],
+            steps: [["Plan the space", "Size, roof style and how it meets the house."], ["Quote", "A quote covering framing, roofing and flashings."], ["Frame and tie in", "The structure is built and connected to the house."], ["Roof and finish", "The roof goes on and the edges are flashed and finished."]],
+            pair: "Timber decks, pergolas", related: ["timber-decks", "pergolas-gazebos", "small-additions"] },
+          { slug: "carports", group: "Outdoor living", name: "Carports", h1: "Carports, framed and <em>roofed.</em>",
+            lead: "Timber-framed cover for the car, built to suit the house and the driveway.",
+            what: ["A carport is a simple building done well: posts, beams and a roof frame, finished with a roof cover that sheds water away from the house and the car.", "Clients mention a carport Mat built in East Victoria Park. As a roof framing specialist, he builds the frame and roof as one job."],
+            signs: ["The car sits out in Perth sun and hail", "A driveway beside the house with no cover", "An old carport that's leaning, rusted or leaking", "You want cover that matches the house"],
+            steps: [["Measure up", "Driveway width, height, cars and how it meets the house."], ["Quote", "A clear quote for the structure and roof."], ["Build the frame", "Posts and beams set out and fixed, then the roof frame."], ["Roof it", "Roof sheets fitted and finished with flashings and gutters as needed."]],
+            pair: "Alfresco areas, pergolas", related: ["alfresco-areas", "pergolas-gazebos", "roof-framing"] },
+          { slug: "small-additions", group: "Outdoor living", name: "Small additions", h1: "Small additions, <em>framed properly.</em>",
+            lead: "Modest extensions to the home, with the framing, roof and cladding handled by one carpenter-roofer.",
+            what: ["Small additions, such as an enclosed area, an extra room or a closed-in space, combine several trades: framing the walls and roof, roofing over it and cladding the outside.", "Those are all services Perth Carpentry and Roofing offers, so a small addition can be handled with one point of contact."],
+            signs: ["You need a little more room, not a major renovation", "An open area you'd like enclosed", "An outdoor space you want to turn into usable room", "An addition that needs a roof tied into the house"],
+            steps: [["Discuss the idea", "What you'd like to add and where it joins the house."], ["Check and quote", "The site and any approvals are discussed, then quoted."], ["Frame and roof", "Walls and roof are framed and the roof cover goes on."], ["Clad and finish", "External cladding and flashings close it in."]],
+            pair: "Wall cladding, roof framing", related: ["wall-cladding", "roof-framing", "alfresco-areas"] }
+        ];
+        var BY = {};
+        SERVICES.forEach(function (s) { BY[s.slug] = s; });
+
+        function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]; }); }
+
+        function renderService(s) {
+          var idx = SERVICES.indexOf(s) + 1;
+          return '<section class="x-phero x-ring" aria-labelledby="sd-title"><div class="x-wrap">' +
+            '<ol class="x-crumbs"><li><a href="#/">Home</a></li><li><a href="#/services">Services</a></li><li aria-current="page">' + esc(s.name) + "</li></ol>" +
+            '<p class="x-eyebrow">' + esc(s.group) + " · Service " + (idx < 10 ? "0" : "") + idx + "</p>" +
+            '<h1 class="x-h1" id="sd-title">' + s.h1 + '</h1><p class="x-lead">' + esc(s.lead) + "</p>" +
+            '<div class="x-actions"><a class="x-btn" href="#/contact?service=' + encodeURIComponent(s.slug) + '">Request a quote <span class="x-arr" aria-hidden="true">↗</span></a><a class="x-tlink" href="tel:+61427945345"><span>Or call 0427 945 345</span></a></div>' +
+            "</div></section>" +
+            '<section class="x-sec" aria-labelledby="sd-what"><div class="x-wrap x-split">' +
+            '<div data-reveal><p class="x-kicker">What it is</p><h2 class="x-h2" id="sd-what">' + esc(s.name) + '</h2><div class="x-body" style="margin-top:22px"><p>' + esc(s.what[0]) + "</p><p>" + esc(s.what[1]) + "</p></div></div>" +
+            '<aside class="x-glance" data-reveal style="--d:.1s"><h3>At a glance</h3><dl><dt>Service group</dt><dd>' + esc(s.group) + "</dd><dt>Often paired with</dt><dd>" + esc(s.pair) + '</dd><dt>Where</dt><dd>Perth and surrounding areas, from Como</dd><dt>Quotes</dt><dd><a href="tel:+61427945345">0427 945 345</a> or <a href="https://wa.me/61427945345" target="_blank" rel="noopener">WhatsApp</a></dd></dl><a class="x-btn x-btn--forest" href="#/contact?service=' + encodeURIComponent(s.slug) + '">Get a quote</a></aside>' +
+            "</div></section>" +
+            '<section class="x-sec x-sec--sand" aria-labelledby="sd-signs"><div class="x-wrap"><div class="x-intro" data-reveal><div><p class="x-kicker">Signs you need it</p><h2 class="x-h2" id="sd-signs">When to call Mat.</h2></div><p class="x-intro__text">If any of these sound familiar, a quick message with a photo is a good place to start.</p></div>' +
+            '<ul class="x-signs">' + s.signs.map(function (x, i) { return '<li data-reveal style="--d:' + i * 0.08 + 's">' + esc(x) + "</li>"; }).join("") + "</ul></div></section>" +
+            '<section class="x-sec x-dark" aria-labelledby="sd-how"><div class="x-wrap x-split"><div data-reveal><p class="x-kicker">How the job is done</p><h2 class="x-h2" id="sd-how">Four steps, <em>start to finish.</em></h2><p class="x-intro__text" style="justify-self:start;margin-top:22px">Every job differs, but the shape of it stays the same.</p></div>' +
+            '<ol class="x-steps" data-reveal style="--d:.1s">' + s.steps.map(function (st, i) { return '<li><span class="x-steps__no">0' + (i + 1) + "</span><div><strong>" + esc(st[0]) + "</strong><p>" + esc(st[1]) + "</p></div></li>"; }).join("") + "</ol></div></section>" +
+            '<section class="x-sec" aria-labelledby="sd-rel"><div class="x-wrap"><div class="x-intro" data-reveal><div><p class="x-kicker">Related services</p><h2 class="x-h2" id="sd-rel">Often done together.</h2></div><p class="x-intro__text"><a class="x-tlink" href="#/services" style="color:var(--forest)"><span>See all services</span> ↗</a></p></div>' +
+            '<div class="x-sgrid" data-reveal>' + s.related.map(function (r) { var o = BY[r]; var n = SERVICES.indexOf(o) + 1; return '<a class="x-scard" href="#/services/' + o.slug + '"><span class="x-scard__no">' + (n < 10 ? "0" : "") + n + '</span><span class="x-scard__arr" aria-hidden="true">↗</span><h3>' + esc(o.name) + "</h3><p>" + esc(o.lead) + "</p></a>"; }).join("") + "</div></div></section>";
+        }
+
+        /* ---------- elements ---------- */
+        var header = doc.getElementById("x-header");
+        var main = doc.getElementById("main");
+        var pages = [].slice.call(doc.querySelectorAll(".x-page"));
+        var svcPage = doc.querySelector('[data-page="/service"]');
+        var cta = doc.getElementById("x-cta");
+        var burger = doc.querySelector(".x-burger");
+        var drawer = doc.getElementById("x-drawer");
+        var dd = doc.getElementById("x-dd");
+        var ddBtn = dd.querySelector(".x-dd__btn");
+        var TITLES = { "/": SITE + " | Roof framing, roofing and timber outdoor builds", "/services": "Services | " + SITE, "/about": "About Mat | " + SITE, "/projects": "Projects | " + SITE, "/areas": "Service areas | " + SITE, "/reviews": "Reviews | " + SITE, "/faq": "FAQ | " + SITE, "/contact": "Contact & quotes | " + SITE };
+
+        /* ---------- mobile menu ---------- */
+        function placeDrawer() { var b = header.getBoundingClientRect().bottom; drawer.style.top = Math.max(0, b) + "px"; }
+        function setMenu(open, refocus) {
+          burger.setAttribute("aria-expanded", open ? "true" : "false");
+          burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+          if (open) placeDrawer();
+          drawer.classList.toggle("is-open", open);
+          doc.body.style.overflow = open ? "hidden" : "";
+          if (open) { var f = drawer.querySelector("a"); if (f) setTimeout(function () { f.focus(); }, 60); }
+          else if (refocus) burger.focus();
+        }
+        burger.addEventListener("click", function () { setMenu(burger.getAttribute("aria-expanded") !== "true"); });
+        drawer.addEventListener("click", function (e) { if (e.target.closest("a")) setMenu(false); });
+        window.addEventListener("resize", function () { if (window.innerWidth > 1100 && drawer.classList.contains("is-open")) setMenu(false); else if (drawer.classList.contains("is-open")) placeDrawer(); });
+
+        /* ---------- desktop dropdown ---------- */
+        var ddOpen = false, ddSoft = false;
+        function setDD(open, soft) {
+          ddOpen = open; ddSoft = open && !!soft;
+          dd.classList.toggle("is-open", open);
+          ddBtn.setAttribute("aria-expanded", open ? "true" : "false");
+        }
+        var canHover = window.matchMedia("(hover: hover)");
+        dd.addEventListener("mouseenter", function () { if (canHover.matches && !ddOpen) setDD(true, true); });
+        dd.addEventListener("mouseleave", function () { if (ddSoft) setDD(false); });
+        ddBtn.addEventListener("click", function () {
+          if (ddOpen && ddSoft) { ddSoft = false; return; }
+          setDD(!ddOpen);
+        });
+        ddBtn.addEventListener("keyup", function (e) { if (e.key === "Tab" && !ddOpen) setDD(true, true); });
+        dd.addEventListener("focusout", function (e) { if (!dd.contains(e.relatedTarget)) setDD(false); });
+        dd.querySelector(".x-dd__panel").addEventListener("click", function (e) { if (e.target.closest("a")) { setDD(false); ddBtn.blur(); } });
+        doc.addEventListener("click", function (e) { if (ddOpen && !dd.contains(e.target)) setDD(false); });
+        doc.addEventListener("keydown", function (e) {
+          if (e.key !== "Escape") return;
+          if (drawer.classList.contains("is-open")) setMenu(false, true);
+          if (ddOpen) { setDD(false); ddBtn.focus(); }
+        });
+
+        /* ---------- reveal ---------- */
+        var io = ("IntersectionObserver" in window && !reduce) ? new IntersectionObserver(function (es) {
+          es.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add("is-in"); io.unobserve(e.target); } });
+        }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }) : null;
+        function reveal(scope) {
+          [].slice.call(scope.querySelectorAll("[data-reveal]:not(.is-in)")).forEach(function (el) { if (io) io.observe(el); else el.classList.add("is-in"); });
+        }
+
+        /* ---------- router ---------- */
+        function parse() {
+          var h = (location.hash || "#/").replace(/^#/, "");
+          var q = "";
+          if (h.indexOf("?") > -1) { q = h.slice(h.indexOf("?") + 1); h = h.slice(0, h.indexOf("?")); }
+          if (h.charAt(0) !== "/") h = "/" + h;
+          if (h.length > 1) h = h.replace(/\/+$/, "");
+          return { path: h, query: q };
+        }
+        var first = true, current = null;
+        function show(r) {
+          var key = r.path, title, svc = null;
+          var m = key.match(/^\/services\/([a-z-]+)$/);
+          if (m && BY[m[1]]) { svc = BY[m[1]]; key = "/service"; title = svc.name + " | " + SITE; }
+          else if (!TITLES[key]) { key = "/"; }
+          if (!title) title = TITLES[key];
+          if (svc) svcPage.innerHTML = renderService(svc);
+          pages.forEach(function (p) { p.hidden = p.getAttribute("data-page") !== key; });
+          cta.hidden = key === "/contact";
+          doc.title = title;
+          // active nav
+          var path = svc ? "/services/" + svc.slug : key;
+          [].slice.call(doc.querySelectorAll(".x-menu a, .x-drawer a, .x-dd__btn")).forEach(function (a) {
+            var href = a.getAttribute("href"), target = href ? href.replace(/^#/, "") : a.getAttribute("data-route-link");
+            var on = target === path || (a.classList.contains("x-dd__btn") && path.indexOf("/services") === 0);
+            a.classList.toggle("is-active", on);
+            if (on && href) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current");
+          });
+          if (key === "/contact") prefill(r.query);
+          var active = pages.filter(function (p) { return !p.hidden; })[0];
+          reveal(active); reveal(cta);
+          current = path;
+        }
+        function route() {
+          var r = parse();
+          setMenu(false); setDD(false);
+          if (first || reduce) { show(r); if (!first) { window.scrollTo(0, 0); main.focus({ preventScroll: true }); } first = false; return; }
+          main.classList.add("is-leaving");
+          setTimeout(function () {
+            show(r);
+            root.style.scrollBehavior = "auto";
+            window.scrollTo(0, 0);
+            root.style.scrollBehavior = "";
+            main.focus({ preventScroll: true });
+            requestAnimationFrame(function () { main.classList.remove("is-leaving"); });
+          }, 220);
+        }
+        window.addEventListener("hashchange", route);
+        route();
+
+        doc.querySelector("[data-skip]").addEventListener("click", function (e) { e.preventDefault(); main.focus(); });
+
+        /* ---------- header + back to top ---------- */
+        var topBtn = doc.getElementById("x-top");
+        function onScroll() {
+          var y = window.scrollY;
+          header.classList.toggle("is-scrolled", y > 20);
+          var show = y > 700;
+          if (show) { topBtn.hidden = false; requestAnimationFrame(function () { topBtn.classList.add("is-shown"); }); }
+          else { topBtn.classList.remove("is-shown"); topBtn.hidden = true; }
+        }
+        window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
+        topBtn.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" }); main.focus({ preventScroll: true }); });
+
+        /* ---------- FAQ accordion ---------- */
+        [].slice.call(doc.querySelectorAll(".x-faq__q")).forEach(function (q) {
+          q.addEventListener("click", function () {
+            var open = q.getAttribute("aria-expanded") !== "true";
+            q.setAttribute("aria-expanded", open ? "true" : "false");
+            q.closest(".x-faq__item").classList.toggle("is-open", open);
+          });
+        });
+
+        /* ---------- project filter ---------- */
+        var fBtns = [].slice.call(doc.querySelectorAll(".x-filter button"));
+        var items = [].slice.call(doc.querySelectorAll(".x-gitem"));
+        var fStatus = doc.getElementById("x-filter-status");
+        fBtns.forEach(function (b) {
+          b.addEventListener("click", function () {
+            var f = b.getAttribute("data-filter");
+            fBtns.forEach(function (x) { x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+            items.forEach(function (it) { it.classList.add("is-fading"); });
+            setTimeout(function () {
+              var n = 0;
+              items.forEach(function (it) {
+                var on = f === "all" || it.getAttribute("data-cat") === f;
+                it.classList.toggle("is-hidden", !on);
+                if (on) n++;
+              });
+              requestAnimationFrame(function () { items.forEach(function (it) { it.classList.remove("is-fading"); }); });
+              fStatus.textContent = n + " item" + (n === 1 ? "" : "s") + " shown";
+            }, reduce ? 0 : 200);
+          });
+        });
+
+        /* ---------- quote form → WhatsApp ---------- */
+        var form = doc.getElementById("x-form"), thanks = doc.getElementById("x-thanks");
+        var svcSelect = doc.getElementById("f-service");
+        var SLUG_OPT = { "roof-framing": "Roof framing & trusses", "roof-repairs": "Roof repairs", "barge-board-restoration": "Gable & barge board restoration", "tile-scribe-replacement": "Tile scribe replacement", "wall-cladding": "External wall cladding", "timber-decks": "Custom timber deck", "pergolas-gazebos": "Pergola or gazebo", "alfresco-areas": "Alfresco area", "carports": "Carport", "small-additions": "Small addition" };
+        function prefill(q) {
+          var m = /(?:^|&)service=([^&]+)/.exec(q || "");
+          if (m && SLUG_OPT[decodeURIComponent(m[1])]) svcSelect.value = SLUG_OPT[decodeURIComponent(m[1])];
+        }
+        function field(id) { return doc.getElementById(id); }
+        function check() {
+          var ok = true;
+          [["f-name"], ["f-phone"], ["f-suburb"], ["f-service"]].forEach(function (a) {
+            var el = field(a[0]), bad = !el.value.trim();
+            el.closest(".x-field").classList.toggle("is-invalid", bad);
+            el.setAttribute("aria-invalid", bad ? "true" : "false");
+            if (bad && ok) { el.focus(); ok = false; }
+          });
+          var em = field("f-email"), badE = em.value.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em.value.trim());
+          em.closest(".x-field").classList.toggle("is-invalid", !!badE);
+          if (badE && ok) { em.focus(); ok = false; }
+          return ok;
+        }
+        form.addEventListener("submit", function (e) {
+          e.preventDefault();
+          if (!check()) return;
+          var lines = ["Hi Mat, I'd like a quote.", "", "Name: " + field("f-name").value.trim(), "Phone: " + field("f-phone").value.trim()];
+          if (field("f-email").value.trim()) lines.push("Email: " + field("f-email").value.trim());
+          lines.push("Suburb: " + field("f-suburb").value.trim(), "Service: " + svcSelect.value);
+          if (field("f-msg").value.trim()) lines.push("", field("f-msg").value.trim());
+          var url = "https://wa.me/61427945345?text=" + encodeURIComponent(lines.join("\n"));
+          doc.getElementById("x-wa-retry").href = url;
+          window.open(url, "_blank", "noopener");
+          form.hidden = true; thanks.hidden = false; thanks.focus();
+        });
+        form.addEventListener("input", function (e) { var f = e.target.closest(".x-field"); if (f && e.target.value.trim()) f.classList.remove("is-invalid"); });
+        doc.getElementById("x-reset").addEventListener("click", function () { form.reset(); thanks.hidden = true; form.hidden = false; field("f-name").focus(); });
+      })();
+    </script>
+  </body>
+</html>

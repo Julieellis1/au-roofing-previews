@@ -1,0 +1,1156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Concept preview for Brisbane Roof Restoration &amp; Painting Services Pty Ltd: QBCC-licensed roof restoration, roof painting, gutters and solar panel cleaning across Brisbane, the Gold Coast and the Sunshine Coast.">
+  <meta name="theme-color" content="#142b3c">
+  <title>Brisbane Roof Restoration &amp; Painting Services — Concept Preview</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --navy: #142b3c;
+      --navy-soft: #244254;
+      --navy-deep: #102332;
+      --clay: #c9694d;
+      --clay-dark: #a64c35;
+      --clay-deep: #8a3d2a;
+      --clay-light: #e99a7e;
+      --sand: #f4e5d7;
+      --sand-2: #eee5d8;
+      --stone: #f3f0e9;
+      --mist: #e6ecea;
+      --paper: #fbfaf7;
+      --white: #fff;
+      --ink: #1b2d38;
+      --muted: #53636a;
+      --line: #dce1df;
+      --serif: Georgia, "Times New Roman", serif;
+      --sans: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+      --max: 1200px;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); line-height: 1.6; overflow-x: hidden; }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; }
+    a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible, summary:focus-visible { outline: 3px solid #b5542f; outline-offset: 3px; border-radius: 3px; }
+    h1, h2, h3, h4, p, ul, ol { margin-top: 0; }
+    .preview-banner { padding: 10px 20px; background: var(--navy); color: var(--white); text-align: center; font-size: .76rem; font-weight: 650; letter-spacing: .045em; }
+    .wrap { width: min(var(--max), calc(100% - 56px)); margin-inline: auto; }
+    .skip { position: absolute; left: -9999px; top: 0; z-index: 90; padding: 12px 18px; background: var(--navy); color: #fff; font-weight: 700; }
+    .skip:focus { left: 12px; }
+
+    /* ---------- header ---------- */
+    .site-header { position: sticky; top: 0; z-index: 60; background: rgba(251,250,247,.94); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(20,43,60,.1); }
+    .nav { min-height: 88px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+    .brand { display: flex; align-items: center; gap: 13px; text-decoration: none; min-width: 0; }
+    .brand-mark { width: 42px; height: 42px; flex: 0 0 42px; display: grid; place-items: center; background: var(--clay); border-radius: 50% 50% 50% 12px; }
+    .brand-mark svg { width: 24px; height: 24px; }
+    .brand-name { color: var(--navy); font-size: .88rem; line-height: 1.25; font-weight: 750; letter-spacing: .01em; max-width: 250px; }
+    .nav-right { display: flex; align-items: center; gap: 26px; }
+    .nav-links { display: flex; align-items: center; gap: 26px; list-style: none; margin: 0; padding: 0; }
+    .nav-link { display: inline-flex; align-items: center; min-height: 44px; color: var(--navy); text-decoration: none; font-size: .88rem; font-weight: 650; border-bottom: 2px solid transparent; }
+    .nav-link:hover { color: var(--clay-dark); }
+    .nav-link.is-active { color: var(--clay-dark); border-bottom-color: var(--clay); }
+    .has-drop { position: relative; }
+    .drop-toggle { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; padding: 0; background: none; border: 0; cursor: pointer; font: inherit; font-size: .88rem; font-weight: 650; color: var(--navy); font-family: var(--sans); border-bottom: 2px solid transparent; }
+    .drop-toggle:hover { color: var(--clay-dark); }
+    .drop-toggle.is-active { color: var(--clay-dark); border-bottom-color: var(--clay); }
+    .drop-toggle svg { width: 11px; height: 11px; transition: transform .2s ease; }
+    .drop-toggle[aria-expanded="true"] svg { transform: rotate(180deg); }
+    .drop-menu { position: absolute; top: calc(100% + 10px); left: -18px; min-width: 272px; margin: 0; padding: 10px; list-style: none; background: var(--white); border: 1px solid var(--line); border-radius: 4px 4px 18px 4px; box-shadow: 0 20px 40px rgba(20,43,60,.16); opacity: 0; visibility: hidden; transform: translateY(-6px); transition: opacity .18s ease, transform .18s ease, visibility .18s; }
+    .has-drop.is-open .drop-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+    .drop-menu a { display: flex; align-items: center; min-height: 44px; padding: 6px 12px; border-radius: 3px; color: var(--navy); text-decoration: none; font-size: .86rem; font-weight: 600; }
+    .drop-menu a:hover, .drop-menu a.is-active { background: var(--sand); color: var(--clay-dark); }
+    .drop-menu .drop-all { margin-top: 4px; border-top: 1px solid var(--line); font-weight: 750; }
+    .burger { display: none; width: 46px; height: 46px; align-items: center; justify-content: center; background: none; border: 1px solid rgba(20,43,60,.2); border-radius: 4px; cursor: pointer; }
+    .burger span { position: relative; display: block; width: 20px; height: 2px; background: var(--navy); transition: background .15s ease; }
+    .burger span::before, .burger span::after { content: ""; position: absolute; left: 0; width: 20px; height: 2px; background: var(--navy); transition: transform .2s ease, top .2s ease; }
+    .burger span::before { top: -6px; } .burger span::after { top: 6px; }
+    .burger[aria-expanded="true"] span { background: transparent; }
+    .burger[aria-expanded="true"] span::before { top: 0; transform: rotate(45deg); }
+    .burger[aria-expanded="true"] span::after { top: 0; transform: rotate(-45deg); }
+    .mobile-menu { display: none; }
+    .btn-phone-label { display: inline; }
+
+    /* ---------- buttons ---------- */
+    .button { display: inline-flex; align-items: center; justify-content: center; gap: 10px; border: 0; border-radius: 4px; background: var(--clay-dark); color: #fff; text-decoration: none; padding: 14px 20px; min-height: 50px; font-family: var(--sans); font-size: .9rem; font-weight: 720; cursor: pointer; transition: background .18s ease, transform .18s ease; }
+    .button:hover { background: var(--clay-deep); transform: translateY(-1px); }
+    .button svg { width: 17px; height: 17px; flex: 0 0 17px; }
+    .button--ghost { background: transparent; color: var(--navy); border: 1px solid rgba(20,43,60,.3); }
+    .button--ghost:hover { background: var(--navy); color: #fff; border-color: var(--navy); }
+    .button--light { background: #fff; color: var(--navy); }
+    .button--light:hover { background: var(--sand); }
+    .button--wide { width: 100%; }
+    .textlink { display: inline-flex; align-items: center; gap: 7px; min-height: 44px; color: var(--clay-dark); text-decoration: none; font-weight: 700; font-size: .88rem; border-bottom: 1px solid rgba(166,76,53,.4); }
+    .textlink:hover { color: var(--clay-deep); border-bottom-color: var(--clay-deep); }
+
+    /* ---------- shared blocks ---------- */
+    .eyebrow { display: flex; align-items: center; gap: 11px; margin: 0 0 22px; color: var(--clay-dark); text-transform: uppercase; letter-spacing: .16em; font-size: .72rem; font-weight: 800; }
+    .eyebrow::before { content: ""; width: 28px; height: 2px; background: var(--clay); flex: 0 0 28px; }
+    h1 { max-width: 620px; margin-bottom: 20px; color: var(--navy); font: 500 clamp(2.5rem, 5vw, 4.2rem)/1.05 var(--serif); letter-spacing: -.045em; }
+    h2 { margin-bottom: 14px; color: var(--navy); font: 500 clamp(2rem, 4vw, 3.1rem)/1.1 var(--serif); letter-spacing: -.035em; }
+    h3 { color: var(--navy); }
+    .section { padding: 92px 0; }
+    .section--tight { padding: 64px 0; }
+    .section--sand { background: var(--sand); }
+    .section--stone { background: var(--stone); }
+    .section-heading { max-width: 700px; margin-bottom: 43px; }
+    .section-heading .eyebrow { margin-bottom: 15px; }
+    .section-intro { max-width: 640px; margin-bottom: 0; color: var(--muted); font-size: 1rem; }
+    .lede { max-width: 680px; color: #40535e; font-size: 1.08rem; }
+    .prose p { max-width: 680px; color: #40535e; }
+    .prose ul { max-width: 680px; color: #40535e; padding-left: 20px; }
+    .prose li { margin-bottom: 8px; }
+
+    /* ---------- hero ---------- */
+    .hero { position: relative; overflow: hidden; background: var(--sand); padding: 62px 0 76px; }
+    .hero::before { content: ""; position: absolute; width: 390px; height: 390px; border: 1px solid rgba(201,105,77,.2); border-radius: 50%; right: -205px; top: -230px; box-shadow: 0 0 0 34px rgba(201,105,77,.055), 0 0 0 70px rgba(201,105,77,.04); pointer-events: none; }
+    .hero-grid { position: relative; display: grid; grid-template-columns: .93fr 1.07fr; align-items: center; gap: clamp(38px, 7vw, 86px); }
+    .hero-copy { max-width: 470px; margin-bottom: 29px; color: #40535e; font-size: 1.08rem; }
+    .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .quiet-note { max-width: 185px; color: var(--muted); font-size: .76rem; line-height: 1.45; }
+    .hero-visual { position: relative; margin: 0; padding: 0 0 26px 25px; }
+    .hero-visual::before { content: ""; position: absolute; top: -18px; left: 0; width: 76%; height: 80%; border: 1px solid rgba(20,43,60,.3); border-radius: 4px; }
+    .photo-shell { position: relative; overflow: hidden; min-height: 410px; background: #c3c8c4; border-radius: 4px 4px 50px 4px; box-shadow: 0 22px 45px rgba(20,43,60,.14); }
+    .photo-shell img { width: 100%; height: 100%; min-height: 410px; object-fit: cover; }
+    .photo-caption { position: absolute; left: 15px; right: 15px; bottom: 14px; margin: 0; width: fit-content; max-width: calc(100% - 30px); padding: 8px 11px; background: rgba(20,43,60,.92); color: #fff; border-radius: 2px; font-size: .7rem; line-height: 1.4; }
+    .page-hero { position: relative; overflow: hidden; background: var(--navy); color: #fff; padding: 64px 0 68px; }
+    .page-hero::after { content: ""; position: absolute; right: -130px; top: -170px; width: 340px; height: 340px; border: 1px solid rgba(233,154,126,.3); border-radius: 50%; box-shadow: 0 0 0 36px rgba(233,154,126,.05), 0 0 0 72px rgba(233,154,126,.035); pointer-events: none; }
+    .page-hero .eyebrow { color: var(--clay-light); }
+    .page-hero .eyebrow::before { background: var(--clay-light); }
+    .page-hero h1 { color: #fff; }
+    .page-hero p { max-width: 620px; margin-bottom: 0; color: #d0d9dc; font-size: 1.05rem; }
+    .crumbs { position: relative; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 18px; font-size: .78rem; color: #c3cfd4; }
+    .crumbs a { display: inline-flex; align-items: center; min-height: 32px; color: #f0b49f; text-decoration: none; font-weight: 650; }
+    .crumbs a:hover { text-decoration: underline; }
+
+    /* ---------- trust bar ---------- */
+    .trust { background: var(--navy-deep); color: #e4eaec; padding: 20px 0; }
+    .trust-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px 30px; }
+    .trust-item { display: flex; align-items: center; gap: 9px; font-size: .84rem; font-weight: 650; }
+    .trust-item svg { width: 17px; height: 17px; flex: 0 0 17px; color: var(--clay-light); }
+    .stars { color: #f0b49f; letter-spacing: .08em; font-size: .9rem; }
+
+    /* ---------- cards ---------- */
+    .grid { display: grid; gap: 22px; }
+    .grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .grid--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .grid--4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .card { display: flex; flex-direction: column; padding: 26px 24px; background: var(--white); border: 1px solid var(--line); border-radius: 4px 4px 24px 4px; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+    .card h3 { margin-bottom: 8px; font-size: 1.12rem; font-weight: 700; }
+    .card p { margin-bottom: 0; color: var(--muted); font-size: .92rem; }
+    a.card { text-decoration: none; }
+    a.card:hover { transform: translateY(-3px); border-color: rgba(201,105,77,.5); box-shadow: 0 16px 32px rgba(20,43,60,.1); }
+    .card-icon { width: 40px; height: 40px; display: grid; place-items: center; margin-bottom: 16px; background: var(--sand); border-radius: 50% 50% 50% 10px; }
+    .card-icon svg { width: 20px; height: 20px; color: var(--clay-dark); }
+    .card-more { margin-top: 16px; color: var(--clay-dark); font-size: .83rem; font-weight: 750; letter-spacing: .02em; }
+    .card--plain { background: var(--stone); border-color: transparent; }
+    .tick-list { list-style: none; margin: 0; padding: 0; }
+    .tick-list li { position: relative; padding: 9px 0 9px 30px; color: #40535e; font-size: .95rem; border-bottom: 1px solid var(--line); }
+    .tick-list li::before { content: ""; position: absolute; left: 4px; top: 17px; width: 8px; height: 8px; background: var(--clay); border-radius: 50%; box-shadow: 0 0 0 5px rgba(201,105,77,.12); }
+
+    /* ---------- steps / timeline ---------- */
+    .steps { display: grid; grid-template-columns: repeat(3, 1fr); margin-top: 48px; border-top: 1px solid rgba(255,255,255,.24); }
+    .step { padding: 25px 32px 0 0; }
+    .step + .step { padding-left: 32px; border-left: 1px solid rgba(255,255,255,.2); }
+    .step-number { display: block; margin-bottom: 18px; color: var(--clay-light); font: 500 1.15rem var(--serif); }
+    .step h3 { margin-bottom: 8px; color: #fff; font: 500 1.45rem var(--serif); }
+    .step p { max-width: 280px; margin-bottom: 0; color: #cbd5d8; font-size: .9rem; }
+    .approach { background: var(--navy); color: #fff; }
+    .approach .eyebrow { color: var(--clay-light); } .approach .eyebrow::before { background: var(--clay-light); }
+    .approach h2 { color: #fff; }
+    .approach .section-intro { color: #d0d9dc; }
+    .track { position: relative; margin: 0; padding: 0 0 0 38px; list-style: none; border-left: 2px solid var(--sand); }
+    .track > li { position: relative; padding: 0 0 38px; }
+    .track > li:last-child { padding-bottom: 0; }
+    .track > li::before { content: ""; position: absolute; left: -47px; top: 4px; width: 18px; height: 18px; background: var(--clay); border: 4px solid var(--paper); border-radius: 50%; }
+    .track-day { display: inline-block; margin-bottom: 8px; padding: 4px 11px; background: var(--navy); color: #fff; border-radius: 2px; font-size: .7rem; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
+    .track h3 { margin-bottom: 8px; font: 500 1.5rem var(--serif); }
+    .track p { max-width: 620px; margin-bottom: 0; color: var(--muted); font-size: .95rem; }
+
+    /* ---------- quotes ---------- */
+    .quote-card { display: flex; flex-direction: column; padding: 28px 26px; background: var(--white); border: 1px solid var(--line); border-left: 3px solid var(--clay); border-radius: 0 4px 24px 0; }
+    .quote-card blockquote { margin: 0 0 16px; color: var(--navy-soft); font: 500 1.08rem/1.55 var(--serif); }
+    .quote-card figcaption { margin-top: auto; color: var(--muted); font-size: .84rem; font-weight: 650; }
+    .quote-card .stars { color: var(--clay-dark); margin-bottom: 14px; }
+
+    /* ---------- areas ---------- */
+    .area-list { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .area-card { position: relative; min-height: 124px; display: flex; align-items: flex-end; padding: 19px; overflow: hidden; background: var(--sand); border-radius: 3px; }
+    .area-card:nth-child(2) { background: var(--mist); }
+    .area-card:nth-child(3) { grid-column: 1 / -1; min-height: 104px; background: var(--sand-2); }
+    .area-card::after { content: ""; position: absolute; right: -12px; top: -42px; width: 110px; height: 110px; border: 1px solid rgba(20,43,60,.14); border-radius: 50%; box-shadow: 0 0 0 15px rgba(20,43,60,.035); }
+    .area-card strong { position: relative; z-index: 1; color: var(--navy); font: 500 1.35rem var(--serif); }
+    .areas { display: grid; grid-template-columns: .9fr 1.1fr; gap: 64px; align-items: center; }
+    .suburbs { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 0; padding: 0; list-style: none; }
+    .suburbs li { padding: 7px 13px; background: var(--white); border: 1px solid var(--line); border-radius: 100px; color: var(--navy-soft); font-size: .82rem; font-weight: 600; }
+
+    /* ---------- split / media ---------- */
+    .split { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 5vw, 64px); align-items: center; }
+    .media-shell { position: relative; overflow: hidden; margin: 0; border-radius: 4px 4px 44px 4px; box-shadow: 0 20px 40px rgba(20,43,60,.13); }
+    .media-shell img { width: 100%; height: 100%; min-height: 340px; object-fit: cover; }
+    .fact-strip { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 4px; overflow: hidden; }
+    .fact { padding: 22px 20px; background: var(--white); }
+    .fact strong { display: block; margin-bottom: 4px; color: var(--navy); font: 500 1.6rem var(--serif); }
+    .fact span { color: var(--muted); font-size: .82rem; }
+
+    /* ---------- contact band ---------- */
+    .contact-card { position: relative; display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 28px; padding: clamp(30px, 6vw, 58px); overflow: hidden; background: var(--clay-dark); border-radius: 4px 4px 50px 4px; }
+    .contact-card::after { content: ""; position: absolute; right: 190px; top: -150px; width: 300px; height: 300px; border: 1px solid rgba(255,255,255,.24); border-radius: 50%; box-shadow: 0 0 0 35px rgba(255,255,255,.06), 0 0 0 70px rgba(255,255,255,.04); }
+    .contact-card > * { position: relative; z-index: 1; }
+    .contact-card .eyebrow { color: #fff0e8; } .contact-card .eyebrow::before { background: #fff0e8; }
+    .contact-card h2 { max-width: 620px; margin-bottom: 10px; color: #fff; }
+    .contact-card p { margin: 0; color: #fff1eb; max-width: 560px; }
+    .cta-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    /* ---------- form ---------- */
+    .form-card { padding: clamp(24px, 4vw, 38px); background: var(--white); border: 1px solid var(--line); border-radius: 4px 4px 28px 4px; box-shadow: 0 14px 34px rgba(20,43,60,.07); }
+    .field { margin-bottom: 18px; }
+    .field label { display: block; margin-bottom: 6px; color: var(--navy); font-size: .83rem; font-weight: 700; }
+    .field input, .field select, .field textarea { width: 100%; min-height: 48px; padding: 12px 14px; background: var(--paper); border: 1px solid var(--line); border-radius: 4px; color: var(--ink); font-family: var(--sans); font-size: .95rem; }
+    .field textarea { min-height: 120px; resize: vertical; }
+    .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--clay); background: #fff; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0 18px; }
+    .form-note { margin: 14px 0 0; color: var(--muted); font-size: .78rem; line-height: 1.5; }
+    .thanks { display: none; padding: 20px; margin-bottom: 18px; background: var(--stone); border-left: 3px solid var(--clay); }
+    .thanks.is-shown { display: block; }
+    .thanks p { margin: 0; color: var(--navy-soft); font-size: .92rem; }
+    .thanks strong { display: block; margin-bottom: 4px; font-size: 1rem; }
+
+    /* ---------- faq ---------- */
+    .faq { max-width: 820px; }
+    .faq details { border-bottom: 1px solid var(--line); background: transparent; }
+    .faq summary { display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: 60px; padding: 16px 0; color: var(--navy); font-size: 1rem; font-weight: 700; cursor: pointer; list-style: none; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: ""; flex: 0 0 12px; width: 12px; height: 12px; border-right: 2px solid var(--clay-dark); border-bottom: 2px solid var(--clay-dark); transform: rotate(45deg) translateY(-3px); transition: transform .2s ease; }
+    .faq details[open] summary::after { transform: rotate(225deg) translateY(-3px); }
+    .faq .faq-body { padding: 0 0 20px; }
+    .faq .faq-body p { margin: 0; max-width: 700px; color: var(--muted); font-size: .95rem; }
+
+    /* ---------- footer ---------- */
+    footer.site-footer { padding: 62px 0 28px; background: var(--navy-deep); color: #c6d1d5; }
+    .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 36px; padding-bottom: 34px; border-bottom: 1px solid rgba(255,255,255,.14); }
+    .footer-grid h4 { margin-bottom: 14px; color: #fff; font-size: .82rem; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
+    .footer-brand .brand-name { color: #fff; }
+    .footer-blurb { margin: 18px 0 0; max-width: 320px; font-size: .86rem; line-height: 1.65; }
+    .footer-list { list-style: none; margin: 0; padding: 0; }
+    .footer-list li { margin-bottom: 2px; }
+    .footer-list a, .footer-list span { display: flex; align-items: center; min-height: 44px; color: #c6d1d5; text-decoration: none; font-size: .86rem; }
+    .footer-list a:hover { color: #f0b49f; }
+    .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 14px; padding-top: 22px; }
+    .footer-bottom p { margin: 0; max-width: 700px; font-size: .75rem; line-height: 1.6; color: #a9b8be; }
+    .ident { margin: 14px 0 0; font-size: .78rem; color: #a9b8be; }
+
+    /* ---------- misc ---------- */
+    .to-top { position: fixed; right: 20px; bottom: 20px; z-index: 50; width: 48px; height: 48px; display: grid; place-items: center; background: var(--navy); color: #fff; border: 0; border-radius: 50% 50% 50% 12px; cursor: pointer; opacity: 0; visibility: hidden; transform: translateY(10px); transition: opacity .2s ease, transform .2s ease, visibility .2s; }
+    .to-top.is-shown { opacity: 1; visibility: visible; transform: translateY(0); }
+    .to-top svg { width: 18px; height: 18px; }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+    .reveal.is-in { opacity: 1; transform: none; }
+    .route { animation: fade .34s ease both; }
+    @keyframes fade { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+    .pill-row { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 0; padding: 0; list-style: none; }
+    .pill-row li { padding: 8px 14px; background: rgba(255,255,255,.1); border: 1px solid rgba(255,255,255,.2); border-radius: 100px; color: #e4eaec; font-size: .82rem; font-weight: 600; }
+    .note-box { padding: 22px 24px; background: var(--stone); border-left: 3px solid var(--clay); }
+    .note-box p { margin: 0; color: var(--navy-soft); font: 500 1.14rem/1.5 var(--serif); }
+
+    @media (max-width: 1000px) {
+      .grid--4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 30px; }
+    }
+    @media (max-width: 1180px) {
+      .nav-links, .nav-right > .nav-desktop { display: none; }
+      .burger { display: inline-flex; }
+      .mobile-menu { display: block; position: fixed; inset: 0 0 0 auto; width: min(360px, 88vw); z-index: 70; padding: 22px 20px 40px; background: var(--paper); box-shadow: -14px 0 40px rgba(20,43,60,.2); overflow-y: auto; transform: translateX(100%); transition: transform .26s ease; }
+      .mobile-menu.is-open { transform: none; }
+      .menu-backdrop { position: fixed; inset: 0; z-index: 65; background: rgba(16,35,50,.5); opacity: 0; visibility: hidden; transition: opacity .25s ease, visibility .25s; }
+      .menu-backdrop.is-open { opacity: 1; visibility: visible; }
+      body.menu-open { overflow: hidden; }
+    }
+    @media (max-width: 860px) {
+      .wrap { width: min(100% - 40px, var(--max)); }
+      .nav { min-height: 76px; }
+      .hero { padding: 50px 0 57px; }
+      .hero-grid, .split, .areas, .service-layout { grid-template-columns: 1fr; gap: 36px; }
+      .hero-visual { width: min(100%, 660px); margin-left: auto; }
+      .photo-shell, .photo-shell img { min-height: 340px; }
+      .section { padding: 68px 0; }
+      .section--tight { padding: 52px 0; }
+      .grid--3, .grid--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .steps { grid-template-columns: 1fr; margin-top: 34px; }
+      .step, .step + .step { padding: 22px 0; border-left: 0; border-bottom: 1px solid rgba(255,255,255,.2); }
+      .step p { max-width: none; }
+      .page-hero { padding: 48px 0 52px; }
+    }
+    @media (max-width: 640px) {
+      .preview-banner { padding: 9px 13px; font-size: .67rem; letter-spacing: .01em; }
+      .wrap { width: calc(100% - 36px); }
+      .brand-name { max-width: 175px; font-size: .76rem; }
+      .brand-mark { width: 37px; height: 37px; flex-basis: 37px; }
+      .nav { gap: 12px; }
+      .btn-phone-label { display: none; }
+      .nav-right .button { min-height: 46px; padding: 10px 14px; }
+      h1 { font-size: clamp(2.3rem, 11vw, 3.3rem); }
+      .grid--3, .grid--2, .grid--4, .form-row, .fact-strip { grid-template-columns: 1fr; }
+      .fact-strip { gap: 1px; }
+      .photo-shell, .photo-shell img, .media-shell img { min-height: 260px; }
+      .contact-card { grid-template-columns: 1fr; gap: 22px; padding: 28px 22px; }
+      .contact-card::after { right: -100px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .area-card strong { font-size: 1.15rem; }
+      .track { padding-left: 26px; }
+      .track > li::before { left: -36px; }
+      .to-top { right: 14px; bottom: 14px; }
+    }
+    /* ---------- added: menu, service pages, CTA, tap targets ---------- */
+    html { overflow-x: clip; }
+    .mobile-menu[hidden], .menu-backdrop[hidden], .to-top[hidden] { display: none !important; }
+    .preview-banner, .eyebrow, .photo-caption, .track-day, .footer-bottom p { font-size: max(.75rem, 12px) !important; }
+    .brand { min-height: 44px; }
+    .brand-name { max-width: 200px; }
+    .nav-links { gap: 20px; }
+    .crumbs a { min-height: 44px; }
+    .mm-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 14px; }
+    .mm-head strong { color: var(--navy); font: 500 1.25rem var(--serif); }
+    .mm-close { width: 46px; height: 46px; display: grid; place-items: center; background: none; border: 1px solid rgba(20,43,60,.2); border-radius: 4px; color: var(--navy); cursor: pointer; }
+    .mm-close svg { width: 18px; height: 18px; }
+    .mm-list { list-style: none; margin: 0; padding: 0; }
+    .mm-list a { display: flex; align-items: center; min-height: 48px; padding: 4px 6px; color: var(--navy); text-decoration: none; font-weight: 700; font-size: .98rem; border-bottom: 1px solid var(--line); }
+    .mm-list a:hover, .mm-list a.is-active { color: var(--clay-dark); }
+    .mm-sub { list-style: none; margin: 0; padding: 4px 0 8px; border-bottom: 1px solid var(--line); }
+    .mm-sub a { min-height: 44px; padding-left: 20px; font-weight: 600; font-size: .9rem; color: var(--navy-soft); border-bottom: 0; }
+    .mm-cta { display: grid; gap: 10px; margin-top: 22px; }
+    .service-layout { display: grid; grid-template-columns: 1.25fr .75fr; gap: clamp(32px, 5vw, 64px); align-items: start; }
+    .svc-aside .tick-list { margin: 6px 0 22px; }
+    .svc-aside .textlink { align-self: flex-start; margin-top: 8px; }
+    .svc-media { margin-top: 30px; }
+    .svc-cards .card p { flex: 1; }
+    .section--stone .track > li::before { border-color: var(--stone); }
+    .button--onclay { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.7); }
+    .button--onclay:hover { background: var(--navy); border-color: var(--navy); }
+    .tick-list .textlink { border-bottom-color: rgba(166,76,53,.4); }
+    @media (min-width: 861px) { .split--contact { grid-template-columns: 1.15fr .85fr; } }
+    @media (max-width: 860px) { .x-sticky { position: static !important; } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; } .reveal { opacity: 1; transform: none; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <div class="preview-banner"><span>Independent concept preview · not an official or approved business website</span></div>
+
+  <header class="site-header">
+    <div class="wrap nav">
+      <a class="brand" href="#/" aria-label="Brisbane Roof Restoration and Painting Services, home">
+        <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M3 11.5 12 4l9 7.5M6.5 10.5V20h11v-9.5M9.5 20v-5.5h5V20" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="brand-name">Brisbane Roof Restoration<br>&amp; Painting Services</span>
+      </a>
+      <div class="nav-right">
+        <nav class="nav-desktop" aria-label="Main navigation">
+          <ul class="nav-links" id="desktop-nav"></ul>
+        </nav>
+        <a class="button" href="tel:+61456496222" aria-label="Call Brisbane Roof Restoration and Painting Services on 0456 496 222">
+          <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 4 4l1.5-2 4 1.5v3c0 .6-.4 1-1 1A13 13 0 0 1 3.5 4.5c0-.6.4-1 1-1Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg>
+          <span class="btn-phone-label">0456 496 222</span>
+        </a>
+        <button class="burger" id="burger" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu"><span></span></button>
+      </div>
+    </div>
+  </header>
+
+  <div class="menu-backdrop" id="menu-backdrop" hidden></div>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation" hidden></nav>
+
+  <main id="main" tabindex="-1">
+
+    <!-- ================= HOME ================= -->
+    <div class="view" data-view="home" data-title="Roof Restoration Brisbane, Gold Coast &amp; Sunshine Coast">
+      <section class="hero" aria-labelledby="home-title">
+        <div class="wrap hero-grid">
+          <div>
+            <p class="eyebrow">QBCC-licensed · Moorooka, Brisbane</p>
+            <h1 id="home-title">Make your roof look brand new in 3 to 5 days.</h1>
+            <p class="hero-copy">Clean, seal and three coats of paint. QBCC-licensed roof restoration across Brisbane, the Gold Coast and the Sunshine Coast.</p>
+            <div class="hero-actions">
+              <a class="button" href="#/contact">Get a free quote <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3.5 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              <a class="button button--ghost" href="tel:+61456496222">Call 0456 496 222</a>
+            </div>
+          </div>
+          <figure class="hero-visual">
+            <div class="photo-shell"><img src="bri-hero.jpg" alt="A Queenslander home with a freshly restored charcoal roof" loading="eager"><figcaption class="photo-caption">Representative imagery · not a verified company project</figcaption></div>
+          </figure>
+        </div>
+      </section>
+      <div class="trust" aria-label="Credentials and ratings">
+        <div class="wrap trust-inner">
+          <span class="trust-item"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 2.5 4 5v4.5c0 4 2.6 6.9 6 8 3.4-1.1 6-4 6-8V5l-6-2.5Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="m7.3 10 1.9 1.9 3.6-3.8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>QBCC licence 15637261</span>
+          <span class="trust-item"><span class="stars" aria-hidden="true">★★★★★</span>4.9 on Google · 14 reviews</span>
+          <span class="trust-item"><span class="stars" aria-hidden="true">★★★★★</span>5.0 on hipages · 16 hires</span>
+          <span class="trust-item"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="7.2" stroke="currentColor" stroke-width="1.5"/><path d="M10 6v4.3l2.8 1.7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>Mon–Sat 6:30am–6pm</span>
+        </div>
+      </div>
+
+      <section class="section" aria-labelledby="home-services">
+        <div class="wrap">
+          <div class="section-heading reveal">
+            <p class="eyebrow">What we do</p>
+            <h2 id="home-services">The roof, and every detail around it.</h2>
+            <p class="section-intro">Full restorations, paintwork, repairs, gutters and solar panel cleaning. Pick a service to see how the job is done.</p>
+          </div>
+          <div class="grid grid--4 svc-cards" data-svc-cards></div>
+        </div>
+      </section>
+
+      <section class="section section--stone" aria-labelledby="home-why">
+        <div class="wrap split">
+          <div class="reveal">
+            <p class="eyebrow">Why homeowners choose us</p>
+            <h2 id="home-why">Straight answers from the owner, start to finish.</h2>
+            <p class="lede">Yondo runs every job himself. Reviewers keep mentioning the same things: clear pricing, real roofing knowledge and regular updates.</p>
+            <a class="textlink" href="#/about">Meet the business →</a>
+          </div>
+          <div class="grid grid--2 reveal">
+            <div class="card"><h3>Transparent pricing</h3><p>You know what the quote covers before the work begins.</p></div>
+            <div class="card"><h3>Kept in the loop</h3><p>Updates through the job, so you're never left guessing.</p></div>
+            <div class="card"><h3>QBCC-licensed</h3><p>Licence 15637261, registered with Queensland's building regulator.</p></div>
+            <div class="card"><h3>Clean, tidy sites</h3><p>Work done efficiently, with the site left clean.</p></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section approach" aria-labelledby="home-process">
+        <div class="wrap">
+          <div class="section-heading reveal">
+            <p class="eyebrow">A considered sequence</p>
+            <h2 id="home-process">Clean. Seal. Three coats.</h2>
+            <p class="section-intro">"The process generally takes 3-5 days to complete." Each stage prepares the roof for the next.</p>
+          </div>
+          <div class="steps reveal">
+            <article class="step"><span class="step-number">01</span><h3>Clean</h3><p>A pressure wash strips back dirt, moss and loose material so the coatings can bond.</p></article>
+            <article class="step"><span class="step-number">02</span><h3>Seal</h3><p>A sealer coat goes on the clean surface, ready for the paint system.</p></article>
+            <article class="step"><span class="step-number">03</span><h3>Three coats of paint</h3><p>The finish is built in three coats of roof paint for an even, lasting colour.</p></article>
+          </div>
+          <p style="margin:34px 0 0"><a class="button button--light" href="#/process">See the full process</a></p>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="home-reviews">
+        <div class="wrap">
+          <div class="section-heading reveal">
+            <p class="eyebrow">4.9 ★ on Google</p>
+            <h2 id="home-reviews">"The house looks brand new again."</h2>
+          </div>
+          <div class="grid grid--2 reveal">
+            <figure class="quote-card" style="margin:0"><span class="stars" aria-label="5 stars">★★★★★</span><blockquote>"Highly recommend this team for any roof restoration needs. The owner, Yondo, is great to deal with—transparent with pricing, incredibly knowledgeable, and keeps you updated throughout the whole process. The house looks brand new again."</blockquote><figcaption>Lewis C. · Google review</figcaption></figure>
+            <figure class="quote-card" style="margin:0"><span class="stars" aria-label="5 stars">★★★★★</span><blockquote>"The roof not only looks brand new but also feels well-protected… They kept the site clean, worked efficiently, and delivered exactly what they promised — on time and without any hassle."</blockquote><figcaption>Neal K. · Google review</figcaption></figure>
+          </div>
+          <p style="margin:26px 0 0"><a class="textlink" href="#/reviews">Read all reviews →</a></p>
+        </div>
+      </section>
+
+      <section class="section section--sand" aria-labelledby="home-areas">
+        <div class="wrap areas">
+          <div class="reveal">
+            <p class="eyebrow">Service area</p>
+            <h2 id="home-areas">Working across South East Queensland.</h2>
+            <p class="lede">Based in Moorooka, covering Brisbane, the Gold Coast and the Sunshine Coast, plus Logan, Ipswich and the Redlands.</p>
+            <a class="textlink" href="#/areas">See suburbs we cover →</a>
+          </div>
+          <div class="area-list reveal" aria-label="Service locations">
+            <div class="area-card"><strong>Brisbane</strong></div>
+            <div class="area-card"><strong>Gold Coast</strong></div>
+            <div class="area-card"><strong>Sunshine Coast</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section--tight" aria-labelledby="home-landlord">
+        <div class="wrap">
+          <div class="note-box reveal" style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px">
+            <div>
+              <p id="home-landlord">Own an investment property in Queensland but live interstate?</p>
+              <span style="color:var(--muted);font-size:.92rem">We handle roof and gutter work without you on site.</span>
+            </div>
+            <a class="button" href="#/landlords">For landlords</a>
+          </div>
+        </div>
+      </section>
+      <div data-cta></div>
+    </div>
+
+    <!-- ================= SERVICES ================= -->
+    <div class="view" data-view="services" data-title="Roofing Services" hidden>
+      <section class="page-hero">
+        <div class="wrap">
+          <nav class="crumbs" aria-label="Breadcrumb"><a href="#/">Home</a><span aria-hidden="true">/</span><span>Services</span></nav>
+          <p class="eyebrow">Services</p>
+          <h1>Eight services, one roof.</h1>
+          <p>From a full restoration to a single cracked tile, every job is quoted clearly and done by a QBCC-licensed team.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap">
+          <div class="grid grid--3" data-svc-cards="full"></div>
+        </div>
+      </section>
+      <section class="section section--stone">
+        <div class="wrap split">
+          <div class="reveal">
+            <p class="eyebrow">Not sure what you need?</p>
+            <h2>Start with a look at the roof.</h2>
+            <p class="lede">Tell us what you're seeing: faded tiles, a leak, rusty gutters, grimy panels. We'll say which service fits.</p>
+          </div>
+          <div class="reveal"><ul class="tick-list">
+            <li>Faded or patchy roof colour → <strong>roof painting</strong> or <strong>restoration</strong></li>
+            <li>Moss, lichen or black staining → <strong>pressure washing</strong></li>
+            <li>Cracked bedding along the ridges → <strong>ridge pointing</strong></li>
+            <li>Cracked or slipped tiles → <strong>broken tile replacement</strong></li>
+            <li>Rust holes or leaking joins in gutters → <strong>gutter replacement</strong></li>
+            <li>Dusty, bird-marked panels → <strong>solar panel cleaning</strong></li>
+          </ul></div>
+        </div>
+      </section>
+      <div data-cta></div>
+    </div>
+
+    <!-- ================= SERVICE DETAIL (rendered from data) ================= -->
+    <div class="view" data-view="service" data-title="Service" hidden>
+      <div id="svc-body"></div>
+      <figure class="media-shell" id="solar-fig" hidden><img src="bri-solar.jpg" alt="A worker cleaning solar panels on a tiled roof" loading="lazy"></figure>
+      <div data-cta></div>
+    </div>
+
+    <!-- ================= PROCESS ================= -->
+    <div class="view" data-view="process" data-title="Our 3–5 Day Roof Restoration Process" hidden>
+      <section class="page-hero">
+        <div class="wrap">
+          <nav class="crumbs" aria-label="Breadcrumb"><a href="#/">Home</a><span aria-hidden="true">/</span><span>Process</span></nav>
+          <p class="eyebrow">The process</p>
+          <h1>From tired to brand new in 3 to 5 days.</h1>
+          <p>"The restoration process consist of a clean, seal and three coats of paint." Here's what happens at each stage.</p>
+          <ul class="pill-row"><li>3–5 days, generally</li><li>Clean</li><li>Seal</li><li>Three coats</li></ul>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap split" style="align-items:start">
+          <ol class="track reveal">
+            <li><span class="track-day">Before work starts</span><h3>Inspection and quote</h3><p>We look over the roof, note any broken tiles, ridge capping or gutter issues, and give you a clear price for the whole job.</p></li>
+            <li><span class="track-day">Stage 01</span><h3>Clean</h3><p>A high-pressure wash removes dirt, moss, lichen and loose material. A clean surface is what lets the coatings grip.</p></li>
+            <li><span class="track-day">Where needed</span><h3>Repairs</h3><p>Any broken tiles are replaced and ridge capping re-pointed before coating, so the finish goes over a sound roof.</p></li>
+            <li><span class="track-day">Stage 02</span><h3>Seal</h3><p>A sealer coat is applied to the clean roof, preparing the surface for the paint system.</p></li>
+            <li><span class="track-day">Stage 03</span><h3>Three coats of paint</h3><p>The colour is built up in three coats for even coverage and protection from the Queensland sun and storms.</p></li>
+            <li><span class="track-day">Handover</span><h3>Clean-up and walk-through</h3><p>The site is left clean and you see the finished roof. Updates come through the whole job, so nothing is a surprise.</p></li>
+          </ol>
+          <div class="reveal x-sticky" style="position:sticky;top:120px">
+            <figure class="media-shell"><img src="bri-paint.jpg" alt="A painter spraying a membrane coat onto a roof" loading="lazy"></figure>
+            <p style="margin:12px 0 0;color:var(--muted);font-size:.78rem">Representative imagery · not a verified company project</p>
+            <div class="note-box" style="margin-top:24px"><p>Timing depends on the roof's size and condition, and on the weather; coatings need dry days.</p></div>
+          </div>
+        </div>
+      </section>
+      <div data-cta></div>
+    </div>
+
+    <!-- ================= LANDLORDS ================= -->
+    <div class="view" data-view="landlords" data-title="Roof Work for Landlords &amp; Investment Properties" hidden>
+      <section class="page-hero">
+        <div class="wrap">
+          <nav class="crumbs" aria-label="Breadcrumb"><a href="#/">Home</a><span aria-hidden="true">/</span><span>Landlords</span></nav>
+          <p class="eyebrow">For property investors</p>
+          <h1>Your Queensland roof, looked after from anywhere.</h1>
+          <p>For investment-property owners, including interstate landlords who can't be on site. Quoting, updates and approvals all happen by phone and WhatsApp.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap">
+          <figure class="quote-card reveal" style="margin:0 0 56px;max-width:860px;padding:36px 34px">
+            <span class="stars" aria-label="5 stars">★★★★★</span>
+            <blockquote style="font-size:1.35rem">"I am a NSW landlord that own a QLD investment property. I needed my gutter to be replaced as it was very rusty… It was meticulously done and well priced. I find Yondo trustworthy and his attention to detail was impeccable."</blockquote>
+            <figcaption>Lily H. · NSW landlord · Google review</figcaption>
+          </figure>
+          <div class="section-heading reveal">
+            <p class="eyebrow">How it works remotely</p>
+            <h2>Four steps, no flights needed.</h2>
+          </div>
+          <div class="grid grid--4 reveal">
+            <div class="card"><span class="step-number" style="color:var(--clay-dark);margin-bottom:10px">01</span><h3>Message us</h3><p>Send the address and the issue by WhatsApp or phone. Tenant or agent details help us arrange access.</p></div>
+            <div class="card"><span class="step-number" style="color:var(--clay-dark);margin-bottom:10px">02</span><h3>We inspect</h3><p>We look at the roof and gutters and tell you what we find.</p></div>
+            <div class="card"><span class="step-number" style="color:var(--clay-dark);margin-bottom:10px">03</span><h3>Clear quote</h3><p>A transparent price to approve in writing, with nothing hidden.</p></div>
+            <div class="card"><span class="step-number" style="color:var(--clay-dark);margin-bottom:10px">04</span><h3>Updates to done</h3><p>Progress updates through the job, and a heads-up when it's finished.</p></div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--stone">
+        <div class="wrap split">
+          <div class="reveal">
+            <p class="eyebrow">Common rental jobs</p>
+            <h2>Protect the asset, keep tenants dry.</h2>
+            <p class="lede">Rusty gutters, leaks and a tired roof all cost more the longer they wait. These jobs suit investment properties well.</p>
+          </div>
+          <ul class="tick-list reveal">
+            <li><a class="textlink" href="#/services/gutter-replacement">Gutter replacement</a> for rusted or leaking gutters</li>
+            <li><a class="textlink" href="#/services/broken-tile-replacement">Broken tile replacement</a> after storms</li>
+            <li><a class="textlink" href="#/services/ridge-pointing">Ridge pointing</a> to stop ridge leaks</li>
+            <li><a class="textlink" href="#/services/roof-restoration">Roof restoration</a> between tenancies or before sale</li>
+            <li><a class="textlink" href="#/services/fascia-gutter-painting">Fascia and gutter painting</a> for street appeal</li>
+          </ul>
+        </div>
+      </section>
+      <div data-cta></div>
+    </div>
+
+    <!-- ================= ABOUT ================= -->
+    <div class="view" data-view="about" data-title="About Us" hidden>
+      <section class="page-hero">
+        <div class="wrap">
+          <nav class="crumbs" aria-label="Breadcrumb"><a href="#/">Home</a><span aria-hidden="true">/</span><span>About</span></nav>
+          <p class="eyebrow">About us</p>
+          <h1>A new Brisbane company with an owner you deal with directly.</h1>
+          <p>Brisbane Roof Restoration &amp; Painting Services Pty Ltd is based in Moorooka and led by owner Yondo.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap split" style="align-items:start">
+          <div class="prose reveal">
+            <p class="eyebrow">Our story</p>
+            <h2>Built on reviews, one roof at a time.</h2>
+            <p>We're a newly registered Queensland company, and we'd rather be judged on our work than on a founding date. So far customers have given us 4.9 stars from 14 Google reviews, and 5.0 from 7 ratings on hipages, with 16 hires.</p>
+            <p>Yondo is on every job: pricing it, explaining it and keeping you updated. Customers describe him as "transparent with pricing, incredibly knowledgeable" and "trustworthy".</p>
+            <p>We restore and paint roofs, fix the details around them, and clean solar panels across Brisbane, the Gold Coast and the Sunshine Coast.</p>
+          </div>
+          <div class="reveal">
+            <div class="fact-strip" style="grid-template-columns:1fr 1fr">
+              <div class="fact"><strong>4.9 ★</strong><span>Google, 14 reviews</span></div>
+              <div class="fact"><strong>5.0 ★</strong><span>hipages, 7 ratings</span></div>
+              <div class="fact"><strong>16</strong><span>Hires on hipages</span></div>
+              <div class="fact"><strong>3–5</strong><span>Days for a typical restoration</span></div>
+            </div>
+            <div class="card card--plain" style="margin-top:22px">
+              <h3>Verified credentials</h3>
+              <ul class="tick-list" style="margin-top:6px">
+                <li>QBCC licence 15637261</li>
+                <li>ABN 48 699 747 398</li>
+                <li>ACN 699 747 398</li>
+                <li>Registered in Queensland, 4105</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--stone">
+        <div class="wrap">
+          <div class="section-heading reveal"><p class="eyebrow">What we stand for</p><h2>Four things you can hold us to.</h2></div>
+          <div class="grid grid--4 reveal">
+            <div class="card"><h3>Honest prices</h3><p>Clear quotes that say what's included.</p></div>
+            <div class="card"><h3>Communication</h3><p>Updates through the whole process.</p></div>
+            <div class="card"><h3>Attention to detail</h3><p>Preparation done properly, finishes done neatly.</p></div>
+            <div class="card"><h3>Respect for your home</h3><p>A clean site, efficient work, on time as promised.</p></div>
+          </div>
+        </div>
+      </section>
+      <div data-cta></div>
+    </div>
+
+    <!-- ================= AREAS ================= -->
+    <div class="view" data-view="areas" data-title="Service Areas" hidden>
+      <section class="page-hero">
+        <div class="wrap">
+          <nav class="crumbs" aria-label="Breadcrumb"><a href="#/">Home</a><span aria-hidden="true">/</span><span>Service areas</span></nav>
+          <p class="eyebrow">Service areas</p>
+          <h1>From Moorooka to the coasts.</h1>
+          <p>We cover Brisbane's north, south, east and west, the Gold Coast, the Sunshine Coast, Logan, Ipswich and the Redlands.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap">
+          <div class="section-heading reveal"><p class="eyebrow">Brisbane</p><h2>Every side of the city.</h2></div>
+          <div class="grid grid--4 reveal">
+            <div class="card card--plain"><h3>Brisbane South</h3><ul class="suburbs"><li>Moorooka</li><li>Annerley</li><li>Sunnybank</li><li>Yeronga</li><li>Salisbury</li><li>Holland Park</li></ul></div>
+            <div class="card card--plain"><h3>Brisbane East</h3><ul class="suburbs"><li>Coorparoo</li><li>Carindale</li><li>Wynnum</li><li>Camp Hill</li><li>Bulimba</li><li>Manly</li></ul></div>
+            <div class="card card--plain"><h3>Brisbane West</h3><ul class="suburbs"><li>Indooroopilly</li><li>Toowong</li><li>Kenmore</li><li>Ashgrove</li><li>Taringa</li></ul></div>
+            <div class="card card--plain"><h3>Brisbane North</h3><ul class="suburbs"><li>Chermside</li><li>Aspley</li><li>Nundah</li><li>Stafford</li><li>Everton Park</li></ul></div>
+          </div>
+        </div>
+      </section>
+      <section class="section section--sand">
+        <div class="wrap">
+          <div class="section-heading reveal"><p class="eyebrow">Beyond Brisbane</p><h2>South East Queensland.</h2></div>
+          <div class="grid grid--3 reveal">
+            <div class="card"><h3>Gold Coast</h3><ul class="suburbs"><li>Southport</li><li>Robina</li><li>Burleigh Heads</li><li>Nerang</li></ul></div>
+            <div class="card"><h3>Sunshine Coast</h3><ul class="suburbs"><li>Maroochydore</li><li>Caloundra</li><li>Buderim</li><li>Noosa</li></ul></div>
+            <div class="card"><h3>Logan</h3><ul class="suburbs"><li>Springwood</li><li>Shailer Park</li><li>Beenleigh</li></ul></div>
+            <div class="card"><h3>Ipswich</h3><ul class="suburbs"><li>Springfield</li><li>Redbank Plains</li><li>Goodna</li></ul></div>
+            <div class="card"><h3>Redlands</h3><ul class="suburbs"><li>Cleveland</li><li>Capalaba</li><li>Victoria Point</li></ul></div>
+            <div class="card card--plain"><h3>Not listed?</h3><p>If you're in South East Queensland, ask. We'll tell you straight whether we can get to you.</p><p style="margin-top:10px"><a class="textlink" href="#/contact">Ask about your suburb →</a></p></div>
+          </div>
+        </div>
+      </section>
+      <div data-cta></div>
+    </div>
+
+    <!-- ================= REVIEWS ================= -->
+    <div class="view" data-view="reviews" data-title="Customer Reviews" hidden>
+      <section class="page-hero">
+        <div class="wrap">
+          <nav class="crumbs" aria-label="Breadcrumb"><a href="#/">Home</a><span aria-hidden="true">/</span><span>Reviews</span></nav>
+          <p class="eyebrow">Reviews</p>
+          <h1>4.9 stars from 14 Google reviews.</h1>
+          <p>Plus 5.0 from 7 ratings on hipages, with 16 hires. Here's what customers say, word for word.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap">
+          <div class="fact-strip reveal" style="margin-bottom:48px">
+            <div class="fact"><strong>4.9 <span class="stars" style="color:var(--clay-dark)" aria-hidden="true">★</span></strong><span>Google · 14 reviews</span></div>
+            <div class="fact"><strong>5.0 <span class="stars" style="color:var(--clay-dark)" aria-hidden="true">★</span></strong><span>hipages · 7 ratings</span></div>
+            <div class="fact"><strong>16</strong><span>Hires through hipages</span></div>
+          </div>
+          <div class="grid grid--3 reveal">
+            <figure class="quote-card" style="margin:0"><span class="stars" aria-label="5 stars">★★★★★</span><blockquote>"Highly recommend this team for any roof restoration needs. The owner, Yondo, is great to deal with—transparent with pricing, incredibly knowledgeable, and keeps you updated throughout the whole process. The house looks brand new again."</blockquote><figcaption>Lewis C. · Google review</figcaption></figure>
+            <figure class="quote-card" style="margin:0"><span class="stars" aria-label="5 stars">★★★★★</span><blockquote>"I am a NSW landlord that own a QLD investment property. I needed my gutter to be replaced as it was very rusty… It was meticulously done and well priced. I find Yondo trustworthy and his attention to detail was impeccable."</blockquote><figcaption>Lily H. · Google review</figcaption></figure>
+            <figure class="quote-card" style="margin:0"><span class="stars" aria-label="5 stars">★★★★★</span><blockquote>"The roof not only looks brand new but also feels well-protected… They kept the site clean, worked efficiently, and delivered exactly what they promised — on time and without any hassle."</blockquote><figcaption>Neal K. · Google review</figcaption></figure>
+          </div>
+          <div class="cta-actions reveal" style="margin-top:36px">
+            <a class="button" href="https://www.google.com.au/maps/place/Brisbane+Roof+Restoration+%26+Painting+Services+Pty+Ltd/@-27.27997,153.1103469,17z/data=!3m1!4b1!4m6!3m5!1s0x35204938c47683:0x4f2cca6dac69e7eb!16s%2Fg%2F11yjthr8nk" target="_blank" rel="noopener">Read all reviews on Google</a>
+            <a class="button button--ghost" href="https://hipages.com.au/connect/brisbaneroofrestorationandpaintingservicesptyltd" target="_blank" rel="noopener">See our hipages profile</a>
+          </div>
+        </div>
+      </section>
+      <div data-cta></div>
+    </div>
+
+    <!-- ================= FAQ ================= -->
+    <div class="view" data-view="faq" data-title="Roofing FAQs" hidden>
+      <section class="page-hero">
+        <div class="wrap">
+          <nav class="crumbs" aria-label="Breadcrumb"><a href="#/">Home</a><span aria-hidden="true">/</span><span>FAQ</span></nav>
+          <p class="eyebrow">FAQ</p>
+          <h1>Roofing questions, answered plainly.</h1>
+          <p>General guidance for Brisbane homeowners and landlords. Every roof is different, so we'll confirm the details when we quote.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap">
+          <div class="faq reveal">
+            <details><summary>How long does a roof restoration take?</summary><div class="faq-body"><p>The process generally takes 3 to 5 days. Roof size, repairs needed and the weather all affect it, since coatings need dry conditions.</p></div></details>
+            <details><summary>What does a restoration involve?</summary><div class="faq-body"><p>A clean, a seal and three coats of paint. Repairs like broken tile replacement or ridge pointing are done before coating where the roof needs them.</p></div></details>
+            <details><summary>What's the difference between roof painting and a full restoration?</summary><div class="faq-body"><p>Painting refreshes the colour and protection of a roof that's in sound shape. A restoration also takes in cleaning, repairs and sealing, for roofs showing wear. We'll tell you which your roof needs.</p></div></details>
+            <details><summary>How do I know my roof needs work?</summary><div class="faq-body"><p>Common signs are faded or patchy colour, moss and lichen, cracked or slipped tiles, crumbling ridge bedding, water stains on ceilings and rusty gutters. After a big storm it's worth a check.</p></div></details>
+            <details><summary>How much will it cost?</summary><div class="faq-body"><p>It depends on the roof's size, pitch, material and condition, so we quote each job after seeing it. Customers say our pricing is transparent: you'll know what's included before we start.</p></div></details>
+            <details><summary>Do I need to be home during the work?</summary><div class="faq-body"><p>Usually not, as most work happens on the roof. We need access to the property and water. Interstate landlords can arrange everything by phone or WhatsApp.</p></div></details>
+            <details><summary>What happens if it rains?</summary><div class="faq-body"><p>Coatings shouldn't go onto a wet roof, so we pause on wet days and pick back up when it dries. That's one reason the timeframe is a range.</p></div></details>
+            <details><summary>Should I clean my solar panels?</summary><div class="faq-body"><p>Dust, pollen and bird droppings build up on panels and can cut how much power they make. A careful clean, often alongside roof work, keeps them clear.</p></div></details>
+            <details><summary>Are you licensed?</summary><div class="faq-body"><p>Yes. We hold QBCC licence 15637261. Our ABN is 48 699 747 398.</p></div></details>
+            <details><summary>Which areas do you cover?</summary><div class="faq-body"><p>Brisbane, the Gold Coast and the Sunshine Coast, plus Logan, Ipswich and the Redlands. We're based in Moorooka.</p></div></details>
+          </div>
+        </div>
+      </section>
+      <div data-cta></div>
+    </div>
+
+    <!-- ================= CONTACT ================= -->
+    <div class="view" data-view="contact" data-title="Contact &amp; Free Quote" hidden>
+      <section class="page-hero">
+        <div class="wrap">
+          <nav class="crumbs" aria-label="Breadcrumb"><a href="#/">Home</a><span aria-hidden="true">/</span><span>Contact</span></nav>
+          <p class="eyebrow">Contact</p>
+          <h1>Let's talk about your roof.</h1>
+          <p>Call, WhatsApp, or send the form: it opens WhatsApp with your details filled in, ready to send.</p>
+        </div>
+      </section>
+      <section class="section">
+        <div class="wrap split split--contact" style="align-items:start">
+          <div class="form-card reveal">
+            <h2 style="font-size:clamp(1.7rem,3vw,2.2rem)">Request a free quote</h2>
+            <div class="thanks" id="thanks" role="status" aria-live="polite"><p><strong>Thanks, WhatsApp should now be open.</strong>Press send there and Yondo will get back to you. If nothing opened, call 0456 496 222.</p></div>
+            <form id="quote-form" novalidate>
+              <div class="form-row">
+                <div class="field"><label for="f-name">Name *</label><input id="f-name" name="name" autocomplete="name" required></div>
+                <div class="field"><label for="f-phone">Phone *</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div>
+              </div>
+              <div class="form-row">
+                <div class="field"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email"></div>
+                <div class="field"><label for="f-suburb">Suburb *</label><input id="f-suburb" name="suburb" autocomplete="address-level2" required></div>
+              </div>
+              <div class="field"><label for="f-service">Service</label><select id="f-service" name="service"><option value="">Not sure yet</option></select></div>
+              <div class="field"><label for="f-msg">Tell us about the roof</label><textarea id="f-msg" name="message" placeholder="Roof type, what you've noticed, best time to inspect…"></textarea></div>
+              <p class="form-note" id="form-error" role="alert" style="color:var(--clay-deep);font-weight:650;margin:0 0 12px" hidden></p>
+              <button class="button button--wide" type="submit">Send via WhatsApp <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3.5 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <p class="form-note">No details are stored on this site. The form simply opens a WhatsApp message to +61 456 496 222.</p>
+            </form>
+          </div>
+          <div class="reveal" style="display:grid;gap:18px">
+            <a class="card" href="tel:+61456496222"><span class="card-icon"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 4 4l1.5-2 4 1.5v3c0 .6-.4 1-1 1A13 13 0 0 1 3.5 4.5c0-.6.4-1 1-1Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></span><h3>Call 0456 496 222</h3><p>The fastest way to book an inspection.</p></a>
+            <a class="card" href="https://wa.me/61456496222" target="_blank" rel="noopener"><span class="card-icon"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 16.5 5 13a6.5 6.5 0 1 1 2.3 2.4L4 16.5Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/></svg></span><h3>WhatsApp</h3><p>Send photos of the roof and we'll take a look.</p></a>
+            <div class="card card--plain"><h3>Hours</h3><p>Monday to Saturday<br><strong style="color:var(--navy)">6:30am – 6pm</strong></p></div>
+            <a class="card" href="https://www.google.com.au/maps/place/Brisbane+Roof+Restoration+%26+Painting+Services+Pty+Ltd/@-27.27997,153.1103469,17z/data=!3m1!4b1!4m6!3m5!1s0x35204938c47683:0x4f2cca6dac69e7eb!16s%2Fg%2F11yjthr8nk" target="_blank" rel="noopener" style="padding:0;overflow:hidden">
+              <span class="x-map" aria-hidden="true"><svg viewBox="0 0 400 170" preserveAspectRatio="xMidYMid slice"><rect width="400" height="170" fill="#e6ecea"/><path d="M0 120 C80 100 120 140 200 110 S330 70 400 90" stroke="#fbfaf7" stroke-width="10" fill="none"/><path d="M60 0 L140 170 M260 0 L230 170 M0 50 L400 40" stroke="#fbfaf7" stroke-width="6" fill="none"/><path d="M300 0 C280 60 340 110 320 170" stroke="#c9dbe3" stroke-width="16" fill="none"/><circle cx="200" cy="78" r="30" fill="rgba(201,105,77,.15)"/><path d="M200 52c-10 0-17 7-17 17 0 13 17 29 17 29s17-16 17-29c0-10-7-17-17-17Z" fill="#a64c35"/><circle cx="200" cy="69" r="6" fill="#fff"/></svg></span>
+              <span style="display:block;padding:20px 24px"><h3>Moorooka QLD 4105</h3><p>Open our Google Maps listing →</p></span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#/" aria-label="Home">
+            <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M3 11.5 12 4l9 7.5M6.5 10.5V20h11v-9.5M9.5 20v-5.5h5V20" stroke="#fff" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="brand-name">Brisbane Roof Restoration<br>&amp; Painting Services</span>
+          </a>
+          <p class="footer-blurb">QBCC-licensed roof restoration and painting for homes and investment properties across Brisbane, the Gold Coast and the Sunshine Coast.</p>
+          <p class="ident">QBCC licence 15637261<br>ABN 48 699 747 398 · ACN 699 747 398</p>
+        </div>
+        <div>
+          <h4>Quick links</h4>
+          <ul class="footer-list" id="footer-links"></ul>
+        </div>
+        <div>
+          <h4>Services</h4>
+          <ul class="footer-list" id="footer-services"></ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="footer-list">
+            <li><a href="tel:+61456496222">Call 0456 496 222</a></li>
+            <li><a href="https://wa.me/61456496222" target="_blank" rel="noopener">WhatsApp us</a></li>
+            <li><span>Moorooka QLD 4105</span></li>
+            <li><span>Mon–Sat 6:30am–6pm</span></li>
+            <li><a href="https://www.google.com.au/maps/place/Brisbane+Roof+Restoration+%26+Painting+Services+Pty+Ltd/@-27.27997,153.1103469,17z/data=!3m1!4b1!4m6!3m5!1s0x35204938c47683:0x4f2cca6dac69e7eb!16s%2Fg%2F11yjthr8nk" target="_blank" rel="noopener">Google listing · 4.9 ★</a></li>
+            <li><a href="https://hipages.com.au/connect/brisbaneroofrestorationandpaintingservicesptyltd" target="_blank" rel="noopener">hipages profile · 5.0 ★</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Independent concept preview, not an official or approved business website. Details and imagery require owner confirmation before production. Photography is representative, not verified company projects.</p>
+        <p>© Brisbane Roof Restoration &amp; Painting Services Pty Ltd</p>
+      </div>
+    </div>
+  <div style="text-align:center;padding:12px 16px;font-size:12.5px;opacity:.7">Developed by <a href="https://teta.dpdns.org" target="_blank" rel="noopener" style="color:inherit">Teta Digitals</a></div></footer>
+
+  <button class="to-top" id="to-top" type="button" aria-label="Back to top" hidden><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M10 16V5m0 0L5 10m5-5 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+
+  <script>
+  (function () {
+    "use strict";
+    var WA = "61456496222";
+    var TEL = "tel:+61456496222";
+    var SITE = "Brisbane Roof Restoration & Painting Services";
+    var ARROW = '<svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3.5 10h12m-5-5 5 5-5 5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    function ico(p) { return '<svg viewBox="0 0 20 20" fill="none" aria-hidden="true" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">' + p + "</svg>"; }
+    var ICONS = {
+      roof: ico('<path d="M2.5 10 10 3.5l7.5 6.5M5 8.5v8h10v-8"/>'),
+      brush: ico('<path d="m12.5 3.5 4 4-6 6-4-4 6-6ZM6.5 9.5l-3 7 7-3"/>'),
+      drop: ico('<path d="M10 3s-5 5.5-5 9a5 5 0 0 0 10 0c0-3.5-5-9-5-9Z"/>'),
+      ridge: ico('<path d="M2.5 13 10 5.5l7.5 7.5M6 13h8"/>'),
+      tile: ico('<rect x="3.5" y="4.5" width="13" height="11" rx="1"/><path d="M3.5 10h13M10 4.5v11"/>'),
+      roller: ico('<rect x="3.5" y="3.5" width="11" height="5" rx="1"/><path d="M14.5 6h2v4H10v2.5M10 12.5v4"/>'),
+      solar: ico('<rect x="3" y="6" width="14" height="9" rx="1"/><path d="M3 10.5h14M8 6v9M12.5 6v9"/>'),
+      gutter: ico('<path d="M3 6h14v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6ZM14 11v6"/>')
+    };
+
+    var SERVICES = [
+      { slug: "roof-restoration", name: "Roof restoration", icon: "roof",
+        short: "Clean, seal and three coats of paint, generally over 3 to 5 days.",
+        h: "A worn roof, brought back to brand new.",
+        what: ["A full restoration takes a tired, weathered roof back to a sound, freshly coated finish. It's our core service, and the complete process: the roof is cleaned, repaired where it needs it, sealed, then finished in three coats of paint.",
+               "The process generally takes 3 to 5 days, depending on the roof's size and condition and on the weather."],
+        signs: ["Faded, patchy or chalky roof colour", "Moss, lichen or black staining", "Cracked or slipped tiles", "Crumbling bedding along the ridges", "Leaks or water stains on ceilings"],
+        steps: [["Inspection and quote", "We look over the whole roof and give you a clear price for the job."], ["Clean", "A high-pressure wash removes dirt, moss, lichen and loose material."], ["Repairs", "Broken tiles replaced and ridge capping re-pointed where needed."], ["Seal", "A sealer coat goes onto the clean, sound roof."], ["Three coats of paint", "The colour is built up in three coats for even coverage."], ["Clean-up", "The site is left clean and you see the finished roof."]],
+        related: ["roof-painting", "ridge-pointing", "pressure-washing"] },
+      { slug: "pressure-washing", name: "Pressure washing", icon: "drop",
+        short: "Strips dirt, moss and lichen from tiles and roof surfaces.",
+        h: "A properly clean roof, ready for whatever comes next.",
+        what: ["Queensland's humidity lets moss, lichen and grime build up fast. High-pressure cleaning lifts it off the roof surface.",
+               "It's the first stage of every restoration, because coatings only bond to a clean surface. It can also be booked on its own to freshen up a roof."],
+        signs: ["Moss or lichen growing on tiles", "Black or green streaks across the roof", "Debris building up in valleys and gutters", "You're planning to paint or restore the roof"],
+        steps: [["Check the roof", "We look for cracked tiles or weak spots before any water goes on."], ["High-pressure clean", "The roof is washed systematically, working from the top down."], ["Clear the run-off", "Debris washed off the roof is flushed from the gutters."], ["Rinse and tidy", "Paths and surrounds are rinsed and the site left clean."]],
+        related: ["roof-restoration", "solar-panel-cleaning", "roof-painting"] },
+      { slug: "ridge-pointing", name: "Ridge pointing", icon: "ridge",
+        short: "Re-pointing ridge capping so it stays bedded and weathertight.",
+        h: "Secure ridges that keep the weather out.",
+        what: ["The ridge capping along the peaks of a tiled roof is held in place by bedding and pointing. Over time sun and storms crack it, and water can find its way in.",
+               "Ridge pointing replaces the tired pointing with fresh compound, so the caps stay put and the joins stay sealed."],
+        signs: ["Cracked or crumbling pointing along the ridges", "Loose or rocking ridge caps", "Leaks or stains near the top of the roof", "Gaps visible under the ridge capping"],
+        steps: [["Inspect the ridges", "We check every ridge and hip line and note what needs work."], ["Remove loose material", "Cracked and loose pointing is cleared away."], ["Re-bed where needed", "Caps that have moved are re-bedded so they sit firm."], ["Re-point", "Fresh pointing compound is applied and tooled to a neat finish."]],
+        related: ["broken-tile-replacement", "roof-restoration", "roof-painting"] },
+      { slug: "broken-tile-replacement", name: "Broken tile replacement", icon: "tile",
+        short: "Cracked, slipped or storm-damaged tiles swapped out.",
+        h: "One cracked tile can let a lot of water in.",
+        what: ["Tiles crack from storms, hail, foot traffic and age. A single broken or slipped tile can let water into the roof space and through to the ceilings.",
+               "We find the damaged tiles and replace them, on their own or as part of a restoration before coating."],
+        signs: ["Visible cracks or chips in tiles", "Tiles that have slipped out of line", "Leaks or ceiling stains after rain", "Damage after a storm or hail"],
+        steps: [["Locate the damage", "We check the roof to find every cracked or slipped tile."], ["Source replacements", "Replacement tiles are matched to your roof's profile."], ["Replace", "Damaged tiles come out and the new ones go in, seated properly."], ["Check around them", "Neighbouring tiles and pointing are checked before we finish."]],
+        related: ["ridge-pointing", "roof-restoration", "gutter-replacement"] },
+      { slug: "fascia-gutter-painting", name: "Fascia & gutter painting", icon: "roller",
+        short: "Fresh paint on fascias and gutters for street appeal and protection.",
+        h: "The finishing edge of the house, refreshed.",
+        what: ["Fascias and gutters frame the roofline and take the full brunt of the weather. Peeling, faded paint makes a house look tired and leaves the surface exposed.",
+               "We prepare and repaint them, often alongside a roof restoration so the whole roofline matches."],
+        signs: ["Peeling or flaking paint", "Faded colour that no longer matches the roof", "Light surface marks or spotting", "You're restoring the roof or preparing to sell or lease"],
+        steps: [["Clean", "Fascias and gutters are washed down to remove dirt and chalking."], ["Prepare", "Loose paint is removed and the surface prepared for coating."], ["Prime where needed", "Bare or treated areas are primed so the paint grips."], ["Paint", "The finish coats go on in your chosen colour, then the site is tidied."]],
+        related: ["gutter-replacement", "roof-painting", "roof-restoration"] },
+      { slug: "solar-panel-cleaning", name: "Solar panel cleaning", icon: "solar",
+        short: "Careful cleaning to clear dust, pollen and bird droppings from panels.",
+        h: "Clear panels, cleaned with care.",
+        what: ["Dust, pollen, leaves and bird droppings build up on panels and can cut how much light reaches the cells.",
+               "We clean panels carefully, on their own or while we're already working on the roof."],
+        signs: ["Visible grime or a dull film on the glass", "Bird droppings or leaf build-up", "Output seems lower than usual", "Roof work nearby has left dust on the panels"],
+        steps: [["Check access and panels", "We look at the array and plan safe access across the roof."], ["Gentle clean", "Panels are cleaned with methods suited to the glass and frames."], ["Rinse", "The surface is rinsed so no residue is left behind."], ["Visual check", "We check the panels over and let you know if anything looks off."]],
+        related: ["pressure-washing", "roof-restoration", "roof-painting"] },
+      { slug: "roof-painting", name: "Roof painting", icon: "brush",
+        short: "A fresh colour and protective coat for a roof that's still sound.",
+        h: "New colour, renewed protection.",
+        what: ["If your roof is structurally sound but the colour has faded, painting brings it back to life and renews its protective coating against the Queensland sun.",
+               "It's also the way to change your roof's colour. If the roof needs repairs first, we'll tell you, and a full restoration may suit better."],
+        signs: ["Faded or chalky colour", "Patchy, uneven finish", "You want a new roof colour", "Preparing a property to sell or lease"],
+        steps: [["Inspect and quote", "We check the roof is sound enough to paint and price the job."], ["Clean", "The roof is pressure washed so the paint can bond."], ["Prepare and seal", "The surface is prepared and sealed ready for colour."], ["Paint", "Roof paint is applied in coats for an even, lasting finish."]],
+        related: ["roof-restoration", "fascia-gutter-painting", "pressure-washing"] },
+      { slug: "gutter-replacement", name: "Gutter replacement", icon: "gutter",
+        short: "Rusted, leaking or sagging gutters replaced.",
+        h: "Gutters that carry the water away, as they should.",
+        what: ["Rusty, holed or sagging gutters overflow in a downpour and can push water into eaves, fascias and walls.",
+               "We remove the old gutters and fit new ones, a job that suits landlords managing a property from interstate."],
+        signs: ["Rust or holes along the gutter", "Leaking joins or corners", "Sagging sections or water pooling", "Overflowing in heavy rain"],
+        steps: [["Inspect and measure", "We check the gutters, fascias and downpipes and quote the job."], ["Remove old gutters", "The rusted or damaged gutters come down."], ["Fit new gutters", "New gutters are installed and connected to the downpipes."], ["Check the flow", "We make sure water runs to the outlets, then clean up."]],
+        related: ["fascia-gutter-painting", "broken-tile-replacement", "roof-restoration"] }
+    ];
+    var bySlug = {};
+    SERVICES.forEach(function (s) { bySlug[s.slug] = s; });
+
+    var $ = function (s, c) { return (c || document).querySelector(s); };
+    var $$ = function (s, c) { return Array.prototype.slice.call((c || document).querySelectorAll(s)); };
+    var main = $("#main");
+
+    /* ---------- service cards ---------- */
+    function card(s, full) {
+      return '<a class="card" href="#/services/' + s.slug + '"><span class="card-icon">' + ICONS[s.icon] + "</span><h3>" + s.name + "</h3><p>" + s.short + '</p><span class="card-more">' + (full ? "How it's done →" : "Learn more →") + "</span></a>";
+    }
+    $$("[data-svc-cards]").forEach(function (el) {
+      el.classList.add("reveal");
+      el.innerHTML = SERVICES.map(function (s) { return card(s, el.getAttribute("data-svc-cards") === "full"); }).join("");
+    });
+
+    /* ---------- closing CTA band ---------- */
+    var CTA = '<section class="section section--tight"><div class="wrap"><div class="contact-card reveal"><div><p class="eyebrow">Free quote</p><h2>Ready for a roof that looks brand new?</h2><p>Call or WhatsApp Yondo, Monday to Saturday, 6:30am to 6pm. QBCC licence 15637261.</p></div><div class="cta-actions"><a class="button button--light" href="#/contact">Get a free quote</a><a class="button button--onclay" href="' + TEL + '">Call 0456 496 222</a></div></div></div></section>';
+    $$("[data-cta]").forEach(function (el) { el.innerHTML = CTA; });
+
+    /* ---------- desktop nav ---------- */
+    var NAV = [["home", "Home", "#/"], ["services", "Services"], ["process", "Process", "#/process"], ["landlords", "Landlords", "#/landlords"], ["about", "About", "#/about"], ["areas", "Areas", "#/areas"], ["reviews", "Reviews", "#/reviews"], ["faq", "FAQ", "#/faq"], ["contact", "Contact", "#/contact"]];
+    var svcLinks = SERVICES.map(function (s) { return '<li><a href="#/services/' + s.slug + '" data-svc="' + s.slug + '">' + s.name + "</a></li>"; }).join("");
+    $("#desktop-nav").innerHTML = NAV.map(function (n) {
+      if (n[0] === "services") {
+        return '<li class="has-drop"><button class="drop-toggle" type="button" aria-expanded="false" aria-controls="drop-svc" data-key="services">Services <svg viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="m2 4 4 4 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button><ul class="drop-menu" id="drop-svc">' + svcLinks + '<li><a class="drop-all" href="#/services" data-key="services">All services →</a></li></ul></li>';
+      }
+      return '<li><a class="nav-link" href="' + n[2] + '" data-key="' + n[0] + '">' + n[1] + "</a></li>";
+    }).join("");
+
+    var drop = $(".has-drop"), toggle = $(".drop-toggle"), openedBy = null;
+    function setDrop(open, by) {
+      drop.classList.toggle("is-open", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      openedBy = open ? by : null;
+    }
+    toggle.addEventListener("click", function () {
+      if (drop.classList.contains("is-open") && openedBy !== "click") { openedBy = "click"; return; }
+      setDrop(!drop.classList.contains("is-open"), "click");
+    });
+    toggle.addEventListener("focus", function () {
+      var kb = true;
+      try { kb = toggle.matches(":focus-visible"); } catch (e) {}
+      if (kb) setDrop(true, "focus");
+    });
+    drop.addEventListener("focusout", function (e) { if (!drop.contains(e.relatedTarget)) setDrop(false); });
+    if (window.matchMedia("(hover: hover)").matches) {
+      drop.addEventListener("mouseenter", function () { if (!drop.classList.contains("is-open")) setDrop(true, "hover"); });
+      drop.addEventListener("mouseleave", function () { if (openedBy === "hover") setDrop(false); });
+    }
+    document.addEventListener("click", function (e) { if (!drop.contains(e.target)) setDrop(false); });
+    drop.addEventListener("click", function (e) { if (e.target.closest("a")) setDrop(false); });
+
+    /* ---------- mobile menu ---------- */
+    var burger = $("#burger"), menu = $("#mobile-menu"), backdrop = $("#menu-backdrop"), menuTimer;
+    menu.innerHTML = '<div class="mm-head"><strong>Menu</strong><button class="mm-close" type="button" aria-label="Close menu"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div><ul class="mm-list">' +
+      NAV.map(function (n) {
+        if (n[0] === "services") return '<li><a href="#/services" data-key="services">Services</a><ul class="mm-sub">' + svcLinks + "</ul></li>";
+        return '<li><a href="' + n[2] + '" data-key="' + n[0] + '">' + n[1] + "</a></li>";
+      }).join("") + '</ul><div class="mm-cta"><a class="button" href="#/contact">Get a free quote</a><a class="button button--ghost" href="' + TEL + '">Call 0456 496 222</a><a class="button button--ghost" href="https://wa.me/' + WA + '" target="_blank" rel="noopener">WhatsApp us</a></div>';
+    function isMenuOpen() { return burger.getAttribute("aria-expanded") === "true"; }
+    function openMenu() {
+      clearTimeout(menuTimer);
+      menu.hidden = false; backdrop.hidden = false;
+      void menu.offsetWidth;
+      menu.classList.add("is-open"); backdrop.classList.add("is-open");
+      burger.setAttribute("aria-expanded", "true"); burger.setAttribute("aria-label", "Close menu");
+      document.body.classList.add("menu-open");
+      var first = $(".mm-close", menu); if (first) first.focus();
+    }
+    function closeMenu(restore) {
+      if (!isMenuOpen()) return;
+      menu.classList.remove("is-open"); backdrop.classList.remove("is-open");
+      burger.setAttribute("aria-expanded", "false"); burger.setAttribute("aria-label", "Open menu");
+      document.body.classList.remove("menu-open");
+      menuTimer = setTimeout(function () { menu.hidden = true; backdrop.hidden = true; }, 280);
+      if (restore) burger.focus();
+    }
+    burger.addEventListener("click", function () { isMenuOpen() ? closeMenu(true) : openMenu(); });
+    backdrop.addEventListener("click", function () { closeMenu(true); });
+    $(".mm-close", menu).addEventListener("click", function () { closeMenu(true); });
+    menu.addEventListener("click", function (e) { if (e.target.closest("a")) closeMenu(false); });
+    menu.addEventListener("keydown", function (e) {
+      if (e.key !== "Tab") return;
+      var f = $$("a, button", menu); var a = f[0], z = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === a) { e.preventDefault(); z.focus(); }
+      else if (!e.shiftKey && document.activeElement === z) { e.preventDefault(); a.focus(); }
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key !== "Escape") return;
+      if (isMenuOpen()) closeMenu(true);
+      if (drop.classList.contains("is-open")) { setDrop(false); toggle.focus(); }
+    });
+    window.addEventListener("resize", function () { if (window.innerWidth > 1180) closeMenu(false); });
+
+    /* ---------- footer ---------- */
+    $("#footer-links").innerHTML = [["#/", "Home"], ["#/services", "All services"], ["#/process", "Our process"], ["#/landlords", "For landlords"], ["#/about", "About"], ["#/areas", "Service areas"], ["#/reviews", "Reviews"], ["#/faq", "FAQ"], ["#/contact", "Contact"]]
+      .map(function (l) { return '<li><a href="' + l[0] + '">' + l[1] + "</a></li>"; }).join("");
+    $("#footer-services").innerHTML = SERVICES.map(function (s) { return '<li><a href="#/services/' + s.slug + '">' + s.name + "</a></li>"; }).join("");
+
+    /* ---------- service detail ---------- */
+    var solarFig = $("#solar-fig");
+    function renderService(s) {
+      var rel = s.related.map(function (r) { return card(bySlug[r], false); }).join("");
+      $("#svc-body").innerHTML =
+        '<section class="page-hero"><div class="wrap"><nav class="crumbs" aria-label="Breadcrumb"><a href="#/">Home</a><span aria-hidden="true">/</span><a href="#/services">Services</a><span aria-hidden="true">/</span><span>' + s.name + '</span></nav><p class="eyebrow">Service</p><h1>' + s.name + "</h1><p>" + s.short + '</p><ul class="pill-row"><li>QBCC licence 15637261</li><li>Brisbane · Gold Coast · Sunshine Coast</li></ul></div></section>' +
+        '<section class="section"><div class="wrap service-layout"><div class="prose reveal"><p class="eyebrow">What it is</p><h2>' + s.h + "</h2>" + s.what.map(function (p) { return "<p>" + p + "</p>"; }).join("") + '<div id="svc-media"></div></div>' +
+        '<aside class="card card--plain svc-aside reveal"><h3>Signs you need it</h3><ul class="tick-list">' + s.signs.map(function (g) { return "<li>" + g + "</li>"; }).join("") + '</ul><a class="button button--wide" href="#/contact?service=' + s.slug + '">Get a quote for this ' + ARROW + '</a><a class="textlink" href="' + TEL + '">Or call 0456 496 222</a></aside></div></section>' +
+        '<section class="section section--stone"><div class="wrap split" style="align-items:start"><div class="reveal"><p class="eyebrow">How it\'s done</p><h2>Step by step.</h2><p class="lede">Every job starts with a look at the roof and a clear quote. You get updates through the whole job.</p></div><ol class="track reveal">' +
+        s.steps.map(function (st, i) { return '<li><span class="track-day">Step ' + (i < 9 ? "0" : "") + (i + 1) + "</span><h3>" + st[0] + "</h3><p>" + st[1] + "</p></li>"; }).join("") + "</ol></div></section>" +
+        '<section class="section"><div class="wrap"><div class="section-heading reveal"><p class="eyebrow">Related services</p><h2>Often done together.</h2></div><div class="grid grid--3 svc-cards reveal">' + rel + '</div><p style="margin:26px 0 0"><a class="textlink" href="#/services">See all eight services →</a></p></div></section>';
+      if (s.slug === "solar-panel-cleaning") {
+        solarFig.hidden = false; solarFig.classList.add("svc-media");
+        $("#svc-media").appendChild(solarFig);
+      } else {
+        solarFig.hidden = true;
+      }
+    }
+
+    /* ---------- contact form ---------- */
+    var sel = $("#f-service");
+    sel.insertAdjacentHTML("beforeend", SERVICES.map(function (s) { return '<option value="' + s.name + '">' + s.name + "</option>"; }).join("") + '<option value="Something else">Something else</option>');
+    var form = $("#quote-form"), thanks = $("#thanks"), err = $("#form-error");
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var v = function (id) { return $(id).value.trim(); };
+      var missing = [];
+      [["#f-name", "name"], ["#f-phone", "phone"], ["#f-suburb", "suburb"]].forEach(function (f) {
+        var el = $(f[0]); var bad = !el.value.trim();
+        el.setAttribute("aria-invalid", bad ? "true" : "false");
+        if (bad) missing.push(f[1]);
+      });
+      if (missing.length) {
+        err.textContent = "Please add your " + missing.join(", ").replace(/, ([^,]*)$/, " and $1") + ".";
+        err.hidden = false;
+        $("[aria-invalid='true']", form).focus();
+        return;
+      }
+      err.hidden = true;
+      var lines = ["Hi Yondo, I'd like a quote please.", "", "Name: " + v("#f-name"), "Phone: " + v("#f-phone")];
+      if (v("#f-email")) lines.push("Email: " + v("#f-email"));
+      lines.push("Suburb: " + v("#f-suburb"));
+      lines.push("Service: " + (sel.value || "Not sure yet"));
+      if (v("#f-msg")) lines.push("", v("#f-msg"));
+      var url = "https://wa.me/" + WA + "?text=" + encodeURIComponent(lines.join("\n"));
+      var w = window.open(url, "_blank", "noopener");
+      if (!w) { try { window.location.href = url; } catch (x) {} }
+      form.reset();
+      thanks.classList.add("is-shown");
+      thanks.setAttribute("tabindex", "-1");
+      thanks.focus();
+    });
+
+    /* ---------- reveal on scroll ---------- */
+    var io = "IntersectionObserver" in window ? new IntersectionObserver(function (es) {
+      es.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add("is-in"); io.unobserve(en.target); } });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }) : null;
+    function observe(view) {
+      $$(".reveal:not(.is-in)", view).forEach(function (el) { io ? io.observe(el) : el.classList.add("is-in"); });
+    }
+
+    /* ---------- router ---------- */
+    var PAGES = ["process", "landlords", "about", "areas", "reviews", "faq", "contact"];
+    var views = {};
+    $$(".view").forEach(function (v) { views[v.getAttribute("data-view")] = v; });
+    var first = true;
+    function route() {
+      var h = location.hash || "#/";
+      if (h.indexOf("#/") !== 0) { if (!first) return; h = "#/"; }
+      var path = h.slice(2), q = "", qi = path.indexOf("?");
+      if (qi > -1) { q = path.slice(qi + 1); path = path.slice(0, qi); }
+      var p = path.replace(/\/+$/, "").split("/").filter(Boolean);
+      var key = "home", svc = null;
+      if (!p.length) key = "home";
+      else if (p[0] === "services" && p.length === 1) key = "services";
+      else if (p[0] === "services" && p.length === 2 && bySlug[p[1]]) { key = "service"; svc = bySlug[p[1]]; }
+      else if (p.length === 1 && PAGES.indexOf(p[0]) > -1) key = p[0];
+      else if (location.hash && location.hash !== "#/") { history.replaceState(null, "", "#/"); }
+
+      if (svc) renderService(svc);
+      Object.keys(views).forEach(function (k) {
+        var v = views[k];
+        if (k === key) { v.hidden = false; v.classList.remove("route"); void v.offsetWidth; v.classList.add("route"); }
+        else { v.hidden = true; }
+      });
+
+      var navKey = key === "service" ? "services" : key;
+      $$("[data-key]").forEach(function (a) {
+        var on = a.getAttribute("data-key") === navKey;
+        a.classList.toggle("is-active", on);
+        if (a.tagName === "A") { on && key !== "service" ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current"); }
+      });
+      $$("[data-svc]").forEach(function (a) {
+        var on = !!svc && a.getAttribute("data-svc") === svc.slug;
+        a.classList.toggle("is-active", on);
+        on ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current");
+      });
+
+      var t = svc ? svc.name + " Brisbane" : views[key].getAttribute("data-title");
+      document.title = t + " | " + SITE + " (concept preview)";
+
+      if (key === "contact") {
+        var want = new URLSearchParams(q).get("service");
+        if (want && bySlug[want]) sel.value = bySlug[want].name;
+        thanks.classList.remove("is-shown"); err.hidden = true;
+      }
+
+      setDrop(false);
+      closeMenu(false);
+      window.scrollTo(0, 0);
+      if (!first) main.focus({ preventScroll: true });
+      first = false;
+      observe(views[key]);
+    }
+    window.addEventListener("hashchange", route);
+    route();
+
+    /* skip link without breaking the hash router */
+    $(".skip").addEventListener("click", function (e) { e.preventDefault(); main.focus(); });
+
+    /* ---------- back to top ---------- */
+    var top = $("#to-top"), hideT;
+    function onScroll() {
+      var show = window.scrollY > 700;
+      if (show && !top.classList.contains("is-shown")) { clearTimeout(hideT); top.hidden = false; void top.offsetWidth; top.classList.add("is-shown"); }
+      else if (!show && top.classList.contains("is-shown")) { top.classList.remove("is-shown"); hideT = setTimeout(function () { top.hidden = true; }, 220); }
+    }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    top.addEventListener("click", function () { window.scrollTo({ top: 0, behavior: "smooth" }); main.focus({ preventScroll: true }); });
+  })();
+  </script>
+</body>
+</html>
